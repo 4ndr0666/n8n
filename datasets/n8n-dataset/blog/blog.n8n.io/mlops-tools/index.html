@@ -1,0 +1,1670 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<title>We categorized 40 MLOps tools and here&#x27;s what we found! – n8n Blog</title>
+		<meta name="HandheldFriendly" content="True">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400;1,800;1,900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400;1,800;1,900&display=swap"> -->
+		<link rel="stylesheet" type="text/css" href="../assets/css/screen.css%3Fv=4801f6d1f9.css">
+		<style>hr{background-image:url("data:image/svg+xml;utf8,<svg role='img' viewBox='0 0 136 24' xmlns='http://www.w3.org/2000/svg'><path d='M1.525 1.525a3.5 3.5 0 014.95 0L20 15.05 33.525 1.525a3.5 3.5 0 014.95 0L52 15.05 65.525 1.525a3.5 3.5 0 014.95 0L84 15.05 97.525 1.525a3.5 3.5 0 014.95 0L116 15.05l13.525-13.525a3.5 3.5 0 014.95 4.95l-16 16a3.5 3.5 0 01-4.95 0L100 8.95 86.475 22.475a3.5 3.5 0 01-4.95 0L68 8.95 54.475 22.475a3.5 3.5 0 01-4.95 0L36 8.95 22.475 22.475a3.5 3.5 0 01-4.95 0l-16-16a3.5 3.5 0 010-4.95z'/></svg>")}</style>
+
+		<meta name="description" content="Discover 40 powerful MLOps tools to optimize your machine learning pipeline. Find open-source and commercial solutions for every stage!">
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="n8n Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="We categorized 40 MLOps tools and here&#x27;s what we found!">
+    <meta property="og:description" content="Explore 40 powerful MLOps tools that can streamline your machine learning workflows! From data preparation and model development to deployment and monitoring, this comprehensive guide covers open-source and commercial solutions for every stage of the MLOps lifecycle.">
+    <meta property="og:url" content="https://blog.n8n.io/mlops-tools/">
+    <meta property="og:image" content="https://blog.n8n.io/content/images/size/w1200/2024/11/mlops-8--1-.png">
+    <meta property="article:published_time" content="2024-12-05T11:14:53.000Z">
+    <meta property="article:modified_time" content="2025-01-02T10:14:58.000Z">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Guide">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/n8nio">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="We categorized 40 MLOps tools and here&#x27;s what we found!">
+    <meta name="twitter:description" content="Explore 40 powerful MLOps tools that can streamline your machine learning workflows! From data preparation and model development to deployment and monitoring, this comprehensive guide covers open-source and commercial solutions for every stage of the MLOps lifecycle.">
+    <meta name="twitter:url" content="https://blog.n8n.io/mlops-tools/">
+    <meta name="twitter:image" content="https://blog.n8n.io/content/images/size/w1200/2024/11/mlops-8--1-.png">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Mihai Farcas">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="AI, Guide">
+    <meta name="twitter:site" content="@n8n_io">
+    <meta name="twitter:creator" content="@ltd_mihai">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="675">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "n8n Blog",
+        "url": "https://blog.n8n.io/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.n8n.io/content/images/2022/06/n8n-blog.png"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Mihai Farcas",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://blog.n8n.io/content/images/2024/04/Screenshot-2024-04-30-at-10.41.10.png",
+            "width": 158,
+            "height": 163
+        },
+        "url": "https://blog.n8n.io/author/mihai/",
+        "sameAs": [
+            "https://mihai.ltd",
+            "https://x.com/ltd_mihai"
+        ]
+    },
+    "headline": "We categorized 40 MLOps tools and here&#x27;s what we found!",
+    "url": "https://blog.n8n.io/mlops-tools/",
+    "datePublished": "2024-12-05T11:14:53.000Z",
+    "dateModified": "2025-01-02T10:14:58.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.n8n.io/content/images/size/w1200/2024/11/mlops-8--1-.png",
+        "width": 1200,
+        "height": 675
+    },
+    "keywords": "AI, Guide",
+    "description": "Explore 40 powerful MLOps tools that can streamline your machine learning workflows! From data preparation and model development to deployment and monitoring, this comprehensive guide covers open-source and commercial solutions for every stage of the MLOps lifecycle.",
+    "mainEntityOfPage": "https://blog.n8n.io/mlops-tools/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.119">
+    <link rel="alternate" type="application/rss+xml" title="n8n Blog" href="../rss/index.html">
+    <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.50/umd/portal.min.js" data-i18n="true" data-ghost="https://blog.n8n.io/" data-key="8626993d9b363277120ea42164" data-api="https://n8n-cloud-blog.ghost.io/ghost/api/content/" data-locale="en" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style>
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.5/umd/sodo-search.min.js" data-key="8626993d9b363277120ea42164" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.5/umd/main.css" data-sodo-search="https://n8n-cloud-blog.ghost.io/" data-locale="en" crossorigin="anonymous"></script>
+    
+    <link href="https://blog.n8n.io/webmentions/receive/" rel="webmention">
+    <script defer src="../public/cards.min.js%3Fv=4801f6d1f9"></script>
+    <link rel="stylesheet" type="text/css" href="../public/cards.min.css%3Fv=4801f6d1f9.css">
+    <script defer src="../public/member-attribution.min.js%3Fv=4801f6d1f9"></script><style>:root {--ghost-accent-color: #FD8925;}</style>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<style>
+    .content-banner {
+        display: flex;
+        align-items: center;
+        padding: 25px 30px 29px 120px;
+        gap: 20px;
+        background: url(../content/images/2023/05/banner.svg) no-repeat 0 0;
+        position: relative;
+        overflow: hidden;
+        border-radius: 32px;
+        margin-bottom: 40px;
+    }
+    .content-banner:before {
+        content: '';
+        width: 97px;
+        height: 97px;
+        background: #8287eb;
+        filter: blur(66.7196px);
+        position: absolute;
+        top: -41px;
+        left: -70px;
+    }
+    .content-banner div {
+        flex: 1 1 0%;
+    }
+    .content-banner h3 {
+        font-size: 28px;
+        line-height: 36px;
+        margin: 0;
+    }
+    .content-banner a {
+        flex-shrink: 0;
+    }
+    .content-banner p {
+        margin-bottom: 0;
+        line-height: 24px;
+    }
+    .content-banner .global-button {
+        text-decoration: none;
+        padding: 9px 20px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+</style>
+<!-- cookie consent benner injection-->  
+    <div id="n8n-consent-modal" class="consent-modal consent-modal--hidden">
+      <p class="consent-modal-header">We use analytics</p>
+      <p class="consent-modal-description">
+        We use cookies and other tracking technologies to improve your browsing experience, to analyze our website
+        traffic, assist our marketing efforts and to understand where our visitors are coming from.
+      </p>
+      <a href="https://n8n.io/legal#privacy" class="consent-modal-link">Privacy Policy</a>
+      <div>
+        <button class="consent-modal-button consent-modal-button--decline" onclick="acceptConsent(false)">
+          Decline
+        </button>
+        <button class="consent-modal-button consent-modal-button--agree" onclick="acceptConsent(true)">Agree</button>
+      </div>
+    </div>
+<style>
+      .consent-modal {
+        display: block;
+        padding: 32px 16px;
+        background: #101330;
+        box-shadow: 0px 4px 40px rgba(153, 155, 175, 0.17);
+        width: 100%;
+        position: fixed;
+        z-index: 1000;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        box-sizing: border-box;
+      }
+
+      .consent-modal--hidden {
+        display: none;
+      }
+
+      .consent-modal-link {
+        font-family: 'moderat', sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+        font-style: normal;
+        font-weight: 700;
+        text-decoration-line: underline;
+        color: #e4e6ec;
+        margin-bottom: 16px;
+        display: block;
+      }
+
+      .consent-modal-header,
+      .consent-modal-description {
+        padding: 0;
+        margin: 0 0 16px;
+        font-style: normal;
+      }
+
+      .consent-modal-header {
+        font-family: 'sunset-gothic', 'Sunset Gothic Pro', sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        color: #ffffff;
+      }
+
+      .consent-modal-description {
+        font-family: 'moderat', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #e4e6ec;
+      }
+
+      .consent-modal-button {
+        padding: 9px 20px;
+        border-radius: 6px;
+        font-style: normal;
+        font-weight: 700;
+        text-align: center;
+        color: #ffffff;
+        cursor: pointer;
+        border: none;
+        font-family: 'moderat', sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      .consent-modal-button--decline {
+        margin-right: 10px;
+        background: #40425e;
+      }
+
+      .consent-modal-button--agree {
+        background: #20b69e;
+      }
+
+      @media screen and (min-width: 992px) {
+        .consent-modal {
+          border-radius: 30px;
+          left: unset;
+          right: 14px;
+          bottom: 14px;
+          padding: 48px;
+          max-width: 621px;
+        }
+
+        .consent-modal-header {
+          font-size: 28px;
+          line-height: 36px;
+        }
+
+        .consent-modal-link,
+        .consent-modal-button,
+        .consent-modal-description {
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
+    </style>
+    <script>
+      ;(function () {
+        const GDPR_COUNTRIES = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'GB'];
+        const CONSENT_MODAL_ID = 'n8n-consent-modal';
+        const CONSENT_MODAL_HIDDEN = 'consent-modal--hidden';
+        window.acceptConsent = function (accepted) {
+          const cookie = {
+            consent: accepted
+          };
+          const d = new Date();
+          d.setTime(d.getTime() + 5 * 24 * 60 * 60 * 1000);
+          document.cookie = `n8n-consent=${JSON.stringify(cookie)}; expires=${d.toUTCString()}; path=/; domain=.n8n.io`;
+          const modal = document.getElementById(CONSENT_MODAL_ID);
+          if (modal) {
+            modal.classList.add(CONSENT_MODAL_HIDDEN);
+          }
+        };
+        async function checkCookie() {
+          try {
+            const res = await fetch('https://ipapi.co/json/');
+            const ip = await res.json();
+            const location = ip.country;
+            if (GDPR_COUNTRIES.includes(location) || ip.country_code === 'US' && ip.region_code === 'CA') {
+              var _document$cookie$matc;
+              const cookie = ((_document$cookie$matc = document.cookie.match('(^|;)\\s*' + 'n8n-consent' + '\\s*=\\s*([^;]+)')) === null || _document$cookie$matc === void 0 ? void 0 : _document$cookie$matc.pop()) || '';
+              if (cookie === '') {
+                const modal = document.getElementById(CONSENT_MODAL_ID);
+                if (modal) {
+                  modal.classList.remove(CONSENT_MODAL_HIDDEN);
+                }
+              }
+            } else {
+              acceptConsent(true);
+            }
+          } catch (e) {}
+        }
+        window.addEventListener('DOMContentLoaded', checkCookie);
+      })(window);
+    </script>
+
+<!-- Google Tag Manager (blog.n8n.io) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MQTZKBJ');</script>
+<!-- End Google Tag Manager -->
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/solid.min.css"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<script>
+  !function(e,a,o){"object"==typeof exports?(module.exports=o(),module.exports.default=o()):"function"==typeof define&&define.amd?define(o):a.slugify=o()}(0,this,(function(){var e=JSON.parse('{"$":"dollar","%":"percent","&":"and","<":"less",">":"greater","|":"or","¢":"cent","£":"pound","¤":"currency","¥":"yen","©":"(c)","ª":"a","®":"(r)","º":"o","À":"A","Á":"A","Â":"A","Ã":"A","Ä":"A","Å":"A","Æ":"AE","Ç":"C","È":"E","É":"E","Ê":"E","Ë":"E","Ì":"I","Í":"I","Î":"I","Ï":"I","Ð":"D","Ñ":"N","Ò":"O","Ó":"O","Ô":"O","Õ":"O","Ö":"O","Ø":"O","Ù":"U","Ú":"U","Û":"U","Ü":"U","Ý":"Y","Þ":"TH","ß":"ss","à":"a","á":"a","â":"a","ã":"a","ä":"a","å":"a","æ":"ae","ç":"c","è":"e","é":"e","ê":"e","ë":"e","ì":"i","í":"i","î":"i","ï":"i","ð":"d","ñ":"n","ò":"o","ó":"o","ô":"o","õ":"o","ö":"o","ø":"o","ù":"u","ú":"u","û":"u","ü":"u","ý":"y","þ":"th","ÿ":"y","Ā":"A","ā":"a","Ă":"A","ă":"a","Ą":"A","ą":"a","Ć":"C","ć":"c","Č":"C","č":"c","Ď":"D","ď":"d","Đ":"DJ","đ":"dj","Ē":"E","ē":"e","Ė":"E","ė":"e","Ę":"e","ę":"e","Ě":"E","ě":"e","Ğ":"G","ğ":"g","Ģ":"G","ģ":"g","Ĩ":"I","ĩ":"i","Ī":"i","ī":"i","Į":"I","į":"i","İ":"I","ı":"i","Ķ":"k","ķ":"k","Ļ":"L","ļ":"l","Ľ":"L","ľ":"l","Ł":"L","ł":"l","Ń":"N","ń":"n","Ņ":"N","ņ":"n","Ň":"N","ň":"n","Ō":"O","ō":"o","Ő":"O","ő":"o","Œ":"OE","œ":"oe","Ŕ":"R","ŕ":"r","Ř":"R","ř":"r","Ś":"S","ś":"s","Ş":"S","ş":"s","Š":"S","š":"s","Ţ":"T","ţ":"t","Ť":"T","ť":"t","Ũ":"U","ũ":"u","Ū":"u","ū":"u","Ů":"U","ů":"u","Ű":"U","ű":"u","Ų":"U","ų":"u","Ŵ":"W","ŵ":"w","Ŷ":"Y","ŷ":"y","Ÿ":"Y","Ź":"Z","ź":"z","Ż":"Z","ż":"z","Ž":"Z","ž":"z","Ə":"E","ƒ":"f","Ơ":"O","ơ":"o","Ư":"U","ư":"u","ǈ":"LJ","ǉ":"lj","ǋ":"NJ","ǌ":"nj","Ș":"S","ș":"s","Ț":"T","ț":"t","ə":"e","˚":"o","Ά":"A","Έ":"E","Ή":"H","Ί":"I","Ό":"O","Ύ":"Y","Ώ":"W","ΐ":"i","Α":"A","Β":"B","Γ":"G","Δ":"D","Ε":"E","Ζ":"Z","Η":"H","Θ":"8","Ι":"I","Κ":"K","Λ":"L","Μ":"M","Ν":"N","Ξ":"3","Ο":"O","Π":"P","Ρ":"R","Σ":"S","Τ":"T","Υ":"Y","Φ":"F","Χ":"X","Ψ":"PS","Ω":"W","Ϊ":"I","Ϋ":"Y","ά":"a","έ":"e","ή":"h","ί":"i","ΰ":"y","α":"a","β":"b","γ":"g","δ":"d","ε":"e","ζ":"z","η":"h","θ":"8","ι":"i","κ":"k","λ":"l","μ":"m","ν":"n","ξ":"3","ο":"o","π":"p","ρ":"r","ς":"s","σ":"s","τ":"t","υ":"y","φ":"f","χ":"x","ψ":"ps","ω":"w","ϊ":"i","ϋ":"y","ό":"o","ύ":"y","ώ":"w","Ё":"Yo","Ђ":"DJ","Є":"Ye","І":"I","Ї":"Yi","Ј":"J","Љ":"LJ","Њ":"NJ","Ћ":"C","Џ":"DZ","А":"A","Б":"B","В":"V","Г":"G","Д":"D","Е":"E","Ж":"Zh","З":"Z","И":"I","Й":"J","К":"K","Л":"L","М":"M","Н":"N","О":"O","П":"P","Р":"R","С":"S","Т":"T","У":"U","Ф":"F","Х":"H","Ц":"C","Ч":"Ch","Ш":"Sh","Щ":"Sh","Ъ":"U","Ы":"Y","Ь":"","Э":"E","Ю":"Yu","Я":"Ya","а":"a","б":"b","в":"v","г":"g","д":"d","е":"e","ж":"zh","з":"z","и":"i","й":"j","к":"k","л":"l","м":"m","н":"n","о":"o","п":"p","р":"r","с":"s","т":"t","у":"u","ф":"f","х":"h","ц":"c","ч":"ch","ш":"sh","щ":"sh","ъ":"u","ы":"y","ь":"","э":"e","ю":"yu","я":"ya","ё":"yo","ђ":"dj","є":"ye","і":"i","ї":"yi","ј":"j","љ":"lj","њ":"nj","ћ":"c","ѝ":"u","џ":"dz","Ґ":"G","ґ":"g","Ғ":"GH","ғ":"gh","Қ":"KH","қ":"kh","Ң":"NG","ң":"ng","Ү":"UE","ү":"ue","Ұ":"U","ұ":"u","Һ":"H","һ":"h","Ә":"AE","ә":"ae","Ө":"OE","ө":"oe","Ա":"A","Բ":"B","Գ":"G","Դ":"D","Ե":"E","Զ":"Z","Է":"E\'","Ը":"Y\'","Թ":"T\'","Ժ":"JH","Ի":"I","Լ":"L","Խ":"X","Ծ":"C\'","Կ":"K","Հ":"H","Ձ":"D\'","Ղ":"GH","Ճ":"TW","Մ":"M","Յ":"Y","Ն":"N","Շ":"SH","Չ":"CH","Պ":"P","Ջ":"J","Ռ":"R\'","Ս":"S","Վ":"V","Տ":"T","Ր":"R","Ց":"C","Փ":"P\'","Ք":"Q\'","Օ":"O\'\'","Ֆ":"F","և":"EV","ء":"a","آ":"aa","أ":"a","ؤ":"u","إ":"i","ئ":"e","ا":"a","ب":"b","ة":"h","ت":"t","ث":"th","ج":"j","ح":"h","خ":"kh","د":"d","ذ":"th","ر":"r","ز":"z","س":"s","ش":"sh","ص":"s","ض":"dh","ط":"t","ظ":"z","ع":"a","غ":"gh","ف":"f","ق":"q","ك":"k","ل":"l","م":"m","ن":"n","ه":"h","و":"w","ى":"a","ي":"y","ً":"an","ٌ":"on","ٍ":"en","َ":"a","ُ":"u","ِ":"e","ْ":"","٠":"0","١":"1","٢":"2","٣":"3","٤":"4","٥":"5","٦":"6","٧":"7","٨":"8","٩":"9","پ":"p","چ":"ch","ژ":"zh","ک":"k","گ":"g","ی":"y","۰":"0","۱":"1","۲":"2","۳":"3","۴":"4","۵":"5","۶":"6","۷":"7","۸":"8","۹":"9","฿":"baht","ა":"a","ბ":"b","გ":"g","დ":"d","ე":"e","ვ":"v","ზ":"z","თ":"t","ი":"i","კ":"k","ლ":"l","მ":"m","ნ":"n","ო":"o","პ":"p","ჟ":"zh","რ":"r","ს":"s","ტ":"t","უ":"u","ფ":"f","ქ":"k","ღ":"gh","ყ":"q","შ":"sh","ჩ":"ch","ც":"ts","ძ":"dz","წ":"ts","ჭ":"ch","ხ":"kh","ჯ":"j","ჰ":"h","Ṣ":"S","ṣ":"s","Ẁ":"W","ẁ":"w","Ẃ":"W","ẃ":"w","Ẅ":"W","ẅ":"w","ẞ":"SS","Ạ":"A","ạ":"a","Ả":"A","ả":"a","Ấ":"A","ấ":"a","Ầ":"A","ầ":"a","Ẩ":"A","ẩ":"a","Ẫ":"A","ẫ":"a","Ậ":"A","ậ":"a","Ắ":"A","ắ":"a","Ằ":"A","ằ":"a","Ẳ":"A","ẳ":"a","Ẵ":"A","ẵ":"a","Ặ":"A","ặ":"a","Ẹ":"E","ẹ":"e","Ẻ":"E","ẻ":"e","Ẽ":"E","ẽ":"e","Ế":"E","ế":"e","Ề":"E","ề":"e","Ể":"E","ể":"e","Ễ":"E","ễ":"e","Ệ":"E","ệ":"e","Ỉ":"I","ỉ":"i","Ị":"I","ị":"i","Ọ":"O","ọ":"o","Ỏ":"O","ỏ":"o","Ố":"O","ố":"o","Ồ":"O","ồ":"o","Ổ":"O","ổ":"o","Ỗ":"O","ỗ":"o","Ộ":"O","ộ":"o","Ớ":"O","ớ":"o","Ờ":"O","ờ":"o","Ở":"O","ở":"o","Ỡ":"O","ỡ":"o","Ợ":"O","ợ":"o","Ụ":"U","ụ":"u","Ủ":"U","ủ":"u","Ứ":"U","ứ":"u","Ừ":"U","ừ":"u","Ử":"U","ử":"u","Ữ":"U","ữ":"u","Ự":"U","ự":"u","Ỳ":"Y","ỳ":"y","Ỵ":"Y","ỵ":"y","Ỷ":"Y","ỷ":"y","Ỹ":"Y","ỹ":"y","–":"-","‘":"\'","’":"\'","“":"\\"","”":"\\"","„":"\\"","†":"+","•":"*","…":"...","₠":"ecu","₢":"cruzeiro","₣":"french franc","₤":"lira","₥":"mill","₦":"naira","₧":"peseta","₨":"rupee","₩":"won","₪":"new shequel","₫":"dong","€":"euro","₭":"kip","₮":"tugrik","₯":"drachma","₰":"penny","₱":"peso","₲":"guarani","₳":"austral","₴":"hryvnia","₵":"cedi","₸":"kazakhstani tenge","₹":"indian rupee","₺":"turkish lira","₽":"russian ruble","₿":"bitcoin","℠":"sm","™":"tm","∂":"d","∆":"delta","∑":"sum","∞":"infinity","♥":"love","元":"yuan","円":"yen","﷼":"rial","ﻵ":"laa","ﻷ":"laa","ﻹ":"lai","ﻻ":"la"}'),a=JSON.parse('{"bg":{"Й":"Y","Ц":"Ts","Щ":"Sht","Ъ":"A","Ь":"Y","й":"y","ц":"ts","щ":"sht","ъ":"a","ь":"y"},"de":{"Ä":"AE","ä":"ae","Ö":"OE","ö":"oe","Ü":"UE","ü":"ue","ß":"ss","%":"prozent","&":"und","|":"oder","∑":"summe","∞":"unendlich","♥":"liebe"},"es":{"%":"por ciento","&":"y","<":"menor que",">":"mayor que","|":"o","¢":"centavos","£":"libras","¤":"moneda","₣":"francos","∑":"suma","∞":"infinito","♥":"amor"},"fr":{"%":"pourcent","&":"et","<":"plus petit",">":"plus grand","|":"ou","¢":"centime","£":"livre","¤":"devise","₣":"franc","∑":"somme","∞":"infini","♥":"amour"},"pt":{"%":"porcento","&":"e","<":"menor",">":"maior","|":"ou","¢":"centavo","∑":"soma","£":"libra","∞":"infinito","♥":"amor"},"uk":{"И":"Y","и":"y","Й":"Y","й":"y","Ц":"Ts","ц":"ts","Х":"Kh","х":"kh","Щ":"Shch","щ":"shch","Г":"H","г":"h"},"vi":{"Đ":"D","đ":"d"},"da":{"Ø":"OE","ø":"oe","Å":"AA","å":"aa","%":"procent","&":"og","|":"eller","$":"dollar","<":"mindre end",">":"større end"},"nb":{"&":"og","Å":"AA","Æ":"AE","Ø":"OE","å":"aa","æ":"ae","ø":"oe"},"it":{"&":"e"},"nl":{"&":"en"},"sv":{"&":"och","Å":"AA","Ä":"AE","Ö":"OE","å":"aa","ä":"ae","ö":"oe"}}');function o(o,n){if("string"!=typeof o)throw new Error("slugify: string argument expected");var r=a[(n="string"==typeof n?{replacement:n}:n||{}).locale]||{},i=void 0===n.replacement?"-":n.replacement,t=void 0===n.trim||n.trim,u=o.normalize().split("").reduce((function(a,o){var t=r[o];return void 0===t&&(t=e[o]),void 0===t&&(t=o),t===i&&(t=" "),a+t.replace(n.remove||/[^\w\s$*_+~.()'"!\-:@]+/g,"")}),"");return n.strict&&(u=u.replace(/[^A-Za-z0-9\s]/g,"")),t&&(u=u.trim()),u=u.replace(/\s+/g,i),n.lower&&(u=u.toLowerCase()),u}return o.extend=function(a){Object.assign(e,a)},o}));
+</script>
+
+<style>
+  .content-banner {
+    display: flex;
+    align-items: center;
+    padding: 25px 30px 29px 120px;
+    gap: 20px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="149" height="162" fill="none" viewBox="0 0 149 162"><path stroke="%23997D00" stroke-width="2.799" d="M103.712 197.478s52.843-38.509-53.147-47.372"/><path stroke="%23484C99" stroke-width="2.799" d="M55.914 42.86c-57.712 2.444-108.25 97.476-2.26 106.339M69.258 38.473C99.64 30.633 155 3.5 103.5-4"/><path stroke="%23DDBB1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m73.595 134.165-5.161 28.726a4.864 4.864 0 0 1-5.648 3.928l-28.727-5.162a4.864 4.864 0 0 1-3.928-5.648l5.162-28.727a4.864 4.864 0 0 1 5.648-3.927l28.727 5.161a4.865 4.865 0 0 1 3.927 5.649Z"/><path stroke="%23DDBB1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m34.059 161.657 27.13 4.875-.286 1.596a5.171 5.171 0 0 1-.182.692l-.087.256a3.396 3.396 0 0 1-.19.411l-.017.096-.19.328-.185.247-.09.132-.245.269-.064.079-.189.181-.158.144-.161.119a4.821 4.821 0 0 1-3.89.974l-28.727-5.162a4.878 4.878 0 0 1-3.15-2.041l7.53-5.236a4.856 4.856 0 0 0 3.15 2.04ZM31.042 128.751c.148-.048.298-.087.45-.117l.055.01c.137-.025.265-.052.408-.067.04.004.08.011.12.021.111.021.234-.023.35-.027.076.009.15.023.224.04.088.016.167.03.255.005.163.021.325.05.486.087l1.596.287-4.855 27.019a4.865 4.865 0 0 0 .777 3.608l-7.53 5.236a4.863 4.863 0 0 1-.777-3.607l5.161-28.727a4.866 4.866 0 0 1 2.04-3.151 5.08 5.08 0 0 1 1.237-.601l.003-.016Z"/><path stroke="%23DDBB1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m62.935 133.896-29.525-5.304a4.863 4.863 0 0 0-3.607.777l7.598-5.291a4.87 4.87 0 0 1 3.54-.723l28.727 5.162c3.99.717-.35 6.527-6.733 5.379Z"/><path stroke="%23DDBB1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="M73.595 134.165c-.915 4.777-5.161 28.727-5.161 28.727a4.81 4.81 0 0 1-2.013 3.131l-7.53 5.236a4.806 4.806 0 0 0 2.012-3.131l5.305-29.525c1.147-6.383 8.248-9.226 7.387-4.438Z"/><rect width="38.918" height="38.918" fill="%23FAE166" stroke="%23DDBB1A" stroke-width="2.799" rx="5.599" transform="scale(1 -1) rotate(79.814 133.4 -50.56)"/><rect width="3.073" height="3.012" fill="%23DDBB1A" rx=".7" transform="matrix(-.571 -.821 -.821 .571 67.951 135.654)"/><rect width="1.621" height="3.243" fill="%23DDBB1A" rx=".7" transform="matrix(-.571 -.821 -.821 .571 35.667 127.491)"/><rect width="1.621" height="1.793" fill="%23DDBB1A" rx=".7" transform="matrix(-.571 -.821 -.821 .571 72.876 131.293)"/><path stroke="%236E72E0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m77.366 14.145 8.49 27.925a4.864 4.864 0 0 1-3.238 6.069l-27.925 8.49a4.865 4.865 0 0 1-6.07-3.239l-8.49-27.924a4.864 4.864 0 0 1 3.24-6.07l27.924-8.49a4.865 4.865 0 0 1 6.07 3.24Z"/><path stroke="%236E72E0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m54.693 56.63 26.373-8.02.472 1.552a5.2 5.2 0 0 1 .153.699l.04.268c.015.15.022.3.018.452l.028.093-.02.379-.052.303-.02.159-.096.351-.02.1-.087.246-.074.2-.09.18a4.815 4.815 0 0 1-3.02 2.638l-27.924 8.491a4.865 4.865 0 0 1-3.734-.381l4.319-8.092a4.866 4.866 0 0 0 3.734.381ZM37.018 28.71c.11-.11.225-.213.347-.31l.054-.016c.11-.084.212-.166.333-.245a.673.673 0 0 1 .116-.036c.108-.033.198-.128.3-.184.07-.026.143-.048.217-.066a.53.53 0 0 0 .229-.112 4.94 4.94 0 0 1 .473-.144l1.551-.471 7.986 26.264a4.864 4.864 0 0 0 2.335 2.858l-4.32 8.092a4.864 4.864 0 0 1-2.334-2.858l-8.49-27.924a4.866 4.866 0 0 1 .381-3.735c.224-.402.503-.771.827-1.098l-.005-.016Z"/><path stroke="%236E72E0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m67.754 18.762-28.7 8.727a4.865 4.865 0 0 0-2.858 2.335l4.354-8.171a4.865 4.865 0 0 1 2.822-2.256l27.925-8.49c3.879-1.18 2.662 5.968-3.543 7.855Z"/><path stroke="%236E72E0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="M77.366 14.145c1.362 4.67 8.49 27.925 8.49 27.925a4.816 4.816 0 0 1-.364 3.704l-4.32 8.092a4.817 4.817 0 0 0 .366-3.704l-8.726-28.7c-1.887-6.206 3.14-11.97 4.554-7.317Z"/><rect width="38.918" height="38.918" fill="%238287EB" stroke="%236E72E0" stroke-width="2.799" rx="5.599" transform="scale(-1 1) rotate(-73.088 -4.498 83.371)"/><rect width="1.621" height="3.243" fill="%236E72E0" rx=".7" transform="matrix(-.8822 -.4708 -.4708 .8822 84.062 48.371)"/><rect width="3.073" height="3.012" fill="%236E72E0" rx=".7" transform="matrix(-.8822 -.4708 -.4708 .8822 73.02 18.042)"/><rect width="1.621" height="3.243" fill="%236E72E0" rx=".7" transform="matrix(-.8822 -.4708 -.4708 .8822 40.562 25.48)"/><rect width="1.621" height="1.793" fill="%236E72E0" rx=".7" transform="matrix(-.8822 -.4708 -.4708 .8822 75.418 11.917)"/><path stroke="%23484C99" stroke-width=".35" d="M88.94 52.813 75.834 9.709 32.73 22.814l13.106 43.104z"/></svg>')
+      no-repeat 0 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 32px;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .content-banner {
+      flex-direction: column;
+      background: none;
+      padding-left: 30px;
+      text-align: center;
+    }
+
+    .content-banner:before {
+      display: none;
+    }
+  }
+
+  .content-banner:before {
+    content: "";
+    width: 97px;
+    height: 97px;
+    background: #8287eb;
+    filter: blur(66.7196px);
+    position: absolute;
+    top: -41px;
+    left: -70px;
+  }
+  .content-banner div {
+    flex: 1 1 0%;
+  }
+  .content-banner h3 {
+    font-size: 28px;
+    line-height: 36px;
+    margin: 0;
+  }
+  .content-banner a {
+    flex-shrink: 0;
+  }
+  .content-banner p {
+    margin-bottom: 0;
+    line-height: 24px;
+  }
+  .content-banner .global-button {
+    text-decoration: none;
+    padding: 9px 20px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .content-banner--centered {
+    flex-direction: column;
+    background: none;
+    border-radius: 0;
+    padding-left: 30px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+  .content-banner--centered:before {
+    content: "";
+    width: 168px;
+    height: 168px;
+    background: #20b69e;
+    opacity: 0.7;
+    filter: blur(62.4716px);
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .content-banner--centered .global-button {
+    color: #101330 !important;
+    border: 2px solid #20b69e;
+  }
+  .content-banner--centered .global-button:before,
+  .content-banner--centered .global-button:after {
+    background: #fff;
+  }
+  @media screen and (max-width: 1023px) {
+    .content-banner--centered:before {
+      display: block;
+    }
+  }
+  .workflow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  .workflow-content {
+    display: flex;
+    flex: 1 1 0%;
+  }
+  .workflow-nodes {
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .workflow-nodes img {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .workflow-nodes .fa {
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+  .workflow-nodes span {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background: #e4e6ec;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #101330;
+  }
+  .workflow-details {
+    margin-right: 18px;
+  }
+  .workflow-details p {
+    margin: 0;
+  }
+  .workflow .workflow-details-name {
+    color: #101330;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+  }
+  .workflow .workflow-details-name a {
+    text-decoration: none;
+  }
+  .workflow .workflow-details-name a:hover {
+    text-decoration: underline;
+  }
+  .workflow .workflow-details-stats {
+    font-size: 14px;
+    line-height: 18px;
+    color: #707183;
+  }
+  .workflow .global-button {
+    text-decoration: none;
+    padding: 9px 20px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .workflows h3 {
+    margin-bottom: 30px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .workflows .workflow {
+    border-bottom: 1px solid #E0E0EB;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-bottom: 20px;
+  }
+  .workflows .workflow-content {
+    flex-direction: column;
+  }
+  .workflows .workflow-nodes {
+    margin-bottom: 12px;
+  }
+  .workflows .workflow-nodes span,
+  .workflows .workflow-nodes img {
+    width: 32px;
+    height: 32px;
+  }
+  .workflows .workflow-nodes .fa {
+    font-size: 32px;
+  }
+  .workflows .workflow .workflow-details-name {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 5px;
+  }
+  .workflows .workflow-details-stats span {
+    margin: 0 4px;
+    display: inline-block;
+  }
+  .workflows-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .workflows-button .global-button {
+    color: #101330 !important;
+    border: 2px solid #20b69e;
+    text-decoration: none;
+    padding: 9px 20px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .workflows-button .global-button:before,
+  .workflows-button .global-button:after {
+    background: #fff;
+  }
+
+  @media screen and (max-width: 670px) {
+    .workflow-nodes {
+      display: none;
+    }
+    .workflow {
+      flex-direction: column;
+      align-items: start;
+    }
+    .workflow .global-button {
+      margin-top: 10px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .workflow-nodes {
+      flex-wrap: wrap;
+    }
+  }
+</style>
+<style>
+    .grecaptcha-badge { visibility: hidden !important; }
+</style>
+<script>
+const timeSince = (date) => {
+  const seconds = Math.floor((new Date() - new Date(date)) / 1000);
+  let interval = seconds / 31536000;
+  if (interval > 1) {
+    const roundedInterval = Math.floor(interval);
+    return roundedInterval === 1
+      ? roundedInterval + " year"
+      : roundedInterval + " years";
+  }
+  interval = seconds / 2592000;
+  if (interval > 1) {
+    const roundedInterval = Math.floor(interval);
+    return roundedInterval === 1
+      ? roundedInterval + " month"
+      : roundedInterval + " months";
+  }
+
+  interval = seconds / 86400;
+  if (interval > 1) {
+    const roundedInterval = Math.floor(interval);
+    return roundedInterval === 1
+      ? roundedInterval + " day"
+      : roundedInterval + " days";
+  }
+  interval = seconds / 3600;
+  if (interval > 1) {
+    const roundedInterval = Math.floor(interval);
+    return roundedInterval === 1
+      ? roundedInterval + " hour"
+      : roundedInterval + " hours";
+  }
+  interval = seconds / 60;
+  if (interval > 1) {
+    const roundedInterval = Math.floor(interval);
+    return roundedInterval === 1
+      ? roundedInterval + " minute"
+      : roundedInterval + " minutes";
+  }
+
+  const roundedInterval = Math.floor(interval);
+  return roundedInterval === 1
+    ? roundedInterval + " second"
+    : roundedInterval + " seconds";
+};
+const getSingleWorkflowTemplate = (
+  { name, user, nodes, url, views, createdAt },
+  extended = false,
+  texts
+) => {
+  if (name && user) {
+    const IMAGES_PER_PAGE = 5;
+    const workflowDiv = document.createElement("div");
+    const images = [];
+
+    nodes.forEach((node) => {
+      const { icon, name, color } = node;
+
+      if (icon.type === "icon") {
+        const styles = color ? `style="color:${color}"` : "";
+        images.push(`
+          <i class="fa fa-${icon.icon}" aria-hidden="true" ${styles}></i>
+        `);
+      }
+
+      if (icon.type === "file") {
+        images.push(
+          `<img src="https://blog.n8n.io/mlops-tools/${icon.fileBuffer}" alt="${name}" title="${name}" />`
+        );
+      }
+    });
+
+    const description = extended
+      ? `<p class="workflow-details-stats">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" fill="none" viewBox="0 0 12 10"><path fill="#707183" d="M4.94 6.06a1.5 1.5 0 1 1 2.121-2.12 1.5 1.5 0 0 1-2.12 2.12Z"/><path fill="#707183" fill-rule="evenodd" d="M.462 6.143C1.38 7.135 3.294 9.2 6 9.2s4.62-2.065 5.539-3.057a1.703 1.703 0 0 0 0-2.332l-.001-.002C10.703 2.907 8.749.8 6 .8 3.256.8 1.304 2.903.466 3.806l-.004.005a1.703 1.703 0 0 0 0 2.332ZM3.77 3.305c.689-.38 1.447-.62 2.23-.705a5.88 5.88 0 0 1 3.972 2.17.301.301 0 0 1 0 .414A5.88 5.88 0 0 1 6 7.4 6.216 6.216 0 0 1 1.996 5.24a.3.3 0 0 1-.01-.423A5.937 5.937 0 0 1 3.77 3.305Z" clip-rule="evenodd"/></svg>
+          ${
+            views || 0
+          } <span>•</span> <strong>by ${user}</strong> <span>•</span> ${timeSince(
+          createdAt
+        )}
+        </p>`
+      : `<p class="workflow-details-stats">by ${user}</p>`;
+
+    workflowDiv.classList.add("workflow");
+    workflowDiv.innerHTML = `
+      <div class="workflow-content">
+        <div class="workflow-nodes">
+          ${images.slice(0, IMAGES_PER_PAGE).join("")}
+          ${
+            images.length - IMAGES_PER_PAGE > 0
+              ? `<span>+${images.length - IMAGES_PER_PAGE}</span>`
+              : ""
+          }
+        </div>
+        <div class="workflow-details">
+          <p class="workflow-details-name">
+            <a href="https://blog.n8n.io/mlops-tools/${url}" class="blog-banner-workflow">${name}</a>
+          </p>
+          ${description}
+        </div>
+      </div>
+      <a href="https://blog.n8n.io/mlops-tools/${url}" class="global-button blog-banner-workflow">
+        ${texts.workflowButtonLabel}
+      </a>
+    `;
+    return workflowDiv;
+  }
+
+  return null;
+};
+
+const getMultiWorkflowTemplate = (workflows, texts) => {
+  const workflowsDiv = document.createElement("div");
+
+  workflowsDiv.classList.add("workflows");
+  workflowsDiv.innerHTML = `
+    <h3>${texts.workflowsHeader}</h3>
+  `;
+
+  workflows.forEach((workflow) => {
+    const template = getSingleWorkflowTemplate(workflow, true, texts);
+    workflowsDiv.insertAdjacentElement("beforeend", template);
+  });
+
+  workflowsDiv.innerHTML = `
+    ${workflowsDiv.innerHTML}
+    <div class="workflows-button">
+      <a href="https://blog.n8n.io/mlops-tools/${texts.workflowsButtonUrl}" class="global-button blog-banner-signup">
+        ${texts.workflowsButtonLabel}
+      </a>
+    </div>
+  `;
+
+  return workflowsDiv;
+};
+
+const parseWorkflowData = (workflowData) => {
+  const { name, username, nodes, views, createdAt } = workflowData.attributes;
+
+  return {
+    name,
+    views,
+    createdAt,
+    user: username,
+    url: `https://n8n.io/workflows/${workflowData.id}-${slugify(name, {
+      strict: true,
+      lower: true,
+    })}/`,
+    nodes: nodes.data.map((node) => {
+      return {
+        icon: node.attributes.iconData,
+        name: node.attributes.displayName,
+        color: node.attributes.defaults.color,
+      };
+    }),
+  };
+};
+
+const convertIdsToQuery = (workflowIds) => {
+  const ids = Array.isArray(workflowIds) ? workflowIds : [workflowIds];
+  return ids.map((id) => `{ id: { eq: ${id} } }`).join(",");
+};
+const fetchWorkflows = async (workflowId) => {
+  try {
+    const res = await fetch("https://api.n8n.io/graphql", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        query: `query {\n workflows(\n pagination: { start: 0, limit: 32 }\n filters: {\n status: { eq: "published" }\n or: [${convertIdsToQuery(
+          workflowId
+        )}]\n }\n ) {\n data {\n id\n attributes {\n name\n views\n createdAt\n username\n nodes {\n data {\n id\n attributes {\n defaults\n displayName\n name\n iconData\n}\n}\n}\n}\n}\n}\n}\n`,
+      }),
+    });
+    const data = await res.json();
+
+    return data.data.workflows.data.map((workflow) =>
+      parseWorkflowData(workflow)
+    );
+  } catch (e) {}
+};
+
+const workflowBanner = async (workflowContainerId, scriptEl, texts) => {
+  const workflows = await fetchWorkflows(workflowContainerId);
+  const txts = Object.assign(
+    {},
+    {
+      workflowButtonLabel: "Use this workflow",
+      workflowsHeader: "Most popular workflows with these integrations",
+      workflowsButtonLabel: "Get started",
+      workflowsButtonUrl: "https://app.n8n.cloud/register",
+    },
+    texts
+  );
+
+  if (workflows.length === 1) {
+    const template = getSingleWorkflowTemplate(workflows[0], false, txts);
+    scriptEl.insertAdjacentElement("afterend", template);
+  } else if (workflows.length > 1) {
+    const template = getMultiWorkflowTemplate(workflows, txts);
+    scriptEl.insertAdjacentElement("afterend", template);
+  }
+};
+
+var submitSubscription = async function() {
+        const token = await grecaptcha.getResponse()
+
+        if (newSubscriptionData && newSubscriptionData.data) {
+          newSubscriptionData.data.token = token
+          const res = await fetch('https://n8n-website-backend-prod.internal.n8n.io/api/newsletter/subscribe', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newSubscriptionData.data)
+          })
+
+          if (newSubscriptionData.onSuccess && res.ok) {
+            newSubscriptionData.onSuccess()
+          } else if (newSubscriptionData.onError) {
+            newSubscriptionData.onError()
+          }
+
+          window.newSubscriptionData = null
+        }
+      }
+
+const subscribeNewsletter = async (e) => {
+    e.preventDefault();
+
+    const newsletterMailFormat = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+    const ERROR_CLASS = 'error';
+    const SUCCESS_CLASS = 'success';
+    const SHOW_MESSAGE_CLASS = 'show';
+
+    const form = e.target;
+    const emailField = form.querySelector('input[name=email]');
+    const success = form.querySelector('.message--success');
+    const error = form.querySelector('.message--error');
+
+    emailField.setCustomValidity('Please insert a valid email address.');
+    emailField.disabled = true;
+    emailField.classList.remove(ERROR_CLASS);
+
+    success.classList.remove(SHOW_MESSAGE_CLASS);
+    error.classList.remove(SHOW_MESSAGE_CLASS);
+
+    if (!emailField.value.match(newsletterMailFormat)) {
+        emailField.reportValidity();
+        emailField.classList.add(ERROR_CLASS);
+    } else {
+        try {
+            await grecaptcha.execute()
+            const url = new URL(window.location)
+            const urlSource = `${url.origin}${url.pathname}`
+            const utmParams = {
+                utm_source: url.searchParams.get('utm_source') || null,
+                utm_medium: url.searchParams.get('utm_medium') || null,
+                utm_campaign: url.searchParams.get('utm_campaign') || null
+            }
+            const data = {
+                email: emailField.value,
+                created_at: Math.floor(new Date().getTime() / 1000),
+                newsletter_subscriber: true,
+                url_source: urlSource,
+                ...Object.fromEntries(Object.entries(utmParams).filter(([_, v]) => v !== null))
+            }
+
+            window.newSubscriptionData = {
+                data: data,
+                onSuccess: () => {
+                    success.classList.add(SHOW_MESSAGE_CLASS);
+                    emailField.classList.add(SUCCESS_CLASS);
+                    emailField.setCustomValidity('');
+                    emailField.disabled = false;
+                },
+                onError: () => {
+                    error.classList.add(SHOW_MESSAGE_CLASS);
+                    emailField.classList.add(ERROR_CLASS);
+                    emailField.disabled = false;
+                }
+            }
+        } catch (e) {
+            error.classList.add(SHOW_MESSAGE_CLASS);
+            emailField.classList.add(ERROR_CLASS);
+        }
+    }
+
+    emailField.disabled = false;
+}
+</script>
+<script>
+!function(){let e=function(e){let t=document.createElement("a");return t.href=e.url,t.innerText=e.tag,t},t=function(){let t=window.homePageTags||[],n=document.querySelector(".popular-tags");if(n&&t&&t.length){let r=n.querySelector(".popular-tags-listing");t.forEach(t=>{r.appendChild(e(t))}),n.classList.remove("hidden")}};window.addEventListener("DOMContentLoaded",t)}();
+
+/*
+  example:
+  var homePageTags = [
+    { tag: 'AI', url: '/tag/ai/' },
+    { tag: 'Tutorial', url: '/tag/tutorial/' }
+  ]
+*/
+
+var homePageTags = [
+   { tag: 'AI', url: '/tag/ai/' },
+    { tag: 'Database', url: '/tag/database/' },
+    { tag: 'Marketing automation', url: '/tag/marketing-automation/' },
+    { tag: 'Sales', url: '/tag/sales/' },
+    { tag: 'SecOps', url: '/tag/secops/' },
+    { tag: 'ITOps', url: '/tag/itops/' },
+    { tag: 'Tools Alternatives', url: '/tag/tools-alternatives/' },
+    { tag: 'Bot', url: '/tag/bot/' }
+]
+</script>
+	</head>
+	<body class="post-template tag-ai tag-guide">
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7L9C6X"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		<div class="global-wrap">
+			<div class="global-content">
+				<header class="header-section">
+	<div class="header-wrap">
+		<div class="header-logo is-image">
+			<a href="../index.html" class="is-image"><img src="../content/images/2022/06/n8n-blog.png" alt="n8n Blog"></a>
+		</div>
+		<div class="header-nav">
+			<input id="toggle" class="header-checkbox" type="checkbox">
+			<label class="header-toggle" for="toggle">
+				<span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</span>
+			</label>
+			<nav >
+				<ul>
+<li><a href="https://n8n.io/" >n8n home</a></li>
+<li><a href="../tag/tutorial/index.html" >Tutorials</a></li>
+<li><a href="../tag/guide/index.html" >Guides</a></li>
+<li><a href="../tag/tips/index.html" >Tips</a></li>
+<li><a href="../tag/interview/index.html" >Interviews</a></li>
+<li><a href="../tag/news/index.html" >News</a></li>
+</ul>
+				<ul>
+					<!-- <li class="signin"><a href="https://blog.n8n.io/signin/">Sign in</a></li>
+<li class="signup"><a href="https://blog.n8n.io/signup/" class="global-button">Sign up</a></li>
+ -->
+
+<li class="signin"><a href="https://app.n8n.cloud/">Sign in</a></li>
+<li class="signup"><a href="https://app.n8n.cloud/register" class="global-button">Get started</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>				<main class="global-main">
+					<progress class="post-progress"></progress>
+<article class="post-section">
+	<div class="post-header item is-hero">
+	<div class="item-container">
+		<div class="item-image global-image">
+			<img srcset="../content/images/size/w400/2024/11/mlops-8--1-.png 400w, 
+			../content/images/size/w800/2024/11/mlops-8--1-.pngg 800w,
+		../content/images/size/w1200/2024/11/mlops-8--1-.pngng 1200w,
+	../content/images/size/w1600/2024/11/mlops-8--1-.pngpng 1600w"
+	 sizes="(max-width:480px) 350px, (max-width:1440px) 800px, 1200px"
+	 src="../content/images/size/w1200/2024/11/mlops-8--1-.png"
+	 loading="lazy"
+	 alt="We categorized 40+ MLOps tools and here&#x27;s what we found!">		</div>
+		<div class="item-content">
+			<div class="item-tags global-tags">
+								<a href="../tag/ai/index.html">AI</a><a href="../tag/guide/index.html">Guide</a>
+			</div>
+			<h1 class="item-title">We categorized 40+ MLOps tools and here&#x27;s what we found!</h1>
+			<p class="item-excerpt global-zigzag">
+				<svg role='img' viewBox='0 0 136 24' xmlns='http://www.w3.org/2000/svg'><path d='M1.525 1.525a3.5 3.5 0 014.95 0L20 15.05 33.525 1.525a3.5 3.5 0 014.95 0L52 15.05 65.525 1.525a3.5 3.5 0 014.95 0L84 15.05 97.525 1.525a3.5 3.5 0 014.95 0L116 15.05l13.525-13.525a3.5 3.5 0 014.95 4.95l-16 16a3.5 3.5 0 01-4.95 0L100 8.95 86.475 22.475a3.5 3.5 0 01-4.95 0L68 8.95 54.475 22.475a3.5 3.5 0 01-4.95 0L36 8.95 22.475 22.475a3.5 3.5 0 01-4.95 0l-16-16a3.5 3.5 0 010-4.95z'/></svg>				Explore 40 powerful MLOps tools that can streamline your machine learning workflows! From data preparation and model development to deployment and monitoring, this comprehensive guide covers open-source and commercial solutions for every stage of the MLOps lifecycle.
+			</p>
+			<div class="item-meta global-meta">
+				<div class="item-profile-image">
+					<a href="../author/mihai/index.html" class="global-image">
+						<img src="../content/images/size/w120/2024/04/Screenshot-2024-04-30-at-10.41.10.png" loading="lazy" alt="Mihai Farcas">					</a>
+				</div>
+				<div class="item-authors">
+					<a href="../author/mihai/index.html">Mihai Farcas</a>
+					<div class="item-time">
+						<time datetime="2024-12-05">December 5, 2024</time> ∙ 33 minutes read
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	<div class="post-content">
+		<p>Getting your machine learning models out of the lab and into the real world can be tough. Deploying them, keeping them running smoothly, and making sure they stay accurate are all challenges that need to be solved.</p><p>This is where MLOps comes in.</p><p>MLOps is a set of practices that help you manage the entire lifecycle of your ML models, from development to deployment and beyond. Now, there are a ton of MLOps tools out there, each with its own strengths and quirks. Choosing the right ones for your needs can feel overwhelming.</p><p>That's why we wrote this article - to serve as a guide to the MLOps landscape.</p><p>We'll break down the key things to consider when choosing MLOps tools and give you a rundown of some of the most popular options. We'll also look at what the future holds for MLOps, so you can stay ahead of the curve.</p><p>Without further ado, let's dive into it!</p><h2 id="what-is-mlops-software">What is MLOps software?</h2><p>MLOps software is a suite of tools and practices designed to streamline the deployment, monitoring, and management of machine learning models in production environments, ensuring they perform reliably and efficiently.</p><p>An MLOps platform is made up of several key components that work together to streamline and automate the machine learning lifecycle. These components include:</p><ul><li>A central repository for storing and managing trained machine learning models also called a <strong>model registry</strong></li><li>A <strong>feature store </strong>is a centralized repository for storing and accessing features. Features are the input variables used by machine learning models.</li><li>A database for tracking experiments, model lineage, and other metadata related to machine learning models, also called a <strong>metadata sore</strong>.</li><li>An <strong>orchestration tool</strong>, which is a tool for automating the execution of machine learning workflows, including data preparation, model training, and model deployment.</li><li><strong>Model monitoring</strong> using a tool for tracking the performance of machine learning models in production and detecting issues such as model drift or data drift.</li><li>A <strong>model deployment tool</strong> for deploying machine learning models to production environments, such as cloud platforms or on-premises servers.</li></ul><p>MLOps tools offer several benefits, including:</p><ul><li>Faster development and deployment of ML models,</li><li>Improved collaboration between data scientists and other stakeholders,</li><li>Increased automation of ML tasks,</li><li>Better monitoring and logging of model performance,</li><li>Enhanced reproducibility of ML experiments.</li></ul><p>Now, armed with this knowledge, let's dive into the rich landscape of MLOps tools!</p><h2 id="mlops-tools-landscape">MLOps tools landscape</h2><p>The MLOps landscape is continuously evolving, with new tools and technologies emerging regularly. It is essential to stay updated on the latest advancements and evaluate tools based on specific requirements and compatibility with existing workflows.</p><p>In the following section, we explore the diverse landscape of MLOps tools, categorizing them based on their primary functions and deployment models. Within each stage, the tools are further categorized based on whether they are commercial, open-source or source-available.</p><p>We’ve identified 5 key stages for an end-to-end MLOps workflow:</p><ol><li><strong>Data preparation, </strong>which involves collecting, cleaning, and preparing data for use in machine learning.</li><li><strong>Model development </strong>focuses on creating ML models suitable for the task.</li><li><strong>Model training and retraining</strong> involves using the prepared data, or in the case of retraining, live data, to train the developed ML models.</li><li><strong>Monitoring and evaluation</strong> involves tracking the performance of machine learning models in production. It also involves setting up alerts in response to detected issues.</li><li><strong>Deployment</strong> involves integrating ML models into production systems. This step can involve packaging and containerization of the ML models.</li></ol><p>The tools listed in each category are not exhaustive but represent a selection of popular and effective tools commonly used in MLOps pipelines. It's also important to note that many of these tools don't fit neatly into a single category and may offer complementary or overlapping functionality. In such cases, we've categorized them based on their primary function within the MLOps workflow.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/12/mlops-tools2--1-.png" class="kg-image" alt="Open-source and commercial MLOps tools – n8n Blog" loading="lazy" width="1920" height="2128" srcset="../content/images/size/w600/2024/12/mlops-tools2--1-.png 600w, ../content/images/size/w1000/2024/12/mlops-tools2--1-.png 1000w, ../content/images/size/w1600/2024/12/mlops-tools2--1-.png 1600w, ../content/images/2024/12/mlops-tools2--1-.png 1920w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Open-source and commercial MLOps tools – n8n Blog</span></figcaption></figure><h2 id="end-to-end-mlops-tools-and-platforms">End-to-end MLOps tools and platforms</h2><p>Some tools can be used in multiple, or even all, stages of the MLOps process. These tools are called end-to-end MLOps tools, which we will look at next.</p><h3 id="mlflow">MLflow</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/mlflow.org_.webp" class="kg-image" alt="MLFlow website" loading="lazy" width="2000" height="1286" srcset="../content/images/size/w600/2024/11/mlflow.org_.webp 600w, ../content/images/size/w1000/2024/11/mlflow.org_.webp 1000w, ../content/images/size/w1600/2024/11/mlflow.org_.webp 1600w, ../content/images/size/w2400/2024/11/mlflow.org_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">MLFlow website</span></figcaption></figure><p><strong>License and pricing:</strong> MLflow is an open-source platform licensed under the Apache License 2.0.</p><p><a href="https://mlflow.org/?ref=blog.n8n.io"><u>MLflow</u></a> is a platform for managing the entire machine learning lifecycle. It's a great choice for individuals and small teams that need a flexible and easy-to-use platform for tracking experiments, managing models, and deploying models to various platforms.</p><p>MLflow provides a central repository for managing models, experiments, and metadata. It enables you to track experiments, compare results, and reproduce runs. MLflow also supports packaging models for deployment in various environments and managing their lifecycle.</p><p><strong>Key features:</strong></p><ul><li>Model registry - keep all your models organized and accessible in a central repository.</li><li>Experiment tracking - log parameters, metrics, and artifacts to understand and reproduce your experiments.</li><li>Model packaging- bundle your models and dependencies for easy sharing and deployment.</li><li>Model deployment - straightforward deployment of your models to various platforms.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Perfect for individual developers and small teams who need a versatile tool.</li><li>Projects requiring deployments across various platforms.</li><li>Ideal when flexibility and ease of use are paramount, allowing you to focus on your models, not the tools.</li></ul><h3 id="kubeflow">Kubeflow</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/kubeflow.org_.webp" class="kg-image" alt="Kubeflow website" loading="lazy" width="2000" height="1049" srcset="../content/images/size/w600/2024/11/kubeflow.org_.webp 600w, ../content/images/size/w1000/2024/11/kubeflow.org_.webp 1000w, ../content/images/size/w1600/2024/11/kubeflow.org_.webp 1600w, ../content/images/size/w2400/2024/11/kubeflow.org_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Kubeflow website</span></figcaption></figure><p><strong>License and pricing: </strong>Kubeflow is an open-source platform licensed under the Apache License 2.0.</p><p><a href="https://www.kubeflow.org/?ref=blog.n8n.io"><u>Kubeflow</u></a> is a platform for building and deploying machine learning workflows on Kubernetes and is a solid choice for teams that are already familiar with or needing the scalability of Kubernetes.</p><p>It simplifies the orchestration and management of machine learning workflows on Kubernetes. It provides tools for building and deploying models, tracking experiments, and monitoring performance. Kubeflow also allows you to leverage the scalability and flexibility of Kubernetes for your machine learning workloads.</p><p><strong>Key features:</strong></p><ul><li>Pipelines for building and deploying complex ML workflows.</li><li>Notebook servers for interactive development.</li><li>Model serving for deploying models to production.</li></ul><p><strong>Best use cases:</strong></p><ul><li>A perfect fit for teams already familiar with Kubernetes, leveraging existing infrastructure and expertise.</li><li>Projects requiring scalability.</li><li>Great for organizations that need a platform for complex ML workflows.</li></ul><h3 id="clear-ml">Clear ML</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/clear.ml_.webp" class="kg-image" alt="Clear ML website" loading="lazy" width="2000" height="1049" srcset="../content/images/size/w600/2024/11/clear.ml_.webp 600w, ../content/images/size/w1000/2024/11/clear.ml_.webp 1000w, ../content/images/size/w1600/2024/11/clear.ml_.webp 1600w, ../content/images/size/w2400/2024/11/clear.ml_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Clear ML website</span></figcaption></figure><p><strong>License and pricing: </strong>Clear ML Community Edition<strong> </strong>is open-source and free to use, licensed under the Apache License 2.0. A commercial edition with additional features and support for enterprise users is also available.</p><p><a href="https://clear.ml/?ref=blog.n8n.io"><u>Clear ML</u></a> is an open-source platform that puts collaboration and user experience first. It offers a comprehensive suite of tools for managing machine learning experiments, orchestrating MLOps workflows, and maintaining a model registry.</p><p>With Clear ML, you can track experiments, reproduce results, and easily share findings with your team. It also helps manage and version datasets, ensuring reproducibility and data integrity. Clear ML also supports model deployment to various environments and provides monitoring capabilities to track model performance in production.</p><p><strong>Key features:</strong></p><ul><li>Navigate through experiments, data, and models with ease, making MLOps accessible.</li><li>Track changes to your dataset using data versioning, ensuring reproducibility and understanding the evolution of your data.</li><li>Hyperparameter optimization for tuning model performance.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Teams needing a single solution for experiment management, data management, pipeline orchestration, scheduling, and serving.</li><li>Organizations with a strong emphasis on collaboration.</li><li>Projects requiring a user-friendly platform.</li></ul><h3 id="databricks">Databricks</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/databricks.com_.webp" class="kg-image" alt="Databricks website" loading="lazy" width="2000" height="1049" srcset="../content/images/size/w600/2024/11/databricks.com_.webp 600w, ../content/images/size/w1000/2024/11/databricks.com_.webp 1000w, ../content/images/size/w1600/2024/11/databricks.com_.webp 1600w, ../content/images/size/w2400/2024/11/databricks.com_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Databricks website</span></figcaption></figure><p><strong>License and pricing: </strong>Databricks offers a tiered pricing model based on usage and features.</p><p><a href="https://www.databricks.com/?ref=blog.n8n.io"><u>Databricks</u></a> is a unified data analytics platform that provides a comprehensive suite of tools for data preparation, model development, training, deployment, and monitoring. It's a good choice for teams that need a platform with a strong focus on big data and Apache Spark.</p><p>It simplifies the process of building and deploying machine learning models by providing a managed environment with integrated tools like MLflow for experiment tracking and model management. It also offers features for data versioning, collaboration, and scalable data processig.</p><p><strong>Key features:</strong></p><ul><li>Unified data analytics platform.</li><li>Support for various machine learning frameworks.</li><li>Integration with Apache Spark.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Teams working with big data.</li><li>Projects requiring a unified platform.</li><li>Organizations needing integration with Apache Spark.</li></ul><h3 id="h2oai">h2o.ai</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/h2o.ai_.webp" class="kg-image" alt="h2o.ai website" loading="lazy" width="2000" height="1049" srcset="../content/images/size/w600/2024/11/h2o.ai_.webp 600w, ../content/images/size/w1000/2024/11/h2o.ai_.webp 1000w, ../content/images/size/w1600/2024/11/h2o.ai_.webp 1600w, ../content/images/size/w2400/2024/11/h2o.ai_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">h2o.ai website</span></figcaption></figure><p><strong>License and pricing: </strong>H2O.ai provides an open-source platform with an Apache 2.0 license<strong>. </strong>They also offer commercial and cloud products, typically subscription-based.</p><p><a href="http://h2o.ai/?ref=blog.n8n.io"><u>h2o.ai</u></a> is a leading platform for automated machine learning (AutoML). It offers a comprehensive suite of tools for building and deploying machine learning models with minimal human intervention. It's a good choice for teams that need a platform with a strong focus on AutoML.</p><p>The open-source platform includes tools like H2O, a distributed machine learning platform that supports various algorithms and can be used for a wide range of ML tasks. They also offer commercial products like Driverless AI, which automates many aspects of the machine learning workflow.</p><p><strong>Key features:</strong></p><ul><li>Automatic model selection and tuning.</li><li>Easy-to-use interface.</li><li>Support for various data sources.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Teams with limited machine learning expertise.</li><li>Projects requiring rapid prototyping and deployment.</li><li>Organizations needing a platform for automated machine learning.</li></ul><h3 id="polyaxon">Polyaxon</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/polyaxon.com_.webp" class="kg-image" alt="" loading="lazy" width="2000" height="1049" srcset="../content/images/size/w600/2024/11/polyaxon.com_.webp 600w, ../content/images/size/w1000/2024/11/polyaxon.com_.webp 1000w, ../content/images/size/w1600/2024/11/polyaxon.com_.webp 1600w, ../content/images/size/w2400/2024/11/polyaxon.com_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Polyaxon website</span></figcaption></figure><p><strong>License and pricing: </strong>The is open-source and free to use, licensed under the Apache License 2.0. A commercial edition with additional features and support for enterprise users is also available.</p><p><a href="https://polyaxon.com/?ref=blog.n8n.io"><u>Polyaxon</u></a> is a flexible and customizable platform for managing the machine learning lifecycle. It's a good choice for teams that need a platform with a strong focus on flexibility and customization.</p><p>Polyaxon allows you to automate and orchestrate machine learning workflows, making it easier to manage complex ML pipelines. It also provides tools for experiment tracking, model versioning, and collaboration, enabling teams to work together more effectively on ML projects.</p><p><strong>Key features:</strong></p><ul><li>Customizable workflows.</li><li>Support for various machine learning frameworks.</li><li>Integration with popular tools and services.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Teams with specific workflow requirements.</li><li>Projects needing integration with existing tools.</li><li>Organizations requiring a high degree of customization.</li></ul><h3 id="dataiku">Dataiku</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/dataiku.com_.webp" class="kg-image" alt="Dataiku website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/dataiku.com_.webp 600w, ../content/images/size/w1000/2024/11/dataiku.com_.webp 1000w, ../content/images/size/w1600/2024/11/dataiku.com_.webp 1600w, ../content/images/size/w2400/2024/11/dataiku.com_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Dataiku website</span></figcaption></figure><p><strong>License and pricing:</strong> Dataiku offers a tiered pricing model with different editions to cater to various needs and organization sizes.</p><p><a href="https://www.dataiku.com/?ref=blog.n8n.io"><u>Dataiku </u></a>is an end-to-end platform designed to make data science and machine learning more accessible and collaborative across organizations. It provides a visual and code-based environment where users can prepare data, build and train models, and deploy them into production.</p><p>Dataiku emphasizes collaboration and aims to bridge the gap between data scientists, data engineers, and business analysts. It offers a range of features for data preparation, model development, and MLOps, making it a comprehensive solution for managing the entire machine learning lifecycle.</p><p><strong>Key features:</strong></p><ul><li>Visual and code-based interface for data science and machine learning.</li><li>Collaboration features.</li><li>An end-to-end platform for managing the entire machine learning lifecycle.</li><li>Support for various data sources and machine learning frameworks.</li><li>Tools for data preparation, model development, and deployment.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Building and deploying machine learning models in a collaborative environment.</li><li>Data preparation and feature engineering for machine learning.</li><li>MLOps for managing and monitoring models in production.</li><li>Data exploration and visualization for data analysis.</li></ul><h3 id="digitalocean-paperspace">DigitalOcean Paperspace</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/paperspace.com_.webp" class="kg-image" alt="DigitalOcean Paperspace website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/paperspace.com_.webp 600w, ../content/images/size/w1000/2024/11/paperspace.com_.webp 1000w, ../content/images/size/w1600/2024/11/paperspace.com_.webp 1600w, ../content/images/size/w2400/2024/11/paperspace.com_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">DigitalOcean Paperspace website</span></figcaption></figure><p><strong>License and pricing:</strong> Paperspace, now part of DigitalOcean, has different subscription tiers based on usage and features. It also offers on-demand compune at affordable pricing.</p><p>DigitalOcean is a cloud provider that offers a wide range of infrastructure and services suitable for MLOps, including those previously offered by Paperspace. They provide virtual machines (VMs) with various configurations, including GPUs, which are crucial for training and running machine learning models.</p><p><a href="https://www.paperspace.com/?ref=blog.n8n.io" rel="noreferrer">Paperspace</a>, now integrated into DigitalOcean, enhances the platform's MLOps capabilities. It provides tools like Notebooks, Deployments, Workflows, and Machines, specifically designed for developing, training, and deploying AI applications. It is a good choice for teams that need a platform with a strong focus on affordability and ease of use.</p><p><strong>Key features:</strong></p><ul><li>Wide range of VMs with different configurations, including GPUs.</li><li>Flexible pricing models based on usage.</li><li>Paperspace tools like Notebooks, Deployments, Workflows, and Machines for MLOps</li><li>Control over your MLOps infrastructure and environment</li></ul><p><strong>Best use cases:</strong></p><ul><li>Training and running machine learning models on VMs with GPUs.</li><li>Building and managing a cost-effective MLOps environment.</li></ul><h3 id="amazon-sagemaker">Amazon SageMaker</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/AWSAMA-1.webp" class="kg-image" alt="Amazon AWS SageMaker website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/AWSAMA-1.webp 600w, ../content/images/size/w1000/2024/11/AWSAMA-1.webp 1000w, ../content/images/size/w1600/2024/11/AWSAMA-1.webp 1600w, ../content/images/size/w2400/2024/11/AWSAMA-1.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Amazon AWS SageMaker website</span></figcaption></figure><p><strong>License and pricing: </strong>Amazon SageMaker is a commercial product with a pay-as-you-go pricing model.</p><p><a href="https://aws.amazon.com/pm/sagemaker?ref=blog.n8n.io"><u>Amazon SageMaker</u></a> is a fully managed platform for building, training, and deploying machine learning models. It's a good choice for teams that are already using AWS or that need a platform that can integrate with other AWS services.</p><p><strong>Key features:</strong></p><ul><li>Fully managed infrastructure.</li><li>Wide range of tools and workflows.</li><li>Integration with other AWS services.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Teams already using AWS.</li><li>Projects requiring a fully managed solution.</li><li>Organizations needing integration with AWS services.</li></ul><h3 id="google-cloud-vertex-ai-platform">Google Cloud Vertex AI Platform</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/cloud.google.com_vertex-ai_hl-en.webp" class="kg-image" alt="Google Cloud Vertex AI Platform website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/cloud.google.com_vertex-ai_hl-en.webp 600w, ../content/images/size/w1000/2024/11/cloud.google.com_vertex-ai_hl-en.webp 1000w, ../content/images/size/w1600/2024/11/cloud.google.com_vertex-ai_hl-en.webp 1600w, ../content/images/size/w2400/2024/11/cloud.google.com_vertex-ai_hl-en.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Google Cloud Vertex AI Platform website</span></figcaption></figure><p><strong>License and pricing: </strong>Google Cloud Vertex AI Platform is a commercial product with a pay-as-you-go pricing model.</p><p><a href="https://cloud.google.com/vertex-ai?ref=blog.n8n.io"><u>Google Cloud Vertex AI Platform</u></a> is a unified platform for building and deploying machine learning models. It's a good choice for teams that are already using Google Cloud or that need a platform that can integrate with other Google Cloud services.</p><p><strong>Key features:</strong></p><ul><li>Unified platform for building and deploying models.</li><li>Support for various machine learning frameworks.</li><li>Integration with other Google Cloud services.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Teams already using Google Cloud.</li><li>Projects requiring a unified platform.</li><li>Organizations needing integration with Google Cloud services.</li></ul><h3 id="azure-machine-learning">Azure Machine Learning</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/azure.microsoft.com_en-us_products_machine-learning.webp" class="kg-image" alt="Azure Machine Learning website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/azure.microsoft.com_en-us_products_machine-learning.webp 600w, ../content/images/size/w1000/2024/11/azure.microsoft.com_en-us_products_machine-learning.webp 1000w, ../content/images/size/w1600/2024/11/azure.microsoft.com_en-us_products_machine-learning.webp 1600w, ../content/images/size/w2400/2024/11/azure.microsoft.com_en-us_products_machine-learning.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Azure Machine Learning website</span></figcaption></figure><p><strong>License and pricing: </strong>Azure Machine Learning is a commercial product with a pay-as-you-go pricing model.</p><p><a href="https://azure.microsoft.com/en-us/products/machine-learning?ref=blog.n8n.io"><u>Azure Machine Learning</u></a> is an enterprise-grade platform for building, training, and deploying machine learning models. It's a good choice for teams that are already using Azure or that need a platform that can integrate with other Azure services.</p><p><strong>Key features:</strong></p><ul><li>Enterprise-grade features and support.</li><li>Scalable and reliable infrastructure.</li><li>Integration with other Azure services.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Teams already using Azure.</li><li>Projects requiring enterprise-grade features.</li><li>Organizations needing integration with Azure services.</li></ul><h4 id="ibm-watson-studio">IBM Watson Studio</h4><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/ibm.com_products_watson-studio.webp" class="kg-image" alt="IBM Watson Studio website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/ibm.com_products_watson-studio.webp 600w, ../content/images/size/w1000/2024/11/ibm.com_products_watson-studio.webp 1000w, ../content/images/size/w1600/2024/11/ibm.com_products_watson-studio.webp 1600w, ../content/images/size/w2400/2024/11/ibm.com_products_watson-studio.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">IBM Watson Studio website</span></figcaption></figure><p><strong>License and pricing:</strong> IBM offers commercial licenses with varying features, usage limits, and support levels.</p><p><a href="https://www.ibm.com/products/watson-studio/modelops?ref=blog.n8n.io"><u>IBM Watson Studio</u></a> is a comprehensive platform for building, training, and deploying machine learning models. It's a good choice for teams that need a platform with a strong focus on enterprise-grade features and support.</p><p><strong>Key features:</strong></p><ul><li>Wide range of tools and services.</li><li>Support for various machine learning frameworks.</li><li>Enterprise-grade features and support.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Teams needing a comprehensive platform.</li><li>Projects requiring enterprise-grade features.</li><li>Organizations with a strong emphasis on support.</li></ul><h2 id="data-wrangling-etl-pipeline-tools">Data wrangling, ETL pipeline tools</h2><p>Data wrangling and ETL pipelines are the backbone of any MLOps workflow, ensuring that data is properly prepared and transformed for machine learning tasks. This section explores some of the specialized tools that can help you streamline these processes.</p><h3 id="meltano">Meltano</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/meltano.com_.webp" class="kg-image" alt="Meltano website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/meltano.com_.webp 600w, ../content/images/size/w1000/2024/11/meltano.com_.webp 1000w, ../content/images/size/w1600/2024/11/meltano.com_.webp 1600w, ../content/images/size/w2400/2024/11/meltano.com_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Meltano website</span></figcaption></figure><p><strong>License and pricing:</strong> Meltano is open-source, licensed under the Apache License 2.0.</p><p><a href="https://meltano.com/?ref=blog.n8n.io"><u>Meltano </u></a>is a free, open-source DataOps platform that provides a command-line interface (CLI) for building data pipelines. It emphasizes a code-first approach, allowing developers to define and manage their data pipelines using YAML configuration files. This approach enables version control, reproducibility, and easier collaboration within data teams.&nbsp;</p><p>Meltano supports a wide range of data sources and destinations (extractors and loaders) through its integration with Singer, an open-source standard for data extraction. It also allows for the incorporation of data transformation tools like dbt, enabling end-to-end data pipeline management within a single, unified framework.</p><p><strong>Key features:</strong></p><ul><li>Code-first approach using YAML for defining data pipelines.</li><li>Integration with Singer for a wide range of data sources and destinations.</li><li>Support for dbt for data transformation.</li><li>Command-line interface for managing and running pipelines.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Building and managing data pipelines as code.</li><li>Extracting data from various sources and loading it into different destinations.</li><li>Implementing data transformation and modeling using dbt.</li><li>Versioning and collaborating on data pipelines.</li></ul><h3 id="kedro">Kedro</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/kedro.org_.webp" class="kg-image" alt="Kedro website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/kedro.org_.webp 600w, ../content/images/size/w1000/2024/11/kedro.org_.webp 1000w, ../content/images/size/w1600/2024/11/kedro.org_.webp 1600w, ../content/images/size/w2400/2024/11/kedro.org_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Kedro website</span></figcaption></figure><p><strong>License and pricing:</strong> Kedro is open-source and licensed under the Apache 2.0 license.</p><p><a href="https://kedro.org/?ref=blog.n8n.io"><u>Kedro</u></a> is a Python framework that helps data scientists create reproducible, maintainable, and modular data science code. It borrows concepts from software engineering and applies them to machine learning projects, providing a standardized structure and best practices for building data pipelines.</p><p>Kedro helps structure data science projects by providing a clear and consistent framework for organizing code, data, and configurations. This makes it easier for teams to collaborate and maintain projects over time. It also simplifies the process of transitioning from development to production by encouraging the creation of reproducible and modular pipelines.</p><p><strong>Key features:</strong></p><ul><li>Provides a standardized project structure for data science projects.</li><li>Encourages modularity and reusability of code.</li><li>Facilitates data versioning and pipeline tracking.</li><li>Offers tools for data cataloging and pipeline visualization.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Building and managing complex data pipelines.</li><li>Improving collaboration and code maintainability in data science teams.</li><li>Creating reproducible and deployable machine learning models.</li><li>Transitioning data science projects from development to production.</li></ul><h3 id="airbyte">Airbyte</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/airbyte.com_.webp" class="kg-image" alt="Airbyte website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/airbyte.com_.webp 600w, ../content/images/size/w1000/2024/11/airbyte.com_.webp 1000w, ../content/images/size/w1600/2024/11/airbyte.com_.webp 1600w, ../content/images/size/w2400/2024/11/airbyte.com_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Airbyte website</span></figcaption></figure><p><strong>License and pricing::</strong> Airbyte is an open-source platform with an MIT license. It offers a free, self-hosted version, as well as a cloud-based and an enterprise version.</p><p><a href="https://airbyte.com/?ref=blog.n8n.io"><u>Airbyte</u></a> is a data integration platform that helps you move data from various sources, such as databases, APIs, and files, to different destinations, including data warehouses and data lakes. It's designed to be extensible and supports a wide range of connectors for different data sources and destinations.</p><p>Airbyte's core engine is implemented in Java, and it uses a protocol to extract and load data in a serialized JSON format. It also has developer kits to make it easier to create and customize connectors.</p><p><strong>Key features:</strong></p><ul><li>Extensible platform with support for a wide range of connectors.</li><li>Developer kits for creating and customizing connectors.</li><li>Low-code connector builder</li></ul><p><strong>Best use cases:</strong></p><ul><li>Building and managing data pipelines.</li><li>Replicating data from various sources to data warehouses or data lakes.</li><li>Creating custom connectors for specific data sources or destinations.</li></ul><h3 id="apache-airflow">Apache Airflow</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/airflow.apache.org_.webp" class="kg-image" alt="Apache Airflow website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/airflow.apache.org_.webp 600w, ../content/images/size/w1000/2024/11/airflow.apache.org_.webp 1000w, ../content/images/size/w1600/2024/11/airflow.apache.org_.webp 1600w, ../content/images/size/w2400/2024/11/airflow.apache.org_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Apache Airflow website</span></figcaption></figure><p><strong>License and pricing:</strong> Airflow is an open-source platform licensed under the Apache License 2.0.</p><p><a href="https://airflow.apache.org/?ref=blog.n8n.io"><u>Apache Airflow</u></a> is a powerful and versatile workflow orchestration tool that enables the programmatic authoring, scheduling, and monitoring of workflows. It is widely adopted across various industries and has become a cornerstone technology for managing complex data pipelines and machine learning workflows.</p><p>Airflow's core functionality revolves around Directed Acyclic Graphs (DAGs), which provide a visual and programmatic representation of workflows. Tasks and dependencies within a workflow are defined as nodes and edges in the DAG, offering a clear and auditable structure for managing complex processes.</p><p>Even though we included it in the data wrangling and ETL pipelines section since that is its main use case, Airflow can also be used for other MLOps tasks. It can automate the execution of various processes, such as data preparation, model training, and model evaluation. It can also help manage model deployment workflows and schedule recurring tasks like model retraining or data updates.</p><p><strong>Key features:</strong></p><ul><li>Workflows are defined programmatically in Python.</li><li>Offers a rich user interface for monitoring and managing workflows.</li><li>Provides a variety of integrations with commonly used tools and platforms.</li><li>Allows for defining complex dependencies and schedules for tasks.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Building and managing data pipelines.</li><li>Orchestrating machine learning workflows, including training, testing, and deployment.</li><li>Automating tasks across various systems and platforms.</li><li>Scheduling and managing recurring tasks, such as nightly batch jobs or weekly reports.</li></ul><h3 id="lakefs">LakeFS</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/lakefs.io_-.webp" class="kg-image" alt="LakeFS website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/lakefs.io_-.webp 600w, ../content/images/size/w1000/2024/11/lakefs.io_-.webp 1000w, ../content/images/size/w1600/2024/11/lakefs.io_-.webp 1600w, ../content/images/size/w2400/2024/11/lakefs.io_-.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">LakeFS website</span></figcaption></figure><p><strong>License and pricing:</strong> LakeFS is an open-source platform with a permissive Apache 2.0 license. It offers a free, self-hosted version, as well as a cloud-based and an enterprise version.</p><p><a href="https://lakefs.io/?ref=blog.n8n.io"><u>LakeFS</u></a> is a data version control system that manages data as code using Git-like operations. This approach brings the familiar benefits of version control, such as branching, committing, and reverting, to the world of data management. It's particularly well-suited for managing machine learning datasets, as it enables reproducibility, experimentation, and collaboration around data.</p><p>With LakeFS, you can create isolated branches of your data lake, allowing data scientists and engineers to experiment with different versions of data without affecting the main dataset.</p><p><strong>Key features:</strong></p><ul><li>Git-like operations for data versioning.</li><li>Scalable to petabytes of data.</li><li>Format agnostic, supporting various data formats.</li><li>Integrates with various cloud providers and data lake solutions.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Versioning machine learning datasets.</li><li>Enabling reproducible experiments and model training.</li><li>Creating isolated development and testing environments for data.</li><li>Managing and tracking changes to data over time.</li></ul><h3 id="iterative-datachain">Iterative DataChain</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/datachain.ai_.webp" class="kg-image" alt="Iterative DataChain website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/datachain.ai_.webp 600w, ../content/images/size/w1000/2024/11/datachain.ai_.webp 1000w, ../content/images/size/w1600/2024/11/datachain.ai_.webp 1600w, ../content/images/size/w2400/2024/11/datachain.ai_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Iterative DataChain website</span></figcaption></figure><p><strong>License and pricing:</strong> DataChain is an open-source project under the Apache 2.0 license.</p><p><a href="https://datachain.ai/?ref=blog.n8n.io"><u>DataChain</u></a> is a Pythonic data-frame library specifically designed for managing and processing unstructured data for AI applications. It enables efficient organization, versioning, and transformation of unstructured data like images, videos, text, and PDFs, making it ready for machine learning workflows.</p><p>DataChain allows for the integration of AI models and API calls directly into the data processing pipeline, facilitating tasks such as data enrichment, transformation, and analysis. It supports multimodal data processing and provides functionalities for dataset persistence, versioning, and efficient handling of large-scale data.</p><p><strong>Key features:</strong></p><ul><li>Pythonic data-frame library for AI</li><li>Efficient handling of unstructured data at scale.</li><li>Integration of AI models and API calls in data pipelines.</li><li>Dataset persistence and versioning</li></ul><p><strong>Best use cases:</strong></p><ul><li>Organizing and preprocessing unstructured data for machine learning.</li><li>Data augmentation and enrichment using AI models.</li><li>Building and managing data pipelines for AI applications.</li><li>Versioning and tracking changes in datasets.</li></ul><h3 id="dbt">dbt</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/getdbt.com_-.webp" class="kg-image" alt="dbt website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/getdbt.com_-.webp 600w, ../content/images/size/w1000/2024/11/getdbt.com_-.webp 1000w, ../content/images/size/w1600/2024/11/getdbt.com_-.webp 1600w, ../content/images/size/w2400/2024/11/getdbt.com_-.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">dbt website</span></figcaption></figure><p><strong>License and pricing:</strong>&nbsp;dbt Core is open-source, licensed under the Apache License 2.0. dbt Cloud is a cloud-based platform with a tiered pricing model based on usage and features. It offers a free developer plan and various paid plans for teams and enterprises.</p><p><a href="https://www.getdbt.com/?ref=blog.n8n.io"><u>dbt </u></a>(data build tool) is a popular open-source tool that enables data analysts and engineers to transform data in their warehouses more effectively. It uses a code-based approach, allowing users to define data transformations using SQL SELECT statements, making it accessible to those familiar with SQL.</p><p>dbt promotes best practices in software engineering, such as modularity, reusability, and testing, making it easier to manage and maintain complex data transformation workflows. It also integrates with popular data warehouses like Snowflake, BigQuery, and Redshift, allowing for seamless data transformation within these platforms.</p><p><strong>Key features:</strong></p><ul><li>Code-based data transformation using SQL SELECT statements.</li><li>Modularity and reusability for efficient code management.</li><li>Integration with popular data warehouses and orchestration tools.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Building and managing data transformation pipelines.</li><li>Creating reusable and maintainable data models.</li><li>Testing and validating data transformations for accuracy.</li><li>Improving data quality and reliability in data warehouses.</li></ul><h3 id="pachyderm">Pachyderm</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/pachyderm.com_.webp" class="kg-image" alt="Pachyderm website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/pachyderm.com_.webp 600w, ../content/images/size/w1000/2024/11/pachyderm.com_.webp 1000w, ../content/images/size/w1600/2024/11/pachyderm.com_.webp 1600w, ../content/images/size/w2400/2024/11/pachyderm.com_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Pachyderm website</span></figcaption></figure><p><strong>License and pricing:</strong> Pachyderm is available in two versions, community edition and enterprise edition. The community edition is open-source, licensed under the Apache License 2.0, fee to use and self-hosted. The enterprise edition offers a commercial license with enterprise-grade features and support.</p><p><a href="https://www.pachyderm.com/?ref=blog.n8n.io"><u>Pachyderm </u></a>is a data versioning and pipeline platform designed to bring reproducibility and scalability to data science workflows. It's built on top of Kubernetes and uses containers to package and execute data processing tasks.</p><p>Pachyderm enables data scientists and engineers to track changes to data, code, and configurations, making it easier to reproduce experiments and debug issues. Its versioning capabilities also facilitate collaboration and experimentation with different versions of data and models.</p><p><strong>Key features:</strong></p><ul><li>Data versioning with Git-like semantics.</li><li>Data lineage tracking for auditability and debugging.</li><li>Reproducible pipelines with containerized execution.</li><li>Scalable architecture built on Kubernetes.</li><li>Integrations with popular machine learning tools and frameworks.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Building and managing reproducible machine learning pipelines.</li><li>Versioning and tracking changes to large datasets.</li><li>Collaborating on data science projects with version control.</li><li>Ensuring data integrity and auditability in data pipelines.</li></ul><h3 id="snowflake">Snowflake</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/snowflake.com_en_data-cloud_workloads_ai-ml_.webp" class="kg-image" alt="Snowflake website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/snowflake.com_en_data-cloud_workloads_ai-ml_.webp 600w, ../content/images/size/w1000/2024/11/snowflake.com_en_data-cloud_workloads_ai-ml_.webp 1000w, ../content/images/size/w1600/2024/11/snowflake.com_en_data-cloud_workloads_ai-ml_.webp 1600w, ../content/images/size/w2400/2024/11/snowflake.com_en_data-cloud_workloads_ai-ml_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Snowflake website</span></figcaption></figure><p><strong>License and pricing: </strong>Snowflake utilizes a consumption-based pricing model. You only pay for the resources you use, with costs calculated based on factors like compute time, storage, and cloud services.</p><p><a href="https://www.snowflake.com/en/data-cloud/workloads/ai-ml/?ref=blog.n8n.io" rel="noreferrer">Snowflake</a> is a cloud-based data platform that provides a unified environment for data warehousing, data lakes, data engineering, and application development. It's designed to handle diverse workloads, including those related to machine learning and AI.</p><p>For MLOps, Snowflake offers a robust platform for managing and processing large datasets, building and training machine learning models, and deploying AI applications. It provides tools for data preparation, feature engineering, model development, and deployment, all within a scalable and secure cloud environment.</p><p><strong>Key features:</strong></p><ul><li>Cloud-based data platform with a unified environment for various data workloads.</li><li>Scalable and secure infrastructure for managing and processing large datasets.</li><li>Supports diverse workloads, including data warehousing, data lakes, and data engineering.</li><li>Offers tools for data preparation, feature engineering, and model development.</li><li>Enables deployment and management of AI/ML models in a cloud environment.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Managing and processing large datasets for machine learning and AI applications.</li><li>Data preparation and feature engineering for machine learning.</li></ul><h3 id="talend-data-preparation">Talend Data Preparation</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/talend.com_products_data-preparation_.webp" class="kg-image" alt="Talend Data Preparation website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/talend.com_products_data-preparation_.webp 600w, ../content/images/size/w1000/2024/11/talend.com_products_data-preparation_.webp 1000w, ../content/images/size/w1600/2024/11/talend.com_products_data-preparation_.webp 1600w, ../content/images/size/w2400/2024/11/talend.com_products_data-preparation_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Talend Data Preparation website</span></figcaption></figure><p><strong>License and pricing:</strong> Talend offers a variety of pricing plans for its data preparation tool, including a free trial and paid subscriptions with different features and support levels.</p><p><a href="https://www.talend.com/products/data-preparation/?ref=blog.n8n.io"><u>Talend Data Preparation</u></a> is a data preparation tool that allows users to easily access, cleanse, and prepare data for use in machine learning models. It offers a user-friendly interface with visual tools and built-in transformations, making it accessible to both technical and non-technical users.</p><p>Talend Data Preparation supports a wide range of data sources, including databases, files, and cloud applications. It also integrates with other Talend products, such as Talend Data Integration and Talend Big Data, enabling users to build end-to-end data pipelines for machine learning workflows.</p><p><strong>Key features:</strong></p><ul><li>User-friendly interface with visual tools.</li><li>Wide range of built-in transformations for data cleansing and preparation.</li><li>Support for various data sources, including databases, files, and cloud applications.</li><li>Integration with other Talend products for building end-to-end data pipelines.</li><li>Collaboration features for team-based data preparation.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Data cleansing and preparation for machine learning.</li><li>Data profiling and discovery for understanding data.</li><li>Data enrichment and transformation for creating new features.</li><li>Building data pipelines for machine learning workflows.</li></ul><h2 id="model-development-tools">Model development tools</h2><p>Developing effective machine learning models is at the heart of MLOps. This section explores a range of tools that can assist in various stages of model development, from experimentation and design to training and evaluation.</p><h3 id="tensorflow">TensorFlow</h3><figure class="kg-card kg-image-card"><img src="../content/images/2024/11/tensorflow.org_.webp" class="kg-image" alt="" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/tensorflow.org_.webp 600w, ../content/images/size/w1000/2024/11/tensorflow.org_.webp 1000w, ../content/images/size/w1600/2024/11/tensorflow.org_.webp 1600w, ../content/images/size/w2400/2024/11/tensorflow.org_.webp 2400w" sizes="(min-width: 720px) 720px"></figure><p><strong>License and pricing:</strong> TensorFlow is open-source and available under the Apache License 2.0.</p><p><a href="https://www.tensorflow.org/?ref=blog.n8n.io"><u>TensorFlow</u></a> is a popular open-source machine learning framework developed by Google. It provides a comprehensive ecosystem of tools and libraries for building and deploying various machine learning models, including deep neural networks.</p><p>TensorFlow supports a wide range of functionalities, from data preprocessing and model development to model training, deployment, and monitoring. It offers different levels of abstraction, allowing users to choose between low-level APIs for fine-grained control and high-level APIs like Keras for easier model building. TensorFlow also provides tools for model optimization, distributed training, and deployment across various platforms.</p><p><strong>Key features:</strong></p><ul><li>Supports a wide range of machine learning models, including deep neural networks.</li><li>Offers various levels of abstraction with different APIs.</li><li>Provides tools for model optimization and deployment.</li><li>Large and active community support</li></ul><p><strong>Best use cases:</strong></p><ul><li>Developing and deploying image recognition models.</li><li>Building natural language processing applications.</li><li>Creating and training deep learning models for various tasks.</li><li>Implementing machine learning solutions in research and production environments.</li></ul><h3 id="pytorch">PyTorch</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/pytorch.org_.webp" class="kg-image" alt="PyTorch website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/pytorch.org_.webp 600w, ../content/images/size/w1000/2024/11/pytorch.org_.webp 1000w, ../content/images/size/w1600/2024/11/pytorch.org_.webp 1600w, ../content/images/size/w2400/2024/11/pytorch.org_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">PyTorch website</span></figcaption></figure><p><strong>License and pricing:</strong> PyTorch is an open-source machine learning framework released under the modified BSD license.</p><p><a href="https://pytorch.org/?ref=blog.n8n.io"><u>PyTorch</u></a> is a popular open-source machine learning framework known for its flexibility and ease of use. It is widely used in both research and production environments for developing and deploying a variety of machine learning models, including deep neural networks.</p><p>PyTorch is written in Python and provides a dynamic computational graph, making it intuitive and easy to debug. It offers a rich ecosystem of tools and libraries for various machine learning tasks, including computer vision, natural language processing, and reinforcement learning.</p><p><strong>Key features:</strong></p><ul><li>Dynamic computational graph for flexibility and ease of use.</li><li>Pythonic API for easy integration with other Python libraries.</li><li>Strong support for GPUs for accelerated training.</li><li>Rich ecosystem of tools and libraries for various machine learning tasks.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Developing and training deep learning models.</li><li>Research and experimentation in machine learning.</li><li>Building and deploying AI applications in various domains.</li><li>Prototyping and developing new machine learning algorithms.</li></ul><h3 id="determined-ai">Determined AI</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/determined.ai_.webp" class="kg-image" alt="Determined AI website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/determined.ai_.webp 600w, ../content/images/size/w1000/2024/11/determined.ai_.webp 1000w, ../content/images/size/w1600/2024/11/determined.ai_.webp 1600w, ../content/images/size/w2400/2024/11/determined.ai_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Determined AI website</span></figcaption></figure><p><strong>License and pricing:</strong> Determined AI is an open-source platform licensed under the Apache License 2.0. It offers a free, self-hosted version, as well as a cloud-based enterprise version with customized pricing based on needs and usage.</p><p><a href="https://www.determined.ai/?ref=blog.n8n.io"><u>Determined AI</u></a> is a platform specifically designed to streamline the development and training of deep learning models. It simplifies resource management, experiment tracking, and distributed training, allowing machine learning engineers to focus on model development and optimization rather than infrastructure management.</p><p>Determined AI supports popular deep learning frameworks like TensorFlow and PyTorch, providing a unified platform for model training, hyperparameter tuning, and experiment tracking. It also offers features for efficient resource allocation and distributed training across multiple GPUs and machines, enabling faster model development and iteration.</p><p><strong>Key features:</strong></p><ul><li>Simplifies distributed training and hyperparameter tuning.</li><li>Experiment tracking and visualization.</li><li>Efficient resource management for model training.</li><li>Works with PyTorch and TensorFlow.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Training and optimizing deep learning models.</li><li>Managing and tracking machine learning experiments.</li><li>Accelerating model development with distributed training.</li><li>Improving resource utilization for deep learning workloads.</li></ul><h3 id="ray">Ray</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/ray.io_.webp" class="kg-image" alt="Ray website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/ray.io_.webp 600w, ../content/images/size/w1000/2024/11/ray.io_.webp 1000w, ../content/images/size/w1600/2024/11/ray.io_.webp 1600w, ../content/images/size/w2400/2024/11/ray.io_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Ray website</span></figcaption></figure><p><strong>License and pricing:</strong> Ray is an open-source platform licensed under the Apache License 2.0.</p><p><a href="https://www.ray.io/?ref=blog.n8n.io"><u>Ray</u></a> is an open-source framework for distributed computing that can be used to scale machine learning workloads. It is designed to be flexible and can be used for various machine learning tasks, including data processing, model training, and model serving. It offers a unified platform for managing computing resources, scheduling tasks, and handling data efficiently.</p><p><strong>Key features:</strong></p><ul><li>Handles the majority of the ML workflow.</li><li>Unified framework for managing computing resources.</li><li>Flexible enough to handle most machine learning tasks.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Scaling machine learning workloads.</li><li>Data processing.</li><li>Model training and serving.</li></ul><h3 id="langchain">LangChain</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/langchain.com_.webp" class="kg-image" alt="LangChain website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/langchain.com_.webp 600w, ../content/images/size/w1000/2024/11/langchain.com_.webp 1000w, ../content/images/size/w1600/2024/11/langchain.com_.webp 1600w, ../content/images/size/w2400/2024/11/langchain.com_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">LangChain website</span></figcaption></figure><p><strong>License and pricing:</strong> LangChain is open-source and available under the MIT license.</p><p><a href="https://www.langchain.com/?ref=blog.n8n.io"><u>LangChain</u></a> is a framework designed for developing applications powered by large language models (LLMs). It provides a set of tools and components that simplify the process of building applications that can interact with LLMs, access external data sources, and perform actions.</p><p>LangChain offers modular components for building LLM-powered applications, including modules for models, prompts, chains, agents, memory, and indexes. These components can be combined to create complex applications that can reason, learn, and adapt to new information.</p><p><strong>Key features:</strong></p><ul><li>Provides a set of modular components for building LLM applications.</li><li>Supports various LLMs, including OpenAI, Hugging Face, Cohere, and more.</li><li>Offers tools for prompt management, memory, and external data integration.</li><li>Simplifies the development of complex LLM-powered applications.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Building chatbots and conversational AI applications.</li><li>Creating question-answering systems that can access and process information from various sources.</li><li>Developing agents that can reason, learn, and interact with their environment.</li><li>Integrating LLMs into existing applications and workflows.</li></ul><h3 id="llamaindex">LlamaIndex</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/llamaindex.ai_.webp" class="kg-image" alt="LlamaIndex website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/llamaindex.ai_.webp 600w, ../content/images/size/w1000/2024/11/llamaindex.ai_.webp 1000w, ../content/images/size/w1600/2024/11/llamaindex.ai_.webp 1600w, ../content/images/size/w2400/2024/11/llamaindex.ai_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">LlamaIndex website</span></figcaption></figure><p><strong>License and pricing:</strong> LlamaIndex is open-source and available under the Apache 2.0 license.</p><p><a href="https://www.llamaindex.ai/?ref=blog.n8n.io"><u>LlamaIndex</u></a> (formerly GPT Index) is a data framework that simplifies the process of connecting your data to large language models (LLMs). It provides tools for indexing, structuring, and querying data sources, making it easier to build LLM-powered applications that can access and utilize your data effectively.</p><p>LlamaIndex focuses on simplifying the retrieval and grounding of LLM responses by providing a modular and customizable framework. It supports various data sources, including APIs, PDFs, documents, and SQL databases, and offers different indexing strategies to optimize data retrieval for LLMs.</p><p><strong>Key features:</strong></p><ul><li>Simplifies the process of connecting your data to LLMs.</li><li>Provides tools for indexing, structuring, and querying data sources.</li><li>Supports various data sources and indexing strategies.</li><li>Facilitates the development of retrieval-augmented generation (RAG) applications.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Building LLM-powered applications that can access and utilize your data.</li><li>Creating question-answering systems that can ground responses in your data</li><li>Developing personalized LLM applications that can tailor responses based on user data.</li><li>Improving the accuracy and relevance of LLM responses by grounding them in relevant data.</li></ul><h3 id="metaflow">Metaflow</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/metaflow.org_.webp" class="kg-image" alt="Metaflow website" loading="lazy" width="2000" height="1110" srcset="../content/images/size/w600/2024/11/metaflow.org_.webp 600w, ../content/images/size/w1000/2024/11/metaflow.org_.webp 1000w, ../content/images/size/w1600/2024/11/metaflow.org_.webp 1600w, ../content/images/size/w2400/2024/11/metaflow.org_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Metaflow website</span></figcaption></figure><p><strong>License and pricing: </strong>Metaflow is an open-source platform licensed under the Apache License 2.0.</p><p><a href="https://metaflow.org/?ref=blog.n8n.io" rel="noreferrer">Metaflow</a> is a human-centric framework specifically designed for developing, scaling, and deploying machine learning (ML) projects. It simplifies the process of building and managing real-life data science projects, from experimentation and prototyping to production deployment.</p><p>It provides a Pythonic API for defining workflows, seamlessly scales to the cloud for demanding tasks, and facilitates easy deployment.</p><p><strong>Key features:</strong></p><ul><li>Supports various cloud providers and on-premises Kubernetes deployments.</li><li>Provides tools for experiment tracking, versioning, and collaboration.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Developing and deploying ML/AI projects from classical statistics to deep learning.</li><li>Building and deploying complex, multi-stage data science projects.</li><li>Managing and tracking experiments, including results and artifacts.</li></ul><h3 id="weights-biases">Weights &amp; Biases</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/wandb.ai_site.webp" class="kg-image" alt="Weights &amp; Biases website" loading="lazy" width="2000" height="1424" srcset="../content/images/size/w600/2024/11/wandb.ai_site.webp 600w, ../content/images/size/w1000/2024/11/wandb.ai_site.webp 1000w, ../content/images/size/w1600/2024/11/wandb.ai_site.webp 1600w, ../content/images/size/w2400/2024/11/wandb.ai_site.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Weights &amp; Biases website</span></figcaption></figure><p><strong>License and pricing:</strong> Weights &amp; Biases (WandB) offer different commercial licenses with varying features, usage limits, and support levels.</p><p><a href="https://wandb.ai/site?ref=blog.n8n.io" rel="noreferrer">Weights &amp; Biases</a> is a platform for experiment tracking, model optimization, and collaboration in machine learning. It helps data scientists and ML engineers track their experiments, visualize results, and improve model performance.</p><p>WandB provides a centralized platform for logging and visualizing various aspects of machine learning experiments, including hyperparameters, metrics, code changes, and visualizations. This allows for better organization, comparison of experiments, and easier collaboration among team members.</p><p><strong>Key features:</strong></p><ul><li>Tracks and logs machine learning experiments.</li><li>Provides visualizations and insights into model performance.</li><li>Integrates with various machine learning libraries and frameworks.</li><li>Offers tools for model optimization and hyperparameter tuning.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Tracking and managing machine learning experiments.</li><li>Comparing different models and hyperparameters.</li><li>Debugging and optimizing machine learning models.</li></ul><h3 id="guardrails-ai">GuardRails AI</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/guardrailsai.com_-.webp" class="kg-image" alt="GuardRails website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/guardrailsai.com_-.webp 600w, ../content/images/size/w1000/2024/11/guardrailsai.com_-.webp 1000w, ../content/images/size/w1600/2024/11/guardrailsai.com_-.webp 1600w, ../content/images/size/w2400/2024/11/guardrailsai.com_-.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">GuardRails website</span></figcaption></figure><p><strong>License and pricing:</strong> Guardrails AI is an open-source project with a permissive Apache 2.0 license. It offers a free, self-hosted version, as well as a cloud-based enterprise version with usage-based pricing.&nbsp;</p><p><a href="https://www.guardrailsai.com/?ref=blog.n8n.io"><u>Guardrails AI</u></a> is a framework that enhances the reliability and safety of applications that use LLMs. It focuses on validating and correcting the output of LLMs, ensuring that the generated content adheres to predefined rules and guidelines.</p><p>Guardrails AI uses a declarative approach, where developers define the expected structure and format of LLM outputs using a specification language called RAIL (Reliable AI Markup Language). This allows for precise control over the generated content and helps prevent unexpected or undesirable outputs.</p><p><strong>Key features:</strong></p><ul><li>Uses RAIL for defining and enforcing output rules.</li><li>Validates and corrects LLM outputs.</li><li>Integrates with popular LLM frameworks and libraries.</li><li>Helps ensure the reliability and safety of LLM applications.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Ensuring that LLM-generated content adheres to specific formats and guidelines.</li><li>Preventing undesirable or harmful outputs from LLMs.</li><li>Improving the reliability and consistency of LLM applications.</li><li>Building safer and more trustworthy AI systems.</li></ul><h2 id="model-monitoring-and-evaluation-tools">Model monitoring and evaluation tools</h2><p>This section explores tools that can help you track key metrics, detect anomalies, and maintain the health of your deployed models.</p><h3 id="grafana-and-prometheus">Grafana and Prometheus</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/grafana.com_.webp" class="kg-image" alt="Grafana website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/grafana.com_.webp 600w, ../content/images/size/w1000/2024/11/grafana.com_.webp 1000w, ../content/images/size/w1600/2024/11/grafana.com_.webp 1600w, ../content/images/size/w2400/2024/11/grafana.com_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Grafana website</span></figcaption></figure><p><strong>License and pricing:</strong> Grafana is an open-source platform licensed under the Apache License 2.0.</p><p><a href="https://grafana.com/?ref=blog.n8n.io" rel="noreferrer">Grafana</a> is a popular open-source platform for data visualization and monitoring. It allows you to create interactive dashboards and visualizations from various data sources, including time-series databases, logs, and application metrics.&nbsp;</p><p>Grafana is widely used for monitoring infrastructure, applications, and business performance. It is highly extensible and supports a wide range of data sources and plugins, making it a versatile tool for visualizing and analyzing data.</p><p>Prometheus is an open-source monitoring system widely used for collecting and storing time-series data. Prometheus works by scraping metrics from instrumented applications and storing them in a time-series database.</p><p><strong>Key features:</strong></p><ul><li>Create interactive dashboards and visualizations.</li><li>Supports a wide range of data sources and plugins.</li><li>Highly extensible and customizable.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Monitoring infrastructure and applications.</li><li>Visualizing time-series data and metrics.</li><li>Creating dashboards for business performance monitoring.</li><li>Analyzing and exploring data from various sources</li></ul><h3 id="evidently-ai">Evidently AI</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/evidentlyai.com_.webp" class="kg-image" alt="Evidently AI website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/evidentlyai.com_.webp 600w, ../content/images/size/w1000/2024/11/evidentlyai.com_.webp 1000w, ../content/images/size/w1600/2024/11/evidentlyai.com_.webp 1600w, ../content/images/size/w2400/2024/11/evidentlyai.com_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Evidently AI website</span></figcaption></figure><p><strong>License and pricing:</strong> Evidently AI is open-source and available under the Apache 2.0 license.</p><p><a href="https://www.evidentlyai.com/?ref=blog.n8n.io"><u>Evidently AI</u></a> is an open-source Python library designed for machine learning model monitoring and evaluation. It helps data scientists and ML engineers analyze and understand model performance, identify issues like data drift and model drift, and ensure the ongoing quality of deployed models.It provides a range of tools and visualizations for model analysis, including reports, dashboards, and test suites. These tools help identify and diagnose problems in data and model performance, enabling data scientists to take corrective actions and maintain the reliability of their models in production.</p><p><strong>Key features:</strong></p><ul><li>Provides tools for model monitoring and evaluation.</li><li>Detects data drift and model drift.</li><li>Offers visualizations and reports for model analysis.</li><li>Integrates with various machine learning frameworks and tools such as PyTorch, TensorFlow, MLflow, Apache Airflow etc.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Monitoring the performance of machine learning models in production.</li><li>Identifying and diagnosing data and model drift.</li><li>Generating reports and visualizations for model analysis.</li><li>Ensuring the ongoing quality and reliability of deployed models.</li></ul><h3 id="comet-ml">Comet ML</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/12/comet.com_site_.webp" class="kg-image" alt="Comet ML website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/12/comet.com_site_.webp 600w, ../content/images/size/w1000/2024/12/comet.com_site_.webp 1000w, ../content/images/size/w1600/2024/12/comet.com_site_.webp 1600w, ../content/images/size/w2400/2024/12/comet.com_site_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Comet ML website</span></figcaption></figure><p><strong>License and pricing:</strong> Comet ML offers different pricing plans for teams and enterprises with varying features and usage limits.</p><p><a href="https://www.comet.com/?ref=blog.n8n.io"><u>Comet ML</u></a> is a cloud-based platform designed for tracking, comparing, explaining, and optimizing machine learning experiments and models. It provides a centralized hub for managing the entire machine learning lifecycle, from experiment tracking and model comparison to production model monitoring.</p><p>Comet ML allows data scientists and ML engineers to log various metrics, parameters, code changes, and visualizations during model training. It also enables collaboration and knowledge sharing among team members by providing a platform for comparing experiments, sharing results, and reproducing experiments.</p><p><strong>Key features:</strong></p><ul><li>Tracks and logs machine learning experiments.</li><li>Compares different experiments and models.</li><li>Provides visualizations and insights into model performance.</li><li>Facilitates collaboration and knowledge sharing.</li><li>Integrates with various machine learning libraries and frameworks.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Tracking and managing machine learning experiments.</li><li>Comparing different models and hyperparameters.</li><li>Visualizing and analyzing model performance.</li><li>Collaborating on machine learning projects with team members.</li><li>Monitoring and debugging models in production.</li></ul><h3 id="datadog">Datadog</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/datadoghq.com_.webp" class="kg-image" alt="Datadog website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/datadoghq.com_.webp 600w, ../content/images/size/w1000/2024/11/datadoghq.com_.webp 1000w, ../content/images/size/w1600/2024/11/datadoghq.com_.webp 1600w, ../content/images/size/w2400/2024/11/datadoghq.com_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Datadog website</span></figcaption></figure><p><strong>License and pricing:</strong> Datadog is a commercial platform with a subscription-based pricing model. They offer various plans tailored to different needs and usage levels, including infrastructure monitoring, log management, and application performance monitoring.</p><p><a href="https://www.datadoghq.com/?ref=blog.n8n.io"><u>Datadog</u></a> is a comprehensive monitoring and observability platform designed for cloud-scale applications and infrastructure. It provides a unified platform for monitoring metrics, traces, and logs from various sources, including servers, databases, applications, and cloud services.</p><p>In the context of MLOps, Datadog allows for deep insights into model performance by tracking key metrics such as accuracy, precision, recall, and F1-score. It can also monitor the health of the underlying infrastructure, including GPU utilization, memory usage, and network performance. This comprehensive monitoring helps identify bottlenecks, optimize resource allocation, and ensure the smooth operation of AI/ML workloads.</p><p><strong>Key features:</strong></p><ul><li>Unified platform for monitoring metrics, traces, and logs.</li><li>Real-time dashboards and visualizations.</li><li>Alerting and anomaly detection.</li><li>Integration with popular MLOps tools and frameworks such as LangChain, Kubeflow etc.</li><li>AI-powered insights and automation such as automated anomaly detection and predictive analytics for resource optimization.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Scaling machine learning workloads.</li><li>Data processing.</li><li>Model training and serving.</li></ul><h3 id="dynatrace">Dynatrace</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/dynatrace.com_.webp" class="kg-image" alt="Dynatrace website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/dynatrace.com_.webp 600w, ../content/images/size/w1000/2024/11/dynatrace.com_.webp 1000w, ../content/images/size/w1600/2024/11/dynatrace.com_.webp 1600w, ../content/images/size/w2400/2024/11/dynatrace.com_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Dynatrace website</span></figcaption></figure><p><strong>License and pricing:</strong> Dynatrace is a commercial platform with a subscription-based pricing model.</p><p><a href="https://www.dynatrace.com/?ref=blog.n8n.io"><u>Dynatrace</u></a> is an AI-powered observability platform that provides comprehensive monitoring and analysis of applications, infrastructure, and user experience. In the context of MLOps, Dynatrace enables organizations to gain deep insights into the performance and health of their AI/ML models and the underlying infrastructure. It offers a unified view of metrics, traces, logs, and dependencies, making it easier to identify and resolve issues that may impact model accuracy, performance, or availability.</p><p><strong>Key features:</strong></p><ul><li>AI-powered observability.</li><li>Automated root cause analysis.</li><li>Offers real-time dashboards and visualizations to track key MLOps metrics and identify trends.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Monitoring the performance and health of AI/ML models in production.</li><li>Troubleshooting performance issues and identifying anomalies in AI/ML pipelines.</li><li>Optimizing resource allocation and utilization for AI/ML workloads.</li></ul><h3 id="splunk">Splunk</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/splunk.com_.webp" class="kg-image" alt="Splunk website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/splunk.com_.webp 600w, ../content/images/size/w1000/2024/11/splunk.com_.webp 1000w, ../content/images/size/w1600/2024/11/splunk.com_.webp 1600w, ../content/images/size/w2400/2024/11/splunk.com_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Splunk website</span></figcaption></figure><p><strong>License and pricing:</strong> Splunk is a commercial platform with a subscription-based pricing model. They offer various plans based on data ingestion volume, features, and support levels.</p><p><a href="https://www.splunk.com/?ref=blog.n8n.io" rel="noreferrer">Splunk</a> is a platform that helps you analyze data coming from your machine learning pipelines. It can gather information from different sources like logs, metrics, and traces, giving you a full picture of what's happening with your ML models and infrastructure.</p><p>It integrates with popular machine learning frameworks and tools, providing a central platform to analyze model behavior and detect problems like data drift, ensuring the stability and reliability of your AI/ML systems.</p><p><strong>Key features:</strong></p><ul><li>Advanced analytics and visualization</li><li>Real-time monitoring and alerting.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Troubleshooting and identifying anomalies in ML pipelines.</li><li>Monitoring and analyzing AI/ML models in production.</li><li>Detecting and addressing data and model drift.</li></ul><h2 id="model-deployment-tools">Model deployment tools</h2><p>From packaging and containerization to setting up APIs and managing versions, model deployment involves a range of tasks. This section explores tools that can automate and streamline these tasks, making it easier to bring your AI solutions to market.</p><h3 id="kserve">Kserve</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/kserve.github.io_website_latest_.webp" class="kg-image" alt="Kserve website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/kserve.github.io_website_latest_.webp 600w, ../content/images/size/w1000/2024/11/kserve.github.io_website_latest_.webp 1000w, ../content/images/size/w1600/2024/11/kserve.github.io_website_latest_.webp 1600w, ../content/images/size/w2400/2024/11/kserve.github.io_website_latest_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Kserve website</span></figcaption></figure><p><strong>License and pricing:</strong> KServe is an open-source platform licensed under the Apache License 2.0.</p><p><a href="https://kserve.github.io/website/latest/?ref=blog.n8n.io"><u>KServe</u></a> is a cloud-native platform for serving machine learning models on Kubernetes that aims to simplify the process of deploying and managing models in production. It provides a standardized and scalable way to deploy models, offering features like autoscaling, canary deployments, and model versioning.</p><p>KServe is designed to be flexible and supports various machine learning frameworks, including TensorFlow, PyTorch, and XGBoost.</p><p><strong>Key features:</strong></p><ul><li>Unified framework for managing computing resources.</li><li>Flexible enough to handle most machine learning tasks.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Deploying and serving machine learning models on Kubernetes.</li><li>Scaling machine learning workloads.</li><li>Implementing canary deployments and A/B testing for models.</li></ul><h3 id="bentoml">BentoML</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/www.bentoml.com_.webp" class="kg-image" alt="BentoML website" loading="lazy" width="2000" height="1110" srcset="../content/images/size/w600/2024/11/www.bentoml.com_.webp 600w, ../content/images/size/w1000/2024/11/www.bentoml.com_.webp 1000w, ../content/images/size/w1600/2024/11/www.bentoml.com_.webp 1600w, ../content/images/size/w2400/2024/11/www.bentoml.com_.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">BentoML website</span></figcaption></figure><p><strong>License and pricing: </strong>BentoML is free to use under the Apache 2.0 license. They also provide a managed environment called BentoCloud. For larger organizations with specific cloud requirements, BentoML can be deployed on existing cloud infrastructure in a Bring Your Own Cloud (BYOC) fashion.</p><p><a href="https://www.bentoml.com/?ref=blog.n8n.io" rel="noreferrer">BentoML</a> is more than just a Python library; it's a comprehensive framework for building and deploying AI applications. It streamlines the entire process, from packaging models to serving them in production.</p><p>BentoML allows you to package models trained with any framework, whether it's TensorFlow, PyTorch, scikit-learn, or even custom models. You can then serve these models via different methods, including HTTP API endpoints, online batch serving, or even integrate them into more complex AI systems. BentoML provides the tools for optimizing performance, managing dependencies, and scaling your deployments.</p><p><strong>Key features:</strong></p><ul><li>Supports any model format and custom Python code.</li><li>Provides tools for serving optimizations, task queues, and batching.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Building and deploying high-performance AI applications.</li><li>Serving models trained with any machine learning framework.</li><li>Simplifying the deployment and management of AI models in production.</li></ul><h3 id="pytorch-torchserve">Pytorch (TorchServe)</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/11/pytorch.org_serve_-1.webp" class="kg-image" alt="TorchServe website" loading="lazy" width="2000" height="1287" srcset="../content/images/size/w600/2024/11/pytorch.org_serve_-1.webp 600w, ../content/images/size/w1000/2024/11/pytorch.org_serve_-1.webp 1000w, ../content/images/size/w1600/2024/11/pytorch.org_serve_-1.webp 1600w, ../content/images/size/w2400/2024/11/pytorch.org_serve_-1.webp 2400w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">TorchServe website</span></figcaption></figure><p><strong>License and pricing:</strong> TorchServe is an open-source model server released under the BSD-3 license. It's free to use and can be deployed on various platforms.</p><p><a href="https://pytorch.org/serve/?ref=blog.n8n.io" rel="noreferrer">TorchServe</a> is a tool specifically designed for serving PyTorch models. It simplifies the process of deploying your trained PyTorch models for inference, handling tasks like model loading, preprocessing, inference, and postprocessing.</p><p><strong>Key features:</strong></p><ul><li>Specifically designed for serving PyTorch models.</li><li>Handles model loading, preprocessing, inference, and postprocessing.</li><li>Provides model versioning, metrics, logging, and REST API endpoints.</li></ul><p><strong>Best use cases:</strong></p><ul><li>Serving models with REST API endpoints for easy integration with other applications.</li><li>Managing multiple versions of models and seamlessly switching between them.</li><li>Scaling model serving to handle high traffic loads.</li></ul><h2 id="integrate-mlops-tools-into-your-workflow-with-n8n">Integrate MLOps tools into your workflow with n8n</h2><p>MLOps can be quite complex, especially when it comes to managing intricate workflows, integrating data from various sources, and keeping track of different versions. Teams often find it challenging to monitor how their models are performing and ensure they can reproduce machine-learning experiments.</p><p>This is where a tool like <a href="https://n8n.io/ai/?ref=blog.n8n.io" rel="noreferrer">n8n comes in</a>.</p>
+<!--kg-card-begin: html-->
+<script>
+  workflowBanner([2440, 2468, 2508, 2458, 2457], document.currentScript);
+</script>
+<!--kg-card-end: html-->
+<p>n8n provides a visual interface that simplifies the process of managing these complex workflows. It also integrates with many different data sources and tools, making it easier to connect all the pieces of your MLOps puzzle.</p><p>By leveraging <a href="https://n8n.io/integrations/?ref=blog.n8n.io"><u>n8n's extensive integration library</u></a> and flexible workflow design, you can orchestrate and automate a wide range of tasks, including data preparation and data wrangling. For example:</p><ul><li>You can extract data from various sources including databases and cloud storage. Some notable examples are the <a href="https://n8n.io/integrations/aws-s3/?ref=blog.n8n.io"><u>AWS S3</u></a>, <a href="https://n8n.io/integrations/google-cloud-storage/?ref=blog.n8n.io"><u>Google Cloud Storage</u></a>, <a href="https://n8n.io/integrations/postgres/?ref=blog.n8n.io"><u>PostgreSQL</u></a>, <a href="https://n8n.io/integrations/mongodb/?ref=blog.n8n.io"><u>MongoDB integration</u></a> and the <a href="https://n8n.io/integrations/gmail/and/microsoft-sql/?ref=blog.n8n.io"><u>Microsoft SQL Server</u></a> integrations.</li><li>You can also extract or send data to HTTP REST or GraphQL APIs using the <a href="https://n8n.io/integrations/graphql/?ref=blog.n8n.io"><u>GraphQL integration</u></a> or the <a href="https://n8n.io/integrations/http-request/?ref=blog.n8n.io"><u>HTTP Request integrations</u></a>.</li><li>Transforming and processing the data is a breeze using n8n’s built-in nodes for <a href="https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.filter/?ref=blog.n8n.io"><u>filtering data</u></a>, <a href="https://docs.n8n.io/data/transforming-data/?ref=blog.n8n.io"><u>transforming data</u></a>, or you could write custom data transformation and wrangling using the custom <a href="https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code/?ref=blog.n8n.io"><u>Code node</u></a></li></ul>
+<!--kg-card-begin: html-->
+<div class="content-banner">
+  <div>
+    <h3>Create your own MLOps workflows</h3>
+    <p>Build complex automations 10x faster, without fighting APIs</p>
+  </div>
+  <a href="https://app.n8n.cloud/register?ref=blog.n8n.io" class="global-button blog-banner-signup">Try n8n now</a>
+</div>
+<!--kg-card-end: html-->
+<p>n8n can also integrate with other tools you may use in your MLOps workflow, such as:</p><ul><li>Monitoring tools using the <a href="https://n8n.io/integrations/datadog/?ref=blog.n8n.io"><u>Datadog</u></a>, <a href="https://n8n.io/integrations/grafana/?ref=blog.n8n.io"><u>Grafana</u></a> and <a href="https://n8n.io/integrations/splunk/?ref=blog.n8n.io"><u>Splunk </u></a>integrations.</li><li>Send out notifications using <a href="https://n8n.io/integrations/slack/?ref=blog.n8n.io"><u>Slack</u></a>, <a href="https://n8n.io/integrations/microsoft-teams/?ref=blog.n8n.io"><u>Microsoft Teams</u></a>, <a href="https://n8n.io/integrations/gmail/?ref=blog.n8n.io"><u>Gmail</u></a>.</li><li>n8n can <a href="https://n8n.io/integrations/databricks/?ref=blog.n8n.io"><u>interact with Databricks</u></a> or <a href="https://n8n.io/integrations/snowflake/?ref=blog.n8n.io"><u>Snowflake</u></a>.</li></ul><p>n8n's capabilities extend beyond data wrangling and MLOps pipelines to support the <a href="https://n8n.io/ai/?ref=blog.n8n.io"><u>development and deployment of ML applications</u></a>:</p><ul><li>Use <a href="https://docs.n8n.io/advanced-ai/langchain/langchain-n8n/?ref=blog.n8n.io"><u>n8n’s LangChain nodes</u></a> to create sophisticated LLM chains and agents.</li><li>Integrate with commercial or self hosted LLMs using the <a href="https://n8n.io/integrations/openai/?ref=blog.n8n.io"><u>OpenAI</u></a>, <a href="https://n8n.io/integrations/mistral-cloud-chat-model/?ref=blog.n8n.io"><u>Mistral Cloud</u></a>, <a href="https://n8n.io/integrations/google-gemini-chat-model/?ref=blog.n8n.io"><u>Google Gemini</u></a>, <a href="https://n8n.io/integrations/ollama-model/?ref=blog.n8n.io"><u>Ollama</u></a> integrations.</li><li>Generate embeddings using various techniques and models.</li><li>Create complex RAG applications by integrating with <a href="https://n8n.io/integrations/qdrant-vector-store/?ref=blog.n8n.io"><u>Qdrant</u></a>, <a href="https://n8n.io/integrations/pinecone-vector-store/?ref=blog.n8n.io"><u>Pinecone</u></a>, or other vector stores.</li></ul><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">Want to run powerful AI models on your own machine? Check out our <a href="../local-llm/index.html" rel="noreferrer">guide to self-hosting LLMs</a>!</div></div><h2 id="mlops-faqs">MLOps FAQs</h2><div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+            <div class="kg-toggle-heading">
+                <h4 class="kg-toggle-heading-text"><span style="white-space: pre-wrap;">MLOps vs. DevOps tools</span></h4>
+                <button class="kg-toggle-card-icon" aria-label="Expand toggle to read content">
+                    <svg id="Regular" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path class="cls-1" d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="kg-toggle-content"><p><span style="white-space: pre-wrap;">While MLOps and DevOps share some similarities in terms of their focus on automation, collaboration, and continuous improvement, there are some key differences between the two.</span></p><p><span style="white-space: pre-wrap;">DevOps tools are typically focused on the software development lifecycle (SDLC), while MLOps tools are focused on the machine learning lifecycle (MLLC). The MLLC includes additional steps, such as data collection, data preparation, model training, model evaluation, model deployment, model monitoring, and model retraining.</span></p><p><span style="white-space: pre-wrap;">DevOps tools are typically used to manage code, infrastructure, and deployments. MLOps tools are used to manage data, models, and experiments.</span></p></div>
+        </div><div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+            <div class="kg-toggle-heading">
+                <h4 class="kg-toggle-heading-text"><span style="white-space: pre-wrap;">Is KubeFlow better than MLflow?</span></h4>
+                <button class="kg-toggle-card-icon" aria-label="Expand toggle to read content">
+                    <svg id="Regular" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path class="cls-1" d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="kg-toggle-content"><p><span style="white-space: pre-wrap;">Kubeflow and MLflow are both popular MLOps tools, but they have different strengths and weaknesses.</span></p><p><span style="white-space: pre-wrap;">Kubeflow is a platform for building and deploying machine learning workflows on Kubernetes. It is a good choice for organizations that are already using Kubernetes or that need a platform that can scale to large deployments.</span></p><p><span style="white-space: pre-wrap;">MLflow is a platform for managing the end-to-end machine learning lifecycle. It is a good choice for organizations that need a platform that can track experiments, manage models, and deploy models to a variety of platforms.</span></p></div>
+        </div><div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+            <div class="kg-toggle-heading">
+                <h4 class="kg-toggle-heading-text"><span style="white-space: pre-wrap;">What are the main challenges of implementing MLOps?</span></h4>
+                <button class="kg-toggle-card-icon" aria-label="Expand toggle to read content">
+                    <svg id="Regular" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path class="cls-1" d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="kg-toggle-content"><p><span style="white-space: pre-wrap;">Implementing MLOps can be challenging due to the following factors:</span></p><ul><li value="1"><span style="white-space: pre-wrap;">The complexity of integrating various tools and technologies</span></li><li value="2"><span style="white-space: pre-wrap;">The lack of standardized processes and best practices</span></li><li value="3"><span style="white-space: pre-wrap;">The need for skilled engineers with expertise in both data science and DevOps.</span></li></ul></div>
+        </div><h2 id="wrap-up">Wrap up</h2><p>In this article, we explored the concept of MLOps and the machine learning development lifecycle. Additionally, we provided an overview of the MLOps tools landscape, highlighting various open-source and commercial solutions available for different stages of the MLOps workflow.</p><p>We also highlighted how <a href="../tag/ai/index.html" rel="noreferrer">n8n can be seamlessly integrated into your MLOps workflow</a>, enabling you to automate tasks, orchestrate tools, and connect to various data sources.</p><h2 id="what%E2%80%99s-next">What’s next?</h2><p>You've journeyed through the MLOps landscape, fine-tuned your models, and established a monitoring system. But the road doesn't end here. Ready to take your MLOps journey to the next level? Explore these helpful resources from n8n:</p><ul><li>Explore <a href="https://n8n.io/ai/?ref=blog.n8n.io" rel="noreferrer">n8n's AI capabilities</a> and learn how to integrate AI into your workflows.</li><li>Learn how to <a href="../open-source-llm/index.html" rel="noreferrer">leverage open-source large language models in your n8n workflows</a>.</li><li>Dive deeper into <a href="../ai-agents/index.html" rel="noreferrer">using AI agents within n8n workflows</a>.</li><li>Connect various <a href="https://n8n.io/integrations/categories/langchain/?ref=blog.n8n.io" rel="noreferrer">LangChain components</a> within your n8n workflows.</li><li>Explore <a href="https://n8n.io/integrations/categories/ai/?ref=blog.n8n.io" rel="noreferrer">n8n's growing list of AI-related integrations</a>.</li><li>Join the vibrant <a href="https://community.n8n.io/?ref=blog.n8n.io" rel="noreferrer">n8n community</a> and engage in discussions, ask questions, and share your knowledge.</li></ul><p>Whether you're a seasoned engineer or just starting your ML journey, n8n provides the tools and resources to simplify your workflow and unlock the full potential of your AI initiatives.</p>
+		<div class="newsletter-banner">
+	    <div class="newsletter-banner-content">
+	      <div class="section-header">
+	        <h2>Subscribe to <span>n8n newsletter</span></h2>
+	        <div class="section-subheader--bottom">
+	          Get the best, coolest, and latest in automation and low-code delivered to your inbox each week.
+	        </div>
+	      </div>
+	      <div class="newsletter-banner-form">
+	        <form autocomplete="off" class="contact-form" onsubmit="subscribeNewsletter(event)">
+	        	<div id="recaptcha" class="g-recaptcha"
+              data-sitekey="6LeAQeopAAAAAKlLsRb1weWm6T_vijoQBkGkbHzB"
+              data-callback="submitSubscription"
+              data-size="invisible">
+            </div>
+	          <div class="input-wrapper">
+	            <input placeholder="Email" name="email" type="email" required="required" class="">
+	            <div class="messages">
+	              <div class="message message--error">Something went wrong. Please try again later.</div>
+	              <div class="message message--success">Subscribed!</div>
+	            </div>
+	          </div>
+	          <button type="submit" class="submit-btn">Subscribe</button>
+	        </form>
+	      </div>
+	    </div>
+    </div>
+		<div class="post-share-section">
+	<div class="post-share-wrap">
+		<a href="https://twitter.com/intent/tweet?text=We%20categorized%2040%2B%20MLOps%20tools%20and%20here's%20what%20we%20found!&amp;url=https://blog.n8n.io/mlops-tools/" target="_blank" rel="noopener" aria-label="Twitter share icon"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg></a>
+		<a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.n8n.io/mlops-tools/" target="_blank" rel="noopener" aria-label="Facebook share icon"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"/></svg></a>
+		<!-- <a href="javascript:" class="post-share-link" id="copy" data-clipboard-target="#copy-link" aria-label="Copy link icon"><svg role="img" viewBox="0 0 33 24" xmlns="http://www.w3.org/2000/svg"><path d="M27.3999996,13.4004128 L21.7999996,13.4004128 L21.7999996,19 L18.9999996,19 L18.9999996,13.4004128 L13.3999996,13.4004128 L13.3999996,10.6006192 L18.9999996,10.6006192 L18.9999996,5 L21.7999996,5 L21.7999996,10.6006192 L27.3999996,10.6006192 L27.3999996,13.4004128 Z M12,20.87 C7.101,20.87 3.13,16.898 3.13,12 C3.13,7.102 7.101,3.13 12,3.13 C12.091,3.13 12.181,3.139 12.272,3.142 C9.866,5.336 8.347,8.487 8.347,12 C8.347,15.512 9.866,18.662 12.271,20.857 C12.18,20.859 12.091,20.87 12,20.87 Z M20.347,0 C18.882,0 17.484,0.276 16.186,0.756 C14.882,0.271 13.473,0 12,0 C5.372,0 0,5.373 0,12 C0,18.628 5.372,24 12,24 C13.471,24 14.878,23.726 16.181,23.242 C17.481,23.724 18.88,24 20.347,24 C26.975,24 32.347,18.628 32.347,12 C32.347,5.373 26.975,0 20.347,0 Z"/></svg></a>
+		<small class="share-link-info">The link has been copied!</small> -->
+	</div>
+	<input type="text" value="https://blog.n8n.io/mlops-tools/" id="copy-link" aria-label="Copy link input">
+</div>
+	</div>
+</article>
+<aside class="nextprev-section">
+	<div class="nextprev-wrap">
+		<section class="nextprev-newer post tag-guide tag-itops">
+			<a href="../itops-buyers-guide-to-evaluating-workflow-automation-tools/index.html" class="global-link" aria-label="ITOps Buyer’s Guide to Evaluating Workflow Automation Tools"></a>
+			<a href="../itops-buyers-guide-to-evaluating-workflow-automation-tools/index.html" class="nextprev-image global-image">
+				<img src="../content/images/size/w400/2024/12/itops3b-8--1-.jpg" loading="lazy" alt="ITOps Buyer’s Guide to Evaluating Workflow Automation Tools">			</a>
+			<div>
+				<small>Newer post</small>
+				<h3><a href="../itops-buyers-guide-to-evaluating-workflow-automation-tools/index.html">ITOps Buyer’s Guide to Evaluating Workflow Automation Tools</a></h3>
+			</div>
+		</section>
+		<section class="nextprev-older post tag-guide tag-tools-alternatives">
+			<a href="../open-source-zapier/index.html" class="global-link" aria-label="Top 7 open-source Zapier alternatives for workflow automation"></a>
+			<div>
+				<small>Older post</small>
+				<h3><a href="../open-source-zapier/index.html">Top 7 open-source Zapier alternatives for workflow automation</a></h3>
+			</div>
+			<a href="../open-source-zapier/index.html" class="nextprev-image global-image">
+				<img src="../content/images/size/w400/2024/11/8os-zapier-alternatives2--1-.jpg" loading="lazy" alt="Top 7 open-source Zapier alternatives for workflow automation">			</a>
+		</section>
+	</div>
+</aside><div class="comments-section">
+	<div class="comments-wrap">
+			</div>
+</div>
+            <div class="related-posts">
+                  <h3>Other Guides on AI</h3>
+              <div class="global-sections global-sections-items-4">
+                <h2 class="global-label global-zigzag">
+	
+	<svg role='img' viewBox='0 0 136 24' xmlns='http://www.w3.org/2000/svg'><path d='M1.525 1.525a3.5 3.5 0 014.95 0L20 15.05 33.525 1.525a3.5 3.5 0 014.95 0L52 15.05 65.525 1.525a3.5 3.5 0 014.95 0L84 15.05 97.525 1.525a3.5 3.5 0 014.95 0L116 15.05l13.525-13.525a3.5 3.5 0 014.95 4.95l-16 16a3.5 3.5 0 01-4.95 0L100 8.95 86.475 22.475a3.5 3.5 0 01-4.95 0L68 8.95 54.475 22.475a3.5 3.5 0 01-4.95 0L36 8.95 22.475 22.475a3.5 3.5 0 01-4.95 0l-16-16a3.5 3.5 0 010-4.95z'/></svg></h2>
+<article class="item-section post tag-ai tag-tutorial">
+	<a href="../how-to-build-ai-agent/index.html" class="global-link" aria-label="How To Build Your First AI Agent (+Free Workflow Template)"></a>
+	<div class="global-image">
+		<img srcset="../content/images/size/w300/2025/04/ai-2--1-.png 300w,
+			../content/images/size/w400/2025/04/ai-2--1-.pngg 400w,
+		../content/images/size/w600/2025/04/ai-2--1-.pngng 600w"
+	 sizes="(max-width:480px) 150px, 200px"
+	 src="../content/images/size/w300/2025/04/ai-2--1-.png"
+	 loading="lazy"
+	 alt="How To Build Your First AI Agent (+Free Workflow Template)">	</div>
+	<div class="global-sections-content">
+		<h3><a href="../how-to-build-ai-agent/index.html">How To Build Your First AI Agent (+Free Workflow Template)</a></h3>
+		<div class="global-sections-meta global-meta global-pointer">
+			<a href="../author/mihai/index.html">Mihai Farcas</a>
+		</div>
+	</div>
+</article>
+                <article class="item-section post tag-ai tag-guide">
+	<a href="../ai-agent-frameworks/index.html" class="global-link" aria-label="9 AI Agent Frameworks Battle: Why Developers Prefer n8n"></a>
+	<div class="global-image">
+		<img srcset="../content/images/size/w300/2025/04/ai-agent-frameworks5.jpg 300w,
+			../content/images/size/w400/2025/04/ai-agent-frameworks5.jpgg 400w,
+		../content/images/size/w600/2025/04/ai-agent-frameworks5.jpgpg 600w"
+	 sizes="(max-width:480px) 150px, 200px"
+	 src="../content/images/size/w300/2025/04/ai-agent-frameworks5.jpg"
+	 loading="lazy"
+	 alt="9 AI Agent Frameworks Battle: Why Developers Prefer n8n">	</div>
+	<div class="global-sections-content">
+		<h3><a href="../ai-agent-frameworks/index.html">9 AI Agent Frameworks Battle: Why Developers Prefer n8n</a></h3>
+		<div class="global-sections-meta global-meta global-pointer">
+			<a href="../author/yulia/index.html">Yulia Dmitrievna</a>, <a href="../author/eduard/index.html">Eduard Parsadanyan</a>
+		</div>
+	</div>
+</article>
+                <article class="item-section post tag-ai tag-guide">
+	<a href="../ai-agents-examples/index.html" class="global-link" aria-label="15 Practical AI Agent Examples to Scale Your Business in 2025"></a>
+	<div class="global-image">
+		<img srcset="../content/images/size/w300/2025/03/Slide-16_9---172--1-.png 300w,
+			../content/images/size/w400/2025/03/Slide-16_9---172--1-.pngg 400w,
+		../content/images/size/w600/2025/03/Slide-16_9---172--1-.pngng 600w"
+	 sizes="(max-width:480px) 150px, 200px"
+	 src="../content/images/size/w300/2025/03/Slide-16_9---172--1-.png"
+	 loading="lazy"
+	 alt="15 Practical AI Agent Examples to Scale Your Business in 2025">	</div>
+	<div class="global-sections-content">
+		<h3><a href="../ai-agents-examples/index.html">15 Practical AI Agent Examples to Scale Your Business in 2025</a></h3>
+		<div class="global-sections-meta global-meta global-pointer">
+			<a href="../author/federico/index.html">Federico Trotta</a>
+		</div>
+	</div>
+</article>
+                <article class="item-section post tag-ai tag-guide">
+	<a href="../best-ai-for-coding/index.html" class="global-link" aria-label="8 best AI coding tools for developers: tested &amp; compared!"></a>
+	<div class="global-image">
+		<img srcset="../content/images/size/w300/2025/03/11-ai-tools-coding--2---2-.png 300w,
+			../content/images/size/w400/2025/03/11-ai-tools-coding--2---2-.pngg 400w,
+		../content/images/size/w600/2025/03/11-ai-tools-coding--2---2-.pngng 600w"
+	 sizes="(max-width:480px) 150px, 200px"
+	 src="../content/images/size/w300/2025/03/11-ai-tools-coding--2---2-.png"
+	 loading="lazy"
+	 alt="8 best AI coding tools for developers: tested &amp; compared!">	</div>
+	<div class="global-sections-content">
+		<h3><a href="../best-ai-for-coding/index.html">8 best AI coding tools for developers: tested &amp; compared!</a></h3>
+		<div class="global-sections-meta global-meta global-pointer">
+			<a href="../author/yulia/index.html">Yulia Dmitrievna</a>, <a href="../author/eduard/index.html">Eduard Parsadanyan</a>
+		</div>
+	</div>
+</article>
+              </div>
+            </div>
+  <aside class="two-column-posts">
+    <h3>Latest n8n guides</h3>
+    <div class="two-column-posts__inner">
+	      <section class="nextprev-newer post">
+  <a href="../how-to-build-ai-agent/index.html" class="global-link" aria-label="How To Build Your First AI Agent (+Free Workflow Template)"></a>
+    <a href="../how-to-build-ai-agent/index.html" class="nextprev-image global-image">
+      <img src="../content/images/size/w400/2025/04/ai-2--1-.png" loading="lazy" alt="How To Build Your First AI Agent (+Free Workflow Template)">    </a>
+  <div>
+    <h3><a href="../how-to-build-ai-agent/index.html">How To Build Your First AI Agent (+Free Workflow Template)</a></h3>
+  </div>
+</section>
+	      <section class="nextprev-newer post">
+  <a href="../ai-agent-frameworks/index.html" class="global-link" aria-label="9 AI Agent Frameworks Battle: Why Developers Prefer n8n"></a>
+    <a href="../ai-agent-frameworks/index.html" class="nextprev-image global-image">
+      <img src="../content/images/size/w400/2025/04/ai-agent-frameworks5.jpg" loading="lazy" alt="9 AI Agent Frameworks Battle: Why Developers Prefer n8n">    </a>
+  <div>
+    <h3><a href="../ai-agent-frameworks/index.html">9 AI Agent Frameworks Battle: Why Developers Prefer n8n</a></h3>
+  </div>
+</section>
+	      <section class="nextprev-newer post">
+  <a href="../series-b/index.html" class="global-link" aria-label="n8n closes €55M Series B round led by Highland Europe"></a>
+    <a href="../series-b/index.html" class="nextprev-image global-image">
+      <img src="../content/images/size/w400/2025/03/seriesB-blog.jpg" loading="lazy" alt="n8n closes €55M Series B round led by Highland Europe">    </a>
+  <div>
+    <h3><a href="../series-b/index.html">n8n closes €55M Series B round led by Highland Europe</a></h3>
+  </div>
+</section>
+	      <section class="nextprev-newer post">
+  <a href="../ai-agents-examples/index.html" class="global-link" aria-label="15 Practical AI Agent Examples to Scale Your Business in 2025"></a>
+    <a href="../ai-agents-examples/index.html" class="nextprev-image global-image">
+      <img src="../content/images/size/w400/2025/03/Slide-16_9---172--1-.png" loading="lazy" alt="15 Practical AI Agent Examples to Scale Your Business in 2025">    </a>
+  <div>
+    <h3><a href="../ai-agents-examples/index.html">15 Practical AI Agent Examples to Scale Your Business in 2025</a></h3>
+  </div>
+</section>
+    </div>
+  </aside>
+
+					<!-- <div class="subscribe-section">
+	<div class="subscribe-wrap">
+		<h3>Subscribe to new posts</h3>
+		<form data-members-form="subscribe" class="subscribe-form">
+			<input data-members-email type="email" placeholder="Your email address" aria-label="Your email address" required>
+			<button class="global-button" type="submit">Subscribe</button>
+		</form>
+		<div class="subscribe-alert">
+			<small class="alert-loading global-alert">Processing your application</small>
+			<small class="alert-success global-alert">Please check your inbox and click the link to confirm your subscription</small>
+			<small class="alert-error global-alert">There was an error sending the email</small>
+		</div>
+	</div>
+</div>
+ -->
+				</main>
+				<div id="subFooter" class="sub-footer">
+  <div class="sub-footer-container">
+    <div class="footer-columns">
+      <div>
+        <div class="column-name">Popular integrations</div>
+        <ul class="col-links">
+          <li>
+            <a href="https://n8n.io/integrations/google-sheets/" class="footer-link"> Google Sheets </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/telegram/" class="footer-link"> Telegram </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/mysql/" class="footer-link"> MySQL </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/slack/" class="footer-link"> Slack </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/discord/" class="footer-link"> Discord </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/postgres/" class="footer-link"> Postgres </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/notion/" class="footer-link"> Notion </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/gmail/" class="footer-link"> Gmail </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/airtable/" class="footer-link"> Airtable </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/google-drive/" class="footer-link"> Google Drive </a>
+          </li>
+        </ul>
+        <div class="bottom-link hidden-link">
+          <a href="https://n8n.io/integrations/" class="footer-link">
+            Show more integrations
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10" width="7px" height="7px">
+              <g clip-path="url(#a)">
+                <path
+                  fill="#111010"
+                  fill-rule="evenodd"
+                  d="M7.678 1.36H.481V0H10v9.52H8.64v-7.2L.962 10 0 9.038 7.678 1.36Z"
+                  clip-rule="evenodd"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h10v10H0z"></path>
+                </clipPath>
+              </defs></svg
+            ></a>
+        </div>
+        <button
+          type="button"
+          class="footer-link footer-link--more"
+          onclick="document.getElementById('subFooter').classList.toggle('sub-footer--full')"></button>
+      </div>
+      <div>
+        <div class="column-name">Trending combinations</div>
+        <ul class="col-links">
+          <li>
+            <a href="https://n8n.io/integrations/hubspot/and/salesforce/" class="footer-link">
+              HubSpot and Salesforce
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/twilio/and/whatsapp-business-cloud/" class="footer-link">
+              Twilio and WhatsApp
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/github/and/jira-software/" class="footer-link">
+              GitHub and Jira
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/asana/and/slack/" class="footer-link"> Asana and Slack </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/asana/and/salesforce/" class="footer-link">
+              Asana and Salesforce
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/jira-software/and/slack/" class="footer-link">
+              Jira and Slack
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/jira-software/and/salesforce/" class="footer-link">
+              Jira and Salesforce
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/github/and/slack/" class="footer-link"> GitHub and Slack </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/hubspot/and/quickbooks-online/" class="footer-link">
+              HubSpot and QuickBooks
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/hubspot/and/slack/" class="footer-link"> HubSpot and Slack </a>
+          </li>
+        </ul>
+        <div class="bottom-link hidden-link">
+          <a href="https://n8n.io/integrations/" class="footer-link">
+            Show more integrations
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10" width="7px" height="7px">
+              <g clip-path="url(#a)">
+                <path
+                  fill="#111010"
+                  fill-rule="evenodd"
+                  d="M7.678 1.36H.481V0H10v9.52H8.64v-7.2L.962 10 0 9.038 7.678 1.36Z"
+                  clip-rule="evenodd"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h10v10H0z"></path>
+                </clipPath>
+              </defs></svg
+            ></a>
+        </div>
+        <button
+          type="button"
+          class="footer-link footer-link--more"
+          onclick="document.getElementById('subFooter').classList.toggle('sub-footer--full')"></button>
+      </div>
+      <div>
+        <div class="column-name">Top integration categories</div>
+        <ul class="col-links">
+          <li>
+            <a href="https://n8n.io/integrations/categories/development/" class="footer-link"> Development </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/categories/communication/" class="footer-link">
+              Communication
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/categories/langchain/" class="footer-link"> Langchain </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/categories/ai/" class="footer-link"> AI </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/categories/data-and-storage/" class="footer-link">
+              Data &amp; Storage
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/categories/marketing/" class="footer-link"> Marketing </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/categories/productivity/" class="footer-link">
+              Productivity
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/categories/sales/" class="footer-link"> Sales </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/categories/utility/" class="footer-link"> Utility </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/categories/miscellaneous/" class="footer-link">
+              Miscellaneous
+            </a>
+          </li>
+        </ul>
+        <div class="bottom-link hidden-link">
+          <a href="https://n8n.io/integrations/" class="footer-link">
+            Explore more categories
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10" width="7px" height="7px">
+              <g clip-path="url(#a)">
+                <path
+                  fill="#111010"
+                  fill-rule="evenodd"
+                  d="M7.678 1.36H.481V0H10v9.52H8.64v-7.2L.962 10 0 9.038 7.678 1.36Z"
+                  clip-rule="evenodd"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h10v10H0z"></path>
+                </clipPath>
+              </defs></svg
+            ></a>
+        </div>
+        <button
+          type="button"
+          class="footer-link footer-link--more"
+          onclick="document.getElementById('subFooter').classList.toggle('sub-footer--full')"></button>
+      </div>
+      <div>
+        <div class="column-name">Trending templates</div>
+        <ul class="col-links">
+          <li>
+            <a href="https://n8n.io/workflows/1750-creating-an-api-endpoint/" class="footer-link">
+              Creating an API endpoint
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/workflows/1954-ai-agent-chat/" class="footer-link">
+              AI agent chat
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/workflows/1951-scrape-and-summarize-webpages-with-ai/" class="footer-link">
+              Scrape and summarize webpages with AI
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/workflows/1700-very-quick-quickstart/" class="footer-link">
+              Very quick quickstart
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/workflows/1748-pulling-data-from-services-that-n8n-doesnt-have-a-pre-built-integration-for/" class="footer-link">
+              Pulling data from services that n8n doesn’t have a pre-built integration for
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/workflows/1747-joining-different-datasets/" class="footer-link">
+              Joining different datasets
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/workflows/1534-back-up-your-n8n-workflows-to-github/" class="footer-link">
+              Back Up Your n8n Workflows To Github
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/workflows/2006-ai-agent-that-can-scrape-webpages/" class="footer-link">
+              AI agent that can scrape webpages
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/workflows/1862-openai-gpt-3-company-enrichment-from-website-content/" class="footer-link">
+              OpenAI GPT-3: Company Enrichment from website content
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/workflows/1934-telegram-ai-chatbot/" class="footer-link">
+              Telegram AI Chatbot
+            </a>
+          </li>
+        </ul>
+        <div class="bottom-link hidden-link">
+          <a href="https://n8n.io/workflows/" class="footer-link">
+            Explore 800+ workflow templates
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10" width="7px" height="7px">
+              <g clip-path="url(#a)">
+                <path
+                  fill="#111010"
+                  fill-rule="evenodd"
+                  d="M7.678 1.36H.481V0H10v9.52H8.64v-7.2L.962 10 0 9.038 7.678 1.36Z"
+                  clip-rule="evenodd"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h10v10H0z"></path>
+                </clipPath>
+              </defs></svg
+            ></a>
+        </div>
+        <button
+          type="button"
+          class="footer-link footer-link--more"
+          onclick="document.getElementById('subFooter').classList.toggle('sub-footer--full')"></button>
+      </div>
+      <div>
+        <div class="column-name">Top guides</div>
+        <ul class="col-links">
+          <li>
+            <a href="../telegram-bots/index.html" class="footer-link"> Telegram bots </a>
+          </li>
+          <li>
+            <a href="../open-source-chatbot/index.html" class="footer-link"> Open-source chatbot </a>
+          </li>
+          <li>
+            <a href="../open-source-llm/index.html" class="footer-link"> Open-source LLM </a>
+          </li>
+          <li>
+            <a href="../open-source-low-code-platforms.html" class="footer-link"> Open-source low-code platforms </a>
+          </li>
+          <li>
+            <a href="../free-zapier-alternatives/index.html" class="footer-link"> Zapier alternatives </a>
+          </li>
+          <li>
+            <a href="../make-vs-zapier/index.html" class="footer-link"> Make vs Zapier </a>
+          </li>
+          <li class="hidden-link">
+            <a href="../ai-agents/index.html" class="footer-link"> AI agents </a>
+          </li>
+          <li class="hidden-link">
+            <a href="../ai-coding-assistants/index.html" class="footer-link"> AI coding assistants </a>
+          </li>
+          <li class="hidden-link">
+            <a href="../create-chatgpt-discord-bot/index.html" class="footer-link"> ChatGPT Discord bot </a>
+          </li>
+          <li class="hidden-link">
+            <a href="../best-ai-chatbot/index.html" class="footer-link"> Best AI chatbot </a>
+          </li>
+        </ul>
+        <div class="bottom-link hidden-link">
+          <a href="../index.html" class="footer-link">
+            Show guides
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10" width="7px" height="7px">
+              <g clip-path="url(#a)">
+                <path
+                  fill="#111010"
+                  fill-rule="evenodd"
+                  d="M7.678 1.36H.481V0H10v9.52H8.64v-7.2L.962 10 0 9.038 7.678 1.36Z"
+                  clip-rule="evenodd"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h10v10H0z"></path>
+                </clipPath>
+              </defs></svg
+            ></a>
+        </div>
+        <button
+          type="button"
+          class="footer-link footer-link--more"
+          onclick="document.getElementById('subFooter').classList.toggle('sub-footer--full')"></button>
+      </div>
+    </div>
+  </div>
+</div><footer class="footer-section global-footer">
+	<div class="footer-wrap">
+		<div class="footer-data">
+			<div class="footer-logo">
+				<a href="../index.html" class="is-image"><img src="../content/images/2022/06/n8n-blog.png" alt="n8n Blog"></a>
+			</div>
+			<p class="footer-description">Automate without limits</p>
+			<div class="footer-icons">
+				<a href="https://www.facebook.com/n8nio" aria-label="link Facebook"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"/></svg></a>
+				<a href="https://x.com/n8n_io" aria-label="link Twitter"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg></a>
+				<a href="https://github.com/n8n-io/n8n" aria-label="link GitHub"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+				<a href="https://discord.gg/n8n" aria-label="link Discord"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.222 0c1.406 0 2.54 1.137 2.607 2.475V24l-2.677-2.273-1.47-1.338-1.604-1.398.67 2.205H3.71c-1.402 0-2.54-1.065-2.54-2.476V2.48C1.17 1.142 2.31.003 3.715.003h16.5L20.222 0zm-6.118 5.683h-.03l-.202.2c2.073.6 3.076 1.537 3.076 1.537-1.336-.668-2.54-1.002-3.744-1.137-.87-.135-1.74-.064-2.475 0h-.2c-.47 0-1.47.2-2.81.735-.467.203-.735.336-.735.336s1.002-1.002 3.21-1.537l-.135-.135s-1.672-.064-3.477 1.27c0 0-1.805 3.144-1.805 7.02 0 0 1 1.74 3.743 1.806 0 0 .4-.533.805-1.002-1.54-.468-2.14-1.404-2.14-1.404s.134.066.335.2h.06c.03 0 .044.015.06.03v.006c.016.016.03.03.06.03.33.136.66.27.93.4.466.202 1.065.403 1.8.536.93.135 1.996.2 3.21 0 .6-.135 1.2-.267 1.8-.535.39-.2.87-.4 1.397-.737 0 0-.6.936-2.205 1.404.33.466.795 1 .795 1 2.744-.06 3.81-1.8 3.87-1.726 0-3.87-1.815-7.02-1.815-7.02-1.635-1.214-3.165-1.26-3.435-1.26l.056-.02zm.168 4.413c.703 0 1.27.6 1.27 1.335 0 .74-.57 1.34-1.27 1.34-.7 0-1.27-.6-1.27-1.334.002-.74.573-1.338 1.27-1.338zm-4.543 0c.7 0 1.266.6 1.266 1.335 0 .74-.57 1.34-1.27 1.34-.7 0-1.27-.6-1.27-1.334 0-.74.57-1.338 1.27-1.338z"/></svg></a>
+				<a href="https://www.linkedin.com/company/n8n/" aria-label="link LinkedIn"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+				<a href="https://www.youtube.com/c/n8n-io" aria-label="link YouTube"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path class="a" d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+				
+
+			</div>
+		</div>
+		<div class="footer-nav">
+			
+
+
+
+<div class="footer-nav-column">
+	<!-- <small>Column 1</small> -->
+	<ul>
+		<li><a href="https://n8n.io/">n8n home</a></li>
+		<li><a href="https://n8n.io/features/">Features</a></li>
+		<li><a href="https://n8n.io/pricing/">Pricing</a></li>
+		<li><a href="https://docs.n8n.io/">Docs</a></li>
+	</ul>
+</div>
+
+<div class="footer-nav-column">
+	<!-- <small>Column 2</small> -->
+	<ul>
+		<li><a href="https://community.n8n.io">Community</a></li>
+	</ul>
+</div>
+
+
+		</div>
+	</div>
+	<div class="footer-copyright">
+		Made with ❤️ in Berlin. © 2025 n8n | All rights reserved.
+	</div>
+</footer>
+			</div>
+		</div>
+		<div id="notifications" class="global-notification">
+	<div class="subscribe">You’ve successfully subscribed to n8n Blog</div>
+	<div class="signin">Welcome back! You’ve successfully signed in.</div>
+	<div class="signup">Great! You’ve successfully signed up.</div>
+	<div class="expired">Your link has expired</div>
+	<div class="checkout-success">Success! Check your email for magic link to sign-in.</div>
+</div>
+				<script src="../assets/js/global.js%3Fv=4801f6d1f9"></script>
+		<script src="../assets/js/post.js%3Fv=4801f6d1f9"></script>
+		
+		<script>
+!function(){"use strict";const p=new URLSearchParams(window.location.search),isAction=p.has("action"),isStripe=p.has("stripe"),success=p.get("success"),action=p.get("action"),stripe=p.get("stripe"),n=document.getElementById("notifications"),a="is-subscribe",b="is-signin",c="is-signup",d="is-expired",e="is-checkout-success";p&&(isAction&&(action=="subscribe"&&success=="true"&&n.classList.add(a),action=="signin"&&success=="true"&&n.classList.add(b),action=="signup"&&success=="true"&&n.classList.add(c),success=="false"&&n.classList.add(d)),isStripe&&stripe=="success"&&n.classList.add(e),(isAction||isStripe)&&setTimeout(function(){window.history.replaceState(null,null,window.location.pathname),n.classList.remove(a,b,c,d,e)},5000))}();
+</script>
+
+		
+		<script>
+
+// Contain every link in an array.
+var links = document.querySelectorAll('a');
+
+// For every link,
+for (var i = 0; i < links.length; i++) {
+
+  // if the link's hostname is different from this Ghost's hostname,
+  // i.e. if the link is external,
+  if (links[i].hostname != window.location.hostname) {
+
+    // change the target and rel value as the following.
+    links[i].target = '_blank';
+    links[i].rel = 'noopener';
+
+  }
+}
+</script>
+	</body>
+</html>

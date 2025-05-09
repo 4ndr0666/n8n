@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<title>Your Guide to AI Orchestration: Best Practices and Tools – n8n Blog</title>
+		<meta name="HandheldFriendly" content="True">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400;1,800;1,900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400;1,800;1,900&display=swap"> -->
+		<link rel="stylesheet" type="text/css" href="../assets/css/screen.css%3Fv=4801f6d1f9.css">
+		<style>hr{background-image:url("data:image/svg+xml;utf8,<svg role='img' viewBox='0 0 136 24' xmlns='http://www.w3.org/2000/svg'><path d='M1.525 1.525a3.5 3.5 0 014.95 0L20 15.05 33.525 1.525a3.5 3.5 0 014.95 0L52 15.05 65.525 1.525a3.5 3.5 0 014.95 0L84 15.05 97.525 1.525a3.5 3.5 0 014.95 0L116 15.05l13.525-13.525a3.5 3.5 0 014.95 4.95l-16 16a3.5 3.5 0 01-4.95 0L100 8.95 86.475 22.475a3.5 3.5 0 01-4.95 0L68 8.95 54.475 22.475a3.5 3.5 0 01-4.95 0L36 8.95 22.475 22.475a3.5 3.5 0 01-4.95 0l-16-16a3.5 3.5 0 010-4.95z'/></svg>")}</style>
+
+		<meta name="description" content="Learn how AI orchestration aligns AI capabilities with business objectives. Explore benefits, best practices, and top tools. Read more here!">
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="n8n Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Your Guide to AI Orchestration: Best Practices and Tools">
+    <meta property="og:description" content="Learn how AI orchestration aligns AI capabilities with business objectives. Explore best practices, top 5 tools and how n8n helps with the effective implementation.">
+    <meta property="og:url" content="https://blog.n8n.io/ai-orchestration/">
+    <meta property="og:image" content="https://blog.n8n.io/content/images/size/w1200/2024/07/ai-orchestrationd-1--1-.jpg">
+    <meta property="article:published_time" content="2024-08-01T09:15:46.000Z">
+    <meta property="article:modified_time" content="2024-09-16T09:01:35.000Z">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Guide">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/n8nio">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your Guide to AI Orchestration: Best Practices and Tools">
+    <meta name="twitter:description" content="Learn how AI orchestration aligns AI capabilities with business objectives. Explore best practices, top 5 tools and how n8n helps with the effective implementation.">
+    <meta name="twitter:url" content="https://blog.n8n.io/ai-orchestration/">
+    <meta name="twitter:image" content="https://blog.n8n.io/content/images/size/w1200/2024/07/ai-orchestrationd-1--1-.jpg">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Yulia Dmitrievna">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="AI, Guide">
+    <meta name="twitter:site" content="@n8n_io">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="675">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "n8n Blog",
+        "url": "https://blog.n8n.io/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.n8n.io/content/images/2022/06/n8n-blog.png"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Yulia Dmitrievna",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://blog.n8n.io/content/images/2023/01/profile-pik.jpg",
+            "width": 1024,
+            "height": 1024
+        },
+        "url": "https://blog.n8n.io/author/yulia/",
+        "sameAs": []
+    },
+    "headline": "Your Guide to AI Orchestration: Best Practices and Tools",
+    "url": "https://blog.n8n.io/ai-orchestration/",
+    "datePublished": "2024-08-01T09:15:46.000Z",
+    "dateModified": "2024-09-16T09:01:35.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.n8n.io/content/images/size/w1200/2024/07/ai-orchestrationd-1--1-.jpg",
+        "width": 1200,
+        "height": 675
+    },
+    "keywords": "AI, Guide",
+    "description": "Learn how AI orchestration aligns AI capabilities with business objectives. Explore best practices, top 5 tools and how n8n helps with the effective implementation.",
+    "mainEntityOfPage": "https://blog.n8n.io/ai-orchestration/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.119">
+    <link rel="alternate" type="application/rss+xml" title="n8n Blog" href="../rss/index.html">
+    <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.50/umd/portal.min.js" data-i18n="true" data-ghost="https://blog.n8n.io/" data-key="8626993d9b363277120ea42164" data-api="https://n8n-cloud-blog.ghost.io/ghost/api/content/" data-locale="en" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style>
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.5/umd/sodo-search.min.js" data-key="8626993d9b363277120ea42164" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.5/umd/main.css" data-sodo-search="https://n8n-cloud-blog.ghost.io/" data-locale="en" crossorigin="anonymous"></script>
+    
+    <link href="https://blog.n8n.io/webmentions/receive/" rel="webmention">
+    <script defer src="../public/cards.min.js%3Fv=4801f6d1f9"></script>
+    <link rel="stylesheet" type="text/css" href="../public/cards.min.css%3Fv=4801f6d1f9.css">
+    <script defer src="../public/member-attribution.min.js%3Fv=4801f6d1f9"></script><style>:root {--ghost-accent-color: #FD8925;}</style>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<style>
+    .content-banner {
+        display: flex;
+        align-items: center;
+        padding: 25px 30px 29px 120px;
+        gap: 20px;
+        background: url(../content/images/2023/05/banner.svg) no-repeat 0 0;
+        position: relative;
+        overflow: hidden;
+        border-radius: 32px;
+        margin-bottom: 40px;
+    }
+    .content-banner:before {
+        content: '';
+        width: 97px;
+        height: 97px;
+        background: #8287eb;
+        filter: blur(66.7196px);
+        position: absolute;
+        top: -41px;
+        left: -70px;
+    }
+    .content-banner div {
+        flex: 1 1 0%;
+    }
+    .content-banner h3 {
+        font-size: 28px;
+        line-height: 36px;
+        margin: 0;
+    }
+    .content-banner a {
+        flex-shrink: 0;
+    }
+    .content-banner p {
+        margin-bottom: 0;
+        line-height: 24px;
+    }
+    .content-banner .global-button {
+        text-decoration: none;
+        padding: 9px 20px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+</style>
+<!-- cookie consent benner injection-->  
+    <div id="n8n-consent-modal" class="consent-modal consent-modal--hidden">
+      <p class="consent-modal-header">We use analytics</p>
+      <p class="consent-modal-description">
+        We use cookies and other tracking technologies to improve your browsing experience, to analyze our website
+        traffic, assist our marketing efforts and to understand where our visitors are coming from.
+      </p>
+      <a href="https://n8n.io/legal#privacy" class="consent-modal-link">Privacy Policy</a>
+      <div>
+        <button class="consent-modal-button consent-modal-button--decline" onclick="acceptConsent(false)">
+          Decline
+        </button>
+        <button class="consent-modal-button consent-modal-button--agree" onclick="acceptConsent(true)">Agree</button>
+      </div>
+    </div>
+<style>
+      .consent-modal {
+        display: block;
+        padding: 32px 16px;
+        background: #101330;
+        box-shadow: 0px 4px 40px rgba(153, 155, 175, 0.17);
+        width: 100%;
+        position: fixed;
+        z-index: 1000;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        box-sizing: border-box;
+      }
+
+      .consent-modal--hidden {
+        display: none;
+      }
+
+      .consent-modal-link {
+        font-family: 'moderat', sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+        font-style: normal;
+        font-weight: 700;
+        text-decoration-line: underline;
+        color: #e4e6ec;
+        margin-bottom: 16px;
+        display: block;
+      }
+
+      .consent-modal-header,
+      .consent-modal-description {
+        padding: 0;
+        margin: 0 0 16px;
+        font-style: normal;
+      }
+
+      .consent-modal-header {
+        font-family: 'sunset-gothic', 'Sunset Gothic Pro', sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        color: #ffffff;
+      }
+
+      .consent-modal-description {
+        font-family: 'moderat', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #e4e6ec;
+      }
+
+      .consent-modal-button {
+        padding: 9px 20px;
+        border-radius: 6px;
+        font-style: normal;
+        font-weight: 700;
+        text-align: center;
+        color: #ffffff;
+        cursor: pointer;
+        border: none;
+        font-family: 'moderat', sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      .consent-modal-button--decline {
+        margin-right: 10px;
+        background: #40425e;
+      }
+
+      .consent-modal-button--agree {
+        background: #20b69e;
+      }
+
+      @media screen and (min-width: 992px) {
+        .consent-modal {
+          border-radius: 30px;
+          left: unset;
+          right: 14px;
+          bottom: 14px;
+          padding: 48px;
+          max-width: 621px;
+        }
+
+        .consent-modal-header {
+          font-size: 28px;
+          line-height: 36px;
+        }
+
+        .consent-modal-link,
+        .consent-modal-button,
+        .consent-modal-description {
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
+    </style>
+    <script>
+      ;(function () {
+        const GDPR_COUNTRIES = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'GB'];
+        const CONSENT_MODAL_ID = 'n8n-consent-modal';
+        const CONSENT_MODAL_HIDDEN = 'consent-modal--hidden';
+        window.acceptConsent = function (accepted) {
+          const cookie = {
+            consent: accepted
+          };
+          const d = new Date();
+          d.setTime(d.getTime() + 5 * 24 * 60 * 60 * 1000);
+          document.cookie = `n8n-consent=${JSON.stringify(cookie)}; expires=${d.toUTCString()}; path=/; domain=.n8n.io`;
+          const modal = document.getElementById(CONSENT_MODAL_ID);
+          if (modal) {
+            modal.classList.add(CONSENT_MODAL_HIDDEN);
+          }
+        };
+        async function checkCookie() {
+          try {
+            const res = await fetch('https://ipapi.co/json/');
+            const ip = await res.json();
+            const location = ip.country;
+            if (GDPR_COUNTRIES.includes(location) || ip.country_code === 'US' && ip.region_code === 'CA') {
+              var _document$cookie$matc;
+              const cookie = ((_document$cookie$matc = document.cookie.match('(^|;)\\s*' + 'n8n-consent' + '\\s*=\\s*([^;]+)')) === null || _document$cookie$matc === void 0 ? void 0 : _document$cookie$matc.pop()) || '';
+              if (cookie === '') {
+                const modal = document.getElementById(CONSENT_MODAL_ID);
+                if (modal) {
+                  modal.classList.remove(CONSENT_MODAL_HIDDEN);
+                }
+              }
+            } else {
+              acceptConsent(true);
+            }
+          } catch (e) {}
+        }
+        window.addEventListener('DOMContentLoaded', checkCookie);
+      })(window);
+    </script>
+
+<!-- Google Tag Manager (blog.n8n.io) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MQTZKBJ');</script>
+<!-- End Google Tag Manager -->
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/solid.min.css"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<script>
+  !function(e,a,o){"object"==typeof exports?(module.exports=o(),module.exports.default=o()):"function"==typeof define&&define.amd?define(o):a.slugify=o()}(0,this,(function(){var e=JSON.parse('{"$":"dollar","%":"percent","&":"and","<":"less",">":"greater","|":"or","¢":"cent","£":"pound","¤":"currency","¥":"yen","©":"(c)","ª":"a","®":"(r)","º":"o","À":"A","Á":"A","Â":"A","Ã":"A","Ä":"A","Å":"A","Æ":"AE","Ç":"C","È":"E","É":"E","Ê":"E","Ë":"E","Ì":"I","Í":"I","Î":"I","Ï":"I","Ð":"D","Ñ":"N","Ò":"O","Ó":"O","Ô":"O","Õ":"O","Ö":"O","Ø":"O","Ù":"U","Ú":"U","Û":"U","Ü":"U","Ý":"Y","Þ":"TH","ß":"ss","à":"a","á":"a","â":"a","ã":"a","ä":"a","å":"a","æ":"ae","ç":"c","è":"e","é":"e","ê":"e","ë":"e","ì":"i","í":"i","î":"i","ï":"i","ð":"d","ñ":"n","ò":"o","ó":"o","ô":"o","õ":"o","ö":"o","ø":"o","ù":"u","ú":"u","û":"u","ü":"u","ý":"y","þ":"th","ÿ":"y","Ā":"A","ā":"a","Ă":"A","ă":"a","Ą":"A","ą":"a","Ć":"C","ć":"c","Č":"C","č":"c","Ď":"D","ď":"d","Đ":"DJ","đ":"dj","Ē":"E","ē":"e","Ė":"E","ė":"e","Ę":"e","ę":"e","Ě":"E","ě":"e","Ğ":"G","ğ":"g","Ģ":"G","ģ":"g","Ĩ":"I","ĩ":"i","Ī":"i","ī":"i","Į":"I","į":"i","İ":"I","ı":"i","Ķ":"k","ķ":"k","Ļ":"L","ļ":"l","Ľ":"L","ľ":"l","Ł":"L","ł":"l","Ń":"N","ń":"n","Ņ":"N","ņ":"n","Ň":"N","ň":"n","Ō":"O","ō":"o","Ő":"O","ő":"o","Œ":"OE","œ":"oe","Ŕ":"R","ŕ":"r","Ř":"R","ř":"r","Ś":"S","ś":"s","Ş":"S","ş":"s","Š":"S","š":"s","Ţ":"T","ţ":"t","Ť":"T","ť":"t","Ũ":"U","ũ":"u","Ū":"u","ū":"u","Ů":"U","ů":"u","Ű":"U","ű":"u","Ų":"U","ų":"u","Ŵ":"W","ŵ":"w","Ŷ":"Y","ŷ":"y","Ÿ":"Y","Ź":"Z","ź":"z","Ż":"Z","ż":"z","Ž":"Z","ž":"z","Ə":"E","ƒ":"f","Ơ":"O","ơ":"o","Ư":"U","ư":"u","ǈ":"LJ","ǉ":"lj","ǋ":"NJ","ǌ":"nj","Ș":"S","ș":"s","Ț":"T","ț":"t","ə":"e","˚":"o","Ά":"A","Έ":"E","Ή":"H","Ί":"I","Ό":"O","Ύ":"Y","Ώ":"W","ΐ":"i","Α":"A","Β":"B","Γ":"G","Δ":"D","Ε":"E","Ζ":"Z","Η":"H","Θ":"8","Ι":"I","Κ":"K","Λ":"L","Μ":"M","Ν":"N","Ξ":"3","Ο":"O","Π":"P","Ρ":"R","Σ":"S","Τ":"T","Υ":"Y","Φ":"F","Χ":"X","Ψ":"PS","Ω":"W","Ϊ":"I","Ϋ":"Y","ά":"a","έ":"e","ή":"h","ί":"i","ΰ":"y","α":"a","β":"b","γ":"g","δ":"d","ε":"e","ζ":"z","η":"h","θ":"8","ι":"i","κ":"k","λ":"l","μ":"m","ν":"n","ξ":"3","ο":"o","π":"p","ρ":"r","ς":"s","σ":"s","τ":"t","υ":"y","φ":"f","χ":"x","ψ":"ps","ω":"w","ϊ":"i","ϋ":"y","ό":"o","ύ":"y","ώ":"w","Ё":"Yo","Ђ":"DJ","Є":"Ye","І":"I","Ї":"Yi","Ј":"J","Љ":"LJ","Њ":"NJ","Ћ":"C","Џ":"DZ","А":"A","Б":"B","В":"V","Г":"G","Д":"D","Е":"E","Ж":"Zh","З":"Z","И":"I","Й":"J","К":"K","Л":"L","М":"M","Н":"N","О":"O","П":"P","Р":"R","С":"S","Т":"T","У":"U","Ф":"F","Х":"H","Ц":"C","Ч":"Ch","Ш":"Sh","Щ":"Sh","Ъ":"U","Ы":"Y","Ь":"","Э":"E","Ю":"Yu","Я":"Ya","а":"a","б":"b","в":"v","г":"g","д":"d","е":"e","ж":"zh","з":"z","и":"i","й":"j","к":"k","л":"l","м":"m","н":"n","о":"o","п":"p","р":"r","с":"s","т":"t","у":"u","ф":"f","х":"h","ц":"c","ч":"ch","ш":"sh","щ":"sh","ъ":"u","ы":"y","ь":"","э":"e","ю":"yu","я":"ya","ё":"yo","ђ":"dj","є":"ye","і":"i","ї":"yi","ј":"j","љ":"lj","њ":"nj","ћ":"c","ѝ":"u","џ":"dz","Ґ":"G","ґ":"g","Ғ":"GH","ғ":"gh","Қ":"KH","қ":"kh","Ң":"NG","ң":"ng","Ү":"UE","ү":"ue","Ұ":"U","ұ":"u","Һ":"H","һ":"h","Ә":"AE","ә":"ae","Ө":"OE","ө":"oe","Ա":"A","Բ":"B","Գ":"G","Դ":"D","Ե":"E","Զ":"Z","Է":"E\'","Ը":"Y\'","Թ":"T\'","Ժ":"JH","Ի":"I","Լ":"L","Խ":"X","Ծ":"C\'","Կ":"K","Հ":"H","Ձ":"D\'","Ղ":"GH","Ճ":"TW","Մ":"M","Յ":"Y","Ն":"N","Շ":"SH","Չ":"CH","Պ":"P","Ջ":"J","Ռ":"R\'","Ս":"S","Վ":"V","Տ":"T","Ր":"R","Ց":"C","Փ":"P\'","Ք":"Q\'","Օ":"O\'\'","Ֆ":"F","և":"EV","ء":"a","آ":"aa","أ":"a","ؤ":"u","إ":"i","ئ":"e","ا":"a","ب":"b","ة":"h","ت":"t","ث":"th","ج":"j","ح":"h","خ":"kh","د":"d","ذ":"th","ر":"r","ز":"z","س":"s","ش":"sh","ص":"s","ض":"dh","ط":"t","ظ":"z","ع":"a","غ":"gh","ف":"f","ق":"q","ك":"k","ل":"l","م":"m","ن":"n","ه":"h","و":"w","ى":"a","ي":"y","ً":"an","ٌ":"on","ٍ":"en","َ":"a","ُ":"u","ِ":"e","ْ":"","٠":"0","١":"1","٢":"2","٣":"3","٤":"4","٥":"5","٦":"6","٧":"7","٨":"8","٩":"9","پ":"p","چ":"ch","ژ":"zh","ک":"k","گ":"g","ی":"y","۰":"0","۱":"1","۲":"2","۳":"3","۴":"4","۵":"5","۶":"6","۷":"7","۸":"8","۹":"9","฿":"baht","ა":"a","ბ":"b","გ":"g","დ":"d","ე":"e","ვ":"v","ზ":"z","თ":"t","ი":"i","კ":"k","ლ":"l","მ":"m","ნ":"n","ო":"o","პ":"p","ჟ":"zh","რ":"r","ს":"s","ტ":"t","უ":"u","ფ":"f","ქ":"k","ღ":"gh","ყ":"q","შ":"sh","ჩ":"ch","ც":"ts","ძ":"dz","წ":"ts","ჭ":"ch","ხ":"kh","ჯ":"j","ჰ":"h","Ṣ":"S","ṣ":"s","Ẁ":"W","ẁ":"w","Ẃ":"W","ẃ":"w","Ẅ":"W","ẅ":"w","ẞ":"SS","Ạ":"A","ạ":"a","Ả":"A","ả":"a","Ấ":"A","ấ":"a","Ầ":"A","ầ":"a","Ẩ":"A","ẩ":"a","Ẫ":"A","ẫ":"a","Ậ":"A","ậ":"a","Ắ":"A","ắ":"a","Ằ":"A","ằ":"a","Ẳ":"A","ẳ":"a","Ẵ":"A","ẵ":"a","Ặ":"A","ặ":"a","Ẹ":"E","ẹ":"e","Ẻ":"E","ẻ":"e","Ẽ":"E","ẽ":"e","Ế":"E","ế":"e","Ề":"E","ề":"e","Ể":"E","ể":"e","Ễ":"E","ễ":"e","Ệ":"E","ệ":"e","Ỉ":"I","ỉ":"i","Ị":"I","ị":"i","Ọ":"O","ọ":"o","Ỏ":"O","ỏ":"o","Ố":"O","ố":"o","Ồ":"O","ồ":"o","Ổ":"O","ổ":"o","Ỗ":"O","ỗ":"o","Ộ":"O","ộ":"o","Ớ":"O","ớ":"o","Ờ":"O","ờ":"o","Ở":"O","ở":"o","Ỡ":"O","ỡ":"o","Ợ":"O","ợ":"o","Ụ":"U","ụ":"u","Ủ":"U","ủ":"u","Ứ":"U","ứ":"u","Ừ":"U","ừ":"u","Ử":"U","ử":"u","Ữ":"U","ữ":"u","Ự":"U","ự":"u","Ỳ":"Y","ỳ":"y","Ỵ":"Y","ỵ":"y","Ỷ":"Y","ỷ":"y","Ỹ":"Y","ỹ":"y","–":"-","‘":"\'","’":"\'","“":"\\"","”":"\\"","„":"\\"","†":"+","•":"*","…":"...","₠":"ecu","₢":"cruzeiro","₣":"french franc","₤":"lira","₥":"mill","₦":"naira","₧":"peseta","₨":"rupee","₩":"won","₪":"new shequel","₫":"dong","€":"euro","₭":"kip","₮":"tugrik","₯":"drachma","₰":"penny","₱":"peso","₲":"guarani","₳":"austral","₴":"hryvnia","₵":"cedi","₸":"kazakhstani tenge","₹":"indian rupee","₺":"turkish lira","₽":"russian ruble","₿":"bitcoin","℠":"sm","™":"tm","∂":"d","∆":"delta","∑":"sum","∞":"infinity","♥":"love","元":"yuan","円":"yen","﷼":"rial","ﻵ":"laa","ﻷ":"laa","ﻹ":"lai","ﻻ":"la"}'),a=JSON.parse('{"bg":{"Й":"Y","Ц":"Ts","Щ":"Sht","Ъ":"A","Ь":"Y","й":"y","ц":"ts","щ":"sht","ъ":"a","ь":"y"},"de":{"Ä":"AE","ä":"ae","Ö":"OE","ö":"oe","Ü":"UE","ü":"ue","ß":"ss","%":"prozent","&":"und","|":"oder","∑":"summe","∞":"unendlich","♥":"liebe"},"es":{"%":"por ciento","&":"y","<":"menor que",">":"mayor que","|":"o","¢":"centavos","£":"libras","¤":"moneda","₣":"francos","∑":"suma","∞":"infinito","♥":"amor"},"fr":{"%":"pourcent","&":"et","<":"plus petit",">":"plus grand","|":"ou","¢":"centime","£":"livre","¤":"devise","₣":"franc","∑":"somme","∞":"infini","♥":"amour"},"pt":{"%":"porcento","&":"e","<":"menor",">":"maior","|":"ou","¢":"centavo","∑":"soma","£":"libra","∞":"infinito","♥":"amor"},"uk":{"И":"Y","и":"y","Й":"Y","й":"y","Ц":"Ts","ц":"ts","Х":"Kh","х":"kh","Щ":"Shch","щ":"shch","Г":"H","г":"h"},"vi":{"Đ":"D","đ":"d"},"da":{"Ø":"OE","ø":"oe","Å":"AA","å":"aa","%":"procent","&":"og","|":"eller","$":"dollar","<":"mindre end",">":"større end"},"nb":{"&":"og","Å":"AA","Æ":"AE","Ø":"OE","å":"aa","æ":"ae","ø":"oe"},"it":{"&":"e"},"nl":{"&":"en"},"sv":{"&":"och","Å":"AA","Ä":"AE","Ö":"OE","å":"aa","ä":"ae","ö":"oe"}}');function o(o,n){if("string"!=typeof o)throw new Error("slugify: string argument expected");var r=a[(n="string"==typeof n?{replacement:n}:n||{}).locale]||{},i=void 0===n.replacement?"-":n.replacement,t=void 0===n.trim||n.trim,u=o.normalize().split("").reduce((function(a,o){var t=r[o];return void 0===t&&(t=e[o]),void 0===t&&(t=o),t===i&&(t=" "),a+t.replace(n.remove||/[^\w\s$*_+~.()'"!\-:@]+/g,"")}),"");return n.strict&&(u=u.replace(/[^A-Za-z0-9\s]/g,"")),t&&(u=u.trim()),u=u.replace(/\s+/g,i),n.lower&&(u=u.toLowerCase()),u}return o.extend=function(a){Object.assign(e,a)},o}));
+</script>
+
+<style>
+  .content-banner {
+    display: flex;
+    align-items: center;
+    padding: 25px 30px 29px 120px;
+    gap: 20px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="149" height="162" fill="none" viewBox="0 0 149 162"><path stroke="%23997D00" stroke-width="2.799" d="M103.712 197.478s52.843-38.509-53.147-47.372"/><path stroke="%23484C99" stroke-width="2.799" d="M55.914 42.86c-57.712 2.444-108.25 97.476-2.26 106.339M69.258 38.473C99.64 30.633 155 3.5 103.5-4"/><path stroke="%23DDBB1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m73.595 134.165-5.161 28.726a4.864 4.864 0 0 1-5.648 3.928l-28.727-5.162a4.864 4.864 0 0 1-3.928-5.648l5.162-28.727a4.864 4.864 0 0 1 5.648-3.927l28.727 5.161a4.865 4.865 0 0 1 3.927 5.649Z"/><path stroke="%23DDBB1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m34.059 161.657 27.13 4.875-.286 1.596a5.171 5.171 0 0 1-.182.692l-.087.256a3.396 3.396 0 0 1-.19.411l-.017.096-.19.328-.185.247-.09.132-.245.269-.064.079-.189.181-.158.144-.161.119a4.821 4.821 0 0 1-3.89.974l-28.727-5.162a4.878 4.878 0 0 1-3.15-2.041l7.53-5.236a4.856 4.856 0 0 0 3.15 2.04ZM31.042 128.751c.148-.048.298-.087.45-.117l.055.01c.137-.025.265-.052.408-.067.04.004.08.011.12.021.111.021.234-.023.35-.027.076.009.15.023.224.04.088.016.167.03.255.005.163.021.325.05.486.087l1.596.287-4.855 27.019a4.865 4.865 0 0 0 .777 3.608l-7.53 5.236a4.863 4.863 0 0 1-.777-3.607l5.161-28.727a4.866 4.866 0 0 1 2.04-3.151 5.08 5.08 0 0 1 1.237-.601l.003-.016Z"/><path stroke="%23DDBB1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m62.935 133.896-29.525-5.304a4.863 4.863 0 0 0-3.607.777l7.598-5.291a4.87 4.87 0 0 1 3.54-.723l28.727 5.162c3.99.717-.35 6.527-6.733 5.379Z"/><path stroke="%23DDBB1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="M73.595 134.165c-.915 4.777-5.161 28.727-5.161 28.727a4.81 4.81 0 0 1-2.013 3.131l-7.53 5.236a4.806 4.806 0 0 0 2.012-3.131l5.305-29.525c1.147-6.383 8.248-9.226 7.387-4.438Z"/><rect width="38.918" height="38.918" fill="%23FAE166" stroke="%23DDBB1A" stroke-width="2.799" rx="5.599" transform="scale(1 -1) rotate(79.814 133.4 -50.56)"/><rect width="3.073" height="3.012" fill="%23DDBB1A" rx=".7" transform="matrix(-.571 -.821 -.821 .571 67.951 135.654)"/><rect width="1.621" height="3.243" fill="%23DDBB1A" rx=".7" transform="matrix(-.571 -.821 -.821 .571 35.667 127.491)"/><rect width="1.621" height="1.793" fill="%23DDBB1A" rx=".7" transform="matrix(-.571 -.821 -.821 .571 72.876 131.293)"/><path stroke="%236E72E0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m77.366 14.145 8.49 27.925a4.864 4.864 0 0 1-3.238 6.069l-27.925 8.49a4.865 4.865 0 0 1-6.07-3.239l-8.49-27.924a4.864 4.864 0 0 1 3.24-6.07l27.924-8.49a4.865 4.865 0 0 1 6.07 3.24Z"/><path stroke="%236E72E0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m54.693 56.63 26.373-8.02.472 1.552a5.2 5.2 0 0 1 .153.699l.04.268c.015.15.022.3.018.452l.028.093-.02.379-.052.303-.02.159-.096.351-.02.1-.087.246-.074.2-.09.18a4.815 4.815 0 0 1-3.02 2.638l-27.924 8.491a4.865 4.865 0 0 1-3.734-.381l4.319-8.092a4.866 4.866 0 0 0 3.734.381ZM37.018 28.71c.11-.11.225-.213.347-.31l.054-.016c.11-.084.212-.166.333-.245a.673.673 0 0 1 .116-.036c.108-.033.198-.128.3-.184.07-.026.143-.048.217-.066a.53.53 0 0 0 .229-.112 4.94 4.94 0 0 1 .473-.144l1.551-.471 7.986 26.264a4.864 4.864 0 0 0 2.335 2.858l-4.32 8.092a4.864 4.864 0 0 1-2.334-2.858l-8.49-27.924a4.866 4.866 0 0 1 .381-3.735c.224-.402.503-.771.827-1.098l-.005-.016Z"/><path stroke="%236E72E0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m67.754 18.762-28.7 8.727a4.865 4.865 0 0 0-2.858 2.335l4.354-8.171a4.865 4.865 0 0 1 2.822-2.256l27.925-8.49c3.879-1.18 2.662 5.968-3.543 7.855Z"/><path stroke="%236E72E0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="M77.366 14.145c1.362 4.67 8.49 27.925 8.49 27.925a4.816 4.816 0 0 1-.364 3.704l-4.32 8.092a4.817 4.817 0 0 0 .366-3.704l-8.726-28.7c-1.887-6.206 3.14-11.97 4.554-7.317Z"/><rect width="38.918" height="38.918" fill="%238287EB" stroke="%236E72E0" stroke-width="2.799" rx="5.599" transform="scale(-1 1) rotate(-73.088 -4.498 83.371)"/><rect width="1.621" height="3.243" fill="%236E72E0" rx=".7" transform="matrix(-.8822 -.4708 -.4708 .8822 84.062 48.371)"/><rect width="3.073" height="3.012" fill="%236E72E0" rx=".7" transform="matrix(-.8822 -.4708 -.4708 .8822 73.02 18.042)"/><rect width="1.621" height="3.243" fill="%236E72E0" rx=".7" transform="matrix(-.8822 -.4708 -.4708 .8822 40.562 25.48)"/><rect width="1.621" height="1.793" fill="%236E72E0" rx=".7" transform="matrix(-.8822 -.4708 -.4708 .8822 75.418 11.917)"/><path stroke="%23484C99" stroke-width=".35" d="M88.94 52.813 75.834 9.709 32.73 22.814l13.106 43.104z"/></svg>')
+      no-repeat 0 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 32px;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .content-banner {
+      flex-direction: column;
+      background: none;
+      padding-left: 30px;
+      text-align: center;
+    }
+
+    .content-banner:before {
+      display: none;
+    }
+  }
+
+  .content-banner:before {
+    content: "";
+    width: 97px;
+    height: 97px;
+    background: #8287eb;
+    filter: blur(66.7196px);
+    position: absolute;
+    top: -41px;
+    left: -70px;
+  }
+  .content-banner div {
+    flex: 1 1 0%;
+  }
+  .content-banner h3 {
+    font-size: 28px;
+    line-height: 36px;
+    margin: 0;
+  }
+  .content-banner a {
+    flex-shrink: 0;
+  }
+  .content-banner p {
+    margin-bottom: 0;
+    line-height: 24px;
+  }
+  .content-banner .global-button {
+    text-decoration: none;
+    padding: 9px 20px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .content-banner--centered {
+    flex-direction: column;
+    background: none;
+    border-radius: 0;
+    padding-left: 30px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+  .content-banner--centered:before {
+    content: "";
+    width: 168px;
+    height: 168px;
+    background: #20b69e;
+    opacity: 0.7;
+    filter: blur(62.4716px);
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .content-banner--centered .global-button {
+    color: #101330 !important;
+    border: 2px solid #20b69e;
+  }
+  .content-banner--centered .global-button:before,
+  .content-banner--centered .global-button:after {
+    background: #fff;
+  }
+  @media screen and (max-width: 1023px) {
+    .content-banner--centered:before {
+      display: block;
+    }
+  }
+  .workflow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  .workflow-content {
+    display: flex;
+    flex: 1 1 0%;
+  }
+  .workflow-nodes {
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .workflow-nodes img {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .workflow-nodes .fa {
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+  .workflow-nodes span {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background: #e4e6ec;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #101330;
+  }
+  .workflow-details {
+    margin-right: 18px;
+  }
+  .workflow-details p {
+    margin: 0;
+  }
+  .workflow .workflow-details-name {
+    color: #101330;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+  }
+  .workflow .workflow-details-name a {
+    text-decoration: none;
+  }
+  .workflow .workflow-details-name a:hover {
+    text-decoration: underline;
+  }
+  .workflow .workflow-details-stats {
+    font-size: 14px;
+    line-height: 18px;
+    color: #707183;
+  }
+  .workflow .global-button {
+    text-decoration: none;
+    padding: 9px 20px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .workflows h3 {
+    margin-bottom: 30px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .workflows .workflow {
+    border-bottom: 1px solid #E0E0EB;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-bottom: 20px;
+  }
+  .workflows .workflow-content {
+    flex-direction: column;
+  }
+  .workflows .workflow-nodes {
+    margin-bottom: 12px;
+  }
+  .workflows .workflow-nodes span,
+  .workflows .workflow-nodes img {
+    width: 32px;
+    height: 32px;
+  }
+  .workflows .workflow-nodes .fa {
+    font-size: 32px;
+  }
+  .workflows .workflow .workflow-details-name {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 5px;
+  }
+  .workflows .workflow-details-stats span {
+    margin: 0 4px;
+    display: inline-block;
+  }
+  .workflows-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .workflows-button .global-button {
+    color: #101330 !important;
+    border: 2px solid #20b69e;
+    text-decoration: none;
+    padding: 9px 20px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .workflows-button .global-button:before,
+  .workflows-button .global-button:after {
+    background: #fff;
+  }
+
+  @media screen and (max-width: 670px) {
+    .workflow-nodes {
+      display: none;
+    }
+    .workflow {
+      flex-direction: column;
+      align-items: start;
+    }
+    .workflow .global-button {
+      margin-top: 10px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .workflow-nodes {
+      flex-wrap: wrap;
+    }
+  }
+</style>
+<style>
+    .grecaptcha-badge { visibility: hidden !important; }
+</style>
+<script>
+const timeSince = (date) => {
+  const seconds = Math.floor((new Date() - new Date(date)) / 1000);
+  let interval = seconds / 31536000;
+  if (interval > 1) {
+    const roundedInterval = Math.floor(interval);
+    return roundedInterval === 1
+      ? roundedInterval + " year"
+      : roundedInterval + " years";
+  }
+  interval = seconds / 2592000;
+  if (interval > 1) {
+    const roundedInterval = Math.floor(interval);
+    return roundedInterval === 1
+      ? roundedInterval + " month"
+      : roundedInterval + " months";
+  }
+
+  interval = seconds / 86400;
+  if (interval > 1) {
+    const roundedInterval = Math.floor(interval);
+    return roundedInterval === 1
+      ? roundedInterval + " day"
+      : roundedInterval + " days";
+  }
+  interval = seconds / 3600;
+  if (interval > 1) {
+    const roundedInterval = Math.floor(interval);
+    return roundedInterval === 1
+      ? roundedInterval + " hour"
+      : roundedInterval + " hours";
+  }
+  interval = seconds / 60;
+  if (interval > 1) {
+    const roundedInterval = Math.floor(interval);
+    return roundedInterval === 1
+      ? roundedInterval + " minute"
+      : roundedInterval + " minutes";
+  }
+
+  const roundedInterval = Math.floor(interval);
+  return roundedInterval === 1
+    ? roundedInterval + " second"
+    : roundedInterval + " seconds";
+};
+const getSingleWorkflowTemplate = (
+  { name, user, nodes, url, views, createdAt },
+  extended = false,
+  texts
+) => {
+  if (name && user) {
+    const IMAGES_PER_PAGE = 5;
+    const workflowDiv = document.createElement("div");
+    const images = [];
+
+    nodes.forEach((node) => {
+      const { icon, name, color } = node;
+
+      if (icon.type === "icon") {
+        const styles = color ? `style="color:${color}"` : "";
+        images.push(`
+          <i class="fa fa-${icon.icon}" aria-hidden="true" ${styles}></i>
+        `);
+      }
+
+      if (icon.type === "file") {
+        images.push(
+          `<img src="https://blog.n8n.io/ai-orchestration/${icon.fileBuffer}" alt="${name}" title="${name}" />`
+        );
+      }
+    });
+
+    const description = extended
+      ? `<p class="workflow-details-stats">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" fill="none" viewBox="0 0 12 10"><path fill="#707183" d="M4.94 6.06a1.5 1.5 0 1 1 2.121-2.12 1.5 1.5 0 0 1-2.12 2.12Z"/><path fill="#707183" fill-rule="evenodd" d="M.462 6.143C1.38 7.135 3.294 9.2 6 9.2s4.62-2.065 5.539-3.057a1.703 1.703 0 0 0 0-2.332l-.001-.002C10.703 2.907 8.749.8 6 .8 3.256.8 1.304 2.903.466 3.806l-.004.005a1.703 1.703 0 0 0 0 2.332ZM3.77 3.305c.689-.38 1.447-.62 2.23-.705a5.88 5.88 0 0 1 3.972 2.17.301.301 0 0 1 0 .414A5.88 5.88 0 0 1 6 7.4 6.216 6.216 0 0 1 1.996 5.24a.3.3 0 0 1-.01-.423A5.937 5.937 0 0 1 3.77 3.305Z" clip-rule="evenodd"/></svg>
+          ${
+            views || 0
+          } <span>•</span> <strong>by ${user}</strong> <span>•</span> ${timeSince(
+          createdAt
+        )}
+        </p>`
+      : `<p class="workflow-details-stats">by ${user}</p>`;
+
+    workflowDiv.classList.add("workflow");
+    workflowDiv.innerHTML = `
+      <div class="workflow-content">
+        <div class="workflow-nodes">
+          ${images.slice(0, IMAGES_PER_PAGE).join("")}
+          ${
+            images.length - IMAGES_PER_PAGE > 0
+              ? `<span>+${images.length - IMAGES_PER_PAGE}</span>`
+              : ""
+          }
+        </div>
+        <div class="workflow-details">
+          <p class="workflow-details-name">
+            <a href="https://blog.n8n.io/ai-orchestration/${url}" class="blog-banner-workflow">${name}</a>
+          </p>
+          ${description}
+        </div>
+      </div>
+      <a href="https://blog.n8n.io/ai-orchestration/${url}" class="global-button blog-banner-workflow">
+        ${texts.workflowButtonLabel}
+      </a>
+    `;
+    return workflowDiv;
+  }
+
+  return null;
+};
+
+const getMultiWorkflowTemplate = (workflows, texts) => {
+  const workflowsDiv = document.createElement("div");
+
+  workflowsDiv.classList.add("workflows");
+  workflowsDiv.innerHTML = `
+    <h3>${texts.workflowsHeader}</h3>
+  `;
+
+  workflows.forEach((workflow) => {
+    const template = getSingleWorkflowTemplate(workflow, true, texts);
+    workflowsDiv.insertAdjacentElement("beforeend", template);
+  });
+
+  workflowsDiv.innerHTML = `
+    ${workflowsDiv.innerHTML}
+    <div class="workflows-button">
+      <a href="https://blog.n8n.io/ai-orchestration/${texts.workflowsButtonUrl}" class="global-button blog-banner-signup">
+        ${texts.workflowsButtonLabel}
+      </a>
+    </div>
+  `;
+
+  return workflowsDiv;
+};
+
+const parseWorkflowData = (workflowData) => {
+  const { name, username, nodes, views, createdAt } = workflowData.attributes;
+
+  return {
+    name,
+    views,
+    createdAt,
+    user: username,
+    url: `https://n8n.io/workflows/${workflowData.id}-${slugify(name, {
+      strict: true,
+      lower: true,
+    })}/`,
+    nodes: nodes.data.map((node) => {
+      return {
+        icon: node.attributes.iconData,
+        name: node.attributes.displayName,
+        color: node.attributes.defaults.color,
+      };
+    }),
+  };
+};
+
+const convertIdsToQuery = (workflowIds) => {
+  const ids = Array.isArray(workflowIds) ? workflowIds : [workflowIds];
+  return ids.map((id) => `{ id: { eq: ${id} } }`).join(",");
+};
+const fetchWorkflows = async (workflowId) => {
+  try {
+    const res = await fetch("https://api.n8n.io/graphql", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        query: `query {\n workflows(\n pagination: { start: 0, limit: 32 }\n filters: {\n status: { eq: "published" }\n or: [${convertIdsToQuery(
+          workflowId
+        )}]\n }\n ) {\n data {\n id\n attributes {\n name\n views\n createdAt\n username\n nodes {\n data {\n id\n attributes {\n defaults\n displayName\n name\n iconData\n}\n}\n}\n}\n}\n}\n}\n`,
+      }),
+    });
+    const data = await res.json();
+
+    return data.data.workflows.data.map((workflow) =>
+      parseWorkflowData(workflow)
+    );
+  } catch (e) {}
+};
+
+const workflowBanner = async (workflowContainerId, scriptEl, texts) => {
+  const workflows = await fetchWorkflows(workflowContainerId);
+  const txts = Object.assign(
+    {},
+    {
+      workflowButtonLabel: "Use this workflow",
+      workflowsHeader: "Most popular workflows with these integrations",
+      workflowsButtonLabel: "Get started",
+      workflowsButtonUrl: "https://app.n8n.cloud/register",
+    },
+    texts
+  );
+
+  if (workflows.length === 1) {
+    const template = getSingleWorkflowTemplate(workflows[0], false, txts);
+    scriptEl.insertAdjacentElement("afterend", template);
+  } else if (workflows.length > 1) {
+    const template = getMultiWorkflowTemplate(workflows, txts);
+    scriptEl.insertAdjacentElement("afterend", template);
+  }
+};
+
+var submitSubscription = async function() {
+        const token = await grecaptcha.getResponse()
+
+        if (newSubscriptionData && newSubscriptionData.data) {
+          newSubscriptionData.data.token = token
+          const res = await fetch('https://n8n-website-backend-prod.internal.n8n.io/api/newsletter/subscribe', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newSubscriptionData.data)
+          })
+
+          if (newSubscriptionData.onSuccess && res.ok) {
+            newSubscriptionData.onSuccess()
+          } else if (newSubscriptionData.onError) {
+            newSubscriptionData.onError()
+          }
+
+          window.newSubscriptionData = null
+        }
+      }
+
+const subscribeNewsletter = async (e) => {
+    e.preventDefault();
+
+    const newsletterMailFormat = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+    const ERROR_CLASS = 'error';
+    const SUCCESS_CLASS = 'success';
+    const SHOW_MESSAGE_CLASS = 'show';
+
+    const form = e.target;
+    const emailField = form.querySelector('input[name=email]');
+    const success = form.querySelector('.message--success');
+    const error = form.querySelector('.message--error');
+
+    emailField.setCustomValidity('Please insert a valid email address.');
+    emailField.disabled = true;
+    emailField.classList.remove(ERROR_CLASS);
+
+    success.classList.remove(SHOW_MESSAGE_CLASS);
+    error.classList.remove(SHOW_MESSAGE_CLASS);
+
+    if (!emailField.value.match(newsletterMailFormat)) {
+        emailField.reportValidity();
+        emailField.classList.add(ERROR_CLASS);
+    } else {
+        try {
+            await grecaptcha.execute()
+            const url = new URL(window.location)
+            const urlSource = `${url.origin}${url.pathname}`
+            const utmParams = {
+                utm_source: url.searchParams.get('utm_source') || null,
+                utm_medium: url.searchParams.get('utm_medium') || null,
+                utm_campaign: url.searchParams.get('utm_campaign') || null
+            }
+            const data = {
+                email: emailField.value,
+                created_at: Math.floor(new Date().getTime() / 1000),
+                newsletter_subscriber: true,
+                url_source: urlSource,
+                ...Object.fromEntries(Object.entries(utmParams).filter(([_, v]) => v !== null))
+            }
+
+            window.newSubscriptionData = {
+                data: data,
+                onSuccess: () => {
+                    success.classList.add(SHOW_MESSAGE_CLASS);
+                    emailField.classList.add(SUCCESS_CLASS);
+                    emailField.setCustomValidity('');
+                    emailField.disabled = false;
+                },
+                onError: () => {
+                    error.classList.add(SHOW_MESSAGE_CLASS);
+                    emailField.classList.add(ERROR_CLASS);
+                    emailField.disabled = false;
+                }
+            }
+        } catch (e) {
+            error.classList.add(SHOW_MESSAGE_CLASS);
+            emailField.classList.add(ERROR_CLASS);
+        }
+    }
+
+    emailField.disabled = false;
+}
+</script>
+<script>
+!function(){let e=function(e){let t=document.createElement("a");return t.href=e.url,t.innerText=e.tag,t},t=function(){let t=window.homePageTags||[],n=document.querySelector(".popular-tags");if(n&&t&&t.length){let r=n.querySelector(".popular-tags-listing");t.forEach(t=>{r.appendChild(e(t))}),n.classList.remove("hidden")}};window.addEventListener("DOMContentLoaded",t)}();
+
+/*
+  example:
+  var homePageTags = [
+    { tag: 'AI', url: '/tag/ai/' },
+    { tag: 'Tutorial', url: '/tag/tutorial/' }
+  ]
+*/
+
+var homePageTags = [
+   { tag: 'AI', url: '/tag/ai/' },
+    { tag: 'Database', url: '/tag/database/' },
+    { tag: 'Marketing automation', url: '/tag/marketing-automation/' },
+    { tag: 'Sales', url: '/tag/sales/' },
+    { tag: 'SecOps', url: '/tag/secops/' },
+    { tag: 'ITOps', url: '/tag/itops/' },
+    { tag: 'Tools Alternatives', url: '/tag/tools-alternatives/' },
+    { tag: 'Bot', url: '/tag/bot/' }
+]
+</script>
+	</head>
+	<body class="post-template tag-ai tag-guide tag-hash-import-2024-10-24-16-31">
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7L9C6X"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		<div class="global-wrap">
+			<div class="global-content">
+				<header class="header-section">
+	<div class="header-wrap">
+		<div class="header-logo is-image">
+			<a href="../index.html" class="is-image"><img src="../content/images/2022/06/n8n-blog.png" alt="n8n Blog"></a>
+		</div>
+		<div class="header-nav">
+			<input id="toggle" class="header-checkbox" type="checkbox">
+			<label class="header-toggle" for="toggle">
+				<span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</span>
+			</label>
+			<nav >
+				<ul>
+<li><a href="https://n8n.io/" >n8n home</a></li>
+<li><a href="../tag/tutorial/index.html" >Tutorials</a></li>
+<li><a href="../tag/guide/index.html" >Guides</a></li>
+<li><a href="../tag/tips/index.html" >Tips</a></li>
+<li><a href="../tag/interview/index.html" >Interviews</a></li>
+<li><a href="../tag/news/index.html" >News</a></li>
+</ul>
+				<ul>
+					<!-- <li class="signin"><a href="https://blog.n8n.io/signin/">Sign in</a></li>
+<li class="signup"><a href="https://blog.n8n.io/signup/" class="global-button">Sign up</a></li>
+ -->
+
+<li class="signin"><a href="https://app.n8n.cloud/">Sign in</a></li>
+<li class="signup"><a href="https://app.n8n.cloud/register" class="global-button">Get started</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>				<main class="global-main">
+					<progress class="post-progress"></progress>
+<article class="post-section">
+	<div class="post-header item is-hero">
+	<div class="item-container">
+		<div class="item-image global-image">
+			<img srcset="../content/images/size/w400/2024/07/ai-orchestrationd-1--1-.jpg 400w, 
+			../content/images/size/w800/2024/07/ai-orchestrationd-1--1-.jpgg 800w,
+		../content/images/size/w1200/2024/07/ai-orchestrationd-1--1-.jpgpg 1200w,
+	../content/images/size/w1600/2024/07/ai-orchestrationd-1--1-.jpgjpg 1600w"
+	 sizes="(max-width:480px) 350px, (max-width:1440px) 800px, 1200px"
+	 src="../content/images/size/w1200/2024/07/ai-orchestrationd-1--1-.jpg"
+	 loading="lazy"
+	 alt="AI orchestration: benefits, best practices, and tools">		</div>
+		<div class="item-content">
+			<div class="item-tags global-tags">
+								<a href="../tag/ai/index.html">AI</a><a href="../tag/guide/index.html">Guide</a>
+			</div>
+			<h1 class="item-title">AI orchestration: benefits, best practices, and tools</h1>
+			<p class="item-excerpt global-zigzag">
+				<svg role='img' viewBox='0 0 136 24' xmlns='http://www.w3.org/2000/svg'><path d='M1.525 1.525a3.5 3.5 0 014.95 0L20 15.05 33.525 1.525a3.5 3.5 0 014.95 0L52 15.05 65.525 1.525a3.5 3.5 0 014.95 0L84 15.05 97.525 1.525a3.5 3.5 0 014.95 0L116 15.05l13.525-13.525a3.5 3.5 0 014.95 4.95l-16 16a3.5 3.5 0 01-4.95 0L100 8.95 86.475 22.475a3.5 3.5 0 01-4.95 0L68 8.95 54.475 22.475a3.5 3.5 0 01-4.95 0L36 8.95 22.475 22.475a3.5 3.5 0 01-4.95 0l-16-16a3.5 3.5 0 010-4.95z'/></svg>				Learn how AI orchestration aligns AI capabilities with business objectives. Explore best practices, top 5 tools and how n8n helps with the effective implementation.
+			</p>
+			<div class="item-meta global-meta">
+				<div class="item-profile-image">
+					<a href="../author/yulia/index.html" class="global-image">
+						<img src="../content/images/size/w120/2023/01/profile-pik.jpg" loading="lazy" alt="Yulia Dmitrievna">					</a>
+					<a href="../author/eduard/index.html" class="global-image">
+						<img src="../content/images/size/w120/2022/05/new_pic.png" loading="lazy" alt="Eduard Parsadanyan">					</a>
+				</div>
+				<div class="item-authors">
+					<a href="../author/yulia/index.html">Yulia Dmitrievna</a>, <a href="../author/eduard/index.html">Eduard Parsadanyan</a>
+					<div class="item-time">
+						<time datetime="2024-08-01">August 1, 2024</time> ∙ 12 minutes read
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	<div class="post-content">
+		<p>The great power of <a href="../ai-tools-for-business/index.html">AI in the business</a> world is broadly recognized, yet many organizations still struggle with its deployment.</p><p>This challenge is especially true for large enterprises, where smooth integration across tech and business units can win or fail the corporate game. <a href="https://www.gartner.com/en/newsroom/press-releases/2022-08-22-gartner-survey-reveals-80-percent-of-executives-think-automation-can-be-applied-to-any-business-decision?ref=blog.n8n.io">Gartner has revealed</a> that slightly over 50% of AI projects make it into production, and these numbers were consistent for years between 2019-2022.</p><figure class="kg-card kg-image-card kg-width-wide kg-card-hascaption"><img src="../content/images/2024/07/ai-adoption.png" class="kg-image" alt="Global AI adoption among enterprise-scale organizations. Source: https://www.multivu.com/players/English/9240059-ibm-2023-global-ai-adoption-index-report/" loading="lazy" width="1100" height="600" srcset="../content/images/size/w600/2024/07/ai-adoption.png 600w, ../content/images/size/w1000/2024/07/ai-adoption.png 1000w, ../content/images/2024/07/ai-adoption.png 1100w"><figcaption>Global AI adoption among enterprise-scale organizations. Source: https://www.multivu.com/players/English/9240059-ibm-2023-global-ai-adoption-index-report/</figcaption></figure><p>This is where AI orchestration comes into play.</p><p>AI orchestration is a practical approach to help companies develop a strategy for managing multiple AI tools and projects. Imagine a world where AI systems not only automate isolated routine tasks but create fully intelligent decision-making processes. This vision is not as distant as it may seem.</p><p>In this article, we'll explore the key concepts of AI orchestration, and its benefits, and review the top 5 AI orchestration platforms with their unique features and methodologies.</p><p>You'll also learn how to effectively use <a href="https://n8n.io/ai/?ref=blog.n8n.io">n8n, a source available workflow automation tool</a>, for AI orchestration.</p><p>Let's dive in!</p><h2 id="what-is-ai-orchestration">What is AI orchestration?</h2><p>While the commonly accepted definition is yet to be specified, Pam Baker, in her insightful report on <a href="https://www.oreilly.com/library/view/ai-orchestration-methodologies/9781492091806/?ref=blog.n8n.io">AI orchestration methodologies</a> mentions the <strong>strategic coordination of AI technologies to manage various AI tools, processes, data, and talent within an organization.</strong></p><p>The goal is to create an interconnected, intelligent decision-making ecosystem. This approach not only maximizes the business value of AI investments but also ensures that AI-driven initiatives are aligned with the company’s overall goals.</p><p>To understand the importance of decision intelligence, consider these real-world examples:</p><ul><li><strong>Public health crisis</strong> (from the source mentioned above): During the COVID-19 pandemic, Dr. Anthony Fauci was able to share data about the spread of the virus, but struggled to make final decisions about safety in schools. True decision intelligence would bridge this gap, providing clear, actionable recommendations based on complex data analysis.</li><li><strong>Retail inventory management</strong>: A large retail chain could use AI to predict product demand based on historical sales data, seasonal trends and external factors like weather or local events. However, decision intelligence goes one step further by automatically adjusting inventory levels, initiating restock orders and even suggesting optimal pricing strategies for hundreds of stores. This can not only reduce overstocking and stock-outs but also improve overall profitability and customer satisfaction.</li></ul><p>By focusing on decision intelligence as the end goal, AI orchestration helps bridge the gap between AI capabilities and practical business outcomes.</p><h2 id="benefits-of-ai-orchestration">Benefits of AI orchestration</h2><p>The key benefit of AI orchestration lies in its ability to enable decision intelligence within an organization. Decision intelligence is the discipline of transforming information into better actions at any scale, effectively automating the full action-to-outcome process.</p><figure class="kg-card kg-image-card kg-width-wide kg-card-hascaption"><img src="../content/images/2024/07/decision-intelligence.png" class="kg-image" alt="The concept of decision intelligence. Source: https://medium.com/oreillymedia/ai-orchestration-enables-decision-intelligence-2a88d8306ac9" loading="lazy" width="1200" height="980" srcset="../content/images/size/w600/2024/07/decision-intelligence.png 600w, ../content/images/size/w1000/2024/07/decision-intelligence.png 1000w, ../content/images/2024/07/decision-intelligence.png 1200w" sizes="(min-width: 1200px) 1200px"><figcaption>The concept of decision intelligence. Source: https://medium.com/oreillymedia/ai-orchestration-enables-decision-intelligence-2a88d8306ac9</figcaption></figure><p>Here's why decision intelligence facilitated by AI orchestration is so important:</p><ol><li><strong>Improved decision-making</strong>: By integrating AI into day-to-day operations, companies can make more informed, data-driven decisions at all levels of the business.</li><li><strong>Scalability</strong>: Decision intelligence enables better actions not just in isolated instances, but across the entire organization.</li><li><strong>Business alignment</strong>: AI orchestration ensures that AI initiatives are directly linked to business outcomes, rather than being isolated technical experiments.</li><li><strong>Operational efficiency</strong>: By automating complex decision processes, businesses can work more efficiently and reduce the time and resources spent on routine decisions.</li><li><strong>Adaptability</strong>: As AI systems learn and improve over time, the quality of automated decisions can be continuously improved, allowing companies to adapt more quickly to changing conditions.</li><li><strong>Risk mitigation</strong>: Proper AI orchestration includes safeguards and oversight, reducing the risks associated with biased or incorrect AI outputs.</li><li><strong>Competitive advantage</strong>: Companies that successfully implement decision intelligence through AI orchestration can respond faster and more effectively to market changes and customer needs.</li></ol><p>In the following section, we'll explore best practices for implementing AI orchestration to achieve these benefits and enable true decision intelligence in your organization.</p><h2 id="best-practices-for-ai-orchestration">Best practices for AI orchestration</h2><p>Traditional approaches to AI and machine learning projects often started from scratch with raw data. Companies collected huge amounts of information and hoped to gain insights later.</p><p>However, this method often did not result in tangible business value.</p><p>According to the <a href="https://www.oreilly.com/library/view/ai-orchestration-methodologies/9781492091806/?ref=blog.n8n.io">AI orchestration methodologies</a> report, a more effective approach reverses the process.</p><p>Instead of starting with raw data, one should start with clear business goals and work backward. This method, which corresponds to the concept of decision intelligence, focuses on identifying the specific decisions and outcomes you want to improve.</p><figure class="kg-card kg-image-card kg-width-wide kg-card-hascaption"><img src="../content/images/2024/07/data-goes-last-fix.png" class="kg-image" alt="Reverse-engineering approach to ML/AI projects. Source: https://www.oreilly.com/library/view/ai-orchestration-methodologies/9781492091806/" loading="lazy" width="1200" height="500" srcset="../content/images/size/w600/2024/07/data-goes-last-fix.png 600w, ../content/images/size/w1000/2024/07/data-goes-last-fix.png 1000w, ../content/images/2024/07/data-goes-last-fix.png 1200w" sizes="(min-width: 1200px) 1200px"><figcaption>Reverse-engineering approach to ML/AI projects. Source: https://www.oreilly.com/library/view/ai-orchestration-methodologies/9781492091806/</figcaption></figure><p>This goal-oriented approach is helpful in several ways:</p><!--kg-card-begin: markdown--><ol>
+<li>It ensures AI projects are aligned with business goals from the start.</li>
+<li>It helps to identify the most relevant data needed for the project and the most suitable ways to use it. AI models may not be even needed in all cases.</li>
+<li>It reduces the risk of bias in AI models by ensuring that the data is representative and contextual.</li>
+</ol>
+<!--kg-card-end: markdown--><p>Other best practices to effectively orchestrate AI projects include:</p><ol><li>Align AI projects with the overall business strategy</li></ol><ul><li>Establish key performance indicators (KPIs) to measure success and manage development.</li><li>Prioritize projects based on their potential impact and feasibility.</li></ul><p>2. Choose the right AI orchestration tools</p><ul><li>Assess compatibility with existing infrastructure.</li><li>Evaluate scalability and flexibility to accommodate future growth and changing requirements.</li><li>Ensure support for the required data modalities, such as structured data, images, text and audio, to handle diverse AI applications.</li></ul><p>3. Build a robust AI pipeline or solution</p><ul><li>Design a modular and reusable architecture to promote efficiency and consistency across projects.</li><li>Implement rigorous data quality and pre-processing steps to ensure reliable inputs to AI models.</li><li>Establish proper version control and reproducibility not only for the code, but also for the data and models.</li></ul><p>4. Monitor and optimize</p><ul><li>Implement real-time monitoring systems to track performance and detect issues promptly.</li><li>Conduct regular audits and reviews to ensure ongoing alignment with business objectives.</li><li>Address model drift and implement retraining strategies to maintain accuracy and relevance over time.</li></ul><p>Implementing these best practices requires coordination across the organization. This includes input from front-line employees who understand the current processes, senior managers who set strategic goals, and technical teams who implement the AI solutions.</p><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">Remember that the ultimate goal of AI orchestration is to enable automated decision intelligence in day-to-day business operations. By starting with business goals and working backward to data selection, organizations can develop AI solutions that deliver real, measurable value.</div></div><h2 id="5-best-ai-orchestration-tools">5 best AI orchestration tools</h2><p>To implement best practices and effectively orchestrate AI in your organization, you need the right tools.</p><p>While the entire process involves much more than just technology, you can significantly optimize your efforts with suitable AI orchestration software. These tools can help manage workflows, integrate AI models into business processes and ensure that your AI initiatives align with your business goals.</p><p>Let's take a look at some of the leading AI orchestration tools available today!</p><h3 id="n8n">n8n</h3><figure class="kg-card kg-image-card kg-width-wide kg-card-hascaption"><img src="../content/images/2024/07/n8n.png" class="kg-image" alt="n8n AI orchestration" loading="lazy" width="1100" height="500" srcset="../content/images/size/w600/2024/07/n8n.png 600w, ../content/images/size/w1000/2024/07/n8n.png 1000w, ../content/images/2024/07/n8n.png 1100w"><figcaption>n8n AI orchestration</figcaption></figure><p><strong>Overview:</strong></p><p>n8n is a powerful and flexible workflow automation platform. Unlike specialized ML platforms, n8n can integrate AI directly into business processes.</p><p>n8n stands out for its flexible “buy vs. build” approach to AI integration.</p><p>It seamlessly connects with ready-made AI tools via API endpoints, enabling <a href="https://n8n.io/saas/?ref=blog.n8n.io">rapid prototyping</a> and iteration. As the project grows and the company's AI capabilities mature, n8n makes it easy to switch to in-house AI models, facilitating a smooth transition from third-party services to custom production models.</p><div class="kg-card kg-callout-card kg-callout-card-grey"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">This adaptability ensures n8n can support an organization’s AI journey from initial experimentation to full-scale custom AI deployment.</div></div><p><strong>Key features:</strong></p><!--kg-card-begin: markdown--><ol>
+<li>Intuitive, low-code interface for designing complex AI-powered workflows.</li>
+<li>Pre-built nodes for common AI services, databases and business tools.</li>
+<li>HTTP requests for working with external services, Execute command node for launching internal tools and Code node for writing completely custom code.</li>
+<li>The ability to create completely new nodes for specific AI tasks or proprietary models.</li>
+<li>Powerful tools for pre-processing and manipulating data.</li>
+<li>Designed to efficiently handle complex, multi-step workflows; creation of reusable building blocks for scalability.</li>
+<li>LLM and LangChain support: seamless integration with advanced AI technologies as well as traditional ML models.</li>
+<li>Flexible deployment: options for cloud-based or self-hosted installations that ensure data protection and security.</li>
+<li>Version control and collaboration: features to support team-based development and iteration.</li>
+<li>Error handling and monitoring: maintaining reliable AI-powered processes.</li>
+</ol>
+<!--kg-card-end: markdown--><p><strong>Pricing:</strong></p><!--kg-card-begin: markdown--><ul>
+<li>Free tier for self-hosted community edition with no feature gating</li>
+<li>Cloud plans from $20/month</li>
+<li>Enterprise custom-priced tier for large-scale deployments with advanced support and features</li>
+</ul>
+<!--kg-card-end: markdown--><h3 id="clearml">Clear.ml</h3><figure class="kg-card kg-image-card kg-width-wide kg-card-hascaption"><img src="../content/images/2024/07/clear.ml.png" class="kg-image" alt="Clear.ml AI orchestration" loading="lazy" width="1200" height="400" srcset="../content/images/size/w600/2024/07/clear.ml.png 600w, ../content/images/size/w1000/2024/07/clear.ml.png 1000w, ../content/images/2024/07/clear.ml.png 1200w" sizes="(min-width: 1200px) 1200px"><figcaption>Clear.ml AI orchestration</figcaption></figure><p><strong>Overview: </strong></p><p><a href="http://clear.ml/?ref=blog.n8n.io">Clear.ml</a> is an end-to-end MLOps (DevOps for machine learning) platform for streamlining the entire AI lifecycle. Clear.ml stands out for its "automagical" approach that requires minimal code changes to integrate into existing workflows. The platform is built to support enterprise-grade AI development, offering features like experiment tracking, model management and orchestration.</p><p>Clear.ml also offers ClearGPT, a secure enterprise-grade platform for large language models (LLMs) that addresses common challenges like security, performance and data governance. This makes it particularly suitable for organizations that want to leverage generative AI while maintaining control over their data and models.</p><p><strong>Key features:</strong></p><!--kg-card-begin: markdown--><ol>
+<li>Experiment manager for automatic tracking of ML experiments.</li>
+<li>MLOps/LLMOps for orchestration and automation of ML/DL/GenAI jobs.</li>
+<li>Data management with version control for datasets.</li>
+<li>Model serving solution for quick deployment of model endpoints.</li>
+<li>Reports module for creating and sharing extensive markdown documents.</li>
+<li>Orchestration dashboard for managing compute clusters.</li>
+<li>Integration with common ML frameworks and development environments.</li>
+<li>ClearGPT for secure, enterprise-grade LLM deployment.</li>
+</ol>
+<!--kg-card-end: markdown--><p><strong>Pricing:</strong></p><!--kg-card-begin: markdown--><ul>
+<li>Free tier for individuals and small teams, includes basic features and 100GB free artifact storage.</li>
+<li>Pro tier: $15 per user/month + usage.</li>
+<li>Even more advanced Scale and Enterprise tiers with custom pricing. Clear.ml also offers a self-hosted open-source core version with a similar to Apache NiFi’s deployment flexibility</li>
+</ul>
+<!--kg-card-end: markdown--><h3 id="apache-nifi">Apache NiFi</h3><figure class="kg-card kg-image-card kg-width-wide kg-card-hascaption"><img src="../content/images/2024/07/nifi.png" class="kg-image" alt="Apache NiFi is a powerful and flexible data flow management system" loading="lazy" width="1200" height="430" srcset="../content/images/size/w600/2024/07/nifi.png 600w, ../content/images/size/w1000/2024/07/nifi.png 1000w, ../content/images/2024/07/nifi.png 1200w" sizes="(min-width: 1200px) 1200px"><figcaption>Apache NiFi is a powerful and flexible data flow management system</figcaption></figure><p><strong>Overview:</strong></p><p><a href="https://nifi.apache.org/?ref=blog.n8n.io">Apache NiFi</a> is a powerful and flexible data flow management system. While not as specialized in ML workflows as Clear.ml or Comet.ml, NiFi provides a robust platform for automating the flow of data between systems, making it suitable for managing complex AI pipelines.</p><p>NiFi’s visual interface makes it easy to design and modify data flows. This visual approach to creating workflows is similar to Azure Machine Learning’s focus on visual tools. NiFi’s architecture supports high throughput and low latency, making it suitable for processing large amounts of AI data.</p><p><strong>Key features:</strong></p><!--kg-card-begin: markdown--><ol>
+<li>Visual creation and management of directed graphs for AI workflows.</li>
+<li>Data provenance tracking for complete information lineage.</li>
+<li>Guaranteed delivery with a persistent write-ahead log.</li>
+<li>Dynamic prioritization of data flows.</li>
+<li>Seamless scaling through clustering.</li>
+<li>Extensive security features, including multi-tenant authorization.</li>
+<li>Flexible extension architecture for custom AI components.</li>
+<li>Site-to-site communication protocol for efficient data transfer between NiFi instances</li>
+</ol>
+<!--kg-card-end: markdown--><p><strong>Pricing:</strong></p><!--kg-card-begin: markdown--><ul>
+<li>Apache NiFi is open-source and free to use. However, organizations may incur costs related to infrastructure, support, and maintenance when implementing NiFi at scale</li>
+</ul>
+<!--kg-card-end: markdown--><h3 id="cometml">Comet.ml</h3><figure class="kg-card kg-image-card kg-width-wide kg-card-hascaption"><img src="../content/images/2024/07/comet.ml.png" class="kg-image" alt="Comet.ml is a machine learning platform for data scientists and ML engineers" loading="lazy" width="1200" height="430" srcset="../content/images/size/w600/2024/07/comet.ml.png 600w, ../content/images/size/w1000/2024/07/comet.ml.png 1000w, ../content/images/2024/07/comet.ml.png 1200w" sizes="(min-width: 1200px) 1200px"><figcaption>Comet.ml is a machine learning platform for data scientists and ML engineers</figcaption></figure><p><strong>Overview:</strong></p><p><a href="http://comet.ml/?ref=blog.n8n.io">Comet.ml</a> is a machine learning platform designed to help data scientists and ML engineers manage, visualize and optimize their models throughout the entire ML lifecycle. Like Clear.ml, it offers robust experiment-tracking capabilities that allow teams to monitor and compare training runs in real time.</p><p>Comet.ml’s platform is particularly strong in its support for both traditional machine learning and LLM workflows, similar to Clear.ml and Azure Machine Learning. It provides tools not only for tracking model metrics and hyperparameters, but also for managing and evaluating LLM prompts.</p><p><strong>Key features:</strong></p><ol><li>Real-time experiment tracking and visualization.</li><li>Custom dashboard creation for tailored insights.</li><li>Model registry for versioning and deployment management.</li><li>LLM prompt management and evaluation tools.</li><li>Hyperparameter optimization.</li><li>Artifact and dataset versioning.</li><li>Integrates smoothly with popular ML frameworks and can be set up with just a few lines of code.</li><li>Collaboration features for team-based workflows.</li></ol><p><strong>Pricing:</strong></p><ul><li>Community: free for personal use, with unlimited projects and 100GB of storage space</li><li>Starter ($50/user/month) for small teams</li><li>Enterprise for larger organizations, custom pricing</li></ul><h3 id="azure-machine-learning">Azure Machine Learning</h3><figure class="kg-card kg-image-card kg-width-wide kg-card-hascaption"><img src="../content/images/2024/07/azure-ml.png" class="kg-image" alt="Azure Machine Learning is an enterprise-grade service for the end-to-end machine learning" loading="lazy" width="1100" height="350" srcset="../content/images/size/w600/2024/07/azure-ml.png 600w, ../content/images/size/w1000/2024/07/azure-ml.png 1000w, ../content/images/2024/07/azure-ml.png 1100w"><figcaption>Azure Machine Learning is an enterprise-grade service for the end-to-end machine learning</figcaption></figure><p><strong>Overview:</strong></p><p><a href="https://azure.microsoft.com/en-us/products/machine-learning?ref=blog.n8n.io">Azure Machine Learning</a> is an enterprise-grade service for the end-to-end machine learning lifecycle. Like Clear.ml and Comet.ml, it provides a comprehensive platform for data scientists and developers to build, train and deploy machine learning models. Azure ML supports the full spectrum of machine learning tasks, from data preparation and model development to deployment and management at scale.</p><p>The platform integrates well with other Azure services, providing a unique advantage for organizations that have already invested in the Azure cloud ecosystem.</p><p><strong>Key features:</strong></p><ol><li>Data preparation with Apache Spark integration.</li><li>Feature store for increased agility in model development.</li><li>Purpose-built AI infrastructure with high-performance GPUs.</li><li>Automated machine learning for rapid model creation.</li><li>Responsible AI tools for interpretability and fairness assessment.</li><li>Model catalog with access to foundation models from various providers.</li><li>Prompt flow for language model workflow design and deployment.</li><li>Managed endpoints for scalable model deployment and monitoring</li></ol><p><strong>Pricing:</strong></p><ul><li>Pay-as-you-go: per-second billing without long-term commitments</li><li>Azure savings plan for compute: commit to a fixed hourly rate for 1 or 3 years and get discounted pricing</li><li>Reserved virtual machine instances: commit for 1 or 3 years and get significant discounts for stable workloads</li></ul><h2 id="how-to-use-n8n-for-ai-orchestration">How to use n8n for AI orchestration?</h2><p>Now that we've explored 5 AI orchestration and automation platforms, let's see one of them in action.</p><p>We’ll focus on n8n's AI capabilities as it offers the most flexibility for data handling, custom code integration, and smooth connection of AI services with existing business processes.</p><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">By using n8n as the central component of AI orchestration, companies can create an approach that integrates AI capabilities into their existing operations.</div></div><h3 id="load-transform-data">Load &amp; transform data</h3><p>Data preparation is critical to a successful AI implementation. n8n provides powerful tools for extracting, transforming, and loading data from various sources. You can automate simple data loading &amp; conversion processes as well as build complex workflows with dataset comparisons and branching logic.</p><!--kg-card-begin: html--><script>
+  workflowBanner([1396, 1914, 1839, 1947, 1964, 2041], document.currentScript, { 
+      workflowsHeader: "Data transformation workflows"
+  });
+</script><!--kg-card-end: html--><h3 id="run-system-programs-and-custom-code">Run system programs and custom code</h3><p>The flexibility of n8n enables the smooth integration of custom code and system programs into your AI workflows. With the <a href="https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.executecommand?ref=blog.n8n.io">Execute Command</a>, <a href="https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code/?ref=blog.n8n.io">Code</a>, <a href="https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.ssh/?ref=blog.n8n.io">SSH</a> nodes, you can incorporate proprietary algorithms or specialized tools into AI orchestration processes. n8n serves as a single point for launching all other tools, regardless of whether they are installed on the same system or in the corporate network.</p><!--kg-card-begin: html--><script>
+  workflowBanner([716, 913, 510], document.currentScript, { 
+      workflowsHeader: "Most popular workflows with custom code"
+  });
+</script><!--kg-card-end: html--><h3 id="integrate-ai-services-into-business-processes">Integrate AI services into business processes</h3><p>One of n8n's strengths is its ability to connect AI services with existing business tools and workflows.</p><p>With the new release of the <a href="https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest/?ref=blog.n8n.io">HTTP Request Tool</a> node, you can connect an LLM to virtually any website or API service with just a single node! Take a look at this in-depth walkthrough with several use cases.</p><figure class="kg-card kg-embed-card"><iframe width="200" height="113" src="https://www.youtube.com/embed/9E3XU0WKoXY?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="Using the HTTP Request Tool with AI Agents"></iframe></figure><p>Connect AI insights directly to your operational processes and improve decision-making across the organization. These workflows could be very specific to each company. Therefore, we’ve prepared some simple ideas for your inspiration.</p><!--kg-card-begin: html--><script>
+  workflowBanner([2343, 1393, 2006, 2187, 2165, 2094], document.currentScript, { 
+      workflowsHeader: "Most popular workflows with AI integrations"
+  });
+</script><!--kg-card-end: html--><h3 id="manage-advanced-llm-logic-on-a-low-code-platform">Manage advanced LLM logic on a low-code platform</h3><p><a href="https://docs.n8n.io/advanced-ai/langchain/langchain-n8n/?ref=blog.n8n.io">n8n + LangChain </a>is a powerful combo for the creation of modular AI applications via the intuitive low-code UI. This integration offers a wide range of nodes and tools directly mapped to LangChain concepts:</p><ol><li>Chains and Agents for complex AI logic</li><li>Vector stores for managing embedded data</li><li>Language models from different providers</li><li>Memory nodes for retaining the context of conversations</li><li>Output parsers and text splitters for data processing</li><li>Embedding nodes for text representation</li></ol><!--kg-card-begin: html--><script>
+  workflowBanner([2292, 2290, 1980, 2098, 2197, 2344], document.currentScript, { 
+      workflowsHeader: "Advanced LLM logic workflows"
+  });
+</script><!--kg-card-end: html--><p>n8n empowers both technical and non-technical users to create sophisticated AI workflows.</p><h3 id="orchestrate-hybrid-ai-environments">Orchestrate hybrid AI environments</h3><p>n8n excels at managing workflows that combine cloud-based AI services with on-premises custom models. This hybrid approach enables companies to balance the benefits of existing AI platforms with the need for data privacy and custom-built AI solutions.</p><!--kg-card-begin: html--><script>
+  workflowBanner([1980, 2201, 1394, 2178], document.currentScript, { 
+      workflowsHeader: "Hybrid AI environments workflows"
+  });
+</script><!--kg-card-end: html--><p>These use cases show how n8n can adapt to the different stages of an organization's AI journey, from initial experimentation with ready-made services to deploying custom, in-house models.</p><h2 id="wrap-up">Wrap Up</h2><p>In this article, we've looked at AI orchestration in modern business operations and the strategies to improve the success rate of AI deployments.</p><p>We’ve covered various specialized AI orchestration tools as well as n8n and highlighted its features in integrating AI into business processes.</p><p>Finally, we’ve also demonstrated practical applications of n8n for AI orchestration, from data preparation to managing hybrid AI environments.</p><!--kg-card-begin: html--><div class="content-banner">
+                <div>
+                    <h3>Create your own AI workflows</h3>
+                    <p>Build complex AI automations 10x faster, without fighting APIs</p>
+                </div>
+                <a href="https://app.n8n.cloud/register?ref=blog.n8n.io" class="global-button blog-banner-signup">Try n8n now</a>
+            </div><!--kg-card-end: html--><h2 id="what%E2%80%99s-next">What’s next?</h2><p>Here are some next steps to start your AI orchestration with n8n:</p><ol><li>Expand your AI toolkit by checking out our article on <a href="../ai-coding-assistants/index.html">the best AI coding assistants</a>.</li><li>Check out our guide to <a href="../erp-ai-chatbot/index.html">building intelligent ERP solutions with n8n</a>.</li><li>If you're a developer, don't miss our <a href="../ai-agents/index.html">handy guide on AI agents</a>.</li></ol><p><a href="https://n8n.io/pricing/?ref=blog.n8n.io">Choose from our cloud plans</a> and create a trial n8n account today. Remember, whether you're just beginning or advancing your AI journey, n8n provides the flexibility and power to meet your needs.</p><p></p><p></p><p></p><p></p>
+		<div class="newsletter-banner">
+	    <div class="newsletter-banner-content">
+	      <div class="section-header">
+	        <h2>Subscribe to <span>n8n newsletter</span></h2>
+	        <div class="section-subheader--bottom">
+	          Get the best, coolest, and latest in automation and low-code delivered to your inbox each week.
+	        </div>
+	      </div>
+	      <div class="newsletter-banner-form">
+	        <form autocomplete="off" class="contact-form" onsubmit="subscribeNewsletter(event)">
+	        	<div id="recaptcha" class="g-recaptcha"
+              data-sitekey="6LeAQeopAAAAAKlLsRb1weWm6T_vijoQBkGkbHzB"
+              data-callback="submitSubscription"
+              data-size="invisible">
+            </div>
+	          <div class="input-wrapper">
+	            <input placeholder="Email" name="email" type="email" required="required" class="">
+	            <div class="messages">
+	              <div class="message message--error">Something went wrong. Please try again later.</div>
+	              <div class="message message--success">Subscribed!</div>
+	            </div>
+	          </div>
+	          <button type="submit" class="submit-btn">Subscribe</button>
+	        </form>
+	      </div>
+	    </div>
+    </div>
+		<div class="post-share-section">
+	<div class="post-share-wrap">
+		<a href="https://twitter.com/intent/tweet?text=AI%20orchestration%3A%20benefits%2C%20best%20practices%2C%20and%20tools&amp;url=https://blog.n8n.io/ai-orchestration/" target="_blank" rel="noopener" aria-label="Twitter share icon"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg></a>
+		<a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.n8n.io/ai-orchestration/" target="_blank" rel="noopener" aria-label="Facebook share icon"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"/></svg></a>
+		<!-- <a href="javascript:" class="post-share-link" id="copy" data-clipboard-target="#copy-link" aria-label="Copy link icon"><svg role="img" viewBox="0 0 33 24" xmlns="http://www.w3.org/2000/svg"><path d="M27.3999996,13.4004128 L21.7999996,13.4004128 L21.7999996,19 L18.9999996,19 L18.9999996,13.4004128 L13.3999996,13.4004128 L13.3999996,10.6006192 L18.9999996,10.6006192 L18.9999996,5 L21.7999996,5 L21.7999996,10.6006192 L27.3999996,10.6006192 L27.3999996,13.4004128 Z M12,20.87 C7.101,20.87 3.13,16.898 3.13,12 C3.13,7.102 7.101,3.13 12,3.13 C12.091,3.13 12.181,3.139 12.272,3.142 C9.866,5.336 8.347,8.487 8.347,12 C8.347,15.512 9.866,18.662 12.271,20.857 C12.18,20.859 12.091,20.87 12,20.87 Z M20.347,0 C18.882,0 17.484,0.276 16.186,0.756 C14.882,0.271 13.473,0 12,0 C5.372,0 0,5.373 0,12 C0,18.628 5.372,24 12,24 C13.471,24 14.878,23.726 16.181,23.242 C17.481,23.724 18.88,24 20.347,24 C26.975,24 32.347,18.628 32.347,12 C32.347,5.373 26.975,0 20.347,0 Z"/></svg></a>
+		<small class="share-link-info">The link has been copied!</small> -->
+	</div>
+	<input type="text" value="https://blog.n8n.io/ai-orchestration/" id="copy-link" aria-label="Copy link input">
+</div>
+	</div>
+</article>
+<aside class="nextprev-section">
+	<div class="nextprev-wrap">
+		<section class="nextprev-newer post tag-marketing-automation tag-guide tag-hash-hubspot tag-hash-pipedrive tag-hash-zoho-crm tag-hash-import-2024-10-24-16-31">
+			<a href="../how-to-get-started-with-crm-automation-and-no-code-workflow-ideas/index.html" class="global-link" aria-label="Getting started with CRM automation: Essential guide &amp; templates included"></a>
+			<a href="../how-to-get-started-with-crm-automation-and-no-code-workflow-ideas/index.html" class="nextprev-image global-image">
+				<img src="../content/images/size/w400/2021/09/CRM-nodes.svg" loading="lazy" alt="Getting started with CRM automation: Essential guide &amp; templates included">			</a>
+			<div>
+				<small>Newer post</small>
+				<h3><a href="../how-to-get-started-with-crm-automation-and-no-code-workflow-ideas/index.html">Getting started with CRM automation: Essential guide &amp; templates included</a></h3>
+			</div>
+		</section>
+		<section class="nextprev-older post tag-ai tag-hash-import-2024-10-24-16-31">
+			<a href="../organise-an-event-using-slack-google-calendar-and-ai/index.html" class="global-link" aria-label="Organise an event using Slack, Google Calendar and AI"></a>
+			<div>
+				<small>Older post</small>
+				<h3><a href="../organise-an-event-using-slack-google-calendar-and-ai/index.html">Organise an event using Slack, Google Calendar and AI</a></h3>
+			</div>
+			<a href="../organise-an-event-using-slack-google-calendar-and-ai/index.html" class="nextprev-image global-image">
+				<img src="../content/images/size/w400/2024/07/ai-1--1-.png" loading="lazy" alt="Organise an event using Slack, Google Calendar and AI">			</a>
+		</section>
+	</div>
+</aside><div class="comments-section">
+	<div class="comments-wrap">
+			</div>
+</div>
+            <div class="related-posts">
+                  <h3>Other Guides on AI</h3>
+              <div class="global-sections global-sections-items-4">
+                <h2 class="global-label global-zigzag">
+	
+	<svg role='img' viewBox='0 0 136 24' xmlns='http://www.w3.org/2000/svg'><path d='M1.525 1.525a3.5 3.5 0 014.95 0L20 15.05 33.525 1.525a3.5 3.5 0 014.95 0L52 15.05 65.525 1.525a3.5 3.5 0 014.95 0L84 15.05 97.525 1.525a3.5 3.5 0 014.95 0L116 15.05l13.525-13.525a3.5 3.5 0 014.95 4.95l-16 16a3.5 3.5 0 01-4.95 0L100 8.95 86.475 22.475a3.5 3.5 0 01-4.95 0L68 8.95 54.475 22.475a3.5 3.5 0 01-4.95 0L36 8.95 22.475 22.475a3.5 3.5 0 01-4.95 0l-16-16a3.5 3.5 0 010-4.95z'/></svg></h2>
+<article class="item-section post tag-ai tag-tutorial">
+	<a href="../how-to-build-ai-agent/index.html" class="global-link" aria-label="How To Build Your First AI Agent (+Free Workflow Template)"></a>
+	<div class="global-image">
+		<img srcset="../content/images/size/w300/2025/04/ai-2--1-.png 300w,
+			../content/images/size/w400/2025/04/ai-2--1-.pngg 400w,
+		../content/images/size/w600/2025/04/ai-2--1-.pngng 600w"
+	 sizes="(max-width:480px) 150px, 200px"
+	 src="../content/images/size/w300/2025/04/ai-2--1-.png"
+	 loading="lazy"
+	 alt="How To Build Your First AI Agent (+Free Workflow Template)">	</div>
+	<div class="global-sections-content">
+		<h3><a href="../how-to-build-ai-agent/index.html">How To Build Your First AI Agent (+Free Workflow Template)</a></h3>
+		<div class="global-sections-meta global-meta global-pointer">
+			<a href="../author/mihai/index.html">Mihai Farcas</a>
+		</div>
+	</div>
+</article>
+                <article class="item-section post tag-ai tag-guide">
+	<a href="../ai-agent-frameworks/index.html" class="global-link" aria-label="9 AI Agent Frameworks Battle: Why Developers Prefer n8n"></a>
+	<div class="global-image">
+		<img srcset="../content/images/size/w300/2025/04/ai-agent-frameworks5.jpg 300w,
+			../content/images/size/w400/2025/04/ai-agent-frameworks5.jpgg 400w,
+		../content/images/size/w600/2025/04/ai-agent-frameworks5.jpgpg 600w"
+	 sizes="(max-width:480px) 150px, 200px"
+	 src="../content/images/size/w300/2025/04/ai-agent-frameworks5.jpg"
+	 loading="lazy"
+	 alt="9 AI Agent Frameworks Battle: Why Developers Prefer n8n">	</div>
+	<div class="global-sections-content">
+		<h3><a href="../ai-agent-frameworks/index.html">9 AI Agent Frameworks Battle: Why Developers Prefer n8n</a></h3>
+		<div class="global-sections-meta global-meta global-pointer">
+			<a href="../author/yulia/index.html">Yulia Dmitrievna</a>, <a href="../author/eduard/index.html">Eduard Parsadanyan</a>
+		</div>
+	</div>
+</article>
+                <article class="item-section post tag-ai tag-guide">
+	<a href="../ai-agents-examples/index.html" class="global-link" aria-label="15 Practical AI Agent Examples to Scale Your Business in 2025"></a>
+	<div class="global-image">
+		<img srcset="../content/images/size/w300/2025/03/Slide-16_9---172--1-.png 300w,
+			../content/images/size/w400/2025/03/Slide-16_9---172--1-.pngg 400w,
+		../content/images/size/w600/2025/03/Slide-16_9---172--1-.pngng 600w"
+	 sizes="(max-width:480px) 150px, 200px"
+	 src="../content/images/size/w300/2025/03/Slide-16_9---172--1-.png"
+	 loading="lazy"
+	 alt="15 Practical AI Agent Examples to Scale Your Business in 2025">	</div>
+	<div class="global-sections-content">
+		<h3><a href="../ai-agents-examples/index.html">15 Practical AI Agent Examples to Scale Your Business in 2025</a></h3>
+		<div class="global-sections-meta global-meta global-pointer">
+			<a href="../author/federico/index.html">Federico Trotta</a>
+		</div>
+	</div>
+</article>
+                <article class="item-section post tag-ai tag-guide">
+	<a href="../best-ai-for-coding/index.html" class="global-link" aria-label="8 best AI coding tools for developers: tested &amp; compared!"></a>
+	<div class="global-image">
+		<img srcset="../content/images/size/w300/2025/03/11-ai-tools-coding--2---2-.png 300w,
+			../content/images/size/w400/2025/03/11-ai-tools-coding--2---2-.pngg 400w,
+		../content/images/size/w600/2025/03/11-ai-tools-coding--2---2-.pngng 600w"
+	 sizes="(max-width:480px) 150px, 200px"
+	 src="../content/images/size/w300/2025/03/11-ai-tools-coding--2---2-.png"
+	 loading="lazy"
+	 alt="8 best AI coding tools for developers: tested &amp; compared!">	</div>
+	<div class="global-sections-content">
+		<h3><a href="../best-ai-for-coding/index.html">8 best AI coding tools for developers: tested &amp; compared!</a></h3>
+		<div class="global-sections-meta global-meta global-pointer">
+			<a href="../author/yulia/index.html">Yulia Dmitrievna</a>, <a href="../author/eduard/index.html">Eduard Parsadanyan</a>
+		</div>
+	</div>
+</article>
+              </div>
+            </div>
+  <aside class="two-column-posts">
+    <h3>Latest n8n guides</h3>
+    <div class="two-column-posts__inner">
+	      <section class="nextprev-newer post">
+  <a href="../how-to-build-ai-agent/index.html" class="global-link" aria-label="How To Build Your First AI Agent (+Free Workflow Template)"></a>
+    <a href="../how-to-build-ai-agent/index.html" class="nextprev-image global-image">
+      <img src="../content/images/size/w400/2025/04/ai-2--1-.png" loading="lazy" alt="How To Build Your First AI Agent (+Free Workflow Template)">    </a>
+  <div>
+    <h3><a href="../how-to-build-ai-agent/index.html">How To Build Your First AI Agent (+Free Workflow Template)</a></h3>
+  </div>
+</section>
+	      <section class="nextprev-newer post">
+  <a href="../ai-agent-frameworks/index.html" class="global-link" aria-label="9 AI Agent Frameworks Battle: Why Developers Prefer n8n"></a>
+    <a href="../ai-agent-frameworks/index.html" class="nextprev-image global-image">
+      <img src="../content/images/size/w400/2025/04/ai-agent-frameworks5.jpg" loading="lazy" alt="9 AI Agent Frameworks Battle: Why Developers Prefer n8n">    </a>
+  <div>
+    <h3><a href="../ai-agent-frameworks/index.html">9 AI Agent Frameworks Battle: Why Developers Prefer n8n</a></h3>
+  </div>
+</section>
+	      <section class="nextprev-newer post">
+  <a href="../series-b/index.html" class="global-link" aria-label="n8n closes €55M Series B round led by Highland Europe"></a>
+    <a href="../series-b/index.html" class="nextprev-image global-image">
+      <img src="../content/images/size/w400/2025/03/seriesB-blog.jpg" loading="lazy" alt="n8n closes €55M Series B round led by Highland Europe">    </a>
+  <div>
+    <h3><a href="../series-b/index.html">n8n closes €55M Series B round led by Highland Europe</a></h3>
+  </div>
+</section>
+	      <section class="nextprev-newer post">
+  <a href="../ai-agents-examples/index.html" class="global-link" aria-label="15 Practical AI Agent Examples to Scale Your Business in 2025"></a>
+    <a href="../ai-agents-examples/index.html" class="nextprev-image global-image">
+      <img src="../content/images/size/w400/2025/03/Slide-16_9---172--1-.png" loading="lazy" alt="15 Practical AI Agent Examples to Scale Your Business in 2025">    </a>
+  <div>
+    <h3><a href="../ai-agents-examples/index.html">15 Practical AI Agent Examples to Scale Your Business in 2025</a></h3>
+  </div>
+</section>
+    </div>
+  </aside>
+
+					<!-- <div class="subscribe-section">
+	<div class="subscribe-wrap">
+		<h3>Subscribe to new posts</h3>
+		<form data-members-form="subscribe" class="subscribe-form">
+			<input data-members-email type="email" placeholder="Your email address" aria-label="Your email address" required>
+			<button class="global-button" type="submit">Subscribe</button>
+		</form>
+		<div class="subscribe-alert">
+			<small class="alert-loading global-alert">Processing your application</small>
+			<small class="alert-success global-alert">Please check your inbox and click the link to confirm your subscription</small>
+			<small class="alert-error global-alert">There was an error sending the email</small>
+		</div>
+	</div>
+</div>
+ -->
+				</main>
+				<div id="subFooter" class="sub-footer">
+  <div class="sub-footer-container">
+    <div class="footer-columns">
+      <div>
+        <div class="column-name">Popular integrations</div>
+        <ul class="col-links">
+          <li>
+            <a href="https://n8n.io/integrations/google-sheets/" class="footer-link"> Google Sheets </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/telegram/" class="footer-link"> Telegram </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/mysql/" class="footer-link"> MySQL </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/slack/" class="footer-link"> Slack </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/discord/" class="footer-link"> Discord </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/postgres/" class="footer-link"> Postgres </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/notion/" class="footer-link"> Notion </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/gmail/" class="footer-link"> Gmail </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/airtable/" class="footer-link"> Airtable </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/google-drive/" class="footer-link"> Google Drive </a>
+          </li>
+        </ul>
+        <div class="bottom-link hidden-link">
+          <a href="https://n8n.io/integrations/" class="footer-link">
+            Show more integrations
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10" width="7px" height="7px">
+              <g clip-path="url(#a)">
+                <path
+                  fill="#111010"
+                  fill-rule="evenodd"
+                  d="M7.678 1.36H.481V0H10v9.52H8.64v-7.2L.962 10 0 9.038 7.678 1.36Z"
+                  clip-rule="evenodd"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h10v10H0z"></path>
+                </clipPath>
+              </defs></svg
+            ></a>
+        </div>
+        <button
+          type="button"
+          class="footer-link footer-link--more"
+          onclick="document.getElementById('subFooter').classList.toggle('sub-footer--full')"></button>
+      </div>
+      <div>
+        <div class="column-name">Trending combinations</div>
+        <ul class="col-links">
+          <li>
+            <a href="https://n8n.io/integrations/hubspot/and/salesforce/" class="footer-link">
+              HubSpot and Salesforce
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/twilio/and/whatsapp-business-cloud/" class="footer-link">
+              Twilio and WhatsApp
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/github/and/jira-software/" class="footer-link">
+              GitHub and Jira
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/asana/and/slack/" class="footer-link"> Asana and Slack </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/asana/and/salesforce/" class="footer-link">
+              Asana and Salesforce
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/jira-software/and/slack/" class="footer-link">
+              Jira and Slack
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/jira-software/and/salesforce/" class="footer-link">
+              Jira and Salesforce
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/github/and/slack/" class="footer-link"> GitHub and Slack </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/hubspot/and/quickbooks-online/" class="footer-link">
+              HubSpot and QuickBooks
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/hubspot/and/slack/" class="footer-link"> HubSpot and Slack </a>
+          </li>
+        </ul>
+        <div class="bottom-link hidden-link">
+          <a href="https://n8n.io/integrations/" class="footer-link">
+            Show more integrations
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10" width="7px" height="7px">
+              <g clip-path="url(#a)">
+                <path
+                  fill="#111010"
+                  fill-rule="evenodd"
+                  d="M7.678 1.36H.481V0H10v9.52H8.64v-7.2L.962 10 0 9.038 7.678 1.36Z"
+                  clip-rule="evenodd"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h10v10H0z"></path>
+                </clipPath>
+              </defs></svg
+            ></a>
+        </div>
+        <button
+          type="button"
+          class="footer-link footer-link--more"
+          onclick="document.getElementById('subFooter').classList.toggle('sub-footer--full')"></button>
+      </div>
+      <div>
+        <div class="column-name">Top integration categories</div>
+        <ul class="col-links">
+          <li>
+            <a href="https://n8n.io/integrations/categories/development/" class="footer-link"> Development </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/categories/communication/" class="footer-link">
+              Communication
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/categories/langchain/" class="footer-link"> Langchain </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/categories/ai/" class="footer-link"> AI </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/categories/data-and-storage/" class="footer-link">
+              Data &amp; Storage
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/categories/marketing/" class="footer-link"> Marketing </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/categories/productivity/" class="footer-link">
+              Productivity
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/categories/sales/" class="footer-link"> Sales </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/categories/utility/" class="footer-link"> Utility </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/categories/miscellaneous/" class="footer-link">
+              Miscellaneous
+            </a>
+          </li>
+        </ul>
+        <div class="bottom-link hidden-link">
+          <a href="https://n8n.io/integrations/" class="footer-link">
+            Explore more categories
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10" width="7px" height="7px">
+              <g clip-path="url(#a)">
+                <path
+                  fill="#111010"
+                  fill-rule="evenodd"
+                  d="M7.678 1.36H.481V0H10v9.52H8.64v-7.2L.962 10 0 9.038 7.678 1.36Z"
+                  clip-rule="evenodd"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h10v10H0z"></path>
+                </clipPath>
+              </defs></svg
+            ></a>
+        </div>
+        <button
+          type="button"
+          class="footer-link footer-link--more"
+          onclick="document.getElementById('subFooter').classList.toggle('sub-footer--full')"></button>
+      </div>
+      <div>
+        <div class="column-name">Trending templates</div>
+        <ul class="col-links">
+          <li>
+            <a href="https://n8n.io/workflows/1750-creating-an-api-endpoint/" class="footer-link">
+              Creating an API endpoint
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/workflows/1954-ai-agent-chat/" class="footer-link">
+              AI agent chat
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/workflows/1951-scrape-and-summarize-webpages-with-ai/" class="footer-link">
+              Scrape and summarize webpages with AI
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/workflows/1700-very-quick-quickstart/" class="footer-link">
+              Very quick quickstart
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/workflows/1748-pulling-data-from-services-that-n8n-doesnt-have-a-pre-built-integration-for/" class="footer-link">
+              Pulling data from services that n8n doesn’t have a pre-built integration for
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/workflows/1747-joining-different-datasets/" class="footer-link">
+              Joining different datasets
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/workflows/1534-back-up-your-n8n-workflows-to-github/" class="footer-link">
+              Back Up Your n8n Workflows To Github
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/workflows/2006-ai-agent-that-can-scrape-webpages/" class="footer-link">
+              AI agent that can scrape webpages
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/workflows/1862-openai-gpt-3-company-enrichment-from-website-content/" class="footer-link">
+              OpenAI GPT-3: Company Enrichment from website content
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/workflows/1934-telegram-ai-chatbot/" class="footer-link">
+              Telegram AI Chatbot
+            </a>
+          </li>
+        </ul>
+        <div class="bottom-link hidden-link">
+          <a href="https://n8n.io/workflows/" class="footer-link">
+            Explore 800+ workflow templates
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10" width="7px" height="7px">
+              <g clip-path="url(#a)">
+                <path
+                  fill="#111010"
+                  fill-rule="evenodd"
+                  d="M7.678 1.36H.481V0H10v9.52H8.64v-7.2L.962 10 0 9.038 7.678 1.36Z"
+                  clip-rule="evenodd"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h10v10H0z"></path>
+                </clipPath>
+              </defs></svg
+            ></a>
+        </div>
+        <button
+          type="button"
+          class="footer-link footer-link--more"
+          onclick="document.getElementById('subFooter').classList.toggle('sub-footer--full')"></button>
+      </div>
+      <div>
+        <div class="column-name">Top guides</div>
+        <ul class="col-links">
+          <li>
+            <a href="../telegram-bots/index.html" class="footer-link"> Telegram bots </a>
+          </li>
+          <li>
+            <a href="../open-source-chatbot/index.html" class="footer-link"> Open-source chatbot </a>
+          </li>
+          <li>
+            <a href="../open-source-llm/index.html" class="footer-link"> Open-source LLM </a>
+          </li>
+          <li>
+            <a href="../open-source-low-code-platforms.html" class="footer-link"> Open-source low-code platforms </a>
+          </li>
+          <li>
+            <a href="../free-zapier-alternatives/index.html" class="footer-link"> Zapier alternatives </a>
+          </li>
+          <li>
+            <a href="../make-vs-zapier/index.html" class="footer-link"> Make vs Zapier </a>
+          </li>
+          <li class="hidden-link">
+            <a href="../ai-agents/index.html" class="footer-link"> AI agents </a>
+          </li>
+          <li class="hidden-link">
+            <a href="../ai-coding-assistants/index.html" class="footer-link"> AI coding assistants </a>
+          </li>
+          <li class="hidden-link">
+            <a href="../create-chatgpt-discord-bot/index.html" class="footer-link"> ChatGPT Discord bot </a>
+          </li>
+          <li class="hidden-link">
+            <a href="../best-ai-chatbot/index.html" class="footer-link"> Best AI chatbot </a>
+          </li>
+        </ul>
+        <div class="bottom-link hidden-link">
+          <a href="../index.html" class="footer-link">
+            Show guides
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10" width="7px" height="7px">
+              <g clip-path="url(#a)">
+                <path
+                  fill="#111010"
+                  fill-rule="evenodd"
+                  d="M7.678 1.36H.481V0H10v9.52H8.64v-7.2L.962 10 0 9.038 7.678 1.36Z"
+                  clip-rule="evenodd"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h10v10H0z"></path>
+                </clipPath>
+              </defs></svg
+            ></a>
+        </div>
+        <button
+          type="button"
+          class="footer-link footer-link--more"
+          onclick="document.getElementById('subFooter').classList.toggle('sub-footer--full')"></button>
+      </div>
+    </div>
+  </div>
+</div><footer class="footer-section global-footer">
+	<div class="footer-wrap">
+		<div class="footer-data">
+			<div class="footer-logo">
+				<a href="../index.html" class="is-image"><img src="../content/images/2022/06/n8n-blog.png" alt="n8n Blog"></a>
+			</div>
+			<p class="footer-description">Automate without limits</p>
+			<div class="footer-icons">
+				<a href="https://www.facebook.com/n8nio" aria-label="link Facebook"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"/></svg></a>
+				<a href="https://x.com/n8n_io" aria-label="link Twitter"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg></a>
+				<a href="https://github.com/n8n-io/n8n" aria-label="link GitHub"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+				<a href="https://discord.gg/n8n" aria-label="link Discord"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.222 0c1.406 0 2.54 1.137 2.607 2.475V24l-2.677-2.273-1.47-1.338-1.604-1.398.67 2.205H3.71c-1.402 0-2.54-1.065-2.54-2.476V2.48C1.17 1.142 2.31.003 3.715.003h16.5L20.222 0zm-6.118 5.683h-.03l-.202.2c2.073.6 3.076 1.537 3.076 1.537-1.336-.668-2.54-1.002-3.744-1.137-.87-.135-1.74-.064-2.475 0h-.2c-.47 0-1.47.2-2.81.735-.467.203-.735.336-.735.336s1.002-1.002 3.21-1.537l-.135-.135s-1.672-.064-3.477 1.27c0 0-1.805 3.144-1.805 7.02 0 0 1 1.74 3.743 1.806 0 0 .4-.533.805-1.002-1.54-.468-2.14-1.404-2.14-1.404s.134.066.335.2h.06c.03 0 .044.015.06.03v.006c.016.016.03.03.06.03.33.136.66.27.93.4.466.202 1.065.403 1.8.536.93.135 1.996.2 3.21 0 .6-.135 1.2-.267 1.8-.535.39-.2.87-.4 1.397-.737 0 0-.6.936-2.205 1.404.33.466.795 1 .795 1 2.744-.06 3.81-1.8 3.87-1.726 0-3.87-1.815-7.02-1.815-7.02-1.635-1.214-3.165-1.26-3.435-1.26l.056-.02zm.168 4.413c.703 0 1.27.6 1.27 1.335 0 .74-.57 1.34-1.27 1.34-.7 0-1.27-.6-1.27-1.334.002-.74.573-1.338 1.27-1.338zm-4.543 0c.7 0 1.266.6 1.266 1.335 0 .74-.57 1.34-1.27 1.34-.7 0-1.27-.6-1.27-1.334 0-.74.57-1.338 1.27-1.338z"/></svg></a>
+				<a href="https://www.linkedin.com/company/n8n/" aria-label="link LinkedIn"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+				<a href="https://www.youtube.com/c/n8n-io" aria-label="link YouTube"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path class="a" d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+				
+
+			</div>
+		</div>
+		<div class="footer-nav">
+			
+
+
+
+<div class="footer-nav-column">
+	<!-- <small>Column 1</small> -->
+	<ul>
+		<li><a href="https://n8n.io/">n8n home</a></li>
+		<li><a href="https://n8n.io/features/">Features</a></li>
+		<li><a href="https://n8n.io/pricing/">Pricing</a></li>
+		<li><a href="https://docs.n8n.io/">Docs</a></li>
+	</ul>
+</div>
+
+<div class="footer-nav-column">
+	<!-- <small>Column 2</small> -->
+	<ul>
+		<li><a href="https://community.n8n.io">Community</a></li>
+	</ul>
+</div>
+
+
+		</div>
+	</div>
+	<div class="footer-copyright">
+		Made with ❤️ in Berlin. © 2025 n8n | All rights reserved.
+	</div>
+</footer>
+			</div>
+		</div>
+		<div id="notifications" class="global-notification">
+	<div class="subscribe">You’ve successfully subscribed to n8n Blog</div>
+	<div class="signin">Welcome back! You’ve successfully signed in.</div>
+	<div class="signup">Great! You’ve successfully signed up.</div>
+	<div class="expired">Your link has expired</div>
+	<div class="checkout-success">Success! Check your email for magic link to sign-in.</div>
+</div>
+				<script src="../assets/js/global.js%3Fv=4801f6d1f9"></script>
+		<script src="../assets/js/post.js%3Fv=4801f6d1f9"></script>
+		
+		<script>
+!function(){"use strict";const p=new URLSearchParams(window.location.search),isAction=p.has("action"),isStripe=p.has("stripe"),success=p.get("success"),action=p.get("action"),stripe=p.get("stripe"),n=document.getElementById("notifications"),a="is-subscribe",b="is-signin",c="is-signup",d="is-expired",e="is-checkout-success";p&&(isAction&&(action=="subscribe"&&success=="true"&&n.classList.add(a),action=="signin"&&success=="true"&&n.classList.add(b),action=="signup"&&success=="true"&&n.classList.add(c),success=="false"&&n.classList.add(d)),isStripe&&stripe=="success"&&n.classList.add(e),(isAction||isStripe)&&setTimeout(function(){window.history.replaceState(null,null,window.location.pathname),n.classList.remove(a,b,c,d,e)},5000))}();
+</script>
+
+		
+		<script>
+
+// Contain every link in an array.
+var links = document.querySelectorAll('a');
+
+// For every link,
+for (var i = 0; i < links.length; i++) {
+
+  // if the link's hostname is different from this Ghost's hostname,
+  // i.e. if the link is external,
+  if (links[i].hostname != window.location.hostname) {
+
+    // change the target and rel value as the following.
+    links[i].target = '_blank';
+    links[i].rel = 'noopener';
+
+  }
+}
+</script>
+	</body>
+</html>

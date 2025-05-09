@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<title>AI Agentic workflows: a practical guide for n8n users – n8n Blog</title>
+		<meta name="HandheldFriendly" content="True">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400;1,800;1,900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400;1,800;1,900&display=swap"> -->
+		<link rel="stylesheet" type="text/css" href="../assets/css/screen.css%3Fv=4801f6d1f9.css">
+		<style>hr{background-image:url("data:image/svg+xml;utf8,<svg role='img' viewBox='0 0 136 24' xmlns='http://www.w3.org/2000/svg'><path d='M1.525 1.525a3.5 3.5 0 014.95 0L20 15.05 33.525 1.525a3.5 3.5 0 014.95 0L52 15.05 65.525 1.525a3.5 3.5 0 014.95 0L84 15.05 97.525 1.525a3.5 3.5 0 014.95 0L116 15.05l13.525-13.525a3.5 3.5 0 014.95 4.95l-16 16a3.5 3.5 0 01-4.95 0L100 8.95 86.475 22.475a3.5 3.5 0 01-4.95 0L68 8.95 54.475 22.475a3.5 3.5 0 01-4.95 0L36 8.95 22.475 22.475a3.5 3.5 0 01-4.95 0l-16-16a3.5 3.5 0 010-4.95z'/></svg>")}</style>
+
+		<meta name="description" content="Learn how to implement intelligent, adaptive AI agentic workflows in n8n. Grab free n8n workflow templates!">
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="n8n Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="AI Agentic workflows: a practical guide for n8n users">
+    <meta property="og:description" content="Learn how to implement intelligent, adaptive AI agentic workflows in n8n. From single agents to multi-agent teams: discover key patterns for advanced automation!">
+    <meta property="og:url" content="https://blog.n8n.io/ai-agentic-workflows/">
+    <meta property="og:image" content="https://blog.n8n.io/content/images/size/w1200/2024/12/ai-agentic-workflows--1-.jpg">
+    <meta property="article:published_time" content="2024-12-27T14:14:28.000Z">
+    <meta property="article:modified_time" content="2025-01-02T09:36:25.000Z">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Guide">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/n8nio">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Agentic workflows: a practical guide for n8n users">
+    <meta name="twitter:description" content="Learn how to implement intelligent, adaptive AI agentic workflows in n8n. From single agents to multi-agent teams: discover key patterns for advanced automation!">
+    <meta name="twitter:url" content="https://blog.n8n.io/ai-agentic-workflows/">
+    <meta name="twitter:image" content="https://blog.n8n.io/content/images/size/w1200/2024/12/ai-agentic-workflows--1-.jpg">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Yulia Dmitrievna">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="AI, Guide">
+    <meta name="twitter:site" content="@n8n_io">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="675">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "n8n Blog",
+        "url": "https://blog.n8n.io/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.n8n.io/content/images/2022/06/n8n-blog.png"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Yulia Dmitrievna",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://blog.n8n.io/content/images/2023/01/profile-pik.jpg",
+            "width": 1024,
+            "height": 1024
+        },
+        "url": "https://blog.n8n.io/author/yulia/",
+        "sameAs": []
+    },
+    "headline": "AI Agentic workflows: a practical guide for n8n users",
+    "url": "https://blog.n8n.io/ai-agentic-workflows/",
+    "datePublished": "2024-12-27T14:14:28.000Z",
+    "dateModified": "2025-01-02T09:36:25.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.n8n.io/content/images/size/w1200/2024/12/ai-agentic-workflows--1-.jpg",
+        "width": 1200,
+        "height": 675
+    },
+    "keywords": "AI, Guide",
+    "description": "Learn how to implement intelligent, adaptive AI agentic workflows in n8n. From single agents to multi-agent teams: discover key patterns for advanced automation!",
+    "mainEntityOfPage": "https://blog.n8n.io/ai-agentic-workflows/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.119">
+    <link rel="alternate" type="application/rss+xml" title="n8n Blog" href="../rss/index.html">
+    <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.50/umd/portal.min.js" data-i18n="true" data-ghost="https://blog.n8n.io/" data-key="8626993d9b363277120ea42164" data-api="https://n8n-cloud-blog.ghost.io/ghost/api/content/" data-locale="en" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style>
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.5/umd/sodo-search.min.js" data-key="8626993d9b363277120ea42164" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.5/umd/main.css" data-sodo-search="https://n8n-cloud-blog.ghost.io/" data-locale="en" crossorigin="anonymous"></script>
+    
+    <link href="https://blog.n8n.io/webmentions/receive/" rel="webmention">
+    <script defer src="../public/cards.min.js%3Fv=4801f6d1f9"></script>
+    <link rel="stylesheet" type="text/css" href="../public/cards.min.css%3Fv=4801f6d1f9.css">
+    <script defer src="../public/member-attribution.min.js%3Fv=4801f6d1f9"></script><style>:root {--ghost-accent-color: #FD8925;}</style>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<style>
+    .content-banner {
+        display: flex;
+        align-items: center;
+        padding: 25px 30px 29px 120px;
+        gap: 20px;
+        background: url(../content/images/2023/05/banner.svg) no-repeat 0 0;
+        position: relative;
+        overflow: hidden;
+        border-radius: 32px;
+        margin-bottom: 40px;
+    }
+    .content-banner:before {
+        content: '';
+        width: 97px;
+        height: 97px;
+        background: #8287eb;
+        filter: blur(66.7196px);
+        position: absolute;
+        top: -41px;
+        left: -70px;
+    }
+    .content-banner div {
+        flex: 1 1 0%;
+    }
+    .content-banner h3 {
+        font-size: 28px;
+        line-height: 36px;
+        margin: 0;
+    }
+    .content-banner a {
+        flex-shrink: 0;
+    }
+    .content-banner p {
+        margin-bottom: 0;
+        line-height: 24px;
+    }
+    .content-banner .global-button {
+        text-decoration: none;
+        padding: 9px 20px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+</style>
+<!-- cookie consent benner injection-->  
+    <div id="n8n-consent-modal" class="consent-modal consent-modal--hidden">
+      <p class="consent-modal-header">We use analytics</p>
+      <p class="consent-modal-description">
+        We use cookies and other tracking technologies to improve your browsing experience, to analyze our website
+        traffic, assist our marketing efforts and to understand where our visitors are coming from.
+      </p>
+      <a href="https://n8n.io/legal#privacy" class="consent-modal-link">Privacy Policy</a>
+      <div>
+        <button class="consent-modal-button consent-modal-button--decline" onclick="acceptConsent(false)">
+          Decline
+        </button>
+        <button class="consent-modal-button consent-modal-button--agree" onclick="acceptConsent(true)">Agree</button>
+      </div>
+    </div>
+<style>
+      .consent-modal {
+        display: block;
+        padding: 32px 16px;
+        background: #101330;
+        box-shadow: 0px 4px 40px rgba(153, 155, 175, 0.17);
+        width: 100%;
+        position: fixed;
+        z-index: 1000;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        box-sizing: border-box;
+      }
+
+      .consent-modal--hidden {
+        display: none;
+      }
+
+      .consent-modal-link {
+        font-family: 'moderat', sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+        font-style: normal;
+        font-weight: 700;
+        text-decoration-line: underline;
+        color: #e4e6ec;
+        margin-bottom: 16px;
+        display: block;
+      }
+
+      .consent-modal-header,
+      .consent-modal-description {
+        padding: 0;
+        margin: 0 0 16px;
+        font-style: normal;
+      }
+
+      .consent-modal-header {
+        font-family: 'sunset-gothic', 'Sunset Gothic Pro', sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        color: #ffffff;
+      }
+
+      .consent-modal-description {
+        font-family: 'moderat', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #e4e6ec;
+      }
+
+      .consent-modal-button {
+        padding: 9px 20px;
+        border-radius: 6px;
+        font-style: normal;
+        font-weight: 700;
+        text-align: center;
+        color: #ffffff;
+        cursor: pointer;
+        border: none;
+        font-family: 'moderat', sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      .consent-modal-button--decline {
+        margin-right: 10px;
+        background: #40425e;
+      }
+
+      .consent-modal-button--agree {
+        background: #20b69e;
+      }
+
+      @media screen and (min-width: 992px) {
+        .consent-modal {
+          border-radius: 30px;
+          left: unset;
+          right: 14px;
+          bottom: 14px;
+          padding: 48px;
+          max-width: 621px;
+        }
+
+        .consent-modal-header {
+          font-size: 28px;
+          line-height: 36px;
+        }
+
+        .consent-modal-link,
+        .consent-modal-button,
+        .consent-modal-description {
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
+    </style>
+    <script>
+      ;(function () {
+        const GDPR_COUNTRIES = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'GB'];
+        const CONSENT_MODAL_ID = 'n8n-consent-modal';
+        const CONSENT_MODAL_HIDDEN = 'consent-modal--hidden';
+        window.acceptConsent = function (accepted) {
+          const cookie = {
+            consent: accepted
+          };
+          const d = new Date();
+          d.setTime(d.getTime() + 5 * 24 * 60 * 60 * 1000);
+          document.cookie = `n8n-consent=${JSON.stringify(cookie)}; expires=${d.toUTCString()}; path=/; domain=.n8n.io`;
+          const modal = document.getElementById(CONSENT_MODAL_ID);
+          if (modal) {
+            modal.classList.add(CONSENT_MODAL_HIDDEN);
+          }
+        };
+        async function checkCookie() {
+          try {
+            const res = await fetch('https://ipapi.co/json/');
+            const ip = await res.json();
+            const location = ip.country;
+            if (GDPR_COUNTRIES.includes(location) || ip.country_code === 'US' && ip.region_code === 'CA') {
+              var _document$cookie$matc;
+              const cookie = ((_document$cookie$matc = document.cookie.match('(^|;)\\s*' + 'n8n-consent' + '\\s*=\\s*([^;]+)')) === null || _document$cookie$matc === void 0 ? void 0 : _document$cookie$matc.pop()) || '';
+              if (cookie === '') {
+                const modal = document.getElementById(CONSENT_MODAL_ID);
+                if (modal) {
+                  modal.classList.remove(CONSENT_MODAL_HIDDEN);
+                }
+              }
+            } else {
+              acceptConsent(true);
+            }
+          } catch (e) {}
+        }
+        window.addEventListener('DOMContentLoaded', checkCookie);
+      })(window);
+    </script>
+
+<!-- Google Tag Manager (blog.n8n.io) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MQTZKBJ');</script>
+<!-- End Google Tag Manager -->
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/solid.min.css"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<script>
+  !function(e,a,o){"object"==typeof exports?(module.exports=o(),module.exports.default=o()):"function"==typeof define&&define.amd?define(o):a.slugify=o()}(0,this,(function(){var e=JSON.parse('{"$":"dollar","%":"percent","&":"and","<":"less",">":"greater","|":"or","¢":"cent","£":"pound","¤":"currency","¥":"yen","©":"(c)","ª":"a","®":"(r)","º":"o","À":"A","Á":"A","Â":"A","Ã":"A","Ä":"A","Å":"A","Æ":"AE","Ç":"C","È":"E","É":"E","Ê":"E","Ë":"E","Ì":"I","Í":"I","Î":"I","Ï":"I","Ð":"D","Ñ":"N","Ò":"O","Ó":"O","Ô":"O","Õ":"O","Ö":"O","Ø":"O","Ù":"U","Ú":"U","Û":"U","Ü":"U","Ý":"Y","Þ":"TH","ß":"ss","à":"a","á":"a","â":"a","ã":"a","ä":"a","å":"a","æ":"ae","ç":"c","è":"e","é":"e","ê":"e","ë":"e","ì":"i","í":"i","î":"i","ï":"i","ð":"d","ñ":"n","ò":"o","ó":"o","ô":"o","õ":"o","ö":"o","ø":"o","ù":"u","ú":"u","û":"u","ü":"u","ý":"y","þ":"th","ÿ":"y","Ā":"A","ā":"a","Ă":"A","ă":"a","Ą":"A","ą":"a","Ć":"C","ć":"c","Č":"C","č":"c","Ď":"D","ď":"d","Đ":"DJ","đ":"dj","Ē":"E","ē":"e","Ė":"E","ė":"e","Ę":"e","ę":"e","Ě":"E","ě":"e","Ğ":"G","ğ":"g","Ģ":"G","ģ":"g","Ĩ":"I","ĩ":"i","Ī":"i","ī":"i","Į":"I","į":"i","İ":"I","ı":"i","Ķ":"k","ķ":"k","Ļ":"L","ļ":"l","Ľ":"L","ľ":"l","Ł":"L","ł":"l","Ń":"N","ń":"n","Ņ":"N","ņ":"n","Ň":"N","ň":"n","Ō":"O","ō":"o","Ő":"O","ő":"o","Œ":"OE","œ":"oe","Ŕ":"R","ŕ":"r","Ř":"R","ř":"r","Ś":"S","ś":"s","Ş":"S","ş":"s","Š":"S","š":"s","Ţ":"T","ţ":"t","Ť":"T","ť":"t","Ũ":"U","ũ":"u","Ū":"u","ū":"u","Ů":"U","ů":"u","Ű":"U","ű":"u","Ų":"U","ų":"u","Ŵ":"W","ŵ":"w","Ŷ":"Y","ŷ":"y","Ÿ":"Y","Ź":"Z","ź":"z","Ż":"Z","ż":"z","Ž":"Z","ž":"z","Ə":"E","ƒ":"f","Ơ":"O","ơ":"o","Ư":"U","ư":"u","ǈ":"LJ","ǉ":"lj","ǋ":"NJ","ǌ":"nj","Ș":"S","ș":"s","Ț":"T","ț":"t","ə":"e","˚":"o","Ά":"A","Έ":"E","Ή":"H","Ί":"I","Ό":"O","Ύ":"Y","Ώ":"W","ΐ":"i","Α":"A","Β":"B","Γ":"G","Δ":"D","Ε":"E","Ζ":"Z","Η":"H","Θ":"8","Ι":"I","Κ":"K","Λ":"L","Μ":"M","Ν":"N","Ξ":"3","Ο":"O","Π":"P","Ρ":"R","Σ":"S","Τ":"T","Υ":"Y","Φ":"F","Χ":"X","Ψ":"PS","Ω":"W","Ϊ":"I","Ϋ":"Y","ά":"a","έ":"e","ή":"h","ί":"i","ΰ":"y","α":"a","β":"b","γ":"g","δ":"d","ε":"e","ζ":"z","η":"h","θ":"8","ι":"i","κ":"k","λ":"l","μ":"m","ν":"n","ξ":"3","ο":"o","π":"p","ρ":"r","ς":"s","σ":"s","τ":"t","υ":"y","φ":"f","χ":"x","ψ":"ps","ω":"w","ϊ":"i","ϋ":"y","ό":"o","ύ":"y","ώ":"w","Ё":"Yo","Ђ":"DJ","Є":"Ye","І":"I","Ї":"Yi","Ј":"J","Љ":"LJ","Њ":"NJ","Ћ":"C","Џ":"DZ","А":"A","Б":"B","В":"V","Г":"G","Д":"D","Е":"E","Ж":"Zh","З":"Z","И":"I","Й":"J","К":"K","Л":"L","М":"M","Н":"N","О":"O","П":"P","Р":"R","С":"S","Т":"T","У":"U","Ф":"F","Х":"H","Ц":"C","Ч":"Ch","Ш":"Sh","Щ":"Sh","Ъ":"U","Ы":"Y","Ь":"","Э":"E","Ю":"Yu","Я":"Ya","а":"a","б":"b","в":"v","г":"g","д":"d","е":"e","ж":"zh","з":"z","и":"i","й":"j","к":"k","л":"l","м":"m","н":"n","о":"o","п":"p","р":"r","с":"s","т":"t","у":"u","ф":"f","х":"h","ц":"c","ч":"ch","ш":"sh","щ":"sh","ъ":"u","ы":"y","ь":"","э":"e","ю":"yu","я":"ya","ё":"yo","ђ":"dj","є":"ye","і":"i","ї":"yi","ј":"j","љ":"lj","њ":"nj","ћ":"c","ѝ":"u","џ":"dz","Ґ":"G","ґ":"g","Ғ":"GH","ғ":"gh","Қ":"KH","қ":"kh","Ң":"NG","ң":"ng","Ү":"UE","ү":"ue","Ұ":"U","ұ":"u","Һ":"H","һ":"h","Ә":"AE","ә":"ae","Ө":"OE","ө":"oe","Ա":"A","Բ":"B","Գ":"G","Դ":"D","Ե":"E","Զ":"Z","Է":"E\'","Ը":"Y\'","Թ":"T\'","Ժ":"JH","Ի":"I","Լ":"L","Խ":"X","Ծ":"C\'","Կ":"K","Հ":"H","Ձ":"D\'","Ղ":"GH","Ճ":"TW","Մ":"M","Յ":"Y","Ն":"N","Շ":"SH","Չ":"CH","Պ":"P","Ջ":"J","Ռ":"R\'","Ս":"S","Վ":"V","Տ":"T","Ր":"R","Ց":"C","Փ":"P\'","Ք":"Q\'","Օ":"O\'\'","Ֆ":"F","և":"EV","ء":"a","آ":"aa","أ":"a","ؤ":"u","إ":"i","ئ":"e","ا":"a","ب":"b","ة":"h","ت":"t","ث":"th","ج":"j","ح":"h","خ":"kh","د":"d","ذ":"th","ر":"r","ز":"z","س":"s","ش":"sh","ص":"s","ض":"dh","ط":"t","ظ":"z","ع":"a","غ":"gh","ف":"f","ق":"q","ك":"k","ل":"l","م":"m","ن":"n","ه":"h","و":"w","ى":"a","ي":"y","ً":"an","ٌ":"on","ٍ":"en","َ":"a","ُ":"u","ِ":"e","ْ":"","٠":"0","١":"1","٢":"2","٣":"3","٤":"4","٥":"5","٦":"6","٧":"7","٨":"8","٩":"9","پ":"p","چ":"ch","ژ":"zh","ک":"k","گ":"g","ی":"y","۰":"0","۱":"1","۲":"2","۳":"3","۴":"4","۵":"5","۶":"6","۷":"7","۸":"8","۹":"9","฿":"baht","ა":"a","ბ":"b","გ":"g","დ":"d","ე":"e","ვ":"v","ზ":"z","თ":"t","ი":"i","კ":"k","ლ":"l","მ":"m","ნ":"n","ო":"o","პ":"p","ჟ":"zh","რ":"r","ს":"s","ტ":"t","უ":"u","ფ":"f","ქ":"k","ღ":"gh","ყ":"q","შ":"sh","ჩ":"ch","ც":"ts","ძ":"dz","წ":"ts","ჭ":"ch","ხ":"kh","ჯ":"j","ჰ":"h","Ṣ":"S","ṣ":"s","Ẁ":"W","ẁ":"w","Ẃ":"W","ẃ":"w","Ẅ":"W","ẅ":"w","ẞ":"SS","Ạ":"A","ạ":"a","Ả":"A","ả":"a","Ấ":"A","ấ":"a","Ầ":"A","ầ":"a","Ẩ":"A","ẩ":"a","Ẫ":"A","ẫ":"a","Ậ":"A","ậ":"a","Ắ":"A","ắ":"a","Ằ":"A","ằ":"a","Ẳ":"A","ẳ":"a","Ẵ":"A","ẵ":"a","Ặ":"A","ặ":"a","Ẹ":"E","ẹ":"e","Ẻ":"E","ẻ":"e","Ẽ":"E","ẽ":"e","Ế":"E","ế":"e","Ề":"E","ề":"e","Ể":"E","ể":"e","Ễ":"E","ễ":"e","Ệ":"E","ệ":"e","Ỉ":"I","ỉ":"i","Ị":"I","ị":"i","Ọ":"O","ọ":"o","Ỏ":"O","ỏ":"o","Ố":"O","ố":"o","Ồ":"O","ồ":"o","Ổ":"O","ổ":"o","Ỗ":"O","ỗ":"o","Ộ":"O","ộ":"o","Ớ":"O","ớ":"o","Ờ":"O","ờ":"o","Ở":"O","ở":"o","Ỡ":"O","ỡ":"o","Ợ":"O","ợ":"o","Ụ":"U","ụ":"u","Ủ":"U","ủ":"u","Ứ":"U","ứ":"u","Ừ":"U","ừ":"u","Ử":"U","ử":"u","Ữ":"U","ữ":"u","Ự":"U","ự":"u","Ỳ":"Y","ỳ":"y","Ỵ":"Y","ỵ":"y","Ỷ":"Y","ỷ":"y","Ỹ":"Y","ỹ":"y","–":"-","‘":"\'","’":"\'","“":"\\"","”":"\\"","„":"\\"","†":"+","•":"*","…":"...","₠":"ecu","₢":"cruzeiro","₣":"french franc","₤":"lira","₥":"mill","₦":"naira","₧":"peseta","₨":"rupee","₩":"won","₪":"new shequel","₫":"dong","€":"euro","₭":"kip","₮":"tugrik","₯":"drachma","₰":"penny","₱":"peso","₲":"guarani","₳":"austral","₴":"hryvnia","₵":"cedi","₸":"kazakhstani tenge","₹":"indian rupee","₺":"turkish lira","₽":"russian ruble","₿":"bitcoin","℠":"sm","™":"tm","∂":"d","∆":"delta","∑":"sum","∞":"infinity","♥":"love","元":"yuan","円":"yen","﷼":"rial","ﻵ":"laa","ﻷ":"laa","ﻹ":"lai","ﻻ":"la"}'),a=JSON.parse('{"bg":{"Й":"Y","Ц":"Ts","Щ":"Sht","Ъ":"A","Ь":"Y","й":"y","ц":"ts","щ":"sht","ъ":"a","ь":"y"},"de":{"Ä":"AE","ä":"ae","Ö":"OE","ö":"oe","Ü":"UE","ü":"ue","ß":"ss","%":"prozent","&":"und","|":"oder","∑":"summe","∞":"unendlich","♥":"liebe"},"es":{"%":"por ciento","&":"y","<":"menor que",">":"mayor que","|":"o","¢":"centavos","£":"libras","¤":"moneda","₣":"francos","∑":"suma","∞":"infinito","♥":"amor"},"fr":{"%":"pourcent","&":"et","<":"plus petit",">":"plus grand","|":"ou","¢":"centime","£":"livre","¤":"devise","₣":"franc","∑":"somme","∞":"infini","♥":"amour"},"pt":{"%":"porcento","&":"e","<":"menor",">":"maior","|":"ou","¢":"centavo","∑":"soma","£":"libra","∞":"infinito","♥":"amor"},"uk":{"И":"Y","и":"y","Й":"Y","й":"y","Ц":"Ts","ц":"ts","Х":"Kh","х":"kh","Щ":"Shch","щ":"shch","Г":"H","г":"h"},"vi":{"Đ":"D","đ":"d"},"da":{"Ø":"OE","ø":"oe","Å":"AA","å":"aa","%":"procent","&":"og","|":"eller","$":"dollar","<":"mindre end",">":"større end"},"nb":{"&":"og","Å":"AA","Æ":"AE","Ø":"OE","å":"aa","æ":"ae","ø":"oe"},"it":{"&":"e"},"nl":{"&":"en"},"sv":{"&":"och","Å":"AA","Ä":"AE","Ö":"OE","å":"aa","ä":"ae","ö":"oe"}}');function o(o,n){if("string"!=typeof o)throw new Error("slugify: string argument expected");var r=a[(n="string"==typeof n?{replacement:n}:n||{}).locale]||{},i=void 0===n.replacement?"-":n.replacement,t=void 0===n.trim||n.trim,u=o.normalize().split("").reduce((function(a,o){var t=r[o];return void 0===t&&(t=e[o]),void 0===t&&(t=o),t===i&&(t=" "),a+t.replace(n.remove||/[^\w\s$*_+~.()'"!\-:@]+/g,"")}),"");return n.strict&&(u=u.replace(/[^A-Za-z0-9\s]/g,"")),t&&(u=u.trim()),u=u.replace(/\s+/g,i),n.lower&&(u=u.toLowerCase()),u}return o.extend=function(a){Object.assign(e,a)},o}));
+</script>
+
+<style>
+  .content-banner {
+    display: flex;
+    align-items: center;
+    padding: 25px 30px 29px 120px;
+    gap: 20px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="149" height="162" fill="none" viewBox="0 0 149 162"><path stroke="%23997D00" stroke-width="2.799" d="M103.712 197.478s52.843-38.509-53.147-47.372"/><path stroke="%23484C99" stroke-width="2.799" d="M55.914 42.86c-57.712 2.444-108.25 97.476-2.26 106.339M69.258 38.473C99.64 30.633 155 3.5 103.5-4"/><path stroke="%23DDBB1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m73.595 134.165-5.161 28.726a4.864 4.864 0 0 1-5.648 3.928l-28.727-5.162a4.864 4.864 0 0 1-3.928-5.648l5.162-28.727a4.864 4.864 0 0 1 5.648-3.927l28.727 5.161a4.865 4.865 0 0 1 3.927 5.649Z"/><path stroke="%23DDBB1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m34.059 161.657 27.13 4.875-.286 1.596a5.171 5.171 0 0 1-.182.692l-.087.256a3.396 3.396 0 0 1-.19.411l-.017.096-.19.328-.185.247-.09.132-.245.269-.064.079-.189.181-.158.144-.161.119a4.821 4.821 0 0 1-3.89.974l-28.727-5.162a4.878 4.878 0 0 1-3.15-2.041l7.53-5.236a4.856 4.856 0 0 0 3.15 2.04ZM31.042 128.751c.148-.048.298-.087.45-.117l.055.01c.137-.025.265-.052.408-.067.04.004.08.011.12.021.111.021.234-.023.35-.027.076.009.15.023.224.04.088.016.167.03.255.005.163.021.325.05.486.087l1.596.287-4.855 27.019a4.865 4.865 0 0 0 .777 3.608l-7.53 5.236a4.863 4.863 0 0 1-.777-3.607l5.161-28.727a4.866 4.866 0 0 1 2.04-3.151 5.08 5.08 0 0 1 1.237-.601l.003-.016Z"/><path stroke="%23DDBB1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m62.935 133.896-29.525-5.304a4.863 4.863 0 0 0-3.607.777l7.598-5.291a4.87 4.87 0 0 1 3.54-.723l28.727 5.162c3.99.717-.35 6.527-6.733 5.379Z"/><path stroke="%23DDBB1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="M73.595 134.165c-.915 4.777-5.161 28.727-5.161 28.727a4.81 4.81 0 0 1-2.013 3.131l-7.53 5.236a4.806 4.806 0 0 0 2.012-3.131l5.305-29.525c1.147-6.383 8.248-9.226 7.387-4.438Z"/><rect width="38.918" height="38.918" fill="%23FAE166" stroke="%23DDBB1A" stroke-width="2.799" rx="5.599" transform="scale(1 -1) rotate(79.814 133.4 -50.56)"/><rect width="3.073" height="3.012" fill="%23DDBB1A" rx=".7" transform="matrix(-.571 -.821 -.821 .571 67.951 135.654)"/><rect width="1.621" height="3.243" fill="%23DDBB1A" rx=".7" transform="matrix(-.571 -.821 -.821 .571 35.667 127.491)"/><rect width="1.621" height="1.793" fill="%23DDBB1A" rx=".7" transform="matrix(-.571 -.821 -.821 .571 72.876 131.293)"/><path stroke="%236E72E0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m77.366 14.145 8.49 27.925a4.864 4.864 0 0 1-3.238 6.069l-27.925 8.49a4.865 4.865 0 0 1-6.07-3.239l-8.49-27.924a4.864 4.864 0 0 1 3.24-6.07l27.924-8.49a4.865 4.865 0 0 1 6.07 3.24Z"/><path stroke="%236E72E0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m54.693 56.63 26.373-8.02.472 1.552a5.2 5.2 0 0 1 .153.699l.04.268c.015.15.022.3.018.452l.028.093-.02.379-.052.303-.02.159-.096.351-.02.1-.087.246-.074.2-.09.18a4.815 4.815 0 0 1-3.02 2.638l-27.924 8.491a4.865 4.865 0 0 1-3.734-.381l4.319-8.092a4.866 4.866 0 0 0 3.734.381ZM37.018 28.71c.11-.11.225-.213.347-.31l.054-.016c.11-.084.212-.166.333-.245a.673.673 0 0 1 .116-.036c.108-.033.198-.128.3-.184.07-.026.143-.048.217-.066a.53.53 0 0 0 .229-.112 4.94 4.94 0 0 1 .473-.144l1.551-.471 7.986 26.264a4.864 4.864 0 0 0 2.335 2.858l-4.32 8.092a4.864 4.864 0 0 1-2.334-2.858l-8.49-27.924a4.866 4.866 0 0 1 .381-3.735c.224-.402.503-.771.827-1.098l-.005-.016Z"/><path stroke="%236E72E0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m67.754 18.762-28.7 8.727a4.865 4.865 0 0 0-2.858 2.335l4.354-8.171a4.865 4.865 0 0 1 2.822-2.256l27.925-8.49c3.879-1.18 2.662 5.968-3.543 7.855Z"/><path stroke="%236E72E0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="M77.366 14.145c1.362 4.67 8.49 27.925 8.49 27.925a4.816 4.816 0 0 1-.364 3.704l-4.32 8.092a4.817 4.817 0 0 0 .366-3.704l-8.726-28.7c-1.887-6.206 3.14-11.97 4.554-7.317Z"/><rect width="38.918" height="38.918" fill="%238287EB" stroke="%236E72E0" stroke-width="2.799" rx="5.599" transform="scale(-1 1) rotate(-73.088 -4.498 83.371)"/><rect width="1.621" height="3.243" fill="%236E72E0" rx=".7" transform="matrix(-.8822 -.4708 -.4708 .8822 84.062 48.371)"/><rect width="3.073" height="3.012" fill="%236E72E0" rx=".7" transform="matrix(-.8822 -.4708 -.4708 .8822 73.02 18.042)"/><rect width="1.621" height="3.243" fill="%236E72E0" rx=".7" transform="matrix(-.8822 -.4708 -.4708 .8822 40.562 25.48)"/><rect width="1.621" height="1.793" fill="%236E72E0" rx=".7" transform="matrix(-.8822 -.4708 -.4708 .8822 75.418 11.917)"/><path stroke="%23484C99" stroke-width=".35" d="M88.94 52.813 75.834 9.709 32.73 22.814l13.106 43.104z"/></svg>')
+      no-repeat 0 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 32px;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .content-banner {
+      flex-direction: column;
+      background: none;
+      padding-left: 30px;
+      text-align: center;
+    }
+
+    .content-banner:before {
+      display: none;
+    }
+  }
+
+  .content-banner:before {
+    content: "";
+    width: 97px;
+    height: 97px;
+    background: #8287eb;
+    filter: blur(66.7196px);
+    position: absolute;
+    top: -41px;
+    left: -70px;
+  }
+  .content-banner div {
+    flex: 1 1 0%;
+  }
+  .content-banner h3 {
+    font-size: 28px;
+    line-height: 36px;
+    margin: 0;
+  }
+  .content-banner a {
+    flex-shrink: 0;
+  }
+  .content-banner p {
+    margin-bottom: 0;
+    line-height: 24px;
+  }
+  .content-banner .global-button {
+    text-decoration: none;
+    padding: 9px 20px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .content-banner--centered {
+    flex-direction: column;
+    background: none;
+    border-radius: 0;
+    padding-left: 30px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+  .content-banner--centered:before {
+    content: "";
+    width: 168px;
+    height: 168px;
+    background: #20b69e;
+    opacity: 0.7;
+    filter: blur(62.4716px);
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .content-banner--centered .global-button {
+    color: #101330 !important;
+    border: 2px solid #20b69e;
+  }
+  .content-banner--centered .global-button:before,
+  .content-banner--centered .global-button:after {
+    background: #fff;
+  }
+  @media screen and (max-width: 1023px) {
+    .content-banner--centered:before {
+      display: block;
+    }
+  }
+  .workflow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  .workflow-content {
+    display: flex;
+    flex: 1 1 0%;
+  }
+  .workflow-nodes {
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .workflow-nodes img {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .workflow-nodes .fa {
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+  .workflow-nodes span {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background: #e4e6ec;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #101330;
+  }
+  .workflow-details {
+    margin-right: 18px;
+  }
+  .workflow-details p {
+    margin: 0;
+  }
+  .workflow .workflow-details-name {
+    color: #101330;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+  }
+  .workflow .workflow-details-name a {
+    text-decoration: none;
+  }
+  .workflow .workflow-details-name a:hover {
+    text-decoration: underline;
+  }
+  .workflow .workflow-details-stats {
+    font-size: 14px;
+    line-height: 18px;
+    color: #707183;
+  }
+  .workflow .global-button {
+    text-decoration: none;
+    padding: 9px 20px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .workflows h3 {
+    margin-bottom: 30px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .workflows .workflow {
+    border-bottom: 1px solid #E0E0EB;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-bottom: 20px;
+  }
+  .workflows .workflow-content {
+    flex-direction: column;
+  }
+  .workflows .workflow-nodes {
+    margin-bottom: 12px;
+  }
+  .workflows .workflow-nodes span,
+  .workflows .workflow-nodes img {
+    width: 32px;
+    height: 32px;
+  }
+  .workflows .workflow-nodes .fa {
+    font-size: 32px;
+  }
+  .workflows .workflow .workflow-details-name {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 5px;
+  }
+  .workflows .workflow-details-stats span {
+    margin: 0 4px;
+    display: inline-block;
+  }
+  .workflows-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .workflows-button .global-button {
+    color: #101330 !important;
+    border: 2px solid #20b69e;
+    text-decoration: none;
+    padding: 9px 20px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .workflows-button .global-button:before,
+  .workflows-button .global-button:after {
+    background: #fff;
+  }
+
+  @media screen and (max-width: 670px) {
+    .workflow-nodes {
+      display: none;
+    }
+    .workflow {
+      flex-direction: column;
+      align-items: start;
+    }
+    .workflow .global-button {
+      margin-top: 10px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .workflow-nodes {
+      flex-wrap: wrap;
+    }
+  }
+</style>
+<style>
+    .grecaptcha-badge { visibility: hidden !important; }
+</style>
+<script>
+const timeSince = (date) => {
+  const seconds = Math.floor((new Date() - new Date(date)) / 1000);
+  let interval = seconds / 31536000;
+  if (interval > 1) {
+    const roundedInterval = Math.floor(interval);
+    return roundedInterval === 1
+      ? roundedInterval + " year"
+      : roundedInterval + " years";
+  }
+  interval = seconds / 2592000;
+  if (interval > 1) {
+    const roundedInterval = Math.floor(interval);
+    return roundedInterval === 1
+      ? roundedInterval + " month"
+      : roundedInterval + " months";
+  }
+
+  interval = seconds / 86400;
+  if (interval > 1) {
+    const roundedInterval = Math.floor(interval);
+    return roundedInterval === 1
+      ? roundedInterval + " day"
+      : roundedInterval + " days";
+  }
+  interval = seconds / 3600;
+  if (interval > 1) {
+    const roundedInterval = Math.floor(interval);
+    return roundedInterval === 1
+      ? roundedInterval + " hour"
+      : roundedInterval + " hours";
+  }
+  interval = seconds / 60;
+  if (interval > 1) {
+    const roundedInterval = Math.floor(interval);
+    return roundedInterval === 1
+      ? roundedInterval + " minute"
+      : roundedInterval + " minutes";
+  }
+
+  const roundedInterval = Math.floor(interval);
+  return roundedInterval === 1
+    ? roundedInterval + " second"
+    : roundedInterval + " seconds";
+};
+const getSingleWorkflowTemplate = (
+  { name, user, nodes, url, views, createdAt },
+  extended = false,
+  texts
+) => {
+  if (name && user) {
+    const IMAGES_PER_PAGE = 5;
+    const workflowDiv = document.createElement("div");
+    const images = [];
+
+    nodes.forEach((node) => {
+      const { icon, name, color } = node;
+
+      if (icon.type === "icon") {
+        const styles = color ? `style="color:${color}"` : "";
+        images.push(`
+          <i class="fa fa-${icon.icon}" aria-hidden="true" ${styles}></i>
+        `);
+      }
+
+      if (icon.type === "file") {
+        images.push(
+          `<img src="https://blog.n8n.io/ai-agentic-workflows/${icon.fileBuffer}" alt="${name}" title="${name}" />`
+        );
+      }
+    });
+
+    const description = extended
+      ? `<p class="workflow-details-stats">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" fill="none" viewBox="0 0 12 10"><path fill="#707183" d="M4.94 6.06a1.5 1.5 0 1 1 2.121-2.12 1.5 1.5 0 0 1-2.12 2.12Z"/><path fill="#707183" fill-rule="evenodd" d="M.462 6.143C1.38 7.135 3.294 9.2 6 9.2s4.62-2.065 5.539-3.057a1.703 1.703 0 0 0 0-2.332l-.001-.002C10.703 2.907 8.749.8 6 .8 3.256.8 1.304 2.903.466 3.806l-.004.005a1.703 1.703 0 0 0 0 2.332ZM3.77 3.305c.689-.38 1.447-.62 2.23-.705a5.88 5.88 0 0 1 3.972 2.17.301.301 0 0 1 0 .414A5.88 5.88 0 0 1 6 7.4 6.216 6.216 0 0 1 1.996 5.24a.3.3 0 0 1-.01-.423A5.937 5.937 0 0 1 3.77 3.305Z" clip-rule="evenodd"/></svg>
+          ${
+            views || 0
+          } <span>•</span> <strong>by ${user}</strong> <span>•</span> ${timeSince(
+          createdAt
+        )}
+        </p>`
+      : `<p class="workflow-details-stats">by ${user}</p>`;
+
+    workflowDiv.classList.add("workflow");
+    workflowDiv.innerHTML = `
+      <div class="workflow-content">
+        <div class="workflow-nodes">
+          ${images.slice(0, IMAGES_PER_PAGE).join("")}
+          ${
+            images.length - IMAGES_PER_PAGE > 0
+              ? `<span>+${images.length - IMAGES_PER_PAGE}</span>`
+              : ""
+          }
+        </div>
+        <div class="workflow-details">
+          <p class="workflow-details-name">
+            <a href="https://blog.n8n.io/ai-agentic-workflows/${url}" class="blog-banner-workflow">${name}</a>
+          </p>
+          ${description}
+        </div>
+      </div>
+      <a href="https://blog.n8n.io/ai-agentic-workflows/${url}" class="global-button blog-banner-workflow">
+        ${texts.workflowButtonLabel}
+      </a>
+    `;
+    return workflowDiv;
+  }
+
+  return null;
+};
+
+const getMultiWorkflowTemplate = (workflows, texts) => {
+  const workflowsDiv = document.createElement("div");
+
+  workflowsDiv.classList.add("workflows");
+  workflowsDiv.innerHTML = `
+    <h3>${texts.workflowsHeader}</h3>
+  `;
+
+  workflows.forEach((workflow) => {
+    const template = getSingleWorkflowTemplate(workflow, true, texts);
+    workflowsDiv.insertAdjacentElement("beforeend", template);
+  });
+
+  workflowsDiv.innerHTML = `
+    ${workflowsDiv.innerHTML}
+    <div class="workflows-button">
+      <a href="https://blog.n8n.io/ai-agentic-workflows/${texts.workflowsButtonUrl}" class="global-button blog-banner-signup">
+        ${texts.workflowsButtonLabel}
+      </a>
+    </div>
+  `;
+
+  return workflowsDiv;
+};
+
+const parseWorkflowData = (workflowData) => {
+  const { name, username, nodes, views, createdAt } = workflowData.attributes;
+
+  return {
+    name,
+    views,
+    createdAt,
+    user: username,
+    url: `https://n8n.io/workflows/${workflowData.id}-${slugify(name, {
+      strict: true,
+      lower: true,
+    })}/`,
+    nodes: nodes.data.map((node) => {
+      return {
+        icon: node.attributes.iconData,
+        name: node.attributes.displayName,
+        color: node.attributes.defaults.color,
+      };
+    }),
+  };
+};
+
+const convertIdsToQuery = (workflowIds) => {
+  const ids = Array.isArray(workflowIds) ? workflowIds : [workflowIds];
+  return ids.map((id) => `{ id: { eq: ${id} } }`).join(",");
+};
+const fetchWorkflows = async (workflowId) => {
+  try {
+    const res = await fetch("https://api.n8n.io/graphql", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        query: `query {\n workflows(\n pagination: { start: 0, limit: 32 }\n filters: {\n status: { eq: "published" }\n or: [${convertIdsToQuery(
+          workflowId
+        )}]\n }\n ) {\n data {\n id\n attributes {\n name\n views\n createdAt\n username\n nodes {\n data {\n id\n attributes {\n defaults\n displayName\n name\n iconData\n}\n}\n}\n}\n}\n}\n}\n`,
+      }),
+    });
+    const data = await res.json();
+
+    return data.data.workflows.data.map((workflow) =>
+      parseWorkflowData(workflow)
+    );
+  } catch (e) {}
+};
+
+const workflowBanner = async (workflowContainerId, scriptEl, texts) => {
+  const workflows = await fetchWorkflows(workflowContainerId);
+  const txts = Object.assign(
+    {},
+    {
+      workflowButtonLabel: "Use this workflow",
+      workflowsHeader: "Most popular workflows with these integrations",
+      workflowsButtonLabel: "Get started",
+      workflowsButtonUrl: "https://app.n8n.cloud/register",
+    },
+    texts
+  );
+
+  if (workflows.length === 1) {
+    const template = getSingleWorkflowTemplate(workflows[0], false, txts);
+    scriptEl.insertAdjacentElement("afterend", template);
+  } else if (workflows.length > 1) {
+    const template = getMultiWorkflowTemplate(workflows, txts);
+    scriptEl.insertAdjacentElement("afterend", template);
+  }
+};
+
+var submitSubscription = async function() {
+        const token = await grecaptcha.getResponse()
+
+        if (newSubscriptionData && newSubscriptionData.data) {
+          newSubscriptionData.data.token = token
+          const res = await fetch('https://n8n-website-backend-prod.internal.n8n.io/api/newsletter/subscribe', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newSubscriptionData.data)
+          })
+
+          if (newSubscriptionData.onSuccess && res.ok) {
+            newSubscriptionData.onSuccess()
+          } else if (newSubscriptionData.onError) {
+            newSubscriptionData.onError()
+          }
+
+          window.newSubscriptionData = null
+        }
+      }
+
+const subscribeNewsletter = async (e) => {
+    e.preventDefault();
+
+    const newsletterMailFormat = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+    const ERROR_CLASS = 'error';
+    const SUCCESS_CLASS = 'success';
+    const SHOW_MESSAGE_CLASS = 'show';
+
+    const form = e.target;
+    const emailField = form.querySelector('input[name=email]');
+    const success = form.querySelector('.message--success');
+    const error = form.querySelector('.message--error');
+
+    emailField.setCustomValidity('Please insert a valid email address.');
+    emailField.disabled = true;
+    emailField.classList.remove(ERROR_CLASS);
+
+    success.classList.remove(SHOW_MESSAGE_CLASS);
+    error.classList.remove(SHOW_MESSAGE_CLASS);
+
+    if (!emailField.value.match(newsletterMailFormat)) {
+        emailField.reportValidity();
+        emailField.classList.add(ERROR_CLASS);
+    } else {
+        try {
+            await grecaptcha.execute()
+            const url = new URL(window.location)
+            const urlSource = `${url.origin}${url.pathname}`
+            const utmParams = {
+                utm_source: url.searchParams.get('utm_source') || null,
+                utm_medium: url.searchParams.get('utm_medium') || null,
+                utm_campaign: url.searchParams.get('utm_campaign') || null
+            }
+            const data = {
+                email: emailField.value,
+                created_at: Math.floor(new Date().getTime() / 1000),
+                newsletter_subscriber: true,
+                url_source: urlSource,
+                ...Object.fromEntries(Object.entries(utmParams).filter(([_, v]) => v !== null))
+            }
+
+            window.newSubscriptionData = {
+                data: data,
+                onSuccess: () => {
+                    success.classList.add(SHOW_MESSAGE_CLASS);
+                    emailField.classList.add(SUCCESS_CLASS);
+                    emailField.setCustomValidity('');
+                    emailField.disabled = false;
+                },
+                onError: () => {
+                    error.classList.add(SHOW_MESSAGE_CLASS);
+                    emailField.classList.add(ERROR_CLASS);
+                    emailField.disabled = false;
+                }
+            }
+        } catch (e) {
+            error.classList.add(SHOW_MESSAGE_CLASS);
+            emailField.classList.add(ERROR_CLASS);
+        }
+    }
+
+    emailField.disabled = false;
+}
+</script>
+<script>
+!function(){let e=function(e){let t=document.createElement("a");return t.href=e.url,t.innerText=e.tag,t},t=function(){let t=window.homePageTags||[],n=document.querySelector(".popular-tags");if(n&&t&&t.length){let r=n.querySelector(".popular-tags-listing");t.forEach(t=>{r.appendChild(e(t))}),n.classList.remove("hidden")}};window.addEventListener("DOMContentLoaded",t)}();
+
+/*
+  example:
+  var homePageTags = [
+    { tag: 'AI', url: '/tag/ai/' },
+    { tag: 'Tutorial', url: '/tag/tutorial/' }
+  ]
+*/
+
+var homePageTags = [
+   { tag: 'AI', url: '/tag/ai/' },
+    { tag: 'Database', url: '/tag/database/' },
+    { tag: 'Marketing automation', url: '/tag/marketing-automation/' },
+    { tag: 'Sales', url: '/tag/sales/' },
+    { tag: 'SecOps', url: '/tag/secops/' },
+    { tag: 'ITOps', url: '/tag/itops/' },
+    { tag: 'Tools Alternatives', url: '/tag/tools-alternatives/' },
+    { tag: 'Bot', url: '/tag/bot/' }
+]
+</script>
+	</head>
+	<body class="post-template tag-ai tag-guide">
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7L9C6X"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		<div class="global-wrap">
+			<div class="global-content">
+				<header class="header-section">
+	<div class="header-wrap">
+		<div class="header-logo is-image">
+			<a href="../index.html" class="is-image"><img src="../content/images/2022/06/n8n-blog.png" alt="n8n Blog"></a>
+		</div>
+		<div class="header-nav">
+			<input id="toggle" class="header-checkbox" type="checkbox">
+			<label class="header-toggle" for="toggle">
+				<span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</span>
+			</label>
+			<nav >
+				<ul>
+<li><a href="https://n8n.io/" >n8n home</a></li>
+<li><a href="../tag/tutorial/index.html" >Tutorials</a></li>
+<li><a href="../tag/guide/index.html" >Guides</a></li>
+<li><a href="../tag/tips/index.html" >Tips</a></li>
+<li><a href="../tag/interview/index.html" >Interviews</a></li>
+<li><a href="../tag/news/index.html" >News</a></li>
+</ul>
+				<ul>
+					<!-- <li class="signin"><a href="https://blog.n8n.io/signin/">Sign in</a></li>
+<li class="signup"><a href="https://blog.n8n.io/signup/" class="global-button">Sign up</a></li>
+ -->
+
+<li class="signin"><a href="https://app.n8n.cloud/">Sign in</a></li>
+<li class="signup"><a href="https://app.n8n.cloud/register" class="global-button">Get started</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>				<main class="global-main">
+					<progress class="post-progress"></progress>
+<article class="post-section">
+	<div class="post-header item is-hero">
+	<div class="item-container">
+		<div class="item-image global-image">
+			<img srcset="../content/images/size/w400/2024/12/ai-agentic-workflows--1-.jpg 400w, 
+			../content/images/size/w800/2024/12/ai-agentic-workflows--1-.jpgg 800w,
+		../content/images/size/w1200/2024/12/ai-agentic-workflows--1-.jpgpg 1200w,
+	../content/images/size/w1600/2024/12/ai-agentic-workflows--1-.jpgjpg 1600w"
+	 sizes="(max-width:480px) 350px, (max-width:1440px) 800px, 1200px"
+	 src="../content/images/size/w1200/2024/12/ai-agentic-workflows--1-.jpg"
+	 loading="lazy"
+	 alt="AI agentic workflows: a practical guide for n8n automation">		</div>
+		<div class="item-content">
+			<div class="item-tags global-tags">
+								<a href="../tag/ai/index.html">AI</a><a href="../tag/guide/index.html">Guide</a>
+			</div>
+			<h1 class="item-title">AI agentic workflows: a practical guide for n8n automation</h1>
+			<p class="item-excerpt global-zigzag">
+				<svg role='img' viewBox='0 0 136 24' xmlns='http://www.w3.org/2000/svg'><path d='M1.525 1.525a3.5 3.5 0 014.95 0L20 15.05 33.525 1.525a3.5 3.5 0 014.95 0L52 15.05 65.525 1.525a3.5 3.5 0 014.95 0L84 15.05 97.525 1.525a3.5 3.5 0 014.95 0L116 15.05l13.525-13.525a3.5 3.5 0 014.95 4.95l-16 16a3.5 3.5 0 01-4.95 0L100 8.95 86.475 22.475a3.5 3.5 0 01-4.95 0L68 8.95 54.475 22.475a3.5 3.5 0 01-4.95 0L36 8.95 22.475 22.475a3.5 3.5 0 01-4.95 0l-16-16a3.5 3.5 0 010-4.95z'/></svg>				Learn how to implement intelligent, adaptive AI agentic workflows in n8n. From single agents to multi-agent teams: discover key patterns for advanced automation!
+			</p>
+			<div class="item-meta global-meta">
+				<div class="item-profile-image">
+					<a href="../author/yulia/index.html" class="global-image">
+						<img src="../content/images/size/w120/2023/01/profile-pik.jpg" loading="lazy" alt="Yulia Dmitrievna">					</a>
+					<a href="../author/eduard/index.html" class="global-image">
+						<img src="../content/images/size/w120/2022/05/new_pic.png" loading="lazy" alt="Eduard Parsadanyan">					</a>
+				</div>
+				<div class="item-authors">
+					<a href="../author/yulia/index.html">Yulia Dmitrievna</a>, <a href="../author/eduard/index.html">Eduard Parsadanyan</a>
+					<div class="item-time">
+						<time datetime="2024-12-27">December 27, 2024</time> ∙ 17 minutes read
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	<div class="post-content">
+		<p>Our recent <a href="../ai-workflow-automation/index.html"><u>post on AI workflow automation</u></a> illustrated how AI can transform business processes, handle unstructured data, and free up teams to focus on high-value tasks. Today, we're taking this concept further by diving into AI agentic workflows.</p><p>Imagine workflows that don't just follow the rules, but think, adapt, and make context-aware decisions. This is the power of AI agents in automation.</p><p>In this guide, we'll explore:</p><ul><li>What makes AI agentic workflows different from traditional automation;</li><li>Key components and design patterns for building effective AI agents;</li><li>Practical examples using <a href="https://n8n.io/ai/?ref=blog.n8n.io"><u>n8n, a powerful AI-native workflow tool</u></a>.</li></ul><p>Let's explore the next frontier in automation!</p><h2 id="what-is-an-ai-agentic-workflow">What is an AI agentic workflow?</h2><p>An AI agentic workflow is a mix of AI agents with traditional workflow automation. Unlike standard workflows that follow predefined steps, AI agentic workflows employ intelligent agents to make decisions, adapt to new situations, and autonomously achieve goals.</p><p><strong>Key characteristics of AI agentic workflow:</strong></p><ul><li>Autonomy: Agents can operate independently, making decisions without constant human input.</li><li>Adaptability: They adjust their actions in response to changes in the environment or new information.</li><li>Goal-oriented: Agents work toward specific objectives rather than simply a set of rules.</li><li>Learning capability: Many AI agents can improve their performance over time.</li><li>Scalability: as agents learn, they can solve increasingly complex tasks without major reprogramming.</li></ul><p>AI agentic workflows leverage large language models (LLMs) as their "brain power", allowing them to understand complex instructions, reason about tasks, and generate appropriate responses or actions.</p><h3 id="traditional-workflow-automation-vs-ai-enhanced-vs-ai-agentic">Traditional workflow automation vs AI-enhanced vs AI agentic </h3><p>To understand the power of AI agentic workflows, let's compare them to traditional approaches:</p><p><strong>Traditional workflow automation:</strong></p><ul>
+<li>Follows predefined, rigid steps</li>
+<li>Handles structured data well</li>
+<li>Limited ability to adapt to new situations</li>
+<li>Requires manual updates to make changes</li>
+</ul>
+
+<!--kg-card-begin: html-->
+<script>
+  workflowBanner([2210, 2275, 1534], document.currentScript);
+</script>
+<!--kg-card-end: html-->
+<p><strong>AI-enhanced workflows:</strong></p>
+<ul>
+<li>Use AI for specific tasks within a predefined workflow</li>
+<li>Can handle unstructured data</li>
+<li>Limited decision-making capabilities</li>
+<li>Still follow a largely linear process</li>
+</ul>
+
+<!--kg-card-begin: html-->
+<script>
+  workflowBanner([2163, 2164, 2417], document.currentScript);
+</script>
+<!--kg-card-end: html-->
+<p><strong>AI agentic workflows:</strong></p>
+<ul>
+<li>Dynamically adapt the workflow depending on context and goals</li>
+<li>Handle both structured and unstructured data</li>
+<li>Manage multi-step, non-linear processes</li>
+<li>Make complex decisions autonomously</li>
+<li>Can learn and improve over time</li>
+</ul>
+
+<!--kg-card-begin: html-->
+<script>
+  workflowBanner([2463, 2006, 2330], document.currentScript);
+</script>
+<!--kg-card-end: html-->
+<div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">In n8n, a workflow automation tool, you can create all three types of workflows. AI agentic workflows combine traditional nodes, <a href="https://n8n.io/integrations/categories/ai/?ref=blog.n8n.io"><u>AI-powered nodes</u></a> as well as <a href="https://n8n.io/integrations/categories/langchain/?ref=blog.n8n.io"><u>LangChain Agent nodes</u></a>.</div></div><p>In the following sections, we’ll explore exactly what these components are and how to create complex AI-driven processes that go beyond traditional automation capabilities.</p><h2 id="key-components-of-ai-agentic-workflows">Key components of AI agentic workflows</h2><p>AI agentic workflows are built on top of <a href="https://n8n.io/integrations/agent/?ref=blog.n8n.io"><u>AI agents</u></a>, combining them with workflow automation tools to create intelligent, adaptive systems. The core components of these workflows stem from the structure of AI agents themselves.</p><p>In our comprehensive guide to <a href="../ai-agents/index.html"><u>AI agents for developers</u></a>, we've covered the fundamental elements of AI agents in detail, including:</p><ul><li>sensors to gather information</li><li>actuators to perform actions</li><li>a reasoning engine (often an LLM) for decision-making</li><li>memory systems for storing information</li></ul><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">In tools like n8n, these components are seamlessly integrated into a workflow automation environment, forming the foundation of AI agentic workflows. The <a href="https://n8n.io/integrations/workflow-tool/?ref=blog.n8n.io"><u>workflow tool</u></a> provides the structure and execution environment, while the <a href="https://n8n.io/integrations/agent/?ref=blog.n8n.io"><u>AI agent</u></a> brings intelligence and adaptability to the process.</div></div><p>To get a good grip on AI agentic workflows, we need to understand the technological stack that powers them. This tech is rapidly changing as AI agents become more advanced.</p><p>A recent article by a group of researchers from the <a href="https://www.letta.com/blog/ai-agents-stack?ref=blog.n8n.io"><u>University of California, Berkeley</u></a> provides an insightful breakdown of the current AI agents landscape. </p><p>Here’s a summary of the key layers:</p><ol>
+<li>Model serving:</li>
+</ol>
+<ul>
+<li>API-based providers: <a href="https://n8n.io/integrations/openai/?ref=blog.n8n.io">OpenAI</a>, <a href="https://n8n.io/integrations/anthropic-chat-model/?ref=blog.n8n.io">Anthropic</a></li>
+<li>Open-weights model providers: Together.AI, Fireworks, <a href="https://n8n.io/integrations/groq-chat-model/?ref=blog.n8n.io">Groq</a></li>
+<li><a href="../local-llm/index.html">Local inference</a>: vLLM, SGLang, Ollama</li>
+</ul>
+<ol start="2">
+<li>Storage:</li>
+</ol>
+<ul>
+<li>Vector databases: Chroma, Weaviate, Pinecone, Qdrant, Milvus</li>
+<li>Traditional databases with vector support: <a href="https://n8n.io/integrations/postgres-chat-memory/?ref=blog.n8n.io">Postgres</a> (with pgvector) or <a href="https://n8n.io/integrations/zep/?ref=blog.n8n.io">Zep</a></li>
+</ul>
+<ol start="3">
+<li>Tools &amp; libraries:</li>
+</ol>
+<ul>
+<li>Function calling frameworks: OpenAI’s <a href="https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured/?ref=blog.n8n.io">JSON schema</a></li>
+<li>Tool providers: Composio, Browserbase, Exa</li>
+</ul>
+<ol start="4">
+<li>Agent frameworks:</li>
+</ol>
+<ul>
+<li>State management</li>
+<li>Context window structuring</li>
+<li>Cross-agent communication</li>
+<li>Memory approaches</li>
+</ul>
+<ol start="5">
+<li><a href="https://n8n.io/ai/?ref=blog.n8n.io">Agent hosting and serving</a>:</li>
+</ol>
+<ul>
+<li>Emerging field for deploying agents as services</li>
+</ul>
+<figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdSaXd9XWmFwzbToATCVo-mNmHpIdsMcEsDGY4VI6Y331ZoRfZjMSLI8IyGuMmV6Kbh3mA3FrPxd2W5KBvq_21qYgHZ0DB-Bc5SOv7l7eGnoelpxOUCc4gF9gMfVmos0avfk-uzlg?key=NZ08G4TSt0ztcXaXn9IiGe0Q" class="kg-image" alt="Source: https://www.letta.com/blog/ai-agents-stack" loading="lazy" width="427" height="533"><figcaption><span style="white-space: pre-wrap;">Source: </span><a href="https://www.letta.com/blog/ai-agents-stack?ref=blog.n8n.io"><u><span class="underline" style="white-space: pre-wrap;">https://www.letta.com/blog/ai-agents-stack</span></u></a></figcaption></figure><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">In n8n, many of these components are abstracted or simplified through <a href="https://n8n.io/integrations/categories/langchain/?ref=blog.n8n.io" rel="noreferrer">Langchain integrations</a>. This allows you to focus on designing the workflow logic while having access to powerful advanced AI agent technologies.</div></div><figure class="kg-card kg-gallery-card kg-width-wide kg-card-hascaption"><div class="kg-gallery-container"><div class="kg-gallery-row"><div class="kg-gallery-image"><img src="../content/images/2024/12/n8n-ai-nodes-1.png" width="380" height="880" loading="lazy" alt=""></div><div class="kg-gallery-image"><img src="../content/images/2024/12/n8n-ai-nodes-2.png" width="380" height="880" loading="lazy" alt=""></div></div></div><figcaption><p><b><strong style="white-space: pre-wrap;">&nbsp;n8n AI nodes panel</strong></b></p></figcaption></figure>
+<!--kg-card-begin: html-->
+<div class="content-banner">
+  <div>
+    <h3>Create your own AI agentic workflows</h3>
+    <p>Build complex automations 10x faster, without fighting APIs</p>
+  </div>
+  <a href="https://app.n8n.cloud/register?ref=blog.n8n.io" class="global-button blog-banner-signup">Try n8n now</a>
+</div>
+<!--kg-card-end: html-->
+<h2 id="ai-agentic-workflow-examples">AI agentic workflow examples</h2><p>Although developers are familiar with design principles like <a href="https://en.wikipedia.org/wiki/SOLID?ref=blog.n8n.io"><u>SOLID</u></a> or <a href="https://en.wikipedia.org/wiki/KISS_principle?ref=blog.n8n.io"><u>KISS</u></a>, they have limited applicability to AI agentic workflows.&nbsp;That's why we’ll show agentic design patterns using the n8n workflow automation tool.</p><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">If you're new to AI workflow automation, n8n's graphical UI and extensive example library make it easy to get started. For more advanced users, n8n allows custom code and functionality extensions in self-hosted environments.</div></div><p>Below are four key design patterns for AI agentic workflows in n8n, that we’ve identified during our extensive use of the tool. These patterns are tailored to the unique capabilities of AI agents in a low-code environment:</p><ol><li><strong>Chained requests</strong> for executing a series of predefined commands to various models in a specific order.</li><li><strong>A single agent</strong> that maintains state and makes decisions throughout the entire workflow.</li><li><strong>Multi-agent with gatekeeper</strong> to delegate specialized tasks while maintaining centralized control.</li><li><strong>Multi-agent teams</strong> that collaborate on complex, multi-step processes with distributed decision-making.</li></ol><p>Let's take a closer look at each of these patterns.</p><h3 id="example-1-chained-requests">Example 1. Chained requests</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcmHiVsQ8s6oRjAoGVQi0eGvfTaE6a6f-dyhHGBK3orGM2UvfprYgXDtmegeebPzO5IW_onIL3tB0yxkP2PNDe1Ncv8qRlW_Gji56dXijX3iBsykRZErcq0HNKbxM39qmJyNzuTwg?key=NZ08G4TSt0ztcXaXn9IiGe0Q" class="kg-image" alt="Chained requests design pattern" loading="lazy" width="602" height="251"><figcaption><span style="white-space: pre-wrap;">Chained requests design pattern</span></figcaption></figure><p>The chained requests pattern is the simplest. Essentially, it’s a series of predefined commands to various models (LLMs and others). This pattern is especially useful when you need to process data across multiple stages, each potentially using a different AI model or service.</p>
+<!--kg-card-begin: html-->
+<script>
+  workflowBanner([2178, 2187, 2520, 2557], document.currentScript);
+</script>
+<!--kg-card-end: html-->
+<h4 id="key-benefits">Key benefits:</h4><ul><li>Rigid logic with flexible components</li><li>Each step can be refined independently</li><li>Ideal for well-defined processes, especially for multi-modal content creation</li></ul><h4 id="how-it-works">How it works:</h4><p>In n8n, chained requests are implemented by connecting multiple AI-powered nodes in sequence. Each node performs a specific task and passes its output to the next node in the chain. There may be standard nodes at any stage of the workflow for data import, simple processing, uploads etc. This allows for complex workflows that can handle various types of data and tasks.</p><h4 id="characteristics">Characteristics:</h4><ol><li>Multi-stage processing: Chained requests excel at breaking down complex tasks into a series of smaller, manageable steps. For example, you can chain together audio transcription, text summarization, and data storage steps in a single workflow.</li><li><a href="https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm/?ref=blog.n8n.io"><u>AI model diversity</u></a>: This pattern allows you to use different AI models for specific tasks within the same workflow. You might employ one model for text generation, another for image creation, and a third to analyze data.</li><li><a href="https://docs.n8n.io/data/transforming-data/?ref=blog.n8n.io"><u>Data transformation</u></a>: As data moves through the chain, it can be transformed at each step. This is useful for scenarios where the output of one AI model needs to be formatted or processed before input into the next model.</li><li>Scalability: Chained requests can handle both simple and complex workflows. You can start with a basic chain and gradually add more steps as your needs grow.</li><li>Customization: Each step in the chain can be fine-tuned independently. This allows for precise control over individual processes while maintaining the overall flow of the workflow. Once new models become available, you can swap them and upgrade individual steps.</li></ol><h4 id="when-to-use">When to use:</h4><p>Choose the Chained Requests pattern when your workflow involves multiple, distinct steps that need to be executed in a specific order. This pattern is especially useful when each step requires different AI capabilities or when you need to process data through various stages of transformation and analysis.</p><h4 id="considerations">Considerations:</h4><ul><li>Ensure each step in the chain is well-defined and outputs data in a format that the next step can use.</li><li><a href="https://docs.n8n.io/flow-logic/error-handling/?ref=blog.n8n.io"><u>Implement error handling</u></a> between steps to manage potential failures in the chain.</li><li>Be mindful of performance implications, especially for chains involving multiple AI model calls.</li></ul><p>Consider using n8n’s built-in tools for <a href="https://docs.n8n.io/data/transforming-data/?ref=blog.n8n.io"><u>data manipulation</u></a> between AI steps to ensure smooth data flow through the chain.</p><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">Here’s a quick overview of the <a href="https://docs.n8n.io/advanced-ai/langchain/langchain-n8n/?ref=blog.n8n.io"><u>LangChain concepts in n8n</u></a>. It is useful for understanding the next sections of this article.</div></div><h3 id="example-2-single-agent">Example 2. Single agent</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfQohuMN3oJBsSoK7OCPowZnNOxjHUxUKlbgzzkP0n_T9SM-FJemUODsoWJoftMIlxuPIGPvbWFZKkOF1SKpg6lRCJC9-RacaHePryi4XNcV19jUAsCmWY5ffbnDS9l2PqMDSZFqQ?key=NZ08G4TSt0ztcXaXn9IiGe0Q" class="kg-image" alt="Single agent design pattern" loading="lazy" width="1000" height="500"><figcaption><span style="white-space: pre-wrap;">Single agent design pattern</span></figcaption></figure><p>The single agent pattern involves one AI agent that maintains the state and makes decisions throughout the entire workflow. This agent typically has a special “scratchpad” memory to retain intermediate information when processing a single request, allowing for more context-aware and consistent decision-making. We will show how to build similar agents in the later part of the guide.</p>
+<!--kg-card-begin: html-->
+<script>
+  workflowBanner([2534, 2541, 2006], document.currentScript);
+</script>
+<!--kg-card-end: html-->
+<h4 id="key-benefits-1">Key benefits:</h4><ul><li>Can query various tools as needed</li><li>Simpler to implement and debug compared to multi-agent systems</li><li>Able to maintain context across multiple interactions without complex setup</li></ul><h4 id="how-it-works-1">How it works:</h4><p>In n8n, a single agent is typically implemented using a built-in <a href="https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/?ref=blog.n8n.io"><u>LangChain node</u></a> or a custom <a href="https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code/?ref=blog.n8n.io"><u>LangChain Code</u></a> node that interacts with an LLM. The agent maintains its state either through built-in memory mechanisms or by storing information in a database between interactions. The workflow is designed so that all decisions and actions pass through this central agent.</p><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">In certain cases you may want to limit the information available for an agent. Take a look at this workflow template, where an <a href="https://n8n.io/workflows/2508-generate-sql-queries-from-schema-only-ai-powered/?ref=blog.n8n.io"><u>AI-agent has access to only an SQL schema</u></a>, but not to the actual data.</div></div><h4 id="characteristics-1">Characteristics:</h4><ol><li>Stateful interactions: A single agent can remember previous interactions and use that context to make future decisions. This is especially useful for chatbots or assistants that need to maintain conversation history.</li><li>Tool integration: While the agent is singular, it can use multiple tools or APIs to gather information or perform actions. This allows for versatility in handling various tasks without complicating the agent’s core logic.</li><li>Adaptability: A single agent can be designed to handle a wide range of tasks or queries, adapting its behavior based on the input it receives and the tools at its disposal.</li><li>Centralized logic: All decision-making is centralized within the single agent, which can simplify workflow design and debugging.</li><li>Scalable functionality: The capabilities of the agent can be expanded by adding new tools or integrations which it can access.</li></ol><h4 id="when-to-use-1">When to use:</h4><p>Choose the single agent pattern when you need a consistent interface for various tasks or when maintaining context in interactions is crucial. It’s particularly well suited for chatbots, personal assistants, or systems that need to provide coherent responses across diverse queries.</p><h4 id="considerations-1">Considerations:</h4><ul><li>Ensure the agent has access to all necessary tools and data sources to handle its responsibilities.</li><li>Implement robust error handling and fallback mechanisms, as the entire workflow depends on this single agent.</li><li>Be mindful of the general <a href="https://www.promptingguide.ai/research/llm-recall?ref=blog.n8n.io"><u>memory limitations</u></a> of LLMs and implement strategies to manage long-term context if needed.</li><li>Consider using n8n <a href="https://n8n.io/integrations/window-buffer-memory/?ref=blog.n8n.io"><u>memory nodes</u></a> or <a href="https://docs.n8n.io/advanced-ai/examples/understand-memory/?ref=blog.n8n.io#ai-memory-in-n8n"><u>external storage solutions</u></a> to persist agent state for long-running or stateful applications.</li><li>When integrating with external services (like Telegram or Google Search Console), ensure proper authentication and data handling practices are followed.</li></ul><h3 id="example-3-multi-agent-with-gatekeeper">Example 3. Multi-agent with gatekeeper</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcv8_sNgMXgnR39yyPM1-KTSKRWUKTcvOy_Q9l7zJR-ns8WssZS8J1InaVNg6lzSgXw_p7lUI5n5Nv4pFeW0g5lJRCLxcb2L4jZEYpqgacw-YrUWJRF0uv8Zaupzk17DRmuekLTrA?key=NZ08G4TSt0ztcXaXn9IiGe0Q" class="kg-image" alt="Multi-agent design pattern" loading="lazy" width="602" height="328"><figcaption><span style="white-space: pre-wrap;">Multi-agent design pattern</span></figcaption></figure><p>The multi-agent with gatekeeper pattern is an evolution of the single agent approach, designed to handle more complex, multi-faceted tasks while maintaining centralized control. In this pattern, a primary AI agent acts as a “gatekeeper,” coordinating and delegating tasks to specialized subordinate agents.</p><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">By employing this pattern in a customer support system, you can create sophisticated and scalable AI-driven workflows in n8n. The gatekeeper agent receives incoming user messages and delegates queries to specialized agents for technical support, billing, sentiment analysis, and knowledge retrieval, ultimately providing comprehensive and consistent customer responses.</div></div>
+<!--kg-card-begin: html-->
+<script>
+  workflowBanner(2446, document.currentScript);
+</script>
+<!--kg-card-end: html-->
+<h4 id="key-benefits-2">Key benefits:</h4><ul><li>Centralized control with distributed expertise</li><li>Ability to handle complex, multi-step processes</li><li>Can use smaller fine-tuned LLMs for specialized tasks</li><li>Scalable architecture to add new capabilities</li></ul><h4 id="how-it-works-2">How it works:</h4><p>In n8n, the gatekeeper is implemented similarly to a single agent, typically using a LangChain node. However, instead of directly performing all tasks, the gatekeeper agent has access to a set of “tools”, which are actually other AI agents, each specialized for specific tasks.</p><ol><li>The gatekeeper receives the first input or query.</li><li>It analyzes the task and decides which specialist agent(s) to involve.</li><li>In certain cases, the gatekeeper can refuse to perform the task, e.g. if the request is irrelevant.</li><li>If the request is valid, the gatekeeper formulates instructions for its agent(s).</li><li>The specialist agents perform their tasks and return results to the gatekeeper.</li><li>The gatekeeper integrates the results and formulates the final response or action.</li></ol><h4 id="characteristics-2">Characteristics:</h4><ol><li>Hierarchical structure: The workflow has a clear hierarchy with the gatekeeper at the top, who manages and coordinates specialist agents.</li><li>Specialized expertise: Each subordinate agent can be optimized for a specific task, using fine-tuned models or specialized algorithms.</li><li>Flexible scaling: New capabilities can be added by introducing new specialist agents without significantly changing the core workflow.</li><li>Optimized resource use: By delegating to specialized agents, the system can use less powerful (and often less expensive) models for specific tasks while reserving more powerful models for complex decision-making.</li><li>Improved context management: The gatekeeper can maintain the overall context while the specialist agents can focus on the tasks at hand.</li></ol><h4 id="when-to-use-2">When to use:</h4><p>Choose the multi-agent with gatekeeper pattern if you need to manage complex workflows that require diverse expertise or when you need to integrate multiple AI capabilities while maintaining a consistent interface and decision-making process.</p><h4 id="considerations-2">Considerations:</h4><ul><li>Design clear interfaces between the gatekeeper and specialist agents to ensure smooth communication.</li><li>Implement error handling at both the gatekeeper and specialist agent levels.</li><li>Consider using different LLMs or AI models for different agents based on their specific requirements.</li><li>Be mindful of the increased complexity in debugging and monitoring multi-agent systems.</li></ul><p>Use n8n’s flow control nodes (<a href="https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.filter/?ref=blog.n8n.io"><u>Filter</u></a>, <a href="https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.if/?ref=blog.n8n.io"><u>IF</u></a>, <a href="https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/?ref=blog.n8n.io"><u>Loop</u></a>, <a href="https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.merge/?ref=blog.n8n.io"><u>Merge</u></a>) to effectively manage routing between the gatekeeper and specialist agents.</p><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">We’ve also written an article on <a href="../langchain-alternatives/index.html"><u>LangChain alternatives</u></a> to give a better overview of the agentic landscape.</div></div><h3 id="example-4-multi-agent-teams">Example 4. Multi-agent teams</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdjAsyPgXDLrllOu46VOgPnZ0wq4-y0lC0ircHx5rvVz8C_NNuN0wTdFEzvYdL8eHfikbFfT3oM9zpr3tbtG9gBx2Nrh9ypRMsq7qYVNaDnkTssFjwvDg_NZGVhkfZEym2ElQnatw?key=NZ08G4TSt0ztcXaXn9IiGe0Q" class="kg-image" alt="Multi-agent teams design pattern" loading="lazy" width="602" height="320"><figcaption><span style="white-space: pre-wrap;">Multi-agent teams design pattern</span></figcaption></figure><p>Multi-agent teams represent the most complex and flexible AI agentic workflow pattern. In this approach, several AI agents work together on sophisticated tasks, whereby various interaction structures are possible.</p><figure class="kg-card kg-gallery-card kg-width-wide kg-card-hascaption"><div class="kg-gallery-container"><div class="kg-gallery-row"><div class="kg-gallery-image"><img src="../content/images/2024/12/multi-agent-community-example.jpg" width="1245" height="738" loading="lazy" alt="" srcset="../content/images/size/w600/2024/12/multi-agent-community-example.jpg 600w, ../content/images/size/w1000/2024/12/multi-agent-community-example.jpg 1000w, ../content/images/2024/12/multi-agent-community-example.jpg 1245w" sizes="(min-width: 720px) 720px"></div><div class="kg-gallery-image"><img src="../content/images/2024/12/multi-agent-community-example-2.png" width="660" height="745" loading="lazy" alt="" srcset="../content/images/size/w600/2024/12/multi-agent-community-example-2.png 600w, ../content/images/2024/12/multi-agent-community-example-2.png 660w"></div></div></div><figcaption><p><span style="white-space: pre-wrap;">One n8n user shared his multi-agent workflow on LinkedIn. Source: https://www.linkedin.com/posts/aimarketerguy_aiautomation-activity-7265761200905342976-6ajt/</span></p></figcaption></figure><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">Without the ready-made templates in the current <a href="https://n8n.io/workflows/?ref=blog.n8n.io"><u>n8n workflow gallery</u></a>, this section is a bit theoretical. If you are already familiar with previous agentic design patterns, it should be quite straightforward to make the next logical step.</div></div><h4 id="key-benefits-3">Key benefits:</h4><ul><li>Highly flexible and scalable architecture</li><li>Can handle complex, multi-step processes</li><li>Allows the integration of different LLMs and prompting styles</li><li>Enables different problem-solving approaches</li></ul><h4 id="how-it-works-3">How it works:</h4><p>In n8n, multi-agent teams are implemented with several LangChain nodes or custom AI integrations. The key lies in the connections and communication between agents. Common structures are:</p><ol><li>Mesh network: Agents communicate freely with every other agent.</li><li>Hierarchical tree: Multiple layers of gatekeeper agents, each managing specialist agents.</li><li>Hybrid approaches: Combination of mesh and hierarchical structures for optimal flexibility.</li></ol><h4 id="characteristics-3">Characteristics:</h4><ol><li>Distributed decision making: Decision-making spread across multiple agents.</li><li>Complex interactions: Agents can pass tasks, request information, or collaborate.</li><li>Model diversity: Different agents can use various LLMs or AI models.</li><li>Adaptive task allocation: The team can reconfigure based on the task at hand.</li></ol><h4 id="when-to-use-3">When to use:</h4><p>Choose multi-agent teams for the most complex workflows that require varying levels of expertise and adaptability. They are ideal for large-scale systems that integrate multiple departments or functions.</p><h4 id="considerations-3">Considerations:</h4><ul><li>Implement robust communication protocols between agents.</li><li>Design clear mechanisms for task assignment and conflict resolution.</li><li>Prepare for increased complexity in monitoring and debugging.</li></ul><p>Utilize n8n’s advanced flow control (i.e. <a href="https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.merge/?ref=blog.n8n.io"><u>Merge</u></a> and <a href="https://n8n.io/integrations/compare-datasets/?ref=blog.n8n.io"><u>Compare datasets</u></a> nodes) and custom function nodes to manage complex interactions.</p><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">Multi-agent systems can emerge organically, even without deliberate planning. This happens when API interfaces abstract other agentic systems. For example, a simple customer engagement workflow might unknowingly interact with AI-powered services from different departments (marketing, sales, IT), creating a de facto multi-agent system.</div></div><h2 id="how-to-build-an-ai-agentic-workflow-with-n8n">How to build an AI agentic workflow with n8n?</h2><p>In our previous video tutorial, we looked at how to create a <a href="https://www.youtube.com/watch?v=ODdRXozldPw&ref=blog.n8n.io"><u>Telegram bot with a custom workflow tool</u></a>.</p><figure class="kg-card kg-image-card kg-width-wide kg-card-hascaption"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfSGrefcjeR_xjAmqc5i7B4zOlI-a6H2P1jd-TOd-ykqq3a06wr7fc6ShYvuPD2z5Jt-U9L2VzEn5l9_rTxWzbrel2i7ckmyhqSLxLfqc5VzT9d3uIccPOgpyzD7IAQF90I9ldk4A?key=NZ08G4TSt0ztcXaXn9IiGe0Q" class="kg-image" alt="Old workflow example with a custom workflow tool" loading="lazy" width="602" height="339"><figcaption><span style="white-space: pre-wrap;">Old workflow example with a custom workflow too</span></figcaption></figure>
+<!--kg-card-begin: html-->
+<script>
+  workflowBanner(2035, document.currentScript);
+</script>
+<!--kg-card-end: html-->
+<p>Since then, n8n has introduced two kinds of powerful tools for LangChain AI agents: the <a href="https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest/?ref=blog.n8n.io"><u>HTTP Request tool</u></a> and <a href="https://community.n8n.io/t/review-node-as-tools-is-finally-here/57539?ref=blog.n8n.io"><u>nodes as tools</u></a>. We’ll use a familiar example and demonstrate how different tool nodes affect agentic workflows.</p><figure class="kg-card kg-image-card kg-width-wide kg-card-hascaption"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdxYR7FU8A293e2eZQ4EWzrFzIyZ2rrLtq6ADtn1-hQABJH8Z3a3suXncWB_qa1PSfKmCj6GMgvuE24_NIkUJj1IHbhVSe3wvDGXpnq4h91xKnhyRm_4W0ch2pJYucEDO0-DtM_bA?key=NZ08G4TSt0ztcXaXn9IiGe0Q" class="kg-image" alt="A similar bot with different types of tool nodes" loading="lazy" width="602" height="361"><figcaption><span style="white-space: pre-wrap;">A similar bot with different types of tool nodes</span></figcaption></figure>
+<!--kg-card-begin: html-->
+<script>
+  workflowBanner(2592, document.currentScript);
+</script>
+<!--kg-card-end: html-->
+<div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">We specifically use Telegram, because it has a developer-friendly ecosystem. You can jump-start in just a few minutes and share tangible results with your colleagues or clients. However, a similar approach remains even if you are building agentic workflows for other services, be it a CRM, helpdesk platform or <a href="../whatsapp-bot/index.html"><u>another IM app</u></a>.</div></div><p>So, let’s set up and test the workflow:</p><h3 id="step-1-telegram-trigger-to-listen-for-incoming-events">Step 1. Telegram trigger to listen for incoming events</h3><p>This node listens for incoming Telegram messages, serving as the entry point for our workflow. If you’ve never created Telegram bots before, <a href="../create-telegram-bot/index.html#step-0-add-a-new-bot-in-telegram"><u>check out our step by step guide</u></a>.</p><h3 id="step-2-ai-agent-to-process-incoming-messages-and-interact-with-users">Step 2. AI agent to process incoming messages and interact with users</h3><p>Connect the output of the Trigger node to the AI Agent node. This is the core of our workflow, this node processes incoming messages and decides on appropriate actions.</p><ul>
+<li>Select the Tools Agent as an Agent type (some other agents may not be capable of working with tools);</li>
+<li>For the Prompt drop-down select Define below and enter an expression: <code>{{ $json.message.text }}</code>. This will send the user's text from Telegram to the Agent.</li>
+<li>To improve the agent response, add a System message option and provide the following expression: You are a helpful assistant. You are communicating with a user named <code>{{ $json.message.from.first_name }}</code>. Address the user by name every time. If the user asks for an image, always send the link to the image in the final reply. You may need to adjust this prompt for your specific case.</li>
+</ul>
+<p>Now, let’s make the agent functional.</p><h3 id="step-3-chat-model-to-provide-the-%E2%80%98brain%E2%80%99-for-the-agent">Step 3. Chat model to provide the ‘brain’ for the agent</h3><p>Connect the OpenAI chat model to the Agent. This will provide the language model – the “brain” of the whole agent. Just pick the exact model (i.e. <a href="https://platform.openai.com/docs/models?ref=blog.n8n.io#gpt-4o"><u>gpt-4o</u></a>). Leave most settings by default except these:</p><ul><li>Set <em>Sampling Temperature</em> to 0.7</li><li>Set <em>Frequency Penalty</em> 0.2</li></ul><h3 id="step-4-window-buffer-memory-to-store-the-conversation-history">Step 4. Window buffer memory to store the conversation history</h3><p>Now, let’s add memory to store the conversation history of a particular user. Window buffer memory stores the last few interactions, allowing the agent to maintain context. To make this node user-specific, open the configuration screen and provide the following settings:</p><ul>
+<li>Make the Session Key as an expression and type in the value: <code>chat_with_{{ $('Listen for incoming events').first().json.message.chat.id }}</code>. This way, the bot’s conversations with different users will remain separate.</li>
+</ul>
+<p>Now, let’s configure the tool nodes.</p><h3 id="step-5-http-request-tool-to-generate-dall-e-3-images">Step 5. HTTP Request tool to generate Dall-e 3 images</h3><p>With the HTTP Request tool node, n8n users can immediately connect to thousands of services in one go. We are using this node to generate images in the Dall-e 3 model.</p><figure class="kg-card kg-gallery-card kg-width-wide kg-card-hascaption"><div class="kg-gallery-container"><div class="kg-gallery-row"><div class="kg-gallery-image"><img src="../content/images/2024/12/Telegram_http-tool.png" width="461" height="794" loading="lazy" alt=""></div><div class="kg-gallery-image"><img src="../content/images/2024/12/Telegram_http-tool2.png" width="462" height="711" loading="lazy" alt=""></div></div></div><figcaption><p><span style="white-space: pre-wrap;">HTTP Request node allows connecting to virtually any API service</span></p></figcaption></figure><p>Here are the configuration tips:</p><ul>
+<li>Make a POST request to the URL: <code>https://api.openai.com/v1/images/generations</code></li>
+<li>Provide a Description: <code>Call this tool to request a Dall-E-3 model, when the user asks to draw something. If you gеt a response from this tool, forward it to the Telegram tool.</code></li>
+<li>Re-use your predefined OpenAI credentials for the Authentication.</li>
+<li>Activate Send Body toggle and provide the following parameters:
+<ul>
+<li>Add model parameter with the <code>dall-e-3</code> value</li>
+<li>Add prompt parameter and select By model (and it is required).</li>
+</ul>
+</li>
+</ul>
+<p>This way we indicate that the prompt should be populated by LLM, whereas the model has always a pre-defined value.</p><h3 id="step-6-telegram-tool-node-to-send-back-an-uncompressed-image">Step 6. Telegram tool node to send back an uncompressed image</h3><p>Now, we need to add a tool to send back the image. <a href="https://community.n8n.io/t/review-node-as-tools-is-finally-here/57539?ref=blog.n8n.io"><u>n8n has recently introduced the Nodes- as-tools feature.</u></a> You can now connect about 20 of the most popular n8n nodes directly to the agent. This approach requires a slightly different configuration.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdTrNfR8N85ulqdt0f4YywdkA2PxngwPdVrBf4szQgVQXXVlCY6QON_R-6AV6vP4O7gcu_CuF6KsqAH6y0pehmH00NRooiBvai3Q5KYLmIn7sLVirvZEYXwRgoj-OTY96W7NSMTHA?key=NZ08G4TSt0ztcXaXn9IiGe0Q" class="kg-image" alt="A new $fromAI() expression simplifies the agent tool configuration" loading="lazy" width="306" height="547"><figcaption><span style="white-space: pre-wrap;">A new $fromAI() expression simplifies the agent tool configuration</span></figcaption></figure><p>In this example, do the following:</p><ul>
+<li>Keep the Tool Description a default Set Automatically value.</li>
+<li>Select Message Resource and a Send Document Operation.</li>
+<li>Make the Chat ID value an expression and provide <code>{{ $('Listen for incoming events').first().json.message.from.id }}</code>. This way, we always reply to the same user that sent the incoming message.</li>
+</ul>
+<p>As for the Document value, Telegram allows direct file URLs. Make this value an expression and enter the text: <code>{{ $fromAI("url", "a valid url of an image", "string", " ") }}</code>.</p>
+<div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text"><a href="https://docs.n8n.io/advanced-ai/examples/using-the-fromai-function/?ref=blog.n8n.io"><u>$fromAI() function</u></a> is a new way of defining tools parameters. It’s a compact form of specifying what JSON key is expected and providing cues to the LLM what it should contain. In our case, we expect the `url` JSON key with the image URL as a value. The exact implementation is hidden under the hood, so you can focus more on building custom agentic workflows instead of grappling with JSON schemas and other LangChain nuances.</div></div><h3 id="step-7-send-a-final-reply-to-provide-the-last-output-from-the-agent-node">Step 7. Send a final reply to provide the last output from the agent node</h3><p>LangChain agents always provide a final reply. You can pass this output to a new agent (for example, if you are building a multi-agent workflow). For now, let’s just add a simple Telegram node and send the AI agent’s response back to the user.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdZop_NU464CrMa6JYvSqcVpIGni2NldMckraQplpq1nBqYo8_RNDHamV2evqj0dbkWbWKKvJJvCRZcYIXwmYQ1uhBexUEvnoK9YeuLtKQ0SwMdfuZRXLOuARx42_IACAkCzHLpow?key=NZ08G4TSt0ztcXaXn9IiGe0Q" class="kg-image" alt="AI agents sends back the final reply via a second Telegram node" loading="lazy" width="277" height="497"><figcaption><span style="white-space: pre-wrap;">AI agents sends back the final reply via a second Telegram node</span></figcaption></figure><ul>
+<li>Select the Send Message Operation</li>
+<li>Set the Chat ID expression to <code>{{ $('Listen for incoming events').first().json.message.from.id }}</code></li>
+<li>Set the Text expression to <code>{{ $json.output }}</code>. This is a standard JSON key for the AI-agent outputs in n8n</li>
+</ul>
+<h3 id="step-8-test-the-workflow">Step 8. Test the workflow</h3><ul><li>Activate the workflow</li></ul><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">Remember! Telegram allows you to register only one Webhook per bot. This means you cannot have 2 active Telegram triggers connected to the same bot.</div></div><ul><li>Start a conversation with your Telegram bot</li><li>Try sending text messages and image requests</li><li>Observe how the AI agent handles different types of requests</li></ul><figure class="kg-card kg-image-card kg-width-wide kg-card-hascaption"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdFmHlT-q73Yk3SUYT2Khug-8vD6O0GXNBlrluSYb_1NWgMFE_MJPs6LXvGgC_XKIIox7jYlcS6dKMc5XQQFH532RLP51-rrkQRTtNTTcJvRoT6B468qG8y9h2BAqQZkRGz--L5Gw?key=NZ08G4TSt0ztcXaXn9IiGe0Q" class="kg-image" alt="The agent performed 5 steps may have a different sequence of actions depending on the user request" loading="lazy" width="602" height="273"><figcaption><span style="white-space: pre-wrap;">The agent performed 5 steps, but may have a different sequence of actions depending on the user request</span></figcaption></figure><p>In this screenshot, you can see a typical agentic workflow. The agent always loads a past conversation and sends a request to the LLM. Depending on the output, it will iterate back and forth between tools and LLM until it reaches a final answer.</p><p>Below is the chat output that the user receives after submitting a request:</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2024/12/Screenshot_20241207_011454_Telegram_cut2.png" class="kg-image" alt="Telegram chat output" loading="lazy" width="450" height="890"><figcaption><span style="white-space: pre-wrap;">Telegram chat output</span></figcaption></figure><p>If you compare this workflow to our <a href="https://community.n8n.io/t/adding-a-url-to-dall-e-3-generated-images-in-telegram/40490?ref=blog.n8n.io"><u>previous example with the custom workflow node</u></a>, you may notice that the new workflow is more flexible.</p><p>This is because an Agent makes more LLM requests, decides on the next step several times, and uses tools independently.If you need to improve Agent’s response time or ensure the exact sequence of actions, you may want to keep the workflow more rigid.</p><p>When creating new AI-agentic workflows, make sure you understand the implications of using various patterns described earlier.</p><p>On the one hand, using custom workflow tools may work better to streamline the Agent behavior. The Agent calls a single workflow tool and several actions are completed in the predefined way.</p><p>On the other hand, connecting several independent tools directly to the Agent may be a better approach when the Agent needs to decide every time which one to use.</p><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">This simplified workflow demonstrates the power of combining AI agents with HTTP Request tools and nodes as tools in n8n. You can expand this basic structure to create more complex AI agentic workflows, integrating various services and capabilities.</div></div><h2 id="wrap-up">Wrap up</h2><p>In conclusion, AI agentic workflows offer a powerful evolution over traditional automation by introducing intelligent, adaptable systems that can make decisions and learn from interactions.</p><p>Unlike standard automation, which relies on predefined rules, AI agentic workflows leverage AI models and flexible agent stacks to handle more complex, dynamic tasks. Through the use of design patterns like chained requests, single agents, multi-agent systems with gatekeepers, and multi-agent teams, organizations can tailor their workflows to meet specific needs, whether it’s automating simple processes or managing more intricate, collaborative tasks. </p><p>Building AI agentic workflows with n8n enables rapid, practical implementation of AI that integrates seamlessly with existing processes, offering real business value by using multiple agents, custom tools, and RAG capabilities. </p><h2 id="what%E2%80%99s-next">What’s next?</h2><p>To deepen your understanding of AI agentic workflows and expand your automation skills,&nbsp; check out these resources:</p><ol><li><a href="../langchain-alternatives/index.html"><u>Discover alternatives to LangChain</u></a> to diversify your AI development toolkit.</li><li><a href="../ai-tools-for-business/index.html"><u>Explore the top AI tools for business</u></a> to complement your n8n workflows and boost productivity.</li><li><a href="../local-llm/index.html"><u>Learn how to run LLMs locally</u></a> for enhanced privacy and control in your AI workflows.</li></ol><p>Ready to start building your own AI agentic workflows? <a href="https://n8n.io/pricing/?ref=blog.n8n.io"><u>Sign up for n8n cloud</u></a> and jump-start right away or explore advanced features of the <a href="https://n8n.io/enterprise/?ref=blog.n8n.io"><u>Enterprise edition</u></a>.</p>
+		<div class="newsletter-banner">
+	    <div class="newsletter-banner-content">
+	      <div class="section-header">
+	        <h2>Subscribe to <span>n8n newsletter</span></h2>
+	        <div class="section-subheader--bottom">
+	          Get the best, coolest, and latest in automation and low-code delivered to your inbox each week.
+	        </div>
+	      </div>
+	      <div class="newsletter-banner-form">
+	        <form autocomplete="off" class="contact-form" onsubmit="subscribeNewsletter(event)">
+	        	<div id="recaptcha" class="g-recaptcha"
+              data-sitekey="6LeAQeopAAAAAKlLsRb1weWm6T_vijoQBkGkbHzB"
+              data-callback="submitSubscription"
+              data-size="invisible">
+            </div>
+	          <div class="input-wrapper">
+	            <input placeholder="Email" name="email" type="email" required="required" class="">
+	            <div class="messages">
+	              <div class="message message--error">Something went wrong. Please try again later.</div>
+	              <div class="message message--success">Subscribed!</div>
+	            </div>
+	          </div>
+	          <button type="submit" class="submit-btn">Subscribe</button>
+	        </form>
+	      </div>
+	    </div>
+    </div>
+		<div class="post-share-section">
+	<div class="post-share-wrap">
+		<a href="https://twitter.com/intent/tweet?text=AI%20agentic%20workflows%3A%20a%20practical%20guide%20for%20n8n%20automation&amp;url=https://blog.n8n.io/ai-agentic-workflows/" target="_blank" rel="noopener" aria-label="Twitter share icon"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg></a>
+		<a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.n8n.io/ai-agentic-workflows/" target="_blank" rel="noopener" aria-label="Facebook share icon"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"/></svg></a>
+		<!-- <a href="javascript:" class="post-share-link" id="copy" data-clipboard-target="#copy-link" aria-label="Copy link icon"><svg role="img" viewBox="0 0 33 24" xmlns="http://www.w3.org/2000/svg"><path d="M27.3999996,13.4004128 L21.7999996,13.4004128 L21.7999996,19 L18.9999996,19 L18.9999996,13.4004128 L13.3999996,13.4004128 L13.3999996,10.6006192 L18.9999996,10.6006192 L18.9999996,5 L21.7999996,5 L21.7999996,10.6006192 L27.3999996,10.6006192 L27.3999996,13.4004128 Z M12,20.87 C7.101,20.87 3.13,16.898 3.13,12 C3.13,7.102 7.101,3.13 12,3.13 C12.091,3.13 12.181,3.139 12.272,3.142 C9.866,5.336 8.347,8.487 8.347,12 C8.347,15.512 9.866,18.662 12.271,20.857 C12.18,20.859 12.091,20.87 12,20.87 Z M20.347,0 C18.882,0 17.484,0.276 16.186,0.756 C14.882,0.271 13.473,0 12,0 C5.372,0 0,5.373 0,12 C0,18.628 5.372,24 12,24 C13.471,24 14.878,23.726 16.181,23.242 C17.481,23.724 18.88,24 20.347,24 C26.975,24 32.347,18.628 32.347,12 C32.347,5.373 26.975,0 20.347,0 Z"/></svg></a>
+		<small class="share-link-info">The link has been copied!</small> -->
+	</div>
+	<input type="text" value="https://blog.n8n.io/ai-agentic-workflows/" id="copy-link" aria-label="Copy link input">
+</div>
+	</div>
+</article>
+<aside class="nextprev-section">
+	<div class="nextprev-wrap">
+		<section class="nextprev-newer post tag-ai tag-guide">
+			<a href="../llm-agents/index.html" class="global-link" aria-label="Your Practical Guide to LLM Agents in 2025 (+ 5 Ready-to-Use Automation Templates)"></a>
+			<a href="../llm-agents/index.html" class="nextprev-image global-image">
+				<img src="../content/images/size/w400/2025/01/Slide-16_9---26--1-.png" loading="lazy" alt="Your Practical Guide to LLM Agents in 2025 (+ 5 Ready-to-Use Automation Templates)">			</a>
+			<div>
+				<small>Newer post</small>
+				<h3><a href="../llm-agents/index.html">Your Practical Guide to LLM Agents in 2025 (+ 5 Ready-to-Use Automation Templates)</a></h3>
+			</div>
+		</section>
+		<section class="nextprev-older post tag-guide tag-itops">
+			<a href="../itops-buyers-guide-to-evaluating-workflow-automation-tools/index.html" class="global-link" aria-label="ITOps Buyer’s Guide to Evaluating Workflow Automation Tools"></a>
+			<div>
+				<small>Older post</small>
+				<h3><a href="../itops-buyers-guide-to-evaluating-workflow-automation-tools/index.html">ITOps Buyer’s Guide to Evaluating Workflow Automation Tools</a></h3>
+			</div>
+			<a href="../itops-buyers-guide-to-evaluating-workflow-automation-tools/index.html" class="nextprev-image global-image">
+				<img src="../content/images/size/w400/2024/12/itops3b-8--1-.jpg" loading="lazy" alt="ITOps Buyer’s Guide to Evaluating Workflow Automation Tools">			</a>
+		</section>
+	</div>
+</aside><div class="comments-section">
+	<div class="comments-wrap">
+			</div>
+</div>
+            <div class="related-posts">
+                  <h3>Other Guides on AI</h3>
+              <div class="global-sections global-sections-items-4">
+                <h2 class="global-label global-zigzag">
+	
+	<svg role='img' viewBox='0 0 136 24' xmlns='http://www.w3.org/2000/svg'><path d='M1.525 1.525a3.5 3.5 0 014.95 0L20 15.05 33.525 1.525a3.5 3.5 0 014.95 0L52 15.05 65.525 1.525a3.5 3.5 0 014.95 0L84 15.05 97.525 1.525a3.5 3.5 0 014.95 0L116 15.05l13.525-13.525a3.5 3.5 0 014.95 4.95l-16 16a3.5 3.5 0 01-4.95 0L100 8.95 86.475 22.475a3.5 3.5 0 01-4.95 0L68 8.95 54.475 22.475a3.5 3.5 0 01-4.95 0L36 8.95 22.475 22.475a3.5 3.5 0 01-4.95 0l-16-16a3.5 3.5 0 010-4.95z'/></svg></h2>
+<article class="item-section post tag-ai tag-tutorial">
+	<a href="../how-to-build-ai-agent/index.html" class="global-link" aria-label="How To Build Your First AI Agent (+Free Workflow Template)"></a>
+	<div class="global-image">
+		<img srcset="../content/images/size/w300/2025/04/ai-2--1-.png 300w,
+			../content/images/size/w400/2025/04/ai-2--1-.pngg 400w,
+		../content/images/size/w600/2025/04/ai-2--1-.pngng 600w"
+	 sizes="(max-width:480px) 150px, 200px"
+	 src="../content/images/size/w300/2025/04/ai-2--1-.png"
+	 loading="lazy"
+	 alt="How To Build Your First AI Agent (+Free Workflow Template)">	</div>
+	<div class="global-sections-content">
+		<h3><a href="../how-to-build-ai-agent/index.html">How To Build Your First AI Agent (+Free Workflow Template)</a></h3>
+		<div class="global-sections-meta global-meta global-pointer">
+			<a href="../author/mihai/index.html">Mihai Farcas</a>
+		</div>
+	</div>
+</article>
+                <article class="item-section post tag-ai tag-guide">
+	<a href="../ai-agent-frameworks/index.html" class="global-link" aria-label="9 AI Agent Frameworks Battle: Why Developers Prefer n8n"></a>
+	<div class="global-image">
+		<img srcset="../content/images/size/w300/2025/04/ai-agent-frameworks5.jpg 300w,
+			../content/images/size/w400/2025/04/ai-agent-frameworks5.jpgg 400w,
+		../content/images/size/w600/2025/04/ai-agent-frameworks5.jpgpg 600w"
+	 sizes="(max-width:480px) 150px, 200px"
+	 src="../content/images/size/w300/2025/04/ai-agent-frameworks5.jpg"
+	 loading="lazy"
+	 alt="9 AI Agent Frameworks Battle: Why Developers Prefer n8n">	</div>
+	<div class="global-sections-content">
+		<h3><a href="../ai-agent-frameworks/index.html">9 AI Agent Frameworks Battle: Why Developers Prefer n8n</a></h3>
+		<div class="global-sections-meta global-meta global-pointer">
+			<a href="../author/yulia/index.html">Yulia Dmitrievna</a>, <a href="../author/eduard/index.html">Eduard Parsadanyan</a>
+		</div>
+	</div>
+</article>
+                <article class="item-section post tag-ai tag-guide">
+	<a href="../ai-agents-examples/index.html" class="global-link" aria-label="15 Practical AI Agent Examples to Scale Your Business in 2025"></a>
+	<div class="global-image">
+		<img srcset="../content/images/size/w300/2025/03/Slide-16_9---172--1-.png 300w,
+			../content/images/size/w400/2025/03/Slide-16_9---172--1-.pngg 400w,
+		../content/images/size/w600/2025/03/Slide-16_9---172--1-.pngng 600w"
+	 sizes="(max-width:480px) 150px, 200px"
+	 src="../content/images/size/w300/2025/03/Slide-16_9---172--1-.png"
+	 loading="lazy"
+	 alt="15 Practical AI Agent Examples to Scale Your Business in 2025">	</div>
+	<div class="global-sections-content">
+		<h3><a href="../ai-agents-examples/index.html">15 Practical AI Agent Examples to Scale Your Business in 2025</a></h3>
+		<div class="global-sections-meta global-meta global-pointer">
+			<a href="../author/federico/index.html">Federico Trotta</a>
+		</div>
+	</div>
+</article>
+                <article class="item-section post tag-ai tag-guide">
+	<a href="../best-ai-for-coding/index.html" class="global-link" aria-label="8 best AI coding tools for developers: tested &amp; compared!"></a>
+	<div class="global-image">
+		<img srcset="../content/images/size/w300/2025/03/11-ai-tools-coding--2---2-.png 300w,
+			../content/images/size/w400/2025/03/11-ai-tools-coding--2---2-.pngg 400w,
+		../content/images/size/w600/2025/03/11-ai-tools-coding--2---2-.pngng 600w"
+	 sizes="(max-width:480px) 150px, 200px"
+	 src="../content/images/size/w300/2025/03/11-ai-tools-coding--2---2-.png"
+	 loading="lazy"
+	 alt="8 best AI coding tools for developers: tested &amp; compared!">	</div>
+	<div class="global-sections-content">
+		<h3><a href="../best-ai-for-coding/index.html">8 best AI coding tools for developers: tested &amp; compared!</a></h3>
+		<div class="global-sections-meta global-meta global-pointer">
+			<a href="../author/yulia/index.html">Yulia Dmitrievna</a>, <a href="../author/eduard/index.html">Eduard Parsadanyan</a>
+		</div>
+	</div>
+</article>
+              </div>
+            </div>
+  <aside class="two-column-posts">
+    <h3>Latest n8n guides</h3>
+    <div class="two-column-posts__inner">
+	      <section class="nextprev-newer post">
+  <a href="../how-to-build-ai-agent/index.html" class="global-link" aria-label="How To Build Your First AI Agent (+Free Workflow Template)"></a>
+    <a href="../how-to-build-ai-agent/index.html" class="nextprev-image global-image">
+      <img src="../content/images/size/w400/2025/04/ai-2--1-.png" loading="lazy" alt="How To Build Your First AI Agent (+Free Workflow Template)">    </a>
+  <div>
+    <h3><a href="../how-to-build-ai-agent/index.html">How To Build Your First AI Agent (+Free Workflow Template)</a></h3>
+  </div>
+</section>
+	      <section class="nextprev-newer post">
+  <a href="../ai-agent-frameworks/index.html" class="global-link" aria-label="9 AI Agent Frameworks Battle: Why Developers Prefer n8n"></a>
+    <a href="../ai-agent-frameworks/index.html" class="nextprev-image global-image">
+      <img src="../content/images/size/w400/2025/04/ai-agent-frameworks5.jpg" loading="lazy" alt="9 AI Agent Frameworks Battle: Why Developers Prefer n8n">    </a>
+  <div>
+    <h3><a href="../ai-agent-frameworks/index.html">9 AI Agent Frameworks Battle: Why Developers Prefer n8n</a></h3>
+  </div>
+</section>
+	      <section class="nextprev-newer post">
+  <a href="../series-b/index.html" class="global-link" aria-label="n8n closes €55M Series B round led by Highland Europe"></a>
+    <a href="../series-b/index.html" class="nextprev-image global-image">
+      <img src="../content/images/size/w400/2025/03/seriesB-blog.jpg" loading="lazy" alt="n8n closes €55M Series B round led by Highland Europe">    </a>
+  <div>
+    <h3><a href="../series-b/index.html">n8n closes €55M Series B round led by Highland Europe</a></h3>
+  </div>
+</section>
+	      <section class="nextprev-newer post">
+  <a href="../ai-agents-examples/index.html" class="global-link" aria-label="15 Practical AI Agent Examples to Scale Your Business in 2025"></a>
+    <a href="../ai-agents-examples/index.html" class="nextprev-image global-image">
+      <img src="../content/images/size/w400/2025/03/Slide-16_9---172--1-.png" loading="lazy" alt="15 Practical AI Agent Examples to Scale Your Business in 2025">    </a>
+  <div>
+    <h3><a href="../ai-agents-examples/index.html">15 Practical AI Agent Examples to Scale Your Business in 2025</a></h3>
+  </div>
+</section>
+    </div>
+  </aside>
+
+					<!-- <div class="subscribe-section">
+	<div class="subscribe-wrap">
+		<h3>Subscribe to new posts</h3>
+		<form data-members-form="subscribe" class="subscribe-form">
+			<input data-members-email type="email" placeholder="Your email address" aria-label="Your email address" required>
+			<button class="global-button" type="submit">Subscribe</button>
+		</form>
+		<div class="subscribe-alert">
+			<small class="alert-loading global-alert">Processing your application</small>
+			<small class="alert-success global-alert">Please check your inbox and click the link to confirm your subscription</small>
+			<small class="alert-error global-alert">There was an error sending the email</small>
+		</div>
+	</div>
+</div>
+ -->
+				</main>
+				<div id="subFooter" class="sub-footer">
+  <div class="sub-footer-container">
+    <div class="footer-columns">
+      <div>
+        <div class="column-name">Popular integrations</div>
+        <ul class="col-links">
+          <li>
+            <a href="https://n8n.io/integrations/google-sheets/" class="footer-link"> Google Sheets </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/telegram/" class="footer-link"> Telegram </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/mysql/" class="footer-link"> MySQL </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/slack/" class="footer-link"> Slack </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/discord/" class="footer-link"> Discord </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/postgres/" class="footer-link"> Postgres </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/notion/" class="footer-link"> Notion </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/gmail/" class="footer-link"> Gmail </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/airtable/" class="footer-link"> Airtable </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/google-drive/" class="footer-link"> Google Drive </a>
+          </li>
+        </ul>
+        <div class="bottom-link hidden-link">
+          <a href="https://n8n.io/integrations/" class="footer-link">
+            Show more integrations
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10" width="7px" height="7px">
+              <g clip-path="url(#a)">
+                <path
+                  fill="#111010"
+                  fill-rule="evenodd"
+                  d="M7.678 1.36H.481V0H10v9.52H8.64v-7.2L.962 10 0 9.038 7.678 1.36Z"
+                  clip-rule="evenodd"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h10v10H0z"></path>
+                </clipPath>
+              </defs></svg
+            ></a>
+        </div>
+        <button
+          type="button"
+          class="footer-link footer-link--more"
+          onclick="document.getElementById('subFooter').classList.toggle('sub-footer--full')"></button>
+      </div>
+      <div>
+        <div class="column-name">Trending combinations</div>
+        <ul class="col-links">
+          <li>
+            <a href="https://n8n.io/integrations/hubspot/and/salesforce/" class="footer-link">
+              HubSpot and Salesforce
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/twilio/and/whatsapp-business-cloud/" class="footer-link">
+              Twilio and WhatsApp
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/github/and/jira-software/" class="footer-link">
+              GitHub and Jira
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/asana/and/slack/" class="footer-link"> Asana and Slack </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/asana/and/salesforce/" class="footer-link">
+              Asana and Salesforce
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/jira-software/and/slack/" class="footer-link">
+              Jira and Slack
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/jira-software/and/salesforce/" class="footer-link">
+              Jira and Salesforce
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/github/and/slack/" class="footer-link"> GitHub and Slack </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/hubspot/and/quickbooks-online/" class="footer-link">
+              HubSpot and QuickBooks
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/hubspot/and/slack/" class="footer-link"> HubSpot and Slack </a>
+          </li>
+        </ul>
+        <div class="bottom-link hidden-link">
+          <a href="https://n8n.io/integrations/" class="footer-link">
+            Show more integrations
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10" width="7px" height="7px">
+              <g clip-path="url(#a)">
+                <path
+                  fill="#111010"
+                  fill-rule="evenodd"
+                  d="M7.678 1.36H.481V0H10v9.52H8.64v-7.2L.962 10 0 9.038 7.678 1.36Z"
+                  clip-rule="evenodd"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h10v10H0z"></path>
+                </clipPath>
+              </defs></svg
+            ></a>
+        </div>
+        <button
+          type="button"
+          class="footer-link footer-link--more"
+          onclick="document.getElementById('subFooter').classList.toggle('sub-footer--full')"></button>
+      </div>
+      <div>
+        <div class="column-name">Top integration categories</div>
+        <ul class="col-links">
+          <li>
+            <a href="https://n8n.io/integrations/categories/development/" class="footer-link"> Development </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/categories/communication/" class="footer-link">
+              Communication
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/categories/langchain/" class="footer-link"> Langchain </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/categories/ai/" class="footer-link"> AI </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/categories/data-and-storage/" class="footer-link">
+              Data &amp; Storage
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/categories/marketing/" class="footer-link"> Marketing </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/categories/productivity/" class="footer-link">
+              Productivity
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/categories/sales/" class="footer-link"> Sales </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/categories/utility/" class="footer-link"> Utility </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/categories/miscellaneous/" class="footer-link">
+              Miscellaneous
+            </a>
+          </li>
+        </ul>
+        <div class="bottom-link hidden-link">
+          <a href="https://n8n.io/integrations/" class="footer-link">
+            Explore more categories
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10" width="7px" height="7px">
+              <g clip-path="url(#a)">
+                <path
+                  fill="#111010"
+                  fill-rule="evenodd"
+                  d="M7.678 1.36H.481V0H10v9.52H8.64v-7.2L.962 10 0 9.038 7.678 1.36Z"
+                  clip-rule="evenodd"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h10v10H0z"></path>
+                </clipPath>
+              </defs></svg
+            ></a>
+        </div>
+        <button
+          type="button"
+          class="footer-link footer-link--more"
+          onclick="document.getElementById('subFooter').classList.toggle('sub-footer--full')"></button>
+      </div>
+      <div>
+        <div class="column-name">Trending templates</div>
+        <ul class="col-links">
+          <li>
+            <a href="https://n8n.io/workflows/1750-creating-an-api-endpoint/" class="footer-link">
+              Creating an API endpoint
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/workflows/1954-ai-agent-chat/" class="footer-link">
+              AI agent chat
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/workflows/1951-scrape-and-summarize-webpages-with-ai/" class="footer-link">
+              Scrape and summarize webpages with AI
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/workflows/1700-very-quick-quickstart/" class="footer-link">
+              Very quick quickstart
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/workflows/1748-pulling-data-from-services-that-n8n-doesnt-have-a-pre-built-integration-for/" class="footer-link">
+              Pulling data from services that n8n doesn’t have a pre-built integration for
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/workflows/1747-joining-different-datasets/" class="footer-link">
+              Joining different datasets
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/workflows/1534-back-up-your-n8n-workflows-to-github/" class="footer-link">
+              Back Up Your n8n Workflows To Github
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/workflows/2006-ai-agent-that-can-scrape-webpages/" class="footer-link">
+              AI agent that can scrape webpages
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/workflows/1862-openai-gpt-3-company-enrichment-from-website-content/" class="footer-link">
+              OpenAI GPT-3: Company Enrichment from website content
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/workflows/1934-telegram-ai-chatbot/" class="footer-link">
+              Telegram AI Chatbot
+            </a>
+          </li>
+        </ul>
+        <div class="bottom-link hidden-link">
+          <a href="https://n8n.io/workflows/" class="footer-link">
+            Explore 800+ workflow templates
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10" width="7px" height="7px">
+              <g clip-path="url(#a)">
+                <path
+                  fill="#111010"
+                  fill-rule="evenodd"
+                  d="M7.678 1.36H.481V0H10v9.52H8.64v-7.2L.962 10 0 9.038 7.678 1.36Z"
+                  clip-rule="evenodd"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h10v10H0z"></path>
+                </clipPath>
+              </defs></svg
+            ></a>
+        </div>
+        <button
+          type="button"
+          class="footer-link footer-link--more"
+          onclick="document.getElementById('subFooter').classList.toggle('sub-footer--full')"></button>
+      </div>
+      <div>
+        <div class="column-name">Top guides</div>
+        <ul class="col-links">
+          <li>
+            <a href="../telegram-bots/index.html" class="footer-link"> Telegram bots </a>
+          </li>
+          <li>
+            <a href="../open-source-chatbot/index.html" class="footer-link"> Open-source chatbot </a>
+          </li>
+          <li>
+            <a href="../open-source-llm/index.html" class="footer-link"> Open-source LLM </a>
+          </li>
+          <li>
+            <a href="../open-source-low-code-platforms.html" class="footer-link"> Open-source low-code platforms </a>
+          </li>
+          <li>
+            <a href="../free-zapier-alternatives/index.html" class="footer-link"> Zapier alternatives </a>
+          </li>
+          <li>
+            <a href="../make-vs-zapier/index.html" class="footer-link"> Make vs Zapier </a>
+          </li>
+          <li class="hidden-link">
+            <a href="../ai-agents/index.html" class="footer-link"> AI agents </a>
+          </li>
+          <li class="hidden-link">
+            <a href="../ai-coding-assistants/index.html" class="footer-link"> AI coding assistants </a>
+          </li>
+          <li class="hidden-link">
+            <a href="../create-chatgpt-discord-bot/index.html" class="footer-link"> ChatGPT Discord bot </a>
+          </li>
+          <li class="hidden-link">
+            <a href="../best-ai-chatbot/index.html" class="footer-link"> Best AI chatbot </a>
+          </li>
+        </ul>
+        <div class="bottom-link hidden-link">
+          <a href="../index.html" class="footer-link">
+            Show guides
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10" width="7px" height="7px">
+              <g clip-path="url(#a)">
+                <path
+                  fill="#111010"
+                  fill-rule="evenodd"
+                  d="M7.678 1.36H.481V0H10v9.52H8.64v-7.2L.962 10 0 9.038 7.678 1.36Z"
+                  clip-rule="evenodd"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h10v10H0z"></path>
+                </clipPath>
+              </defs></svg
+            ></a>
+        </div>
+        <button
+          type="button"
+          class="footer-link footer-link--more"
+          onclick="document.getElementById('subFooter').classList.toggle('sub-footer--full')"></button>
+      </div>
+    </div>
+  </div>
+</div><footer class="footer-section global-footer">
+	<div class="footer-wrap">
+		<div class="footer-data">
+			<div class="footer-logo">
+				<a href="../index.html" class="is-image"><img src="../content/images/2022/06/n8n-blog.png" alt="n8n Blog"></a>
+			</div>
+			<p class="footer-description">Automate without limits</p>
+			<div class="footer-icons">
+				<a href="https://www.facebook.com/n8nio" aria-label="link Facebook"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"/></svg></a>
+				<a href="https://x.com/n8n_io" aria-label="link Twitter"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg></a>
+				<a href="https://github.com/n8n-io/n8n" aria-label="link GitHub"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+				<a href="https://discord.gg/n8n" aria-label="link Discord"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.222 0c1.406 0 2.54 1.137 2.607 2.475V24l-2.677-2.273-1.47-1.338-1.604-1.398.67 2.205H3.71c-1.402 0-2.54-1.065-2.54-2.476V2.48C1.17 1.142 2.31.003 3.715.003h16.5L20.222 0zm-6.118 5.683h-.03l-.202.2c2.073.6 3.076 1.537 3.076 1.537-1.336-.668-2.54-1.002-3.744-1.137-.87-.135-1.74-.064-2.475 0h-.2c-.47 0-1.47.2-2.81.735-.467.203-.735.336-.735.336s1.002-1.002 3.21-1.537l-.135-.135s-1.672-.064-3.477 1.27c0 0-1.805 3.144-1.805 7.02 0 0 1 1.74 3.743 1.806 0 0 .4-.533.805-1.002-1.54-.468-2.14-1.404-2.14-1.404s.134.066.335.2h.06c.03 0 .044.015.06.03v.006c.016.016.03.03.06.03.33.136.66.27.93.4.466.202 1.065.403 1.8.536.93.135 1.996.2 3.21 0 .6-.135 1.2-.267 1.8-.535.39-.2.87-.4 1.397-.737 0 0-.6.936-2.205 1.404.33.466.795 1 .795 1 2.744-.06 3.81-1.8 3.87-1.726 0-3.87-1.815-7.02-1.815-7.02-1.635-1.214-3.165-1.26-3.435-1.26l.056-.02zm.168 4.413c.703 0 1.27.6 1.27 1.335 0 .74-.57 1.34-1.27 1.34-.7 0-1.27-.6-1.27-1.334.002-.74.573-1.338 1.27-1.338zm-4.543 0c.7 0 1.266.6 1.266 1.335 0 .74-.57 1.34-1.27 1.34-.7 0-1.27-.6-1.27-1.334 0-.74.57-1.338 1.27-1.338z"/></svg></a>
+				<a href="https://www.linkedin.com/company/n8n/" aria-label="link LinkedIn"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+				<a href="https://www.youtube.com/c/n8n-io" aria-label="link YouTube"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path class="a" d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+				
+
+			</div>
+		</div>
+		<div class="footer-nav">
+			
+
+
+
+<div class="footer-nav-column">
+	<!-- <small>Column 1</small> -->
+	<ul>
+		<li><a href="https://n8n.io/">n8n home</a></li>
+		<li><a href="https://n8n.io/features/">Features</a></li>
+		<li><a href="https://n8n.io/pricing/">Pricing</a></li>
+		<li><a href="https://docs.n8n.io/">Docs</a></li>
+	</ul>
+</div>
+
+<div class="footer-nav-column">
+	<!-- <small>Column 2</small> -->
+	<ul>
+		<li><a href="https://community.n8n.io">Community</a></li>
+	</ul>
+</div>
+
+
+		</div>
+	</div>
+	<div class="footer-copyright">
+		Made with ❤️ in Berlin. © 2025 n8n | All rights reserved.
+	</div>
+</footer>
+			</div>
+		</div>
+		<div id="notifications" class="global-notification">
+	<div class="subscribe">You’ve successfully subscribed to n8n Blog</div>
+	<div class="signin">Welcome back! You’ve successfully signed in.</div>
+	<div class="signup">Great! You’ve successfully signed up.</div>
+	<div class="expired">Your link has expired</div>
+	<div class="checkout-success">Success! Check your email for magic link to sign-in.</div>
+</div>
+				<script src="../assets/js/global.js%3Fv=4801f6d1f9"></script>
+		<script src="../assets/js/post.js%3Fv=4801f6d1f9"></script>
+		
+		<script>
+!function(){"use strict";const p=new URLSearchParams(window.location.search),isAction=p.has("action"),isStripe=p.has("stripe"),success=p.get("success"),action=p.get("action"),stripe=p.get("stripe"),n=document.getElementById("notifications"),a="is-subscribe",b="is-signin",c="is-signup",d="is-expired",e="is-checkout-success";p&&(isAction&&(action=="subscribe"&&success=="true"&&n.classList.add(a),action=="signin"&&success=="true"&&n.classList.add(b),action=="signup"&&success=="true"&&n.classList.add(c),success=="false"&&n.classList.add(d)),isStripe&&stripe=="success"&&n.classList.add(e),(isAction||isStripe)&&setTimeout(function(){window.history.replaceState(null,null,window.location.pathname),n.classList.remove(a,b,c,d,e)},5000))}();
+</script>
+
+		
+		<script>
+
+// Contain every link in an array.
+var links = document.querySelectorAll('a');
+
+// For every link,
+for (var i = 0; i < links.length; i++) {
+
+  // if the link's hostname is different from this Ghost's hostname,
+  // i.e. if the link is external,
+  if (links[i].hostname != window.location.hostname) {
+
+    // change the target and rel value as the following.
+    links[i].target = '_blank';
+    links[i].rel = 'noopener';
+
+  }
+}
+</script>
+	</body>
+</html>

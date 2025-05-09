@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<title>The 11 best open-source LLMs for 2025 – n8n Blog</title>
+		<meta name="HandheldFriendly" content="True">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400;1,800;1,900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400;1,800;1,900&display=swap"> -->
+		<link rel="stylesheet" type="text/css" href="../assets/css/screen.css%3Fv=4801f6d1f9.css">
+		<style>hr{background-image:url("data:image/svg+xml;utf8,<svg role='img' viewBox='0 0 136 24' xmlns='http://www.w3.org/2000/svg'><path d='M1.525 1.525a3.5 3.5 0 014.95 0L20 15.05 33.525 1.525a3.5 3.5 0 014.95 0L52 15.05 65.525 1.525a3.5 3.5 0 014.95 0L84 15.05 97.525 1.525a3.5 3.5 0 014.95 0L116 15.05l13.525-13.525a3.5 3.5 0 014.95 4.95l-16 16a3.5 3.5 0 01-4.95 0L100 8.95 86.475 22.475a3.5 3.5 0 01-4.95 0L68 8.95 54.475 22.475a3.5 3.5 0 01-4.95 0L36 8.95 22.475 22.475a3.5 3.5 0 01-4.95 0l-16-16a3.5 3.5 0 010-4.95z'/></svg>")}</style>
+
+		<meta name="description" content="Discover these top 11 open-source LLMs and build advanced AI workflows with n8n LangChain integration.">
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="n8n Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="The 11 best open-source LLMs for 2025">
+    <meta property="og:description" content="Discover these top 11 open-source LLMs and build advanced AI workflows with n8n LangChain integration.">
+    <meta property="og:url" content="https://blog.n8n.io/open-source-llm/">
+    <meta property="og:image" content="https://blog.n8n.io/content/images/size/w1200/2025/01/11-os-llm--1-.jpg">
+    <meta property="article:published_time" content="2025-02-10T09:38:00.000Z">
+    <meta property="article:modified_time" content="2025-02-11T09:16:35.000Z">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Guide">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/n8nio">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The 11 best open-source LLMs for 2025">
+    <meta name="twitter:description" content="Discover these top 11 open-source LLMs and build advanced AI workflows with n8n LangChain integration.">
+    <meta name="twitter:url" content="https://blog.n8n.io/open-source-llm/">
+    <meta name="twitter:image" content="https://blog.n8n.io/content/images/size/w1200/2025/01/11-os-llm--1-.jpg">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Yulia Dmitrievna">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="AI, Guide">
+    <meta name="twitter:site" content="@n8n_io">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="675">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "n8n Blog",
+        "url": "https://blog.n8n.io/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.n8n.io/content/images/2022/06/n8n-blog.png"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Yulia Dmitrievna",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://blog.n8n.io/content/images/2023/01/profile-pik.jpg",
+            "width": 1024,
+            "height": 1024
+        },
+        "url": "https://blog.n8n.io/author/yulia/",
+        "sameAs": []
+    },
+    "headline": "The 11 best open-source LLMs for 2025",
+    "url": "https://blog.n8n.io/open-source-llm/",
+    "datePublished": "2025-02-10T09:38:00.000Z",
+    "dateModified": "2025-02-11T09:16:35.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.n8n.io/content/images/size/w1200/2025/01/11-os-llm--1-.jpg",
+        "width": 1200,
+        "height": 675
+    },
+    "keywords": "AI, Guide",
+    "description": "Discover these top 11 open-source LLMs and build advanced AI workflows with n8n LangChain integration.",
+    "mainEntityOfPage": "https://blog.n8n.io/open-source-llm/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.119">
+    <link rel="alternate" type="application/rss+xml" title="n8n Blog" href="../rss/index.html">
+    <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.50/umd/portal.min.js" data-i18n="true" data-ghost="https://blog.n8n.io/" data-key="8626993d9b363277120ea42164" data-api="https://n8n-cloud-blog.ghost.io/ghost/api/content/" data-locale="en" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style>
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.5/umd/sodo-search.min.js" data-key="8626993d9b363277120ea42164" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.5/umd/main.css" data-sodo-search="https://n8n-cloud-blog.ghost.io/" data-locale="en" crossorigin="anonymous"></script>
+    
+    <link href="https://blog.n8n.io/webmentions/receive/" rel="webmention">
+    <script defer src="../public/cards.min.js%3Fv=4801f6d1f9"></script>
+    <link rel="stylesheet" type="text/css" href="../public/cards.min.css%3Fv=4801f6d1f9.css">
+    <script defer src="../public/member-attribution.min.js%3Fv=4801f6d1f9"></script><style>:root {--ghost-accent-color: #FD8925;}</style>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<style>
+    .content-banner {
+        display: flex;
+        align-items: center;
+        padding: 25px 30px 29px 120px;
+        gap: 20px;
+        background: url(../content/images/2023/05/banner.svg) no-repeat 0 0;
+        position: relative;
+        overflow: hidden;
+        border-radius: 32px;
+        margin-bottom: 40px;
+    }
+    .content-banner:before {
+        content: '';
+        width: 97px;
+        height: 97px;
+        background: #8287eb;
+        filter: blur(66.7196px);
+        position: absolute;
+        top: -41px;
+        left: -70px;
+    }
+    .content-banner div {
+        flex: 1 1 0%;
+    }
+    .content-banner h3 {
+        font-size: 28px;
+        line-height: 36px;
+        margin: 0;
+    }
+    .content-banner a {
+        flex-shrink: 0;
+    }
+    .content-banner p {
+        margin-bottom: 0;
+        line-height: 24px;
+    }
+    .content-banner .global-button {
+        text-decoration: none;
+        padding: 9px 20px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+</style>
+<!-- cookie consent benner injection-->  
+    <div id="n8n-consent-modal" class="consent-modal consent-modal--hidden">
+      <p class="consent-modal-header">We use analytics</p>
+      <p class="consent-modal-description">
+        We use cookies and other tracking technologies to improve your browsing experience, to analyze our website
+        traffic, assist our marketing efforts and to understand where our visitors are coming from.
+      </p>
+      <a href="https://n8n.io/legal#privacy" class="consent-modal-link">Privacy Policy</a>
+      <div>
+        <button class="consent-modal-button consent-modal-button--decline" onclick="acceptConsent(false)">
+          Decline
+        </button>
+        <button class="consent-modal-button consent-modal-button--agree" onclick="acceptConsent(true)">Agree</button>
+      </div>
+    </div>
+<style>
+      .consent-modal {
+        display: block;
+        padding: 32px 16px;
+        background: #101330;
+        box-shadow: 0px 4px 40px rgba(153, 155, 175, 0.17);
+        width: 100%;
+        position: fixed;
+        z-index: 1000;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        box-sizing: border-box;
+      }
+
+      .consent-modal--hidden {
+        display: none;
+      }
+
+      .consent-modal-link {
+        font-family: 'moderat', sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+        font-style: normal;
+        font-weight: 700;
+        text-decoration-line: underline;
+        color: #e4e6ec;
+        margin-bottom: 16px;
+        display: block;
+      }
+
+      .consent-modal-header,
+      .consent-modal-description {
+        padding: 0;
+        margin: 0 0 16px;
+        font-style: normal;
+      }
+
+      .consent-modal-header {
+        font-family: 'sunset-gothic', 'Sunset Gothic Pro', sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        color: #ffffff;
+      }
+
+      .consent-modal-description {
+        font-family: 'moderat', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #e4e6ec;
+      }
+
+      .consent-modal-button {
+        padding: 9px 20px;
+        border-radius: 6px;
+        font-style: normal;
+        font-weight: 700;
+        text-align: center;
+        color: #ffffff;
+        cursor: pointer;
+        border: none;
+        font-family: 'moderat', sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      .consent-modal-button--decline {
+        margin-right: 10px;
+        background: #40425e;
+      }
+
+      .consent-modal-button--agree {
+        background: #20b69e;
+      }
+
+      @media screen and (min-width: 992px) {
+        .consent-modal {
+          border-radius: 30px;
+          left: unset;
+          right: 14px;
+          bottom: 14px;
+          padding: 48px;
+          max-width: 621px;
+        }
+
+        .consent-modal-header {
+          font-size: 28px;
+          line-height: 36px;
+        }
+
+        .consent-modal-link,
+        .consent-modal-button,
+        .consent-modal-description {
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
+    </style>
+    <script>
+      ;(function () {
+        const GDPR_COUNTRIES = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'GB'];
+        const CONSENT_MODAL_ID = 'n8n-consent-modal';
+        const CONSENT_MODAL_HIDDEN = 'consent-modal--hidden';
+        window.acceptConsent = function (accepted) {
+          const cookie = {
+            consent: accepted
+          };
+          const d = new Date();
+          d.setTime(d.getTime() + 5 * 24 * 60 * 60 * 1000);
+          document.cookie = `n8n-consent=${JSON.stringify(cookie)}; expires=${d.toUTCString()}; path=/; domain=.n8n.io`;
+          const modal = document.getElementById(CONSENT_MODAL_ID);
+          if (modal) {
+            modal.classList.add(CONSENT_MODAL_HIDDEN);
+          }
+        };
+        async function checkCookie() {
+          try {
+            const res = await fetch('https://ipapi.co/json/');
+            const ip = await res.json();
+            const location = ip.country;
+            if (GDPR_COUNTRIES.includes(location) || ip.country_code === 'US' && ip.region_code === 'CA') {
+              var _document$cookie$matc;
+              const cookie = ((_document$cookie$matc = document.cookie.match('(^|;)\\s*' + 'n8n-consent' + '\\s*=\\s*([^;]+)')) === null || _document$cookie$matc === void 0 ? void 0 : _document$cookie$matc.pop()) || '';
+              if (cookie === '') {
+                const modal = document.getElementById(CONSENT_MODAL_ID);
+                if (modal) {
+                  modal.classList.remove(CONSENT_MODAL_HIDDEN);
+                }
+              }
+            } else {
+              acceptConsent(true);
+            }
+          } catch (e) {}
+        }
+        window.addEventListener('DOMContentLoaded', checkCookie);
+      })(window);
+    </script>
+
+<!-- Google Tag Manager (blog.n8n.io) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MQTZKBJ');</script>
+<!-- End Google Tag Manager -->
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/solid.min.css"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<script>
+  !function(e,a,o){"object"==typeof exports?(module.exports=o(),module.exports.default=o()):"function"==typeof define&&define.amd?define(o):a.slugify=o()}(0,this,(function(){var e=JSON.parse('{"$":"dollar","%":"percent","&":"and","<":"less",">":"greater","|":"or","¢":"cent","£":"pound","¤":"currency","¥":"yen","©":"(c)","ª":"a","®":"(r)","º":"o","À":"A","Á":"A","Â":"A","Ã":"A","Ä":"A","Å":"A","Æ":"AE","Ç":"C","È":"E","É":"E","Ê":"E","Ë":"E","Ì":"I","Í":"I","Î":"I","Ï":"I","Ð":"D","Ñ":"N","Ò":"O","Ó":"O","Ô":"O","Õ":"O","Ö":"O","Ø":"O","Ù":"U","Ú":"U","Û":"U","Ü":"U","Ý":"Y","Þ":"TH","ß":"ss","à":"a","á":"a","â":"a","ã":"a","ä":"a","å":"a","æ":"ae","ç":"c","è":"e","é":"e","ê":"e","ë":"e","ì":"i","í":"i","î":"i","ï":"i","ð":"d","ñ":"n","ò":"o","ó":"o","ô":"o","õ":"o","ö":"o","ø":"o","ù":"u","ú":"u","û":"u","ü":"u","ý":"y","þ":"th","ÿ":"y","Ā":"A","ā":"a","Ă":"A","ă":"a","Ą":"A","ą":"a","Ć":"C","ć":"c","Č":"C","č":"c","Ď":"D","ď":"d","Đ":"DJ","đ":"dj","Ē":"E","ē":"e","Ė":"E","ė":"e","Ę":"e","ę":"e","Ě":"E","ě":"e","Ğ":"G","ğ":"g","Ģ":"G","ģ":"g","Ĩ":"I","ĩ":"i","Ī":"i","ī":"i","Į":"I","į":"i","İ":"I","ı":"i","Ķ":"k","ķ":"k","Ļ":"L","ļ":"l","Ľ":"L","ľ":"l","Ł":"L","ł":"l","Ń":"N","ń":"n","Ņ":"N","ņ":"n","Ň":"N","ň":"n","Ō":"O","ō":"o","Ő":"O","ő":"o","Œ":"OE","œ":"oe","Ŕ":"R","ŕ":"r","Ř":"R","ř":"r","Ś":"S","ś":"s","Ş":"S","ş":"s","Š":"S","š":"s","Ţ":"T","ţ":"t","Ť":"T","ť":"t","Ũ":"U","ũ":"u","Ū":"u","ū":"u","Ů":"U","ů":"u","Ű":"U","ű":"u","Ų":"U","ų":"u","Ŵ":"W","ŵ":"w","Ŷ":"Y","ŷ":"y","Ÿ":"Y","Ź":"Z","ź":"z","Ż":"Z","ż":"z","Ž":"Z","ž":"z","Ə":"E","ƒ":"f","Ơ":"O","ơ":"o","Ư":"U","ư":"u","ǈ":"LJ","ǉ":"lj","ǋ":"NJ","ǌ":"nj","Ș":"S","ș":"s","Ț":"T","ț":"t","ə":"e","˚":"o","Ά":"A","Έ":"E","Ή":"H","Ί":"I","Ό":"O","Ύ":"Y","Ώ":"W","ΐ":"i","Α":"A","Β":"B","Γ":"G","Δ":"D","Ε":"E","Ζ":"Z","Η":"H","Θ":"8","Ι":"I","Κ":"K","Λ":"L","Μ":"M","Ν":"N","Ξ":"3","Ο":"O","Π":"P","Ρ":"R","Σ":"S","Τ":"T","Υ":"Y","Φ":"F","Χ":"X","Ψ":"PS","Ω":"W","Ϊ":"I","Ϋ":"Y","ά":"a","έ":"e","ή":"h","ί":"i","ΰ":"y","α":"a","β":"b","γ":"g","δ":"d","ε":"e","ζ":"z","η":"h","θ":"8","ι":"i","κ":"k","λ":"l","μ":"m","ν":"n","ξ":"3","ο":"o","π":"p","ρ":"r","ς":"s","σ":"s","τ":"t","υ":"y","φ":"f","χ":"x","ψ":"ps","ω":"w","ϊ":"i","ϋ":"y","ό":"o","ύ":"y","ώ":"w","Ё":"Yo","Ђ":"DJ","Є":"Ye","І":"I","Ї":"Yi","Ј":"J","Љ":"LJ","Њ":"NJ","Ћ":"C","Џ":"DZ","А":"A","Б":"B","В":"V","Г":"G","Д":"D","Е":"E","Ж":"Zh","З":"Z","И":"I","Й":"J","К":"K","Л":"L","М":"M","Н":"N","О":"O","П":"P","Р":"R","С":"S","Т":"T","У":"U","Ф":"F","Х":"H","Ц":"C","Ч":"Ch","Ш":"Sh","Щ":"Sh","Ъ":"U","Ы":"Y","Ь":"","Э":"E","Ю":"Yu","Я":"Ya","а":"a","б":"b","в":"v","г":"g","д":"d","е":"e","ж":"zh","з":"z","и":"i","й":"j","к":"k","л":"l","м":"m","н":"n","о":"o","п":"p","р":"r","с":"s","т":"t","у":"u","ф":"f","х":"h","ц":"c","ч":"ch","ш":"sh","щ":"sh","ъ":"u","ы":"y","ь":"","э":"e","ю":"yu","я":"ya","ё":"yo","ђ":"dj","є":"ye","і":"i","ї":"yi","ј":"j","љ":"lj","њ":"nj","ћ":"c","ѝ":"u","џ":"dz","Ґ":"G","ґ":"g","Ғ":"GH","ғ":"gh","Қ":"KH","қ":"kh","Ң":"NG","ң":"ng","Ү":"UE","ү":"ue","Ұ":"U","ұ":"u","Һ":"H","һ":"h","Ә":"AE","ә":"ae","Ө":"OE","ө":"oe","Ա":"A","Բ":"B","Գ":"G","Դ":"D","Ե":"E","Զ":"Z","Է":"E\'","Ը":"Y\'","Թ":"T\'","Ժ":"JH","Ի":"I","Լ":"L","Խ":"X","Ծ":"C\'","Կ":"K","Հ":"H","Ձ":"D\'","Ղ":"GH","Ճ":"TW","Մ":"M","Յ":"Y","Ն":"N","Շ":"SH","Չ":"CH","Պ":"P","Ջ":"J","Ռ":"R\'","Ս":"S","Վ":"V","Տ":"T","Ր":"R","Ց":"C","Փ":"P\'","Ք":"Q\'","Օ":"O\'\'","Ֆ":"F","և":"EV","ء":"a","آ":"aa","أ":"a","ؤ":"u","إ":"i","ئ":"e","ا":"a","ب":"b","ة":"h","ت":"t","ث":"th","ج":"j","ح":"h","خ":"kh","د":"d","ذ":"th","ر":"r","ز":"z","س":"s","ش":"sh","ص":"s","ض":"dh","ط":"t","ظ":"z","ع":"a","غ":"gh","ف":"f","ق":"q","ك":"k","ل":"l","م":"m","ن":"n","ه":"h","و":"w","ى":"a","ي":"y","ً":"an","ٌ":"on","ٍ":"en","َ":"a","ُ":"u","ِ":"e","ْ":"","٠":"0","١":"1","٢":"2","٣":"3","٤":"4","٥":"5","٦":"6","٧":"7","٨":"8","٩":"9","پ":"p","چ":"ch","ژ":"zh","ک":"k","گ":"g","ی":"y","۰":"0","۱":"1","۲":"2","۳":"3","۴":"4","۵":"5","۶":"6","۷":"7","۸":"8","۹":"9","฿":"baht","ა":"a","ბ":"b","გ":"g","დ":"d","ე":"e","ვ":"v","ზ":"z","თ":"t","ი":"i","კ":"k","ლ":"l","მ":"m","ნ":"n","ო":"o","პ":"p","ჟ":"zh","რ":"r","ს":"s","ტ":"t","უ":"u","ფ":"f","ქ":"k","ღ":"gh","ყ":"q","შ":"sh","ჩ":"ch","ც":"ts","ძ":"dz","წ":"ts","ჭ":"ch","ხ":"kh","ჯ":"j","ჰ":"h","Ṣ":"S","ṣ":"s","Ẁ":"W","ẁ":"w","Ẃ":"W","ẃ":"w","Ẅ":"W","ẅ":"w","ẞ":"SS","Ạ":"A","ạ":"a","Ả":"A","ả":"a","Ấ":"A","ấ":"a","Ầ":"A","ầ":"a","Ẩ":"A","ẩ":"a","Ẫ":"A","ẫ":"a","Ậ":"A","ậ":"a","Ắ":"A","ắ":"a","Ằ":"A","ằ":"a","Ẳ":"A","ẳ":"a","Ẵ":"A","ẵ":"a","Ặ":"A","ặ":"a","Ẹ":"E","ẹ":"e","Ẻ":"E","ẻ":"e","Ẽ":"E","ẽ":"e","Ế":"E","ế":"e","Ề":"E","ề":"e","Ể":"E","ể":"e","Ễ":"E","ễ":"e","Ệ":"E","ệ":"e","Ỉ":"I","ỉ":"i","Ị":"I","ị":"i","Ọ":"O","ọ":"o","Ỏ":"O","ỏ":"o","Ố":"O","ố":"o","Ồ":"O","ồ":"o","Ổ":"O","ổ":"o","Ỗ":"O","ỗ":"o","Ộ":"O","ộ":"o","Ớ":"O","ớ":"o","Ờ":"O","ờ":"o","Ở":"O","ở":"o","Ỡ":"O","ỡ":"o","Ợ":"O","ợ":"o","Ụ":"U","ụ":"u","Ủ":"U","ủ":"u","Ứ":"U","ứ":"u","Ừ":"U","ừ":"u","Ử":"U","ử":"u","Ữ":"U","ữ":"u","Ự":"U","ự":"u","Ỳ":"Y","ỳ":"y","Ỵ":"Y","ỵ":"y","Ỷ":"Y","ỷ":"y","Ỹ":"Y","ỹ":"y","–":"-","‘":"\'","’":"\'","“":"\\"","”":"\\"","„":"\\"","†":"+","•":"*","…":"...","₠":"ecu","₢":"cruzeiro","₣":"french franc","₤":"lira","₥":"mill","₦":"naira","₧":"peseta","₨":"rupee","₩":"won","₪":"new shequel","₫":"dong","€":"euro","₭":"kip","₮":"tugrik","₯":"drachma","₰":"penny","₱":"peso","₲":"guarani","₳":"austral","₴":"hryvnia","₵":"cedi","₸":"kazakhstani tenge","₹":"indian rupee","₺":"turkish lira","₽":"russian ruble","₿":"bitcoin","℠":"sm","™":"tm","∂":"d","∆":"delta","∑":"sum","∞":"infinity","♥":"love","元":"yuan","円":"yen","﷼":"rial","ﻵ":"laa","ﻷ":"laa","ﻹ":"lai","ﻻ":"la"}'),a=JSON.parse('{"bg":{"Й":"Y","Ц":"Ts","Щ":"Sht","Ъ":"A","Ь":"Y","й":"y","ц":"ts","щ":"sht","ъ":"a","ь":"y"},"de":{"Ä":"AE","ä":"ae","Ö":"OE","ö":"oe","Ü":"UE","ü":"ue","ß":"ss","%":"prozent","&":"und","|":"oder","∑":"summe","∞":"unendlich","♥":"liebe"},"es":{"%":"por ciento","&":"y","<":"menor que",">":"mayor que","|":"o","¢":"centavos","£":"libras","¤":"moneda","₣":"francos","∑":"suma","∞":"infinito","♥":"amor"},"fr":{"%":"pourcent","&":"et","<":"plus petit",">":"plus grand","|":"ou","¢":"centime","£":"livre","¤":"devise","₣":"franc","∑":"somme","∞":"infini","♥":"amour"},"pt":{"%":"porcento","&":"e","<":"menor",">":"maior","|":"ou","¢":"centavo","∑":"soma","£":"libra","∞":"infinito","♥":"amor"},"uk":{"И":"Y","и":"y","Й":"Y","й":"y","Ц":"Ts","ц":"ts","Х":"Kh","х":"kh","Щ":"Shch","щ":"shch","Г":"H","г":"h"},"vi":{"Đ":"D","đ":"d"},"da":{"Ø":"OE","ø":"oe","Å":"AA","å":"aa","%":"procent","&":"og","|":"eller","$":"dollar","<":"mindre end",">":"større end"},"nb":{"&":"og","Å":"AA","Æ":"AE","Ø":"OE","å":"aa","æ":"ae","ø":"oe"},"it":{"&":"e"},"nl":{"&":"en"},"sv":{"&":"och","Å":"AA","Ä":"AE","Ö":"OE","å":"aa","ä":"ae","ö":"oe"}}');function o(o,n){if("string"!=typeof o)throw new Error("slugify: string argument expected");var r=a[(n="string"==typeof n?{replacement:n}:n||{}).locale]||{},i=void 0===n.replacement?"-":n.replacement,t=void 0===n.trim||n.trim,u=o.normalize().split("").reduce((function(a,o){var t=r[o];return void 0===t&&(t=e[o]),void 0===t&&(t=o),t===i&&(t=" "),a+t.replace(n.remove||/[^\w\s$*_+~.()'"!\-:@]+/g,"")}),"");return n.strict&&(u=u.replace(/[^A-Za-z0-9\s]/g,"")),t&&(u=u.trim()),u=u.replace(/\s+/g,i),n.lower&&(u=u.toLowerCase()),u}return o.extend=function(a){Object.assign(e,a)},o}));
+</script>
+
+<style>
+  .content-banner {
+    display: flex;
+    align-items: center;
+    padding: 25px 30px 29px 120px;
+    gap: 20px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="149" height="162" fill="none" viewBox="0 0 149 162"><path stroke="%23997D00" stroke-width="2.799" d="M103.712 197.478s52.843-38.509-53.147-47.372"/><path stroke="%23484C99" stroke-width="2.799" d="M55.914 42.86c-57.712 2.444-108.25 97.476-2.26 106.339M69.258 38.473C99.64 30.633 155 3.5 103.5-4"/><path stroke="%23DDBB1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m73.595 134.165-5.161 28.726a4.864 4.864 0 0 1-5.648 3.928l-28.727-5.162a4.864 4.864 0 0 1-3.928-5.648l5.162-28.727a4.864 4.864 0 0 1 5.648-3.927l28.727 5.161a4.865 4.865 0 0 1 3.927 5.649Z"/><path stroke="%23DDBB1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m34.059 161.657 27.13 4.875-.286 1.596a5.171 5.171 0 0 1-.182.692l-.087.256a3.396 3.396 0 0 1-.19.411l-.017.096-.19.328-.185.247-.09.132-.245.269-.064.079-.189.181-.158.144-.161.119a4.821 4.821 0 0 1-3.89.974l-28.727-5.162a4.878 4.878 0 0 1-3.15-2.041l7.53-5.236a4.856 4.856 0 0 0 3.15 2.04ZM31.042 128.751c.148-.048.298-.087.45-.117l.055.01c.137-.025.265-.052.408-.067.04.004.08.011.12.021.111.021.234-.023.35-.027.076.009.15.023.224.04.088.016.167.03.255.005.163.021.325.05.486.087l1.596.287-4.855 27.019a4.865 4.865 0 0 0 .777 3.608l-7.53 5.236a4.863 4.863 0 0 1-.777-3.607l5.161-28.727a4.866 4.866 0 0 1 2.04-3.151 5.08 5.08 0 0 1 1.237-.601l.003-.016Z"/><path stroke="%23DDBB1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m62.935 133.896-29.525-5.304a4.863 4.863 0 0 0-3.607.777l7.598-5.291a4.87 4.87 0 0 1 3.54-.723l28.727 5.162c3.99.717-.35 6.527-6.733 5.379Z"/><path stroke="%23DDBB1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="M73.595 134.165c-.915 4.777-5.161 28.727-5.161 28.727a4.81 4.81 0 0 1-2.013 3.131l-7.53 5.236a4.806 4.806 0 0 0 2.012-3.131l5.305-29.525c1.147-6.383 8.248-9.226 7.387-4.438Z"/><rect width="38.918" height="38.918" fill="%23FAE166" stroke="%23DDBB1A" stroke-width="2.799" rx="5.599" transform="scale(1 -1) rotate(79.814 133.4 -50.56)"/><rect width="3.073" height="3.012" fill="%23DDBB1A" rx=".7" transform="matrix(-.571 -.821 -.821 .571 67.951 135.654)"/><rect width="1.621" height="3.243" fill="%23DDBB1A" rx=".7" transform="matrix(-.571 -.821 -.821 .571 35.667 127.491)"/><rect width="1.621" height="1.793" fill="%23DDBB1A" rx=".7" transform="matrix(-.571 -.821 -.821 .571 72.876 131.293)"/><path stroke="%236E72E0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m77.366 14.145 8.49 27.925a4.864 4.864 0 0 1-3.238 6.069l-27.925 8.49a4.865 4.865 0 0 1-6.07-3.239l-8.49-27.924a4.864 4.864 0 0 1 3.24-6.07l27.924-8.49a4.865 4.865 0 0 1 6.07 3.24Z"/><path stroke="%236E72E0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m54.693 56.63 26.373-8.02.472 1.552a5.2 5.2 0 0 1 .153.699l.04.268c.015.15.022.3.018.452l.028.093-.02.379-.052.303-.02.159-.096.351-.02.1-.087.246-.074.2-.09.18a4.815 4.815 0 0 1-3.02 2.638l-27.924 8.491a4.865 4.865 0 0 1-3.734-.381l4.319-8.092a4.866 4.866 0 0 0 3.734.381ZM37.018 28.71c.11-.11.225-.213.347-.31l.054-.016c.11-.084.212-.166.333-.245a.673.673 0 0 1 .116-.036c.108-.033.198-.128.3-.184.07-.026.143-.048.217-.066a.53.53 0 0 0 .229-.112 4.94 4.94 0 0 1 .473-.144l1.551-.471 7.986 26.264a4.864 4.864 0 0 0 2.335 2.858l-4.32 8.092a4.864 4.864 0 0 1-2.334-2.858l-8.49-27.924a4.866 4.866 0 0 1 .381-3.735c.224-.402.503-.771.827-1.098l-.005-.016Z"/><path stroke="%236E72E0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m67.754 18.762-28.7 8.727a4.865 4.865 0 0 0-2.858 2.335l4.354-8.171a4.865 4.865 0 0 1 2.822-2.256l27.925-8.49c3.879-1.18 2.662 5.968-3.543 7.855Z"/><path stroke="%236E72E0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="M77.366 14.145c1.362 4.67 8.49 27.925 8.49 27.925a4.816 4.816 0 0 1-.364 3.704l-4.32 8.092a4.817 4.817 0 0 0 .366-3.704l-8.726-28.7c-1.887-6.206 3.14-11.97 4.554-7.317Z"/><rect width="38.918" height="38.918" fill="%238287EB" stroke="%236E72E0" stroke-width="2.799" rx="5.599" transform="scale(-1 1) rotate(-73.088 -4.498 83.371)"/><rect width="1.621" height="3.243" fill="%236E72E0" rx=".7" transform="matrix(-.8822 -.4708 -.4708 .8822 84.062 48.371)"/><rect width="3.073" height="3.012" fill="%236E72E0" rx=".7" transform="matrix(-.8822 -.4708 -.4708 .8822 73.02 18.042)"/><rect width="1.621" height="3.243" fill="%236E72E0" rx=".7" transform="matrix(-.8822 -.4708 -.4708 .8822 40.562 25.48)"/><rect width="1.621" height="1.793" fill="%236E72E0" rx=".7" transform="matrix(-.8822 -.4708 -.4708 .8822 75.418 11.917)"/><path stroke="%23484C99" stroke-width=".35" d="M88.94 52.813 75.834 9.709 32.73 22.814l13.106 43.104z"/></svg>')
+      no-repeat 0 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 32px;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .content-banner {
+      flex-direction: column;
+      background: none;
+      padding-left: 30px;
+      text-align: center;
+    }
+
+    .content-banner:before {
+      display: none;
+    }
+  }
+
+  .content-banner:before {
+    content: "";
+    width: 97px;
+    height: 97px;
+    background: #8287eb;
+    filter: blur(66.7196px);
+    position: absolute;
+    top: -41px;
+    left: -70px;
+  }
+  .content-banner div {
+    flex: 1 1 0%;
+  }
+  .content-banner h3 {
+    font-size: 28px;
+    line-height: 36px;
+    margin: 0;
+  }
+  .content-banner a {
+    flex-shrink: 0;
+  }
+  .content-banner p {
+    margin-bottom: 0;
+    line-height: 24px;
+  }
+  .content-banner .global-button {
+    text-decoration: none;
+    padding: 9px 20px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .content-banner--centered {
+    flex-direction: column;
+    background: none;
+    border-radius: 0;
+    padding-left: 30px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+  .content-banner--centered:before {
+    content: "";
+    width: 168px;
+    height: 168px;
+    background: #20b69e;
+    opacity: 0.7;
+    filter: blur(62.4716px);
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .content-banner--centered .global-button {
+    color: #101330 !important;
+    border: 2px solid #20b69e;
+  }
+  .content-banner--centered .global-button:before,
+  .content-banner--centered .global-button:after {
+    background: #fff;
+  }
+  @media screen and (max-width: 1023px) {
+    .content-banner--centered:before {
+      display: block;
+    }
+  }
+  .workflow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  .workflow-content {
+    display: flex;
+    flex: 1 1 0%;
+  }
+  .workflow-nodes {
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .workflow-nodes img {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .workflow-nodes .fa {
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+  .workflow-nodes span {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background: #e4e6ec;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #101330;
+  }
+  .workflow-details {
+    margin-right: 18px;
+  }
+  .workflow-details p {
+    margin: 0;
+  }
+  .workflow .workflow-details-name {
+    color: #101330;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+  }
+  .workflow .workflow-details-name a {
+    text-decoration: none;
+  }
+  .workflow .workflow-details-name a:hover {
+    text-decoration: underline;
+  }
+  .workflow .workflow-details-stats {
+    font-size: 14px;
+    line-height: 18px;
+    color: #707183;
+  }
+  .workflow .global-button {
+    text-decoration: none;
+    padding: 9px 20px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .workflows h3 {
+    margin-bottom: 30px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .workflows .workflow {
+    border-bottom: 1px solid #E0E0EB;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-bottom: 20px;
+  }
+  .workflows .workflow-content {
+    flex-direction: column;
+  }
+  .workflows .workflow-nodes {
+    margin-bottom: 12px;
+  }
+  .workflows .workflow-nodes span,
+  .workflows .workflow-nodes img {
+    width: 32px;
+    height: 32px;
+  }
+  .workflows .workflow-nodes .fa {
+    font-size: 32px;
+  }
+  .workflows .workflow .workflow-details-name {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 5px;
+  }
+  .workflows .workflow-details-stats span {
+    margin: 0 4px;
+    display: inline-block;
+  }
+  .workflows-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .workflows-button .global-button {
+    color: #101330 !important;
+    border: 2px solid #20b69e;
+    text-decoration: none;
+    padding: 9px 20px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .workflows-button .global-button:before,
+  .workflows-button .global-button:after {
+    background: #fff;
+  }
+
+  @media screen and (max-width: 670px) {
+    .workflow-nodes {
+      display: none;
+    }
+    .workflow {
+      flex-direction: column;
+      align-items: start;
+    }
+    .workflow .global-button {
+      margin-top: 10px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .workflow-nodes {
+      flex-wrap: wrap;
+    }
+  }
+</style>
+<style>
+    .grecaptcha-badge { visibility: hidden !important; }
+</style>
+<script>
+const timeSince = (date) => {
+  const seconds = Math.floor((new Date() - new Date(date)) / 1000);
+  let interval = seconds / 31536000;
+  if (interval > 1) {
+    const roundedInterval = Math.floor(interval);
+    return roundedInterval === 1
+      ? roundedInterval + " year"
+      : roundedInterval + " years";
+  }
+  interval = seconds / 2592000;
+  if (interval > 1) {
+    const roundedInterval = Math.floor(interval);
+    return roundedInterval === 1
+      ? roundedInterval + " month"
+      : roundedInterval + " months";
+  }
+
+  interval = seconds / 86400;
+  if (interval > 1) {
+    const roundedInterval = Math.floor(interval);
+    return roundedInterval === 1
+      ? roundedInterval + " day"
+      : roundedInterval + " days";
+  }
+  interval = seconds / 3600;
+  if (interval > 1) {
+    const roundedInterval = Math.floor(interval);
+    return roundedInterval === 1
+      ? roundedInterval + " hour"
+      : roundedInterval + " hours";
+  }
+  interval = seconds / 60;
+  if (interval > 1) {
+    const roundedInterval = Math.floor(interval);
+    return roundedInterval === 1
+      ? roundedInterval + " minute"
+      : roundedInterval + " minutes";
+  }
+
+  const roundedInterval = Math.floor(interval);
+  return roundedInterval === 1
+    ? roundedInterval + " second"
+    : roundedInterval + " seconds";
+};
+const getSingleWorkflowTemplate = (
+  { name, user, nodes, url, views, createdAt },
+  extended = false,
+  texts
+) => {
+  if (name && user) {
+    const IMAGES_PER_PAGE = 5;
+    const workflowDiv = document.createElement("div");
+    const images = [];
+
+    nodes.forEach((node) => {
+      const { icon, name, color } = node;
+
+      if (icon.type === "icon") {
+        const styles = color ? `style="color:${color}"` : "";
+        images.push(`
+          <i class="fa fa-${icon.icon}" aria-hidden="true" ${styles}></i>
+        `);
+      }
+
+      if (icon.type === "file") {
+        images.push(
+          `<img src="https://blog.n8n.io/open-source-llm/${icon.fileBuffer}" alt="${name}" title="${name}" />`
+        );
+      }
+    });
+
+    const description = extended
+      ? `<p class="workflow-details-stats">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" fill="none" viewBox="0 0 12 10"><path fill="#707183" d="M4.94 6.06a1.5 1.5 0 1 1 2.121-2.12 1.5 1.5 0 0 1-2.12 2.12Z"/><path fill="#707183" fill-rule="evenodd" d="M.462 6.143C1.38 7.135 3.294 9.2 6 9.2s4.62-2.065 5.539-3.057a1.703 1.703 0 0 0 0-2.332l-.001-.002C10.703 2.907 8.749.8 6 .8 3.256.8 1.304 2.903.466 3.806l-.004.005a1.703 1.703 0 0 0 0 2.332ZM3.77 3.305c.689-.38 1.447-.62 2.23-.705a5.88 5.88 0 0 1 3.972 2.17.301.301 0 0 1 0 .414A5.88 5.88 0 0 1 6 7.4 6.216 6.216 0 0 1 1.996 5.24a.3.3 0 0 1-.01-.423A5.937 5.937 0 0 1 3.77 3.305Z" clip-rule="evenodd"/></svg>
+          ${
+            views || 0
+          } <span>•</span> <strong>by ${user}</strong> <span>•</span> ${timeSince(
+          createdAt
+        )}
+        </p>`
+      : `<p class="workflow-details-stats">by ${user}</p>`;
+
+    workflowDiv.classList.add("workflow");
+    workflowDiv.innerHTML = `
+      <div class="workflow-content">
+        <div class="workflow-nodes">
+          ${images.slice(0, IMAGES_PER_PAGE).join("")}
+          ${
+            images.length - IMAGES_PER_PAGE > 0
+              ? `<span>+${images.length - IMAGES_PER_PAGE}</span>`
+              : ""
+          }
+        </div>
+        <div class="workflow-details">
+          <p class="workflow-details-name">
+            <a href="https://blog.n8n.io/open-source-llm/${url}" class="blog-banner-workflow">${name}</a>
+          </p>
+          ${description}
+        </div>
+      </div>
+      <a href="https://blog.n8n.io/open-source-llm/${url}" class="global-button blog-banner-workflow">
+        ${texts.workflowButtonLabel}
+      </a>
+    `;
+    return workflowDiv;
+  }
+
+  return null;
+};
+
+const getMultiWorkflowTemplate = (workflows, texts) => {
+  const workflowsDiv = document.createElement("div");
+
+  workflowsDiv.classList.add("workflows");
+  workflowsDiv.innerHTML = `
+    <h3>${texts.workflowsHeader}</h3>
+  `;
+
+  workflows.forEach((workflow) => {
+    const template = getSingleWorkflowTemplate(workflow, true, texts);
+    workflowsDiv.insertAdjacentElement("beforeend", template);
+  });
+
+  workflowsDiv.innerHTML = `
+    ${workflowsDiv.innerHTML}
+    <div class="workflows-button">
+      <a href="https://blog.n8n.io/open-source-llm/${texts.workflowsButtonUrl}" class="global-button blog-banner-signup">
+        ${texts.workflowsButtonLabel}
+      </a>
+    </div>
+  `;
+
+  return workflowsDiv;
+};
+
+const parseWorkflowData = (workflowData) => {
+  const { name, username, nodes, views, createdAt } = workflowData.attributes;
+
+  return {
+    name,
+    views,
+    createdAt,
+    user: username,
+    url: `https://n8n.io/workflows/${workflowData.id}-${slugify(name, {
+      strict: true,
+      lower: true,
+    })}/`,
+    nodes: nodes.data.map((node) => {
+      return {
+        icon: node.attributes.iconData,
+        name: node.attributes.displayName,
+        color: node.attributes.defaults.color,
+      };
+    }),
+  };
+};
+
+const convertIdsToQuery = (workflowIds) => {
+  const ids = Array.isArray(workflowIds) ? workflowIds : [workflowIds];
+  return ids.map((id) => `{ id: { eq: ${id} } }`).join(",");
+};
+const fetchWorkflows = async (workflowId) => {
+  try {
+    const res = await fetch("https://api.n8n.io/graphql", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        query: `query {\n workflows(\n pagination: { start: 0, limit: 32 }\n filters: {\n status: { eq: "published" }\n or: [${convertIdsToQuery(
+          workflowId
+        )}]\n }\n ) {\n data {\n id\n attributes {\n name\n views\n createdAt\n username\n nodes {\n data {\n id\n attributes {\n defaults\n displayName\n name\n iconData\n}\n}\n}\n}\n}\n}\n}\n`,
+      }),
+    });
+    const data = await res.json();
+
+    return data.data.workflows.data.map((workflow) =>
+      parseWorkflowData(workflow)
+    );
+  } catch (e) {}
+};
+
+const workflowBanner = async (workflowContainerId, scriptEl, texts) => {
+  const workflows = await fetchWorkflows(workflowContainerId);
+  const txts = Object.assign(
+    {},
+    {
+      workflowButtonLabel: "Use this workflow",
+      workflowsHeader: "Most popular workflows with these integrations",
+      workflowsButtonLabel: "Get started",
+      workflowsButtonUrl: "https://app.n8n.cloud/register",
+    },
+    texts
+  );
+
+  if (workflows.length === 1) {
+    const template = getSingleWorkflowTemplate(workflows[0], false, txts);
+    scriptEl.insertAdjacentElement("afterend", template);
+  } else if (workflows.length > 1) {
+    const template = getMultiWorkflowTemplate(workflows, txts);
+    scriptEl.insertAdjacentElement("afterend", template);
+  }
+};
+
+var submitSubscription = async function() {
+        const token = await grecaptcha.getResponse()
+
+        if (newSubscriptionData && newSubscriptionData.data) {
+          newSubscriptionData.data.token = token
+          const res = await fetch('https://n8n-website-backend-prod.internal.n8n.io/api/newsletter/subscribe', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newSubscriptionData.data)
+          })
+
+          if (newSubscriptionData.onSuccess && res.ok) {
+            newSubscriptionData.onSuccess()
+          } else if (newSubscriptionData.onError) {
+            newSubscriptionData.onError()
+          }
+
+          window.newSubscriptionData = null
+        }
+      }
+
+const subscribeNewsletter = async (e) => {
+    e.preventDefault();
+
+    const newsletterMailFormat = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+    const ERROR_CLASS = 'error';
+    const SUCCESS_CLASS = 'success';
+    const SHOW_MESSAGE_CLASS = 'show';
+
+    const form = e.target;
+    const emailField = form.querySelector('input[name=email]');
+    const success = form.querySelector('.message--success');
+    const error = form.querySelector('.message--error');
+
+    emailField.setCustomValidity('Please insert a valid email address.');
+    emailField.disabled = true;
+    emailField.classList.remove(ERROR_CLASS);
+
+    success.classList.remove(SHOW_MESSAGE_CLASS);
+    error.classList.remove(SHOW_MESSAGE_CLASS);
+
+    if (!emailField.value.match(newsletterMailFormat)) {
+        emailField.reportValidity();
+        emailField.classList.add(ERROR_CLASS);
+    } else {
+        try {
+            await grecaptcha.execute()
+            const url = new URL(window.location)
+            const urlSource = `${url.origin}${url.pathname}`
+            const utmParams = {
+                utm_source: url.searchParams.get('utm_source') || null,
+                utm_medium: url.searchParams.get('utm_medium') || null,
+                utm_campaign: url.searchParams.get('utm_campaign') || null
+            }
+            const data = {
+                email: emailField.value,
+                created_at: Math.floor(new Date().getTime() / 1000),
+                newsletter_subscriber: true,
+                url_source: urlSource,
+                ...Object.fromEntries(Object.entries(utmParams).filter(([_, v]) => v !== null))
+            }
+
+            window.newSubscriptionData = {
+                data: data,
+                onSuccess: () => {
+                    success.classList.add(SHOW_MESSAGE_CLASS);
+                    emailField.classList.add(SUCCESS_CLASS);
+                    emailField.setCustomValidity('');
+                    emailField.disabled = false;
+                },
+                onError: () => {
+                    error.classList.add(SHOW_MESSAGE_CLASS);
+                    emailField.classList.add(ERROR_CLASS);
+                    emailField.disabled = false;
+                }
+            }
+        } catch (e) {
+            error.classList.add(SHOW_MESSAGE_CLASS);
+            emailField.classList.add(ERROR_CLASS);
+        }
+    }
+
+    emailField.disabled = false;
+}
+</script>
+<script>
+!function(){let e=function(e){let t=document.createElement("a");return t.href=e.url,t.innerText=e.tag,t},t=function(){let t=window.homePageTags||[],n=document.querySelector(".popular-tags");if(n&&t&&t.length){let r=n.querySelector(".popular-tags-listing");t.forEach(t=>{r.appendChild(e(t))}),n.classList.remove("hidden")}};window.addEventListener("DOMContentLoaded",t)}();
+
+/*
+  example:
+  var homePageTags = [
+    { tag: 'AI', url: '/tag/ai/' },
+    { tag: 'Tutorial', url: '/tag/tutorial/' }
+  ]
+*/
+
+var homePageTags = [
+   { tag: 'AI', url: '/tag/ai/' },
+    { tag: 'Database', url: '/tag/database/' },
+    { tag: 'Marketing automation', url: '/tag/marketing-automation/' },
+    { tag: 'Sales', url: '/tag/sales/' },
+    { tag: 'SecOps', url: '/tag/secops/' },
+    { tag: 'ITOps', url: '/tag/itops/' },
+    { tag: 'Tools Alternatives', url: '/tag/tools-alternatives/' },
+    { tag: 'Bot', url: '/tag/bot/' }
+]
+</script>
+    <style> 
+    table thead { background: rgba(33,172,232,.12); } 
+</style>
+	</head>
+	<body class="post-template tag-ai tag-guide tag-hash-import-2024-10-24-16-31">
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7L9C6X"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		<div class="global-wrap">
+			<div class="global-content">
+				<header class="header-section">
+	<div class="header-wrap">
+		<div class="header-logo is-image">
+			<a href="../index.html" class="is-image"><img src="../content/images/2022/06/n8n-blog.png" alt="n8n Blog"></a>
+		</div>
+		<div class="header-nav">
+			<input id="toggle" class="header-checkbox" type="checkbox">
+			<label class="header-toggle" for="toggle">
+				<span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</span>
+			</label>
+			<nav >
+				<ul>
+<li><a href="https://n8n.io/" >n8n home</a></li>
+<li><a href="../tag/tutorial/index.html" >Tutorials</a></li>
+<li><a href="../tag/guide/index.html" >Guides</a></li>
+<li><a href="../tag/tips/index.html" >Tips</a></li>
+<li><a href="../tag/interview/index.html" >Interviews</a></li>
+<li><a href="../tag/news/index.html" >News</a></li>
+</ul>
+				<ul>
+					<!-- <li class="signin"><a href="https://blog.n8n.io/signin/">Sign in</a></li>
+<li class="signup"><a href="https://blog.n8n.io/signup/" class="global-button">Sign up</a></li>
+ -->
+
+<li class="signin"><a href="https://app.n8n.cloud/">Sign in</a></li>
+<li class="signup"><a href="https://app.n8n.cloud/register" class="global-button">Get started</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>				<main class="global-main">
+					<progress class="post-progress"></progress>
+<article class="post-section">
+	<div class="post-header item is-hero">
+	<div class="item-container">
+		<div class="item-image global-image">
+			<img srcset="../content/images/size/w400/2025/01/11-os-llm--1-.jpg 400w, 
+			../content/images/size/w800/2025/01/11-os-llm--1-.jpgg 800w,
+		../content/images/size/w1200/2025/01/11-os-llm--1-.jpgpg 1200w,
+	../content/images/size/w1600/2025/01/11-os-llm--1-.jpgjpg 1600w"
+	 sizes="(max-width:480px) 350px, (max-width:1440px) 800px, 1200px"
+	 src="../content/images/size/w1200/2025/01/11-os-llm--1-.jpg"
+	 loading="lazy"
+	 alt="The 11 best open-source LLMs for 2025">		</div>
+		<div class="item-content">
+			<div class="item-tags global-tags">
+								<a href="../tag/ai/index.html">AI</a><a href="../tag/guide/index.html">Guide</a>
+			</div>
+			<h1 class="item-title">The 11 best open-source LLMs for 2025</h1>
+			<p class="item-excerpt global-zigzag">
+				<svg role='img' viewBox='0 0 136 24' xmlns='http://www.w3.org/2000/svg'><path d='M1.525 1.525a3.5 3.5 0 014.95 0L20 15.05 33.525 1.525a3.5 3.5 0 014.95 0L52 15.05 65.525 1.525a3.5 3.5 0 014.95 0L84 15.05 97.525 1.525a3.5 3.5 0 014.95 0L116 15.05l13.525-13.525a3.5 3.5 0 014.95 4.95l-16 16a3.5 3.5 0 01-4.95 0L100 8.95 86.475 22.475a3.5 3.5 0 01-4.95 0L68 8.95 54.475 22.475a3.5 3.5 0 01-4.95 0L36 8.95 22.475 22.475a3.5 3.5 0 01-4.95 0l-16-16a3.5 3.5 0 010-4.95z'/></svg>				Discover these top 11 open-source LLMs and build advanced AI workflows with n8n LangChain integration.
+			</p>
+			<div class="item-meta global-meta">
+				<div class="item-profile-image">
+					<a href="../author/yulia/index.html" class="global-image">
+						<img src="../content/images/size/w120/2023/01/profile-pik.jpg" loading="lazy" alt="Yulia Dmitrievna">					</a>
+					<a href="../author/eduard/index.html" class="global-image">
+						<img src="../content/images/size/w120/2022/05/new_pic.png" loading="lazy" alt="Eduard Parsadanyan">					</a>
+				</div>
+				<div class="item-authors">
+					<a href="../author/yulia/index.html">Yulia Dmitrievna</a>, <a href="../author/eduard/index.html">Eduard Parsadanyan</a>
+					<div class="item-time">
+						<time datetime="2025-02-10">February 10, 2025</time> ∙ 20 minutes read
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	<div class="post-content">
+		<p>Open-source models are changing the LLM landscape, promising better security, cost-efficiency, and customization for AI deployments. While <a href="https://nerdynav.com/chatgpt-statistics/?ref=blog.n8n.io"><u>ChatGPT has over 180 million users</u></a>, on-premises solutions already control more than half of the LLM market, with <a href="https://market.us/report/large-language-model-llm-market/?ref=blog.n8n.io"><u>projections indicating continued growth</u></a> in the coming years.</p><p>The trend is clear: since early 2023, new open-source model releases have nearly doubled compared to their closed-source counterparts.</p><figure class="kg-card kg-image-card kg-width-wide kg-card-hascaption"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdk1JmwPe5tLC6-XHppDpkBwOXd1t-WL4Pu871KVEdheZm03QYtJPD4WU1OXmG_ZiQDp-zHiN9BU5CruVQslAXf4QfqZd5mYPY4oUGbONPORbmVy9AZcy0hUh3QzsiBZ5ca46m1uw?key=INQ3nGlG9V9oPWqw4SkZT1dt" class="kg-image" alt="LLM releases by year: blue cards = pre-trained models, orange cards = instruction-tuned. Top half shows open-source models, bottom half contains closed-source ones. Source: https://arxiv.org/abs/2307.06435" loading="lazy" width="624" height="215"><figcaption><span style="white-space: pre-wrap;">LLM releases by year: blue cards = pre-trained models, orange cards = instruction-tuned. Top half shows open-source models, bottom half contains closed-source ones. Source: </span><a href="https://arxiv.org/abs/2307.06435?ref=blog.n8n.io"><u><span class="underline" style="white-space: pre-wrap;">https://arxiv.org/abs/2307.06435</span></u></a></figcaption></figure><p>Today, we’ll dive into the world of open-source LLMs and:</p><ul><li>discuss the reasons behind the surge in open-source LLM deployments;</li><li>recognize potential pitfalls and challenges;</li><li>review the 11 best open-source LLMs on the market;</li><li>show you how to easily access these powerful open-source AI models;</li><li>guide you on how to get started with open-source LLMs using <a href="https://n8n.io/integrations/categories/ai/?ref=blog.n8n.io"><u>Ollama and LangChain in n8n</u></a>.</li></ul><p>Read on to find out!</p><h2 id="are-there-any-open-source-llms">Are there any open-source LLMs?</h2><p>For this article, we’ve selected 11 popular open-source LLM models, focusing on both widely used and available in <a href="https://ollama.com/library?ref=blog.n8n.io"><u>Ollama</u></a>.</p><p>Our review covers a range of pre-trained “base” models and their fine-tuned variants. These models come in various sizes, and you can either use them directly or opt for fine-tuned versions from original developers or third-party sources.</p><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">While pre-trained models provide a strong foundation, fine-tuned versions are typically necessary for practical, task-specific applications. Many vendors offer pre-fine-tuned models, but users can create their own datasets to further fine-tune for more specialized use cases.</div></div><p>Here's our open-source LLM leaderboard:</p><table>
+<thead>
+<tr>
+<th>Model<br>Family</th>
+<th>Developer</th>
+<th>Params</th>
+<th>Context<br>window</th>
+<th>Use-cases</th>
+<th>License</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="index.html#llama3">Llama 3</a></td>
+<td>Meta</td>
+<td>1B, 3B, 8B,<br>70B, 405B</td>
+<td>8k, 128k</td>
+<td>- General text generation<br>- Multilingual tasks<br>- Code generation<br>- Long-form content<br>- Fine-tuning for specific domains</td>
+<td>Llama Community License</td>
+</tr>
+<tr>
+<td><a href="index.html#mistral">Mistral</a></td>
+<td>Mistral AI</td>
+<td>3B-124B</td>
+<td>32k-128k</td>
+<td>- High-complexity tasks<br>- Multilingual processing<br>- Code generation<br>- Image understanding<br>- Edge computing<br>- On-device AI<br>- Function calling<br>- Efficient large-scale processing</td>
+<td>Apache 2.0<br>Mistral Research License<br>Commercial License</td>
+</tr>
+<tr>
+<td><a href="index.html#falcon-3">Falcon 3</a></td>
+<td>TII</td>
+<td>1B, 3B,<br>7B, 10B</td>
+<td>8k-32k</td>
+<td>- General text generation<br>- Code generation<br>- Mathematical tasks<br>- Scientific knowledge<br>- Multilingual applications<br>- Fine-tuning for specific domains</td>
+<td>TII Falcon License</td>
+</tr>
+<tr>
+<td><a href="index.html#gemma-2">Gemma 2</a></td>
+<td>Google</td>
+<td>2B, 9B, 27B</td>
+<td>8k</td>
+<td>- General text generation<br>- Question answering<br>- Summarization<br>- Code generation<br>- Fine-tuning for specific domains</td>
+<td>Gemma license</td>
+</tr>
+<tr>
+<td><a href="index.html#phi-3x-4">Phi-3.x / 4</a></td>
+<td>Microsoft</td>
+<td>3.8B (mini)<br>7B (small)<br>14B (medium)<br>42B (MoE)</td>
+<td>4k, 8k, 128k<br>16k (Phi-4)</td>
+<td>- General text generation<br>- Multi-lingual tasks<br>- Code understanding<br>- Math reasoning<br>- Image understanding (vision model)<br>- On-device inference</td>
+<td>Microsoft Research<br>License</td>
+</tr>
+<tr>
+<td><a href="index.html#command-r">Command R</a></td>
+<td>Cohere</td>
+<td>7B, 35B, 104B</td>
+<td>128k</td>
+<td>- Conversational AI<br>- RAG<br>- Tool use<br>- Multilingual tasks<br>- Long-form content generation</td>
+<td>CC-BY-NC 4.0</td>
+</tr>
+<tr>
+<td><a href="index.html#stablelm">StableLM 2</a></td>
+<td>Stability AI</td>
+<td>1.6B, 3B, 12B</td>
+<td>Up to 16k</td>
+<td>- Multilingual text generation<br>- Code generation and understanding<br>- Fine-tuning for specific tasks<br>- Research and commercial applications</td>
+<td>Stability AI Community<br>and Enterprise licenses</td>
+</tr>
+<tr>
+<td><a href="index.html#starcoder">StarCoder2</a></td>
+<td>BigCode</td>
+<td>3B, 7B, 15B</td>
+<td>16k</td>
+<td>- Code completion<br>- Multi-language programming<br>- Code understanding<br>- Fine-tuning for specific tasks</td>
+<td>Apache 2.0</td>
+</tr>
+<tr>
+<td><a href="index.html#yi">Yi</a></td>
+<td>01.AI</td>
+<td>6B, 9B, 34B</td>
+<td>4k, 8k, 200k</td>
+<td>- Bilingual text generation<br>- Code understanding and generation<br>- Math and reasoning tasks<br>- Fine-tuning for specific domains</td>
+<td>Apache 2.0</td>
+</tr>
+<tr>
+<td><a href="index.html#qwen25">Qwen2.5</a></td>
+<td>Alibaba</td>
+<td>0.5B to 72B</td>
+<td>128K</td>
+<td>- General text generation<br>- Multilingual tasks<br>- Code generation<br>- Mathematical reasoning<br>- Structured data processing</td>
+<td>Qwen license<br>(3B and 72B size models)<br>Apache 2.0 (others)</td>
+</tr>
+<tr>
+<td><a href="index.html#deepseek-2x-3">DeepSeek-V2.x/V3</a></td>
+<td>DeepSeek AI</td>
+<td>16B, 236B,<br>671B for V3<br>(2.4B-37B<br>activated)</td>
+<td>32k-128k</td>
+<td>- General text generation<br>- Multilingual tasks<br>- Code generation<br>- Fine-tuning<br>- Advanced reasoning (V3)</td>
+<td>DeepSeek License</td>
+</tr>
+</tbody>
+</table>
+<p>For a comprehensive list of available LLMs beyond our selection, you can explore the <a href="https://github.com/Hannibal046/Awesome-LLM?ref=blog.n8n.io"><u>Awesome-LLM GitHub repository</u></a>, which provides an extensive catalog of language models and related resources.</p><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">Did you know that in <a href="https://n8n.io/integrations/?ref=blog.n8n.io"><u>n8n – a workflow automation tool</u></a> – you can use open-source LLMs in several ways. <br><br><b><strong style="white-space: pre-wrap;">First</strong></b>, there is a dedicated node to connect to Ollama models – the easiest way to start working with locally deployed LLMs.<br><br><b><strong style="white-space: pre-wrap;">Second</strong></b>, an OpenAI node allows you to specify a custom endpoint. This way you can swap between OpenAI and open-source LLMs – a perfect solution for working with OpenRouter.<br><br><b><strong style="white-space: pre-wrap;">Finally</strong></b>, there are several nodes to other providers, such as HuggingFace, and even a custom HTTP Request node. Thanks to the straightforward user interface in n8n, your LLM-powered workflow automations and AI-agents remain the same when you switch between models. To easily deploy a local model, begin with a <a href="https://github.com/n8n-io/self-hosted-ai-starter-kit?ref=blog.n8n.io"><u>n8n’s self-hosted AI starter kit with Ollama</u></a> integration.</div></div><h2 id="what-are-the-advantages-and-disadvantages-of-open-source-llms">What are the advantages and disadvantages of open-source LLMs?</h2><p>Open-source LLMs offer several advantages beyond publicly available model weights and increased transparency:</p><ul><li>Full ownership ensures complete control over the model, additional training data, and practical applications.</li><li>Better fine-tuning accuracy is possible due to flexible customization of local model parameters, supported by community contributions.</li><li>Longevity is guaranteed as self-hosted models don’t become obsolete, unlike closed-source providers who may “retire” older models.</li><li>Better cost estimation is possible as expenses shift from potentially volatile usage-based pricing to infrastructure costs. However, total costs may exceed subscription-based services, depending on usage patterns and infrastructure choices.</li><li>Flexibility in choosing software and hardware combinations allows for optimal resource allocation based on specific needs.</li><li>Community contributions enable model optimization through techniques like quantization and pruning, as well as the development of efficient deployment strategies and supporting tools.</li></ul><p>Despite their benefits, open-source LLMs come with some potential drawbacks:</p><ul><li>Quality may not match solutions offered by large corporations due to limited resources.</li><li>Vulnerability to attacks is a concern, as bad actors can potentially manipulate input data and interfere with the model’s behavior in open-source environments.</li><li>License requirements vary widely. Some models use permissive licenses (like Apache 2.0), others have non-commercial restrictions, and some (like Meta Llama 3) include specific terms for commercial usage.</li></ul><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">🔗</div><div class="kg-callout-text">LLMs are commonly used for <a href="../open-source-chatbot/index.html"><u>chatbots</u></a>, <a href="../llm-agents/index.html"><u>AI agents</u></a> and <a href="../ai-agentic-workflows/index.html"><u>workflow automations</u></a>. Check out our earlier blog articles.</div></div><h2 id="what-is-the-best-open-source-llm">What is the best open-source LLM?</h2><p>There is no single best open-source LLM.&nbsp;</p><p>And here’s why.</p><p>There are many benchmarks for rating the models, and various research groups decide which benchmarks are suitable. This makes objective comparison rather non-trivial.</p><p>Thanks to the Hugging Face, there is a <a href="https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?ref=blog.n8n.io"><u>public leaderboard for the open-source LLMs</u></a>.</p><p>It <a href="https://huggingface.co/docs/leaderboards/open_llm_leaderboard/about?ref=blog.n8n.io"><u>performs tests on 6 key benchmarks</u></a> using the Eleuther AI Language Model Evaluation Harness. The results are aggregated and each model receives a final score.</p><p>The leaderboard has several quick filters for consumer-grade, edge device models and so on. Several adjustable columns such as model size, quantization method, etc. are also available.</p><p>The leaderboard is an open competition and anyone can submit their model for evaluation.</p><p>Let’s take open-source LLMs one by one and have a closer look at them!</p><h3 id="llama3">Llama3</h3><p><strong>Best for</strong>: general-purpose applications with scalability needs</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcNs-EXXhwbBahLP_uGL0DEP8hPIEj81LWKRqUr13CS4XlEExOU3GMPZvDpZSn_mOMi9eXPjQxJqW9WxqcXU6Y56okQgEHgl-Da2YBdBomvAhusoiYvMnzyxvM-NcpbFXRpXsmA?key=INQ3nGlG9V9oPWqw4SkZT1dt" class="kg-image" alt="Llama3 is great for general-purpose applications with scalability needs" loading="lazy" width="624" height="312"><figcaption><span style="white-space: pre-wrap;">Llama3 is great for general-purpose applications with scalability needs</span></figcaption></figure><p><a href="https://ai.meta.com/blog/meta-llama-3/?ref=blog.n8n.io"><u>Llama 3</u></a> is Meta’s latest generation of open-source large language models, offering high performance across a wide range of tasks. The latest Llama 3.3 70B model offers performance comparable to the 405B parameter model at a fraction of the computational cost, making it an attractive option for developers and researchers.</p><div class="kg-card kg-callout-card kg-callout-card-red"><div class="kg-callout-emoji">⚙️</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">Llama 3 key features</strong></b></div></div><ul><li>Multiple model sizes: 1B, 3B, 8B, 70B, and 405B parameters</li><li>Multilingual and multimodal capabilities</li><li><a href="https://www.ibm.com/think/topics/grouped-query-attention?ref=blog.n8n.io"><u>Grouped Query Attention</u></a> (GQA) for improved inference efficiency</li><li>Context windows of 8k tokens for smaller models, up to 128k tokens for larger models</li><li>Responsible AI development with tools like Llama Guard 2 and Code Shield</li></ul><div class="kg-card kg-callout-card kg-callout-card-accent"><div class="kg-callout-emoji">🦾</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">Llama 3 use cases</strong></b></div></div><ul><li>General-purpose text generation and understanding</li><li>Multilingual applications across various languages</li><li>Code generation and understanding</li><li>Long-form content creation and analysis</li><li>Fine-tuning for specific domains or tasks</li><li>Assistant-like interactions in chatbots and AI applications</li></ul><h3 id="mistral">Mistral</h3><p><strong>Best for</strong>: on-device AI with function calling</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeDPDSDS0Zu7yMbO_1NciZn8EUNfBbbvtlsb4LXxyiUOCYfLHtuzjubjNBwh9Qjt2IUVTpBuLKPgYM8lhZuctOdQug0ZwbkvMjg2-dqerMV_ggpO6eTMTMqWr-Tng7mm1yXNk3L?key=INQ3nGlG9V9oPWqw4SkZT1dt" class="kg-image" alt="Mistral models are best for on-device AI with function calling" loading="lazy" width="624" height="312"><figcaption><span style="white-space: pre-wrap;">Mistral models are best for on-device AI with function calling</span></figcaption></figure><p><a href="https://mistral.ai/technology/?ref=blog.n8n.io#models"><u>Mistral AI</u></a>, a French startup, has rapidly become a major player in the open-source LLM space. Mistral’s models are designed to cater to a wide range of applications, from edge devices to large-scale enterprise solutions. The company offers both open-source models under Apache 2.0 license and commercial models with negotiable licenses. The latest Ministral model (3B and 8B) is particularly noteworthy for its performance in edge computing scenarios, outperforming similarly-sized models from tech giants.</p><div class="kg-card kg-callout-card kg-callout-card-red"><div class="kg-callout-emoji">⚙️</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">Mistral AI key features</strong></b></div></div><ul><li>Multiple model sizes: from 3B to 124B parameters</li><li>Multilingual and multimodal capabilities</li><li>Large context windows up to 128k tokens</li><li>Native function calling support</li><li>Mixture-of-experts (MoE) architecture in some models</li><li>Efficient models for edge computing and on-device AI</li><li>Fine-tuning capabilities for specific domains or tasks</li></ul><div class="kg-card kg-callout-card kg-callout-card-accent"><div class="kg-callout-emoji">🦾</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">Mistral AI use cases</strong></b></div></div><ul><li>General-purpose text generation and understanding</li><li>High-complexity reasoning and problem-solving</li><li>Code generation and understanding</li><li>Image analysis and multimodal tasks</li><li>On-device AI for smartphones and laptops</li><li>Efficient large-scale processing with MoE models</li></ul><h3 id="falcon-3">Falcon 3</h3><p><strong>Best for</strong>: resource-constrained environments</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXf1xoWpmVt4CR8s4DA5AgxLZW7MwJnl22H-C8a7TzRSvJdLHXQEjvkh-m0zOBBpC6SdVqhNfNwI6OlyNF_pZBv7zhEi7yo5kjVa4c7WKBcZk1lCnJEXaRjlJkJZQGtN6aXkOZt3mg?key=INQ3nGlG9V9oPWqw4SkZT1dt" class="kg-image" alt="Falcon 3 models shine in the resource-constrained environments" loading="lazy" width="624" height="312"><figcaption><span style="white-space: pre-wrap;">Falcon 3 models shine in the resource-constrained environments</span></figcaption></figure><p><a href="https://falconllm.tii.ae/falcon3/index.html?ref=blog.n8n.io"><u>Falcon 3</u></a> is the latest iteration of open-source large language models developed by the Technology Innovation Institute (TII) in Abu Dhabi. This family of models demonstrates impressive performance for small LLMs while democratizing access to advanced AI by enabling efficient operation on light infrastructures, including laptops.</p><div class="kg-card kg-callout-card kg-callout-card-red"><div class="kg-callout-emoji">⚙️</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">Falcon 3 key features</strong></b></div></div><ul><li>Multiple model sizes: 1B, 3B, 7B, and 10B parameters</li><li>Trained on 14 trillion tokens, more than double its predecessor</li><li>Superior reasoning and enhanced fine-tuning capabilities</li><li>Extended context windows up to 32k tokens (except 1B model with 8k)</li><li>Multilingual support (English, French, Spanish, and Portuguese)</li><li>Falcon3-Mamba-7B variant using an alternative <a href="https://thegradient.pub/mamba-explained/?ref=blog.n8n.io"><u>State Space Model (SSM) architecture</u></a></li></ul><div class="kg-card kg-callout-card kg-callout-card-accent"><div class="kg-callout-emoji">🦾</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">Falcon 3 use cases</strong></b></div></div><ul><li>General-purpose text generation and understanding</li><li>Code generation and comprehension</li><li>Mathematical and scientific tasks</li><li>Multilingual applications</li><li>Fine-tuning for specific domains or tasks</li><li>Efficient deployment in resource-constrained environments</li></ul><h3 id="gemma-2">Gemma 2</h3><p><strong>Best for</strong>: responsible AI development and deployment</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcfdVE34X6asO7sAQzUzSdtM0FBDxw8PQaGcKEF7ruzsDNT8I2xWG7ZL67TyaJwsgK5UBquXJdLGufM6jNawGcxEqzYgGiRLTBHsgZ0npzmwEbSwyEUxbhAsrh1KiUkmDLq_75Meg?key=INQ3nGlG9V9oPWqw4SkZT1dt" class="kg-image" alt="Gemma 2 put emphasis on responsible AI development and deployment" loading="lazy" width="624" height="277"><figcaption><span style="white-space: pre-wrap;">Gemma 2 put emphasis on responsible AI development and deployment</span></figcaption></figure><p><a href="https://ai.google.dev/gemma?ref=blog.n8n.io"><u>Gemma 2</u></a> is Google’s latest family of open-source LLMs, built on the same research and technology used to create the Gemini models. Offering strong performance for its size, Gemma 2 is designed with a focus on responsible AI development and efficient deployment.</p><div class="kg-card kg-callout-card kg-callout-card-red"><div class="kg-callout-emoji">⚙️</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">Gemma 2 key features</strong></b></div></div><ul><li>Multiple model sizes: 2B, 9B, and 27B parameters</li><li>Exceptional performance, with the 27B model outperforming some larger proprietary models</li><li>Optimized for efficient inference across various hardware, from edge devices to cloud deployments</li><li>Built-in safety advancements and responsible AI practices</li><li>Broad framework compatibility (Keras, JAX, PyTorch, Hugging Face, etc.)</li><li>Complementary tools: ShieldGemma for content safety and Gemma Scope for model interpretability</li></ul><div class="kg-card kg-callout-card kg-callout-card-accent"><div class="kg-callout-emoji">🦾</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">Gemma 2 use cases</strong></b></div></div><ul><li>General-purpose text generation and understanding</li><li>Question answering and summarization</li><li>Code generation and understanding</li><li>Fine-tuning for specific domains or tasks</li><li>Responsible AI research and development</li><li>On-device AI applications (especially with the 2B model)</li></ul><h3 id="phi-3x-4">Phi 3.x / 4</h3><p><strong>Best for</strong>: cost-effective AI solutions</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcx2s-pwPKAE0xEMkPK73iN1ovTRle20iGpOwPq-UbgEDNR1EcW17aAGP1aX3hZzh2zIRsAx5h5KXIuUNj4QxUbhme3yqXJWlOVBqBp3_3Hh8rbueqW7gs02-Y9WD85IyQtbmwq?key=INQ3nGlG9V9oPWqw4SkZT1dt" class="kg-image" alt="Phi 3.x / 4 models are best for cost-effective AI solutions" loading="lazy" width="624" height="312"><figcaption><span style="white-space: pre-wrap;">Phi 3.x / 4 models are best for cost-effective AI solutions</span></figcaption></figure><p><a href="https://azure.microsoft.com/en-us/products/phi/?ref=blog.n8n.io"><u>Phi-3.x / 4</u></a> is Microsoft’s family of open-source Small Language Models (SLMs), designed to be highly capable and cost-effective. Phi-3.5 updates bring enhanced multi-lingual support, improved multi-frame image understanding, and a new MoE architecture. Phi-4, the latest model, emphasizes data quality over size. It was trained on synthetic data, filtered public content, and academic resources. The model achieves impressive performance over a range of benchmarks with just 16B parameters.</p><div class="kg-card kg-callout-card kg-callout-card-red"><div class="kg-callout-emoji">⚙️</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">Phi LLM key features</strong></b></div></div><ul><li>Multiple model sizes: 3.8B (mini), 7B (small), 14B (medium), and 42B (MoE) parameters for Phi-3.x; 16B for Phi-4</li><li>Long context window support up to 128K tokens for Phi-3.x, 16K for Phi-4</li><li>Multilingual capabilities in over 20 languages</li><li>Multi-modal support with Phi-3.5-vision for image understanding</li><li>Mixture-of-Experts (MoE) architecture for improved efficiency</li><li>Optimized for <a href="https://onnxruntime.ai/docs/?ref=blog.n8n.io"><u>ONNX Runtime</u></a> and various hardware targets</li><li>Developed with Microsoft Responsible AI Standard</li></ul><div class="kg-card kg-callout-card kg-callout-card-accent"><div class="kg-callout-emoji">🦾</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">Phi LLM use cases</strong></b></div></div><ul><li>General-purpose text generation and understanding</li><li>Multilingual applications across various languages</li><li>Code understanding and generation</li><li>Mathematical reasoning and problem-solving</li><li>On-device and offline inference scenarios</li><li>Latency-sensitive applications</li><li>Cost-effective AI solutions for resource-constrained environments</li></ul><h3 id="command-r">Command R</h3><p><strong>Best for</strong>: enterprise-level conversational AI and RAG</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdHfb4eblhnTrB7TXUtycf_HHf-DA_6Oo-5O5VT4p89NTck4W42n1nJXMmfOJfCQR_vAmV3fjfm_Jefvc0hbAuD3jREwZbYZD759Y9uTdbH3Re43rLwPgZsuRwe5tJuDd-41uMrvw?key=INQ3nGlG9V9oPWqw4SkZT1dt" class="kg-image" alt="Command R model allows for building enterprise-level conversational AI and RAG" loading="lazy" width="624" height="312"><figcaption><span style="white-space: pre-wrap;">Command R model allows for building enterprise-level conversational AI and RAG</span></figcaption></figure><p><a href="https://cohere.com/command?ref=blog.n8n.io"><u>Command R</u></a> is Cohere’s flagship family of LLMs for enterprise-level applications with a focus on conversational interaction and long-context tasks. The family includes Command R, Command R+, and the compact Command R7B, each optimized for different use cases.</p><div class="kg-card kg-callout-card kg-callout-card-red"><div class="kg-callout-emoji">⚙️</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">Command R key features</strong></b></div></div><ul><li>Long context window of 128k tokens</li><li>Multilingual capabilities in 10 primary languages and 13 additional languages</li><li>Tool use and multi-step reasoning for complex tasks</li><li>Customizable safety modes for responsible AI deployment</li><li>Command R7B offers on-device inference capabilities</li></ul><div class="kg-card kg-callout-card kg-callout-card-accent"><div class="kg-callout-emoji">🦾</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">Command R use cases</strong></b></div></div><ul><li>High-performance conversational AI and chatbots</li><li>Complex RAG workflows for information retrieval and synthesis</li><li>Multi-step tool use for dynamic, reasoning-based tasks</li><li>Cross-lingual applications and translations</li><li>Code generation and understanding</li><li>Financial and numerical data analysis</li><li>On-device applications (with Command R7B)</li></ul><h3 id="stablelm">StableLM</h3><p><strong>Best for</strong>: rapid prototyping and experimentation</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXd9IioEnSbEwrhM6AtqdwvzKb80PlUqYUZV8Z0k3GpZk_Wv96Ekj1A3X-JKI9lVjXjhZsiG-cDDbzPM-nr61PI-nGe-Cwi80-Eli5vqPTmNHxJmzxx5A-maiHLu6tjIEPMb7YON?key=INQ3nGlG9V9oPWqw4SkZT1dt" class="kg-image" alt="StableLM is great for rapid prototyping and experimentation" loading="lazy" width="624" height="296"><figcaption><span style="white-space: pre-wrap;">StableLM is great for rapid prototyping and experimentation</span></figcaption></figure><p><a href="https://stability.ai/stable-lm?ref=blog.n8n.io"><u>StableLM</u></a> is Stability AI’s series of open-source LLMs, offering competitive performance in compact sizes. The family includes various model sizes and specializations. The 1.6B model, trained on approximately 2 trillion tokens, outperforms many models under 2B parameters on various benchmarks. Stability AI provides both base and instruction-tuned versions, along with pre-training checkpoints to facilitate further fine-tuning.</p><div class="kg-card kg-callout-card kg-callout-card-red"><div class="kg-callout-emoji">⚙️</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">StableLM key features</strong></b></div></div><ul><li>Multiple model sizes: 1.6B, 3B, and 12B parameters</li><li>Multilingual capabilities in English, Spanish, German, Italian, French, Portuguese, and Dutch</li><li>Fill in Middle (FIM) capability for flexible code generation</li><li>Long context support with sequences up to 16k tokens</li><li>Optimized for speed and performance, enabling fast experimentation</li><li>Specialized versions for code generation, Japanese and Arabic languages</li></ul><div class="kg-card kg-callout-card kg-callout-card-accent"><div class="kg-callout-emoji">🦾</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">StableLM use cases</strong></b></div></div><ul><li>General-purpose text generation and understanding in multiple languages</li><li>Code generation and understanding across various programming languages</li><li>Fine-tuning for specific domains or tasks</li><li>Research and commercial applications</li></ul><h3 id="starcoder">Starcoder</h3><p><strong>Best for</strong>: code-related tasks and multi-language programming</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdgR2Po2mCK4FYwMKCPZyiZI3VT7ODdB_0K3elfwk-pIFN02dsbM__J93SLwB3MJ_kgd0Z9BssRo4DC0YiLOEhPEG2G2YKr6Xt17app8sT8BuWBFiYYc-JVfgnBx5_muREcQbUF?key=INQ3nGlG9V9oPWqw4SkZT1dt" class="kg-image" alt="Starcoder is best-suited for code-related tasks and multi-language programming" loading="lazy" width="624" height="312"><figcaption><span style="white-space: pre-wrap;">Starcoder is best-suited for code-related tasks and multi-language programming</span></figcaption></figure><p><a href="https://github.com/bigcode-project/starcoder2?ref=blog.n8n.io"><u>StarCoder2</u></a> is the next generation of transparently trained open-source language models for code, developed by the BigCode project. It offers high performance for code-related tasks across a wide range of programming languages. The 15B model, in particular, matches the performance of much larger 33B+ models on many evaluations, while the 3B model matches the performance of the previous 15B StarCoder model, showcasing significant improvements in efficiency and capability.</p><div class="kg-card kg-callout-card kg-callout-card-red"><div class="kg-callout-emoji">⚙️</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">StarCoder2 key features</strong></b></div></div><ul><li>Multiple model sizes: 3B, 7B, and 15B parameters</li><li>Trained on 600+ programming languages (15B model)</li><li>Large context window of 16,384 tokens with sliding window attention of 4,096 tokens</li><li>Grouped Query Attention (GQA) for improved efficiency</li><li>Fill-in-the-Middle training objective</li><li>Trained on 3+ trillion tokens (3B and 7B models) to 4+ trillion tokens (15B model)</li></ul><div class="kg-card kg-callout-card kg-callout-card-accent"><div class="kg-callout-emoji">🦾</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">StarCoder2 use cases</strong></b></div></div><ul><li>Code completion and generation across multiple programming languages</li><li>Code understanding and analysis</li><li>Fine-tuning for specific programming tasks or languages</li><li>Assisting developers in various coding scenarios</li><li>Research in code language models and AI for programming</li></ul><h3 id="yi">Yi</h3><p><strong>Best for</strong>: bilingual applications (English and Chinese)</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXd90ameeVcaYVB8AZsRbu-B0GCZdxQG8_wKMxXhQ7gcM8S4k3Nvvq6HiOz39GgxUsLt8O_ucBXUxRuefoucxUhMYGyTYtopU_vRq99uoBTLJBiGanNHaiRXZHZhRBA1WIaCnUjUoA?key=INQ3nGlG9V9oPWqw4SkZT1dt" class="kg-image" alt="Yi LLM is great for bilingual applications (English and Chinese)" loading="lazy" width="624" height="312"><figcaption><span style="white-space: pre-wrap;">Yi LLM is great for bilingual applications (English and Chinese)</span></figcaption></figure><p><a href="https://huggingface.co/01-ai?ref=blog.n8n.io"><u>Yi is a series of open-source LLMs</u></a> developed by 01.AI, offering strong performance in both English and Chinese across a wide range of tasks. The Yi-1.5 series, an upgraded version of the original Yi models, delivers enhanced capabilities in coding, math, reasoning, and instruction-following.</p><div class="kg-card kg-callout-card kg-callout-card-red"><div class="kg-callout-emoji">⚙️</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">Yi key features</strong></b></div></div><ul><li>Multiple model sizes: 6B, 9B, and 34B parameters</li><li>Bilingual support for English and Chinese</li><li>Extended context windows up to 200k tokens for larger models</li><li>Continuous pre-training on high-quality corpus (500B tokens for Yi-1.5)</li><li>Fine-tuned on 3M diverse samples for improved instruction-following</li><li>Optimized for efficient deployment and fine-tuning</li></ul><div class="kg-card kg-callout-card kg-callout-card-accent"><div class="kg-callout-emoji">🦾</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">Yi use cases</strong></b></div></div><ul><li>Bilingual text generation and understanding</li><li>Code generation and comprehension</li><li>Mathematical problem-solving and reasoning tasks</li><li>Fine-tuning for domain-specific applications</li><li>Natural language processing in academic and commercial settings</li><li>Building chatbots and AI assistants</li></ul><h3 id="qwen25">Qwen2.5</h3><p><strong>Best for</strong>: multilingual and specialized tasks (coding and math)</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdAM8Foi5i6zjGDAz9xWqkrM5FfulQIrrFh3DIP1mWE_XvomYoQSqom-UElQ76ofl-g_YAmUMt3KzMCPlTdgWuBlBNAPU4yA7D0qZOlcHvGHQDsa4l7wYSdG7bKI6LSSOk-hekuXA?key=INQ3nGlG9V9oPWqw4SkZT1dt" class="kg-image" alt="Qwen2.5 works great for multilingual and specialized tasks (coding and math)" loading="lazy" width="624" height="243"><figcaption><span style="white-space: pre-wrap;">Qwen2.5 works great for multilingual and specialized tasks (coding and math)</span></figcaption></figure><p><a href="https://qwenlm.github.io/blog/qwen2.5-coder-family/?ref=blog.n8n.io"><u>Qwen2.5</u></a> is Alibaba’s latest series of open-source LLMs with a wide range of sizes and specialized variants for coding and mathematics. These models represent a significant advancement in multilingual capabilities and task-specific performance.</p><div class="kg-card kg-callout-card kg-callout-card-red"><div class="kg-callout-emoji">⚙️</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">Qwen2.5 key features</strong></b></div></div><ul><li>Multiple model sizes: 0.5B, 1.5B, 3B, 7B, 14B, 32B, and 72B parameters</li><li>Pretrained on up to 18 trillion tokens</li><li>128K token context window with generation up to 8K tokens</li><li>Multilingual support for over 29 languages</li><li>Specialized models: Qwen2.5-Coder and Qwen2.5-Math</li><li>Improved instruction following and structured data understanding</li><li>Enhanced JSON output generation</li></ul><div class="kg-card kg-callout-card kg-callout-card-accent"><div class="kg-callout-emoji">🦾</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">Qwen2.5 use cases</strong></b></div></div><ul><li>General-purpose text generation and understanding</li><li>Multilingual applications across various languages</li><li>Code generation and understanding with Qwen2.5-Coder</li><li>Mathematical reasoning and problem-solving with Qwen2.5-Math</li><li>Long-form content creation and analysis</li><li>Structured data processing and JSON output generation</li><li>Chatbot development with improved role-play capabilities</li></ul><h3 id="deepseek-2x-3">Deepseek 2.x / 3</h3><p><strong>Best for</strong>: efficient large-scale language processing</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeMOB661VVWKZBwVvPhX8liuKnDy1tAjBZOiBXydNRDzGEs-pBAZDt3EVMDjnk-Y2J7RuwmDDiz6w2nyUUo8WB6vHif36vnyOOjNdBaqqjiRZTTnx5Up59wgMGuvVuN6VwPozP0Tg?key=INQ3nGlG9V9oPWqw4SkZT1dt" class="kg-image" alt="Deepseek 2.x / 3 is a top LLM for efficient large-scale language processing" loading="lazy" width="624" height="208"><figcaption><span style="white-space: pre-wrap;">Deepseek 2.x / 3 is a top LLM for efficient large-scale language processing</span></figcaption></figure><p><a href="https://www.deepseek.com/?ref=blog.n8n.io"><u>DeepSeek</u></a> is a series of powerful open-source LLMs developed by DeepSeek AI, featuring innovative architectures for efficient inference and cost-effective training. The DeepSeek-V2 and V2.5 models are available for use with Ollama. While the recently released DeepSeek-V3 offers even more impressive capabilities with its 671B parameters, it is not yet available in Ollama at the moment of writing.</p><div class="kg-card kg-callout-card kg-callout-card-red"><div class="kg-callout-emoji">⚙️</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">DeepSeek key features</strong></b></div></div><ul><li>Mixture-of-Experts (MoE) architecture for efficient parameter usage</li><li>Multi-head Latent Attention (MLA) for improved inference efficiency</li><li>Large context windows of up to 128k tokens</li><li>Multilingual capabilities, with strong performance in English and Chinese</li><li>Optimized for both general text generation and coding tasks</li></ul><div class="kg-card kg-callout-card kg-callout-card-accent"><div class="kg-callout-emoji">🦾</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">DeepSeek use cases</strong></b></div></div><ul><li>General-purpose text generation and understanding</li><li>Multilingual applications and translations</li><li>Code generation and understanding</li><li>Fine-tuning for specific domains or tasks</li><li>Assistant-like interactions in chatbots and AI applications</li><li>Long-form content creation and analysis</li></ul><h2 id="getting-started-with-langchain-and-open-source-llms-in-n8n">Getting started with LangChain and open-source LLMs in n8n</h2><p>If running an open-source LLM seems too complicated, we’ve got great news: in n8n you can jump-start with Ollama. This powerful integration allows you to connect local models to real-world workflows and automate tasks in a meaningful way.</p><p>By combining the flexibility of open-source LLMs with the automation capabilities of n8n, you can build custom AI applications that are both powerful and efficient. LangChain (JavaScript version) is the main framework for building AI agents and LLM-powered workflows in n8n. The possibilities for customization and innovation are virtually limitless – use hundreds of pre-built nodes or write custom JS scripts.</p><p>Let’s explore how n8n makes creating custom LLM-powered apps and workflows easy!</p><p>There are at least 3 easy ways to build projects with open-source LLMs with n8n LangChain nodes:</p><ol><li>Run small Hugging Face models with a <a href="https://huggingface.co/docs/hub/security-tokens?ref=blog.n8n.io"><u>User Access Token</u></a> completely for free.</li><li>If you want to run larger models or need a quick response, try the Hugging Face service called <a href="https://huggingface.co/inference-endpoints?ref=blog.n8n.io"><u>Custom Inference Endpoints</u></a>.</li><li>If you have enough computing resources, run the model via <a href="https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama?ref=blog.n8n.io"><u>Ollama</u></a> locally or self-hosted.</li></ol><p><a href="https://docs.n8n.io/hosting/starter-kits/ai-starter-kit/?ref=blog.n8n.io"><u>LangChain nodes in n8n + Ollama integration</u></a> make it easier to access open-source LLMs and give you handy tools for working with them. Here’s a video with an overview of the most important aspects:</p><figure class="kg-card kg-embed-card"><iframe width="200" height="113" src="https://www.youtube.com/embed/xz_X2N-hPg0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" title="Installing and Using Local AI for n8n"></iframe></figure><p>After you’ve installed the self-hosted AI Starter Kit, it’s time for a practical part!</p><p>Here is a workflow template that is particularly useful for enterprise environments where data privacy is crucial. It allows for on-premises processing of personal information.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2025/01/WK-Data-ext2-1.png" class="kg-image" alt="This workflow takes an input and extracts user information in a consistent JSON format" loading="lazy" width="966" height="726" srcset="../content/images/size/w600/2025/01/WK-Data-ext2-1.png 600w, ../content/images/2025/01/WK-Data-ext2-1.png 966w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">This workflow takes an input and extracts user information in a consistent JSON format</span></figcaption></figure>
+<!--kg-card-begin: html-->
+<script>
+  workflowBanner(2766, document.currentScript);
+</script>
+<!--kg-card-end: html-->
+<h3 id="step-1-configure-the-basic-llm-chain-node">Step 1: Configure the Basic LLM Chain node</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdhMUK2iNl9WeDN06C2gN4ok2boEvaAAGnWx2KMEIpoa2Co6HhsaKWIfpHMHGh-BjjR0FR1Us38mdUSx9sW2ALlbq0YAVpxWxtC8GZJ3EI50ttS0pbVpTiVje5zwxhZzcFwr8Xi?key=INQ3nGlG9V9oPWqw4SkZT1dt" class="kg-image" alt="Provide a system prompt and make sure a user message is coming for the correct input" loading="lazy" width="624" height="427"><figcaption><span style="white-space: pre-wrap;">Provide a system prompt and make sure a user message is coming for the correct input</span></figcaption></figure><p>The core of the workflow is the <a href="https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm/?ref=blog.n8n.io"><u>Basic LLM Chain node</u></a>. Configure it as follows:</p><ul>
+<li>Activate the Require Specific Output Format toggle;</li>
+<li>In the Messages section, add a system message with the following content:<code>Please analyse the incoming user request. Extract information according to the JSON schema. Today is: {{ $now.toISO() }}</code>This is the main prompt with the general task.</li>
+</ul>
+<h3 id="step-2-add-the-chat-trigger-node">Step 2: Add the Chat Trigger node</h3><p>For this example, we’re using a <a href="https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/?ref=blog.n8n.io"><u>Chat Trigger</u></a> to simulate user input.</p><p>💡 In a real-world scenario, this could be replaced with various data sources such as database queries, voice transcripts, or incoming Webhook data.</p><h3 id="step-3-configure-the-ollama-chat-model-node">Step 3: Configure the Ollama Chat Model node</h3><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXe_9JkZcwIFJmGTUNh6PWO1GrLrqdAVhV6FQ44st0A4lgKa4Rd7fGiIi70ZFOJN4zEG4OtOCVQrgzmeBSYDOkckKYLZt2voymt_FpVlMDBsWi9PJ_yZgydacH1iJez7Z03MkHRrYg?key=INQ3nGlG9V9oPWqw4SkZT1dt" class="kg-image" alt="Ollama provides several additional settings that are specific to self-hosted LLMs" loading="lazy" width="624" height="388"><figcaption><span style="white-space: pre-wrap;">Ollama provides several additional settings that are specific to self-hosted LLMs</span></figcaption></figure><p>Connect the <a href="https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/?ref=blog.n8n.io"><u>Ollama Chat Model</u></a> node to provide the language model capabilities:</p><ul>
+<li>Set the model to <code>mistral-nemo:latest</code></li>
+<li>Set temperature to <code>0.1</code> for more consistent outputs</li>
+<li>Set keep Alive setting to <code>2h</code> to maintain the model in memory</li>
+<li>Enable the Use Memory Locking toggle for improved performance</li>
+</ul>
+<h3 id="step-4-ensure-consistent-structured-output">Step 4: Ensure consistent structured output</h3><ol><li>Add an <a href="https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserautofixing/?ref=blog.n8n.io"><u>Auto-fixing Output Parser node</u></a> and connect it to the same Ollama Chat Model.</li></ol><p>Add a <a href="https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured/?ref=blog.n8n.io"><u>Structured Output Parser node</u></a> with the following JSON schema:</p><pre><code>{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the user"
+    },
+    "surname": {
+      "type": "string",
+      "description": "Surname of the user"
+    },
+    "commtype": {
+      "type": "string",
+      "enum": ["email", "phone", "other"],
+      "description": "Method of communication"
+    },
+    "contacts": {
+      "type": "string",
+      "description": "Contact details. ONLY IF PROVIDED"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the communication occurred"
+    },
+    "subject": {
+      "type": "string",
+      "description": "Brief description of the communication topic"
+    }
+  },
+  "required": ["name", "communicationType"]
+}
+
+</code></pre><p>This JSON schema defines several JSON keys to collect various data like name, surname, communication method, user contacts, topic and the timestamp. However, only the name and the communication method are mandatory parameters. You can adjust the schema according to your needs.</p><h3 id="step-5-process-the-output">Step 5: Process the output</h3><figure class="kg-card kg-image-card kg-width-wide kg-card-hascaption"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfyOgsB5H6zjCeBegEW54Q00X8atspKeS7AEDxNtxIVTqLOFzKHGqChQ3O6qROpyTEswefxFXBAz-mGhmr8tpx-IGXIz5OGiWJrHdnTPvVSByBp6oEtIk-he8aFN3vjMEdUGxTPRQ?key=INQ3nGlG9V9oPWqw4SkZT1dt" class="kg-image" alt="As an optional step, transform the Basic LLM Chain output" loading="lazy" width="624" height="171"><figcaption><span style="white-space: pre-wrap;">As an optional step, transform the Basic LLM Chain output</span></figcaption></figure><p>After the Basic LLM Chain node processes the request, it will produce a JSON with an output key. Transform this output using a Set node:</p><p>Set the Mode to <code>JSON</code><br>
+Use the following expression: <code>{{ $json.output }}</code></p>
+<p>Adding a Set node is optional, which we did just for convenience.</p><h3 id="step-6-handle-errors">Step 6: Handle errors</h3><p>Add a <a href="https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.noop/?ref=blog.n8n.io"><u>No Operation node</u></a> after the Error output from the Basic LLM Chain node. This serves as an intermediary step before further error processing.</p><p>That’s it! Now you’re done and can test the workflow. Press the Chat button in the bottom middle part of your instance and provide a text message. For example:</p><p><code>Hi, my name is John. I'd like to be contacted via E-mail at john.smith@example.com regarding my recent order #12345.</code></p>
+<p>You can easily adapt this template to various enterprise use cases by modifying the input source, output schema or post-processing steps.</p><p>If you have a specific storage system where you’d like to save the result, consider switching the Basic LLM Chain node to a <a href="https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent/?ref=blog.n8n.io"><u>Tools Agent node</u></a>. Modern LLMs have <a href="https://docs.mistral.ai/capabilities/function_calling/?ref=blog.n8n.io"><u>built-in capabilities for function calling</u></a>, so you can define the desired output format which can immediately connect to a database and upload the parsed information.</p><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">Additionally, special <a href="https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code?ref=blog.n8n.io"><u>LangChain Code</u></a> and <a href="https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode?ref=blog.n8n.io"><u>Code Tool</u></a> nodes allow you to create completely custom chains. You can build whatever is supported by the LangChainJS library, even if a ready-made node is not yet available.</div></div><h2 id="faqs">FAQs&nbsp;</h2><div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+            <div class="kg-toggle-heading">
+                <h4 class="kg-toggle-heading-text"><span style="white-space: pre-wrap;">Which types of open-source LLMs are there?</span></h4>
+                <button class="kg-toggle-card-icon" aria-label="Expand toggle to read content">
+                    <svg id="Regular" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path class="cls-1" d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="kg-toggle-content"><p><span style="white-space: pre-wrap;">Open-source models fall into two main categories:</span></p><ul><li value="1"><b><strong style="white-space: pre-wrap;">Pre-trained LLMs </strong></b><span style="white-space: pre-wrap;">are created using vast amounts of text data. These models excel at understanding broad contexts and generating coherent text. While valuable for research and general language tasks, they may struggle with specific instructions or specialized applications.</span></li><li value="2"><b><strong style="white-space: pre-wrap;">Fine-tuned LLMs </strong></b><span style="white-space: pre-wrap;">are adapted from pre-trained models. They undergo additional training on targeted datasets, making them more effective for particular use cases like classification, summarization, or question-answering. Fine-tuned models are essential for modern applications such as turn-based chat messaging and function calling.</span></li></ul><p><span style="white-space: pre-wrap;">Note that some authors distinguish fine-tuning from</span><a href="https://medium.com/@eordaxd/fine-tuning-vs-pre-training-651d05186faf?ref=blog.n8n.io"> <u><span class="underline" style="white-space: pre-wrap;">continuous pre-training</span></u></a><span style="white-space: pre-wrap;">. The latter involves further pre-training a model with domain-specific data, such as medical or financial reports, to adapt it to a particular field.</span></p></div>
+        </div><div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+            <div class="kg-toggle-heading">
+                <h4 class="kg-toggle-heading-text"><span style="white-space: pre-wrap;">How to get started with an open-source LLM?</span></h4>
+                <button class="kg-toggle-card-icon" aria-label="Expand toggle to read content">
+                    <svg id="Regular" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path class="cls-1" d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="kg-toggle-content"><p><span style="white-space: pre-wrap;">There are two main approaches to setting up and using open-source LLMs:</span></p><ol><li value="1"><b><strong style="white-space: pre-wrap;">Install locally</strong></b><span style="white-space: pre-wrap;">. Helper tools such as Ollama simplify the process. However, the larger the model, the more difficult it is to meet the hardware requirements. The largest models require industrial-level equipment.</span></li><li value="2"><span style="white-space: pre-wrap;">Instead of hosting everything locally, it’s also possible to </span><b><strong style="white-space: pre-wrap;">rent a virtual server. </strong></b></li></ol><p><b><strong style="white-space: pre-wrap;">VPS with a GPU</strong></b><span style="white-space: pre-wrap;"> allows for faster inference, but is more expensive. Several hosting providers have automated the process of model installation and deployment, so the entire setup requires just a few clicks and some waiting time.</span></p><p><b><strong style="white-space: pre-wrap;">Traditional CPU-only virtual servers</strong></b><span style="white-space: pre-wrap;"> could be a more cost-efficient alternative, especially when deploying smaller language models without strict requirements on response time.</span></p></div>
+        </div><div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+            <div class="kg-toggle-heading">
+                <h4 class="kg-toggle-heading-text"><span style="white-space: pre-wrap;">How to run open-source LLM locally?</span></h4>
+                <button class="kg-toggle-card-icon" aria-label="Expand toggle to read content">
+                    <svg id="Regular" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path class="cls-1" d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="kg-toggle-content"><p><span style="white-space: pre-wrap;">There are several ways to run LLMs locally. The easiest approach is to use one of the available frameworks, which can get you up and running in just a few clicks:</span></p><ul><li value="1"><b><strong style="white-space: pre-wrap;">Ollama + OpenWebUI</strong></b><span style="white-space: pre-wrap;">: Ollama as a backend for quick LLM deployment, OpenWebUI as a user-friendly frontend</span></li><li value="2"><b><strong style="white-space: pre-wrap;">GPT4All</strong></b><span style="white-space: pre-wrap;">: General-purpose AI applications and document chat</span></li><li value="3"><b><strong style="white-space: pre-wrap;">LM Studio</strong></b><span style="white-space: pre-wrap;">: LLM customization and fine-tuning</span></li><li value="4"><b><strong style="white-space: pre-wrap;">Jan</strong></b><span style="white-space: pre-wrap;">: Privacy-focused LLM interactions with flexible server options</span></li><li value="5"><b><strong style="white-space: pre-wrap;">NextChat</strong></b><span style="white-space: pre-wrap;">: Building conversational AI with support for various LLMs</span></li></ul></div>
+        </div><div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+            <div class="kg-toggle-heading">
+                <h4 class="kg-toggle-heading-text"><span style="white-space: pre-wrap;">How much RAM do I need to run an LLM?</span></h4>
+                <button class="kg-toggle-card-icon" aria-label="Expand toggle to read content">
+                    <svg id="Regular" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path class="cls-1" d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="kg-toggle-content"><p><span style="white-space: pre-wrap;">To work, most LLMs have to be loaded into memory (RAM or GPU VRAM). How much memory you need depends on multiple factors (model size, quantization, etc.) as well as specific use-cases (for example, simple inference vs fine-tuning).</span></p><p><span style="white-space: pre-wrap;">Thanks to recent advances, some efficient small language models (SLMs) can run simple tasks on systems with just 4 GB of free RAM. During fine-tuning, however, the requirements increase, because you need to store intermediate steps while model parameter values are updated.</span></p><p><span style="white-space: pre-wrap;">To check specific hardware requirements for an open-source LLM, look up its model card on Hugging Face, GitHub, or the developer's website. For quick estimates, you can use the</span><a href="https://huggingface.co/spaces/Vokturz/can-it-run-llm?ref=blog.n8n.io"> <u><span class="underline" style="white-space: pre-wrap;">"Can you run it?" tool for LLMs</span></u></a><span style="white-space: pre-wrap;">.</span></p></div>
+        </div><div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+            <div class="kg-toggle-heading">
+                <h4 class="kg-toggle-heading-text"><span style="white-space: pre-wrap;">How much does it cost to run an open-source LLM?</span></h4>
+                <button class="kg-toggle-card-icon" aria-label="Expand toggle to read content">
+                    <svg id="Regular" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path class="cls-1" d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="kg-toggle-content"><p><span style="white-space: pre-wrap;">While open-source models are free to use, the deployment and infrastructure costs vary. The main cost when running open-source LLMs is hardware. Here’s a concise breakdown of costs depending on different deployment options:</span></p><ul><li value="1"><span style="white-space: pre-wrap;">Locally: free if your computer meets system requirements</span></li><li value="2"><span style="white-space: pre-wrap;">Managed API providers: free limited options or fees comparable to popular services like OpenAI / Anthropic</span></li><li value="3"><span style="white-space: pre-wrap;">Simple VPS: starting from $20/mo for CPU-only servers; GPU server prices are higher, up to dozens of dollars per hour</span></li><li value="4"><span style="white-space: pre-wrap;">Managed options with one-click install on GPU servers: premium pricing</span></li></ul></div>
+        </div><div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+            <div class="kg-toggle-heading">
+                <h4 class="kg-toggle-heading-text"><span style="white-space: pre-wrap;">Are open-source LLMs secure?</span></h4>
+                <button class="kg-toggle-card-icon" aria-label="Expand toggle to read content">
+                    <svg id="Regular" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path class="cls-1" d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="kg-toggle-content"><p><span style="white-space: pre-wrap;">Open-source LLMs offer transparency but also present certain security challenges:</span></p><ol><li value="1"><span style="white-space: pre-wrap;">Potential vulnerabilities: the publicly available model weights and architecture can attract both collaborators and potential attackers.</span></li><li value="2"><span style="white-space: pre-wrap;">Adversarial attacks: methods like data poisoning, prompt injection, and model evasion can alter input data to produce incorrect or unintended results.</span></li><li value="3"><span style="white-space: pre-wrap;">Wider attack surface: as open-source LLMs are integrated into more applications and platforms, the potential for attacks increases.</span></li></ol><p><span style="white-space: pre-wrap;">While the open-source community actively works on improving LLM security, users should implement additional safeguards. We recommend gating open-source LLMs during prototyping and rollout, making them accessible only through internal services (e.g. via n8n rather than directly by users).</span></p></div>
+        </div><div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+            <div class="kg-toggle-heading">
+                <h4 class="kg-toggle-heading-text"><span style="white-space: pre-wrap;">Why to use open-source LLMs commercially?</span></h4>
+                <button class="kg-toggle-card-icon" aria-label="Expand toggle to read content">
+                    <svg id="Regular" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path class="cls-1" d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="kg-toggle-content"><p><span style="white-space: pre-wrap;">We’ve gathered insights from real-world users on </span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1cub6sg/who_is_using_opensource_llms_commercially/?ref=blog.n8n.io"><u><span class="underline" style="white-space: pre-wrap;">Reddit</span></u></a><span style="white-space: pre-wrap;"> to understand why businesses choose open-source LLMs. Here are the key reasons:</span></p><ol><li value="1"><b><strong style="white-space: pre-wrap;">Efficient for simple tasks</strong></b><span style="white-space: pre-wrap;">: smaller open-source models can handle basic text generation, classification, and function calling effectively.</span></li><li value="2"><b><strong style="white-space: pre-wrap;">Data privacy</strong></b><span style="white-space: pre-wrap;">: ideal for processing sensitive documents without relying on external cloud services.</span></li><li value="3"><b><strong style="white-space: pre-wrap;">Integration with existing infrastructure</strong></b><span style="white-space: pre-wrap;">: easy to incorporate if you’re already running ML models on your own GPUs.</span></li><li value="4"><b><strong style="white-space: pre-wrap;">Cost-effective for high volumes</strong></b><span style="white-space: pre-wrap;">: fine-tuning smaller open-source models can offer a better price-performance ratio for large-scale operations.</span></li><li value="5"><b><strong style="white-space: pre-wrap;">Customization</strong></b><span style="white-space: pre-wrap;">: allows setting your own guidelines to align with company policies and ethical standards.</span></li><li value="6"><b><strong style="white-space: pre-wrap;">Transparency</strong></b><span style="white-space: pre-wrap;">: offers the ability to review training data and understand the model’s architecture.</span></li><li value="7"><b><strong style="white-space: pre-wrap;">Control over costs</strong></b><span style="white-space: pre-wrap;">: prototyping with open-source models helps manage expenses before committing to specific providers.ntv </span></li></ol></div>
+        </div><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">For a detailed guide on these frameworks and how to use them, check out a <a href="../local-llm/index.html"><u>comprehensive guide on running local LLMs</u></a>.</div></div><h2 id="wrap-up">Wrap Up</h2><p>In this article, we've highlighted that the best open-source LLM depends on your specific use case, as models like Llama3, Mistral, and Falcon 3 excel in different areas such as speed, accuracy, or resource efficiency. We emphasized evaluating models based on factors like task requirements, deployment setup, and available resources.</p><p>Additionally, we explained how <a href="https://n8n.io/ai/?ref=blog.n8n.io" rel="noreferrer">tools like n8n</a> and LangChain simplify integrating these LLMs into workflows, making it easier to experiment and find the right fit.</p>
+<!--kg-card-begin: html-->
+<div class="content-banner">
+  <div>
+    <h3>Create your own LLM workflows</h3>
+    <p>Build complex automations 10x faster, without fighting APIs</p>
+  </div>
+  <a href="https://app.n8n.cloud/register?ref=blog.n8n.io" class="global-button blog-banner-signup">Try n8n now</a>
+</div>
+<!--kg-card-end: html-->
+<h2 id="what%E2%80%99s-next">What’s next?</h2><p>Now that you’ve got a grasp on using open-source LLMs with n8n, you can explore more advanced AI-powered automation scenarios. Many of the concepts we’ve covered in our other AI-related articles can be applied to local models as well.</p><p>Here are some resources to continue your journey:</p><ul><li>Learn about <a href="../ai-workflow-automation/index.html"><u>AI workflow automation trends</u></a>;</li><li>Create intelligent workflows with <a href="../ai-agentic-workflows/index.html"><u>AI agents in n8n automation</u></a>;</li></ul><p>Build your own <a href="../telegram-bots/index.html"><u>AI chatbot using n8n and Telegram</u></a>.</p>
+<!--kg-card-begin: html-->
+<script>
+  workflowBanner([2729, 2384, 1980], document.currentScript);
+</script>
+<!--kg-card-end: html-->
+
+		<div class="newsletter-banner">
+	    <div class="newsletter-banner-content">
+	      <div class="section-header">
+	        <h2>Subscribe to <span>n8n newsletter</span></h2>
+	        <div class="section-subheader--bottom">
+	          Get the best, coolest, and latest in automation and low-code delivered to your inbox each week.
+	        </div>
+	      </div>
+	      <div class="newsletter-banner-form">
+	        <form autocomplete="off" class="contact-form" onsubmit="subscribeNewsletter(event)">
+	        	<div id="recaptcha" class="g-recaptcha"
+              data-sitekey="6LeAQeopAAAAAKlLsRb1weWm6T_vijoQBkGkbHzB"
+              data-callback="submitSubscription"
+              data-size="invisible">
+            </div>
+	          <div class="input-wrapper">
+	            <input placeholder="Email" name="email" type="email" required="required" class="">
+	            <div class="messages">
+	              <div class="message message--error">Something went wrong. Please try again later.</div>
+	              <div class="message message--success">Subscribed!</div>
+	            </div>
+	          </div>
+	          <button type="submit" class="submit-btn">Subscribe</button>
+	        </form>
+	      </div>
+	    </div>
+    </div>
+		<div class="post-share-section">
+	<div class="post-share-wrap">
+		<a href="https://twitter.com/intent/tweet?text=The%2011%20best%20open-source%20LLMs%20for%202025&amp;url=https://blog.n8n.io/open-source-llm/" target="_blank" rel="noopener" aria-label="Twitter share icon"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg></a>
+		<a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.n8n.io/open-source-llm/" target="_blank" rel="noopener" aria-label="Facebook share icon"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"/></svg></a>
+		<!-- <a href="javascript:" class="post-share-link" id="copy" data-clipboard-target="#copy-link" aria-label="Copy link icon"><svg role="img" viewBox="0 0 33 24" xmlns="http://www.w3.org/2000/svg"><path d="M27.3999996,13.4004128 L21.7999996,13.4004128 L21.7999996,19 L18.9999996,19 L18.9999996,13.4004128 L13.3999996,13.4004128 L13.3999996,10.6006192 L18.9999996,10.6006192 L18.9999996,5 L21.7999996,5 L21.7999996,10.6006192 L27.3999996,10.6006192 L27.3999996,13.4004128 Z M12,20.87 C7.101,20.87 3.13,16.898 3.13,12 C3.13,7.102 7.101,3.13 12,3.13 C12.091,3.13 12.181,3.139 12.272,3.142 C9.866,5.336 8.347,8.487 8.347,12 C8.347,15.512 9.866,18.662 12.271,20.857 C12.18,20.859 12.091,20.87 12,20.87 Z M20.347,0 C18.882,0 17.484,0.276 16.186,0.756 C14.882,0.271 13.473,0 12,0 C5.372,0 0,5.373 0,12 C0,18.628 5.372,24 12,24 C13.471,24 14.878,23.726 16.181,23.242 C17.481,23.724 18.88,24 20.347,24 C26.975,24 32.347,18.628 32.347,12 C32.347,5.373 26.975,0 20.347,0 Z"/></svg></a>
+		<small class="share-link-info">The link has been copied!</small> -->
+	</div>
+	<input type="text" value="https://blog.n8n.io/open-source-llm/" id="copy-link" aria-label="Copy link input">
+</div>
+	</div>
+</article>
+<aside class="nextprev-section">
+	<div class="nextprev-wrap">
+		<section class="nextprev-newer post tag-ai tag-guide tag-hash-import-2024-10-24-16-31">
+			<a href="../ai-agents/index.html" class="global-link" aria-label="AI Agents Explained: From Theory to Practical Deployment"></a>
+			<a href="../ai-agents/index.html" class="nextprev-image global-image">
+				<img src="../content/images/size/w400/2024/06/ai-chatbots-8--1---3-.png" loading="lazy" alt="AI Agents Explained: From Theory to Practical Deployment">			</a>
+			<div>
+				<small>Newer post</small>
+				<h3><a href="../ai-agents/index.html">AI Agents Explained: From Theory to Practical Deployment</a></h3>
+			</div>
+		</section>
+		<section class="nextprev-older post tag-news">
+			<a href="../2024-in-review/index.html" class="global-link" aria-label="2024 in Review"></a>
+			<div>
+				<small>Older post</small>
+				<h3><a href="../2024-in-review/index.html">2024 in Review</a></h3>
+			</div>
+			<a href="../2024-in-review/index.html" class="nextprev-image global-image">
+				<img src="../content/images/size/w400/2025/01/2024-review-v2.png" loading="lazy" alt="2024 in Review">			</a>
+		</section>
+	</div>
+</aside><div class="comments-section">
+	<div class="comments-wrap">
+			</div>
+</div>
+            <div class="related-posts">
+                  <h3>Other Guides on AI</h3>
+              <div class="global-sections global-sections-items-4">
+                <h2 class="global-label global-zigzag">
+	
+	<svg role='img' viewBox='0 0 136 24' xmlns='http://www.w3.org/2000/svg'><path d='M1.525 1.525a3.5 3.5 0 014.95 0L20 15.05 33.525 1.525a3.5 3.5 0 014.95 0L52 15.05 65.525 1.525a3.5 3.5 0 014.95 0L84 15.05 97.525 1.525a3.5 3.5 0 014.95 0L116 15.05l13.525-13.525a3.5 3.5 0 014.95 4.95l-16 16a3.5 3.5 0 01-4.95 0L100 8.95 86.475 22.475a3.5 3.5 0 01-4.95 0L68 8.95 54.475 22.475a3.5 3.5 0 01-4.95 0L36 8.95 22.475 22.475a3.5 3.5 0 01-4.95 0l-16-16a3.5 3.5 0 010-4.95z'/></svg></h2>
+<article class="item-section post tag-ai tag-tutorial">
+	<a href="../how-to-build-ai-agent/index.html" class="global-link" aria-label="How To Build Your First AI Agent (+Free Workflow Template)"></a>
+	<div class="global-image">
+		<img srcset="../content/images/size/w300/2025/04/ai-2--1-.png 300w,
+			../content/images/size/w400/2025/04/ai-2--1-.pngg 400w,
+		../content/images/size/w600/2025/04/ai-2--1-.pngng 600w"
+	 sizes="(max-width:480px) 150px, 200px"
+	 src="../content/images/size/w300/2025/04/ai-2--1-.png"
+	 loading="lazy"
+	 alt="How To Build Your First AI Agent (+Free Workflow Template)">	</div>
+	<div class="global-sections-content">
+		<h3><a href="../how-to-build-ai-agent/index.html">How To Build Your First AI Agent (+Free Workflow Template)</a></h3>
+		<div class="global-sections-meta global-meta global-pointer">
+			<a href="../author/mihai/index.html">Mihai Farcas</a>
+		</div>
+	</div>
+</article>
+                <article class="item-section post tag-ai tag-guide">
+	<a href="../ai-agent-frameworks/index.html" class="global-link" aria-label="9 AI Agent Frameworks Battle: Why Developers Prefer n8n"></a>
+	<div class="global-image">
+		<img srcset="../content/images/size/w300/2025/04/ai-agent-frameworks5.jpg 300w,
+			../content/images/size/w400/2025/04/ai-agent-frameworks5.jpgg 400w,
+		../content/images/size/w600/2025/04/ai-agent-frameworks5.jpgpg 600w"
+	 sizes="(max-width:480px) 150px, 200px"
+	 src="../content/images/size/w300/2025/04/ai-agent-frameworks5.jpg"
+	 loading="lazy"
+	 alt="9 AI Agent Frameworks Battle: Why Developers Prefer n8n">	</div>
+	<div class="global-sections-content">
+		<h3><a href="../ai-agent-frameworks/index.html">9 AI Agent Frameworks Battle: Why Developers Prefer n8n</a></h3>
+		<div class="global-sections-meta global-meta global-pointer">
+			<a href="../author/yulia/index.html">Yulia Dmitrievna</a>, <a href="../author/eduard/index.html">Eduard Parsadanyan</a>
+		</div>
+	</div>
+</article>
+                <article class="item-section post tag-ai tag-guide">
+	<a href="../ai-agents-examples/index.html" class="global-link" aria-label="15 Practical AI Agent Examples to Scale Your Business in 2025"></a>
+	<div class="global-image">
+		<img srcset="../content/images/size/w300/2025/03/Slide-16_9---172--1-.png 300w,
+			../content/images/size/w400/2025/03/Slide-16_9---172--1-.pngg 400w,
+		../content/images/size/w600/2025/03/Slide-16_9---172--1-.pngng 600w"
+	 sizes="(max-width:480px) 150px, 200px"
+	 src="../content/images/size/w300/2025/03/Slide-16_9---172--1-.png"
+	 loading="lazy"
+	 alt="15 Practical AI Agent Examples to Scale Your Business in 2025">	</div>
+	<div class="global-sections-content">
+		<h3><a href="../ai-agents-examples/index.html">15 Practical AI Agent Examples to Scale Your Business in 2025</a></h3>
+		<div class="global-sections-meta global-meta global-pointer">
+			<a href="../author/federico/index.html">Federico Trotta</a>
+		</div>
+	</div>
+</article>
+                <article class="item-section post tag-ai tag-guide">
+	<a href="../best-ai-for-coding/index.html" class="global-link" aria-label="8 best AI coding tools for developers: tested &amp; compared!"></a>
+	<div class="global-image">
+		<img srcset="../content/images/size/w300/2025/03/11-ai-tools-coding--2---2-.png 300w,
+			../content/images/size/w400/2025/03/11-ai-tools-coding--2---2-.pngg 400w,
+		../content/images/size/w600/2025/03/11-ai-tools-coding--2---2-.pngng 600w"
+	 sizes="(max-width:480px) 150px, 200px"
+	 src="../content/images/size/w300/2025/03/11-ai-tools-coding--2---2-.png"
+	 loading="lazy"
+	 alt="8 best AI coding tools for developers: tested &amp; compared!">	</div>
+	<div class="global-sections-content">
+		<h3><a href="../best-ai-for-coding/index.html">8 best AI coding tools for developers: tested &amp; compared!</a></h3>
+		<div class="global-sections-meta global-meta global-pointer">
+			<a href="../author/yulia/index.html">Yulia Dmitrievna</a>, <a href="../author/eduard/index.html">Eduard Parsadanyan</a>
+		</div>
+	</div>
+</article>
+              </div>
+            </div>
+  <aside class="two-column-posts">
+    <h3>Latest n8n guides</h3>
+    <div class="two-column-posts__inner">
+	      <section class="nextprev-newer post">
+  <a href="../how-to-build-ai-agent/index.html" class="global-link" aria-label="How To Build Your First AI Agent (+Free Workflow Template)"></a>
+    <a href="../how-to-build-ai-agent/index.html" class="nextprev-image global-image">
+      <img src="../content/images/size/w400/2025/04/ai-2--1-.png" loading="lazy" alt="How To Build Your First AI Agent (+Free Workflow Template)">    </a>
+  <div>
+    <h3><a href="../how-to-build-ai-agent/index.html">How To Build Your First AI Agent (+Free Workflow Template)</a></h3>
+  </div>
+</section>
+	      <section class="nextprev-newer post">
+  <a href="../ai-agent-frameworks/index.html" class="global-link" aria-label="9 AI Agent Frameworks Battle: Why Developers Prefer n8n"></a>
+    <a href="../ai-agent-frameworks/index.html" class="nextprev-image global-image">
+      <img src="../content/images/size/w400/2025/04/ai-agent-frameworks5.jpg" loading="lazy" alt="9 AI Agent Frameworks Battle: Why Developers Prefer n8n">    </a>
+  <div>
+    <h3><a href="../ai-agent-frameworks/index.html">9 AI Agent Frameworks Battle: Why Developers Prefer n8n</a></h3>
+  </div>
+</section>
+	      <section class="nextprev-newer post">
+  <a href="../series-b/index.html" class="global-link" aria-label="n8n closes €55M Series B round led by Highland Europe"></a>
+    <a href="../series-b/index.html" class="nextprev-image global-image">
+      <img src="../content/images/size/w400/2025/03/seriesB-blog.jpg" loading="lazy" alt="n8n closes €55M Series B round led by Highland Europe">    </a>
+  <div>
+    <h3><a href="../series-b/index.html">n8n closes €55M Series B round led by Highland Europe</a></h3>
+  </div>
+</section>
+	      <section class="nextprev-newer post">
+  <a href="../ai-agents-examples/index.html" class="global-link" aria-label="15 Practical AI Agent Examples to Scale Your Business in 2025"></a>
+    <a href="../ai-agents-examples/index.html" class="nextprev-image global-image">
+      <img src="../content/images/size/w400/2025/03/Slide-16_9---172--1-.png" loading="lazy" alt="15 Practical AI Agent Examples to Scale Your Business in 2025">    </a>
+  <div>
+    <h3><a href="../ai-agents-examples/index.html">15 Practical AI Agent Examples to Scale Your Business in 2025</a></h3>
+  </div>
+</section>
+    </div>
+  </aside>
+
+					<!-- <div class="subscribe-section">
+	<div class="subscribe-wrap">
+		<h3>Subscribe to new posts</h3>
+		<form data-members-form="subscribe" class="subscribe-form">
+			<input data-members-email type="email" placeholder="Your email address" aria-label="Your email address" required>
+			<button class="global-button" type="submit">Subscribe</button>
+		</form>
+		<div class="subscribe-alert">
+			<small class="alert-loading global-alert">Processing your application</small>
+			<small class="alert-success global-alert">Please check your inbox and click the link to confirm your subscription</small>
+			<small class="alert-error global-alert">There was an error sending the email</small>
+		</div>
+	</div>
+</div>
+ -->
+				</main>
+				<div id="subFooter" class="sub-footer">
+  <div class="sub-footer-container">
+    <div class="footer-columns">
+      <div>
+        <div class="column-name">Popular integrations</div>
+        <ul class="col-links">
+          <li>
+            <a href="https://n8n.io/integrations/google-sheets/" class="footer-link"> Google Sheets </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/telegram/" class="footer-link"> Telegram </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/mysql/" class="footer-link"> MySQL </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/slack/" class="footer-link"> Slack </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/discord/" class="footer-link"> Discord </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/postgres/" class="footer-link"> Postgres </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/notion/" class="footer-link"> Notion </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/gmail/" class="footer-link"> Gmail </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/airtable/" class="footer-link"> Airtable </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/google-drive/" class="footer-link"> Google Drive </a>
+          </li>
+        </ul>
+        <div class="bottom-link hidden-link">
+          <a href="https://n8n.io/integrations/" class="footer-link">
+            Show more integrations
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10" width="7px" height="7px">
+              <g clip-path="url(#a)">
+                <path
+                  fill="#111010"
+                  fill-rule="evenodd"
+                  d="M7.678 1.36H.481V0H10v9.52H8.64v-7.2L.962 10 0 9.038 7.678 1.36Z"
+                  clip-rule="evenodd"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h10v10H0z"></path>
+                </clipPath>
+              </defs></svg
+            ></a>
+        </div>
+        <button
+          type="button"
+          class="footer-link footer-link--more"
+          onclick="document.getElementById('subFooter').classList.toggle('sub-footer--full')"></button>
+      </div>
+      <div>
+        <div class="column-name">Trending combinations</div>
+        <ul class="col-links">
+          <li>
+            <a href="https://n8n.io/integrations/hubspot/and/salesforce/" class="footer-link">
+              HubSpot and Salesforce
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/twilio/and/whatsapp-business-cloud/" class="footer-link">
+              Twilio and WhatsApp
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/github/and/jira-software/" class="footer-link">
+              GitHub and Jira
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/asana/and/slack/" class="footer-link"> Asana and Slack </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/asana/and/salesforce/" class="footer-link">
+              Asana and Salesforce
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/jira-software/and/slack/" class="footer-link">
+              Jira and Slack
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/jira-software/and/salesforce/" class="footer-link">
+              Jira and Salesforce
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/github/and/slack/" class="footer-link"> GitHub and Slack </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/hubspot/and/quickbooks-online/" class="footer-link">
+              HubSpot and QuickBooks
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/hubspot/and/slack/" class="footer-link"> HubSpot and Slack </a>
+          </li>
+        </ul>
+        <div class="bottom-link hidden-link">
+          <a href="https://n8n.io/integrations/" class="footer-link">
+            Show more integrations
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10" width="7px" height="7px">
+              <g clip-path="url(#a)">
+                <path
+                  fill="#111010"
+                  fill-rule="evenodd"
+                  d="M7.678 1.36H.481V0H10v9.52H8.64v-7.2L.962 10 0 9.038 7.678 1.36Z"
+                  clip-rule="evenodd"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h10v10H0z"></path>
+                </clipPath>
+              </defs></svg
+            ></a>
+        </div>
+        <button
+          type="button"
+          class="footer-link footer-link--more"
+          onclick="document.getElementById('subFooter').classList.toggle('sub-footer--full')"></button>
+      </div>
+      <div>
+        <div class="column-name">Top integration categories</div>
+        <ul class="col-links">
+          <li>
+            <a href="https://n8n.io/integrations/categories/development/" class="footer-link"> Development </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/categories/communication/" class="footer-link">
+              Communication
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/categories/langchain/" class="footer-link"> Langchain </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/categories/ai/" class="footer-link"> AI </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/categories/data-and-storage/" class="footer-link">
+              Data &amp; Storage
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/categories/marketing/" class="footer-link"> Marketing </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/categories/productivity/" class="footer-link">
+              Productivity
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/categories/sales/" class="footer-link"> Sales </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/categories/utility/" class="footer-link"> Utility </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/categories/miscellaneous/" class="footer-link">
+              Miscellaneous
+            </a>
+          </li>
+        </ul>
+        <div class="bottom-link hidden-link">
+          <a href="https://n8n.io/integrations/" class="footer-link">
+            Explore more categories
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10" width="7px" height="7px">
+              <g clip-path="url(#a)">
+                <path
+                  fill="#111010"
+                  fill-rule="evenodd"
+                  d="M7.678 1.36H.481V0H10v9.52H8.64v-7.2L.962 10 0 9.038 7.678 1.36Z"
+                  clip-rule="evenodd"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h10v10H0z"></path>
+                </clipPath>
+              </defs></svg
+            ></a>
+        </div>
+        <button
+          type="button"
+          class="footer-link footer-link--more"
+          onclick="document.getElementById('subFooter').classList.toggle('sub-footer--full')"></button>
+      </div>
+      <div>
+        <div class="column-name">Trending templates</div>
+        <ul class="col-links">
+          <li>
+            <a href="https://n8n.io/workflows/1750-creating-an-api-endpoint/" class="footer-link">
+              Creating an API endpoint
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/workflows/1954-ai-agent-chat/" class="footer-link">
+              AI agent chat
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/workflows/1951-scrape-and-summarize-webpages-with-ai/" class="footer-link">
+              Scrape and summarize webpages with AI
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/workflows/1700-very-quick-quickstart/" class="footer-link">
+              Very quick quickstart
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/workflows/1748-pulling-data-from-services-that-n8n-doesnt-have-a-pre-built-integration-for/" class="footer-link">
+              Pulling data from services that n8n doesn’t have a pre-built integration for
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/workflows/1747-joining-different-datasets/" class="footer-link">
+              Joining different datasets
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/workflows/1534-back-up-your-n8n-workflows-to-github/" class="footer-link">
+              Back Up Your n8n Workflows To Github
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/workflows/2006-ai-agent-that-can-scrape-webpages/" class="footer-link">
+              AI agent that can scrape webpages
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/workflows/1862-openai-gpt-3-company-enrichment-from-website-content/" class="footer-link">
+              OpenAI GPT-3: Company Enrichment from website content
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/workflows/1934-telegram-ai-chatbot/" class="footer-link">
+              Telegram AI Chatbot
+            </a>
+          </li>
+        </ul>
+        <div class="bottom-link hidden-link">
+          <a href="https://n8n.io/workflows/" class="footer-link">
+            Explore 800+ workflow templates
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10" width="7px" height="7px">
+              <g clip-path="url(#a)">
+                <path
+                  fill="#111010"
+                  fill-rule="evenodd"
+                  d="M7.678 1.36H.481V0H10v9.52H8.64v-7.2L.962 10 0 9.038 7.678 1.36Z"
+                  clip-rule="evenodd"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h10v10H0z"></path>
+                </clipPath>
+              </defs></svg
+            ></a>
+        </div>
+        <button
+          type="button"
+          class="footer-link footer-link--more"
+          onclick="document.getElementById('subFooter').classList.toggle('sub-footer--full')"></button>
+      </div>
+      <div>
+        <div class="column-name">Top guides</div>
+        <ul class="col-links">
+          <li>
+            <a href="../telegram-bots/index.html" class="footer-link"> Telegram bots </a>
+          </li>
+          <li>
+            <a href="../open-source-chatbot/index.html" class="footer-link"> Open-source chatbot </a>
+          </li>
+          <li>
+            <a href="index.html" class="footer-link"> Open-source LLM </a>
+          </li>
+          <li>
+            <a href="../open-source-low-code-platforms.html" class="footer-link"> Open-source low-code platforms </a>
+          </li>
+          <li>
+            <a href="../free-zapier-alternatives/index.html" class="footer-link"> Zapier alternatives </a>
+          </li>
+          <li>
+            <a href="../make-vs-zapier/index.html" class="footer-link"> Make vs Zapier </a>
+          </li>
+          <li class="hidden-link">
+            <a href="../ai-agents/index.html" class="footer-link"> AI agents </a>
+          </li>
+          <li class="hidden-link">
+            <a href="../ai-coding-assistants/index.html" class="footer-link"> AI coding assistants </a>
+          </li>
+          <li class="hidden-link">
+            <a href="../create-chatgpt-discord-bot/index.html" class="footer-link"> ChatGPT Discord bot </a>
+          </li>
+          <li class="hidden-link">
+            <a href="../best-ai-chatbot/index.html" class="footer-link"> Best AI chatbot </a>
+          </li>
+        </ul>
+        <div class="bottom-link hidden-link">
+          <a href="../index.html" class="footer-link">
+            Show guides
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10" width="7px" height="7px">
+              <g clip-path="url(#a)">
+                <path
+                  fill="#111010"
+                  fill-rule="evenodd"
+                  d="M7.678 1.36H.481V0H10v9.52H8.64v-7.2L.962 10 0 9.038 7.678 1.36Z"
+                  clip-rule="evenodd"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h10v10H0z"></path>
+                </clipPath>
+              </defs></svg
+            ></a>
+        </div>
+        <button
+          type="button"
+          class="footer-link footer-link--more"
+          onclick="document.getElementById('subFooter').classList.toggle('sub-footer--full')"></button>
+      </div>
+    </div>
+  </div>
+</div><footer class="footer-section global-footer">
+	<div class="footer-wrap">
+		<div class="footer-data">
+			<div class="footer-logo">
+				<a href="../index.html" class="is-image"><img src="../content/images/2022/06/n8n-blog.png" alt="n8n Blog"></a>
+			</div>
+			<p class="footer-description">Automate without limits</p>
+			<div class="footer-icons">
+				<a href="https://www.facebook.com/n8nio" aria-label="link Facebook"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"/></svg></a>
+				<a href="https://x.com/n8n_io" aria-label="link Twitter"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg></a>
+				<a href="https://github.com/n8n-io/n8n" aria-label="link GitHub"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+				<a href="https://discord.gg/n8n" aria-label="link Discord"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.222 0c1.406 0 2.54 1.137 2.607 2.475V24l-2.677-2.273-1.47-1.338-1.604-1.398.67 2.205H3.71c-1.402 0-2.54-1.065-2.54-2.476V2.48C1.17 1.142 2.31.003 3.715.003h16.5L20.222 0zm-6.118 5.683h-.03l-.202.2c2.073.6 3.076 1.537 3.076 1.537-1.336-.668-2.54-1.002-3.744-1.137-.87-.135-1.74-.064-2.475 0h-.2c-.47 0-1.47.2-2.81.735-.467.203-.735.336-.735.336s1.002-1.002 3.21-1.537l-.135-.135s-1.672-.064-3.477 1.27c0 0-1.805 3.144-1.805 7.02 0 0 1 1.74 3.743 1.806 0 0 .4-.533.805-1.002-1.54-.468-2.14-1.404-2.14-1.404s.134.066.335.2h.06c.03 0 .044.015.06.03v.006c.016.016.03.03.06.03.33.136.66.27.93.4.466.202 1.065.403 1.8.536.93.135 1.996.2 3.21 0 .6-.135 1.2-.267 1.8-.535.39-.2.87-.4 1.397-.737 0 0-.6.936-2.205 1.404.33.466.795 1 .795 1 2.744-.06 3.81-1.8 3.87-1.726 0-3.87-1.815-7.02-1.815-7.02-1.635-1.214-3.165-1.26-3.435-1.26l.056-.02zm.168 4.413c.703 0 1.27.6 1.27 1.335 0 .74-.57 1.34-1.27 1.34-.7 0-1.27-.6-1.27-1.334.002-.74.573-1.338 1.27-1.338zm-4.543 0c.7 0 1.266.6 1.266 1.335 0 .74-.57 1.34-1.27 1.34-.7 0-1.27-.6-1.27-1.334 0-.74.57-1.338 1.27-1.338z"/></svg></a>
+				<a href="https://www.linkedin.com/company/n8n/" aria-label="link LinkedIn"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+				<a href="https://www.youtube.com/c/n8n-io" aria-label="link YouTube"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path class="a" d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+				
+
+			</div>
+		</div>
+		<div class="footer-nav">
+			
+
+
+
+<div class="footer-nav-column">
+	<!-- <small>Column 1</small> -->
+	<ul>
+		<li><a href="https://n8n.io/">n8n home</a></li>
+		<li><a href="https://n8n.io/features/">Features</a></li>
+		<li><a href="https://n8n.io/pricing/">Pricing</a></li>
+		<li><a href="https://docs.n8n.io/">Docs</a></li>
+	</ul>
+</div>
+
+<div class="footer-nav-column">
+	<!-- <small>Column 2</small> -->
+	<ul>
+		<li><a href="https://community.n8n.io">Community</a></li>
+	</ul>
+</div>
+
+
+		</div>
+	</div>
+	<div class="footer-copyright">
+		Made with ❤️ in Berlin. © 2025 n8n | All rights reserved.
+	</div>
+</footer>
+			</div>
+		</div>
+		<div id="notifications" class="global-notification">
+	<div class="subscribe">You’ve successfully subscribed to n8n Blog</div>
+	<div class="signin">Welcome back! You’ve successfully signed in.</div>
+	<div class="signup">Great! You’ve successfully signed up.</div>
+	<div class="expired">Your link has expired</div>
+	<div class="checkout-success">Success! Check your email for magic link to sign-in.</div>
+</div>
+				<script src="../assets/js/global.js%3Fv=4801f6d1f9"></script>
+		<script src="../assets/js/post.js%3Fv=4801f6d1f9"></script>
+		
+		<script>
+!function(){"use strict";const p=new URLSearchParams(window.location.search),isAction=p.has("action"),isStripe=p.has("stripe"),success=p.get("success"),action=p.get("action"),stripe=p.get("stripe"),n=document.getElementById("notifications"),a="is-subscribe",b="is-signin",c="is-signup",d="is-expired",e="is-checkout-success";p&&(isAction&&(action=="subscribe"&&success=="true"&&n.classList.add(a),action=="signin"&&success=="true"&&n.classList.add(b),action=="signup"&&success=="true"&&n.classList.add(c),success=="false"&&n.classList.add(d)),isStripe&&stripe=="success"&&n.classList.add(e),(isAction||isStripe)&&setTimeout(function(){window.history.replaceState(null,null,window.location.pathname),n.classList.remove(a,b,c,d,e)},5000))}();
+</script>
+
+		
+		<script>
+
+// Contain every link in an array.
+var links = document.querySelectorAll('a');
+
+// For every link,
+for (var i = 0; i < links.length; i++) {
+
+  // if the link's hostname is different from this Ghost's hostname,
+  // i.e. if the link is external,
+  if (links[i].hostname != window.location.hostname) {
+
+    // change the target and rel value as the following.
+    links[i].target = '_blank';
+    links[i].rel = 'noopener';
+
+  }
+}
+</script>
+	</body>
+</html>

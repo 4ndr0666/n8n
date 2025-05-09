@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<title>Top 10 data orchestration tools: a detailed roundup – n8n Blog</title>
+		<meta name="HandheldFriendly" content="True">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400;1,800;1,900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;0,900;1,400;1,800;1,900&display=swap"> -->
+		<link rel="stylesheet" type="text/css" href="../assets/css/screen.css%3Fv=4801f6d1f9.css">
+		<style>hr{background-image:url("data:image/svg+xml;utf8,<svg role='img' viewBox='0 0 136 24' xmlns='http://www.w3.org/2000/svg'><path d='M1.525 1.525a3.5 3.5 0 014.95 0L20 15.05 33.525 1.525a3.5 3.5 0 014.95 0L52 15.05 65.525 1.525a3.5 3.5 0 014.95 0L84 15.05 97.525 1.525a3.5 3.5 0 014.95 0L116 15.05l13.525-13.525a3.5 3.5 0 014.95 4.95l-16 16a3.5 3.5 0 01-4.95 0L100 8.95 86.475 22.475a3.5 3.5 0 01-4.95 0L68 8.95 54.475 22.475a3.5 3.5 0 01-4.95 0L36 8.95 22.475 22.475a3.5 3.5 0 01-4.95 0l-16-16a3.5 3.5 0 010-4.95z'/></svg>")}</style>
+
+		<meta name="description" content="Looking for data orchestration solutions? Dive into our comprehensive overview of the top 10 tools, including n8n, Prefect and Azure Data Factory">
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="n8n Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Top 10 data orchestration tools: a detailed roundup">
+    <meta property="og:description" content="Looking for data orchestration solutions? Dive into our comprehensive overview of the top 10 tools, including n8n, Prefect, and Azure Data Factory!">
+    <meta property="og:url" content="https://blog.n8n.io/data-orchestration-tools/">
+    <meta property="og:image" content="https://blog.n8n.io/content/images/size/w1200/2023/12/data-orchestration-tools5.jpg">
+    <meta property="article:published_time" content="2023-12-18T13:35:28.000Z">
+    <meta property="article:modified_time" content="2023-12-18T13:35:28.000Z">
+    <meta property="article:tag" content="Guide">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/n8nio">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Top 10 data orchestration tools: a detailed roundup">
+    <meta name="twitter:description" content="Looking for data orchestration solutions? Dive into our comprehensive overview of the top 10 tools, including n8n, Prefect, and Azure Data Factory!">
+    <meta name="twitter:url" content="https://blog.n8n.io/data-orchestration-tools/">
+    <meta name="twitter:image" content="https://blog.n8n.io/content/images/size/w1200/2023/12/data-orchestration-tools5.jpg">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Yulia Dmitrievna">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Guide">
+    <meta name="twitter:site" content="@n8n_io">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="675">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "n8n Blog",
+        "url": "https://blog.n8n.io/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.n8n.io/content/images/2022/06/n8n-blog.png"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Yulia Dmitrievna",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://blog.n8n.io/content/images/2023/01/profile-pik.jpg",
+            "width": 1024,
+            "height": 1024
+        },
+        "url": "https://blog.n8n.io/author/yulia/",
+        "sameAs": []
+    },
+    "headline": "Top 10 data orchestration tools: a detailed roundup",
+    "url": "https://blog.n8n.io/data-orchestration-tools/",
+    "datePublished": "2023-12-18T13:35:28.000Z",
+    "dateModified": "2023-12-18T13:35:28.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.n8n.io/content/images/size/w1200/2023/12/data-orchestration-tools5.jpg",
+        "width": 1200,
+        "height": 675
+    },
+    "keywords": "Guide",
+    "description": "Looking for data orchestration solutions? Dive into our comprehensive overview of the top 10 tools, including n8n, Prefect, and Azure Data Factory!",
+    "mainEntityOfPage": "https://blog.n8n.io/data-orchestration-tools/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.119">
+    <link rel="alternate" type="application/rss+xml" title="n8n Blog" href="../rss/index.html">
+    <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.50/umd/portal.min.js" data-i18n="true" data-ghost="https://blog.n8n.io/" data-key="8626993d9b363277120ea42164" data-api="https://n8n-cloud-blog.ghost.io/ghost/api/content/" data-locale="en" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style>
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.5/umd/sodo-search.min.js" data-key="8626993d9b363277120ea42164" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.5/umd/main.css" data-sodo-search="https://n8n-cloud-blog.ghost.io/" data-locale="en" crossorigin="anonymous"></script>
+    
+    <link href="https://blog.n8n.io/webmentions/receive/" rel="webmention">
+    <script defer src="../public/cards.min.js%3Fv=4801f6d1f9"></script>
+    <link rel="stylesheet" type="text/css" href="../public/cards.min.css%3Fv=4801f6d1f9.css">
+    <script defer src="../public/member-attribution.min.js%3Fv=4801f6d1f9"></script><style>:root {--ghost-accent-color: #FD8925;}</style>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<style>
+    .content-banner {
+        display: flex;
+        align-items: center;
+        padding: 25px 30px 29px 120px;
+        gap: 20px;
+        background: url(../content/images/2023/05/banner.svg) no-repeat 0 0;
+        position: relative;
+        overflow: hidden;
+        border-radius: 32px;
+        margin-bottom: 40px;
+    }
+    .content-banner:before {
+        content: '';
+        width: 97px;
+        height: 97px;
+        background: #8287eb;
+        filter: blur(66.7196px);
+        position: absolute;
+        top: -41px;
+        left: -70px;
+    }
+    .content-banner div {
+        flex: 1 1 0%;
+    }
+    .content-banner h3 {
+        font-size: 28px;
+        line-height: 36px;
+        margin: 0;
+    }
+    .content-banner a {
+        flex-shrink: 0;
+    }
+    .content-banner p {
+        margin-bottom: 0;
+        line-height: 24px;
+    }
+    .content-banner .global-button {
+        text-decoration: none;
+        padding: 9px 20px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+</style>
+<!-- cookie consent benner injection-->  
+    <div id="n8n-consent-modal" class="consent-modal consent-modal--hidden">
+      <p class="consent-modal-header">We use analytics</p>
+      <p class="consent-modal-description">
+        We use cookies and other tracking technologies to improve your browsing experience, to analyze our website
+        traffic, assist our marketing efforts and to understand where our visitors are coming from.
+      </p>
+      <a href="https://n8n.io/legal#privacy" class="consent-modal-link">Privacy Policy</a>
+      <div>
+        <button class="consent-modal-button consent-modal-button--decline" onclick="acceptConsent(false)">
+          Decline
+        </button>
+        <button class="consent-modal-button consent-modal-button--agree" onclick="acceptConsent(true)">Agree</button>
+      </div>
+    </div>
+<style>
+      .consent-modal {
+        display: block;
+        padding: 32px 16px;
+        background: #101330;
+        box-shadow: 0px 4px 40px rgba(153, 155, 175, 0.17);
+        width: 100%;
+        position: fixed;
+        z-index: 1000;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        box-sizing: border-box;
+      }
+
+      .consent-modal--hidden {
+        display: none;
+      }
+
+      .consent-modal-link {
+        font-family: 'moderat', sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+        font-style: normal;
+        font-weight: 700;
+        text-decoration-line: underline;
+        color: #e4e6ec;
+        margin-bottom: 16px;
+        display: block;
+      }
+
+      .consent-modal-header,
+      .consent-modal-description {
+        padding: 0;
+        margin: 0 0 16px;
+        font-style: normal;
+      }
+
+      .consent-modal-header {
+        font-family: 'sunset-gothic', 'Sunset Gothic Pro', sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        color: #ffffff;
+      }
+
+      .consent-modal-description {
+        font-family: 'moderat', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #e4e6ec;
+      }
+
+      .consent-modal-button {
+        padding: 9px 20px;
+        border-radius: 6px;
+        font-style: normal;
+        font-weight: 700;
+        text-align: center;
+        color: #ffffff;
+        cursor: pointer;
+        border: none;
+        font-family: 'moderat', sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      .consent-modal-button--decline {
+        margin-right: 10px;
+        background: #40425e;
+      }
+
+      .consent-modal-button--agree {
+        background: #20b69e;
+      }
+
+      @media screen and (min-width: 992px) {
+        .consent-modal {
+          border-radius: 30px;
+          left: unset;
+          right: 14px;
+          bottom: 14px;
+          padding: 48px;
+          max-width: 621px;
+        }
+
+        .consent-modal-header {
+          font-size: 28px;
+          line-height: 36px;
+        }
+
+        .consent-modal-link,
+        .consent-modal-button,
+        .consent-modal-description {
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
+    </style>
+    <script>
+      ;(function () {
+        const GDPR_COUNTRIES = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'GB'];
+        const CONSENT_MODAL_ID = 'n8n-consent-modal';
+        const CONSENT_MODAL_HIDDEN = 'consent-modal--hidden';
+        window.acceptConsent = function (accepted) {
+          const cookie = {
+            consent: accepted
+          };
+          const d = new Date();
+          d.setTime(d.getTime() + 5 * 24 * 60 * 60 * 1000);
+          document.cookie = `n8n-consent=${JSON.stringify(cookie)}; expires=${d.toUTCString()}; path=/; domain=.n8n.io`;
+          const modal = document.getElementById(CONSENT_MODAL_ID);
+          if (modal) {
+            modal.classList.add(CONSENT_MODAL_HIDDEN);
+          }
+        };
+        async function checkCookie() {
+          try {
+            const res = await fetch('https://ipapi.co/json/');
+            const ip = await res.json();
+            const location = ip.country;
+            if (GDPR_COUNTRIES.includes(location) || ip.country_code === 'US' && ip.region_code === 'CA') {
+              var _document$cookie$matc;
+              const cookie = ((_document$cookie$matc = document.cookie.match('(^|;)\\s*' + 'n8n-consent' + '\\s*=\\s*([^;]+)')) === null || _document$cookie$matc === void 0 ? void 0 : _document$cookie$matc.pop()) || '';
+              if (cookie === '') {
+                const modal = document.getElementById(CONSENT_MODAL_ID);
+                if (modal) {
+                  modal.classList.remove(CONSENT_MODAL_HIDDEN);
+                }
+              }
+            } else {
+              acceptConsent(true);
+            }
+          } catch (e) {}
+        }
+        window.addEventListener('DOMContentLoaded', checkCookie);
+      })(window);
+    </script>
+
+<!-- Google Tag Manager (blog.n8n.io) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MQTZKBJ');</script>
+<!-- End Google Tag Manager -->
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/solid.min.css"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<script>
+  !function(e,a,o){"object"==typeof exports?(module.exports=o(),module.exports.default=o()):"function"==typeof define&&define.amd?define(o):a.slugify=o()}(0,this,(function(){var e=JSON.parse('{"$":"dollar","%":"percent","&":"and","<":"less",">":"greater","|":"or","¢":"cent","£":"pound","¤":"currency","¥":"yen","©":"(c)","ª":"a","®":"(r)","º":"o","À":"A","Á":"A","Â":"A","Ã":"A","Ä":"A","Å":"A","Æ":"AE","Ç":"C","È":"E","É":"E","Ê":"E","Ë":"E","Ì":"I","Í":"I","Î":"I","Ï":"I","Ð":"D","Ñ":"N","Ò":"O","Ó":"O","Ô":"O","Õ":"O","Ö":"O","Ø":"O","Ù":"U","Ú":"U","Û":"U","Ü":"U","Ý":"Y","Þ":"TH","ß":"ss","à":"a","á":"a","â":"a","ã":"a","ä":"a","å":"a","æ":"ae","ç":"c","è":"e","é":"e","ê":"e","ë":"e","ì":"i","í":"i","î":"i","ï":"i","ð":"d","ñ":"n","ò":"o","ó":"o","ô":"o","õ":"o","ö":"o","ø":"o","ù":"u","ú":"u","û":"u","ü":"u","ý":"y","þ":"th","ÿ":"y","Ā":"A","ā":"a","Ă":"A","ă":"a","Ą":"A","ą":"a","Ć":"C","ć":"c","Č":"C","č":"c","Ď":"D","ď":"d","Đ":"DJ","đ":"dj","Ē":"E","ē":"e","Ė":"E","ė":"e","Ę":"e","ę":"e","Ě":"E","ě":"e","Ğ":"G","ğ":"g","Ģ":"G","ģ":"g","Ĩ":"I","ĩ":"i","Ī":"i","ī":"i","Į":"I","į":"i","İ":"I","ı":"i","Ķ":"k","ķ":"k","Ļ":"L","ļ":"l","Ľ":"L","ľ":"l","Ł":"L","ł":"l","Ń":"N","ń":"n","Ņ":"N","ņ":"n","Ň":"N","ň":"n","Ō":"O","ō":"o","Ő":"O","ő":"o","Œ":"OE","œ":"oe","Ŕ":"R","ŕ":"r","Ř":"R","ř":"r","Ś":"S","ś":"s","Ş":"S","ş":"s","Š":"S","š":"s","Ţ":"T","ţ":"t","Ť":"T","ť":"t","Ũ":"U","ũ":"u","Ū":"u","ū":"u","Ů":"U","ů":"u","Ű":"U","ű":"u","Ų":"U","ų":"u","Ŵ":"W","ŵ":"w","Ŷ":"Y","ŷ":"y","Ÿ":"Y","Ź":"Z","ź":"z","Ż":"Z","ż":"z","Ž":"Z","ž":"z","Ə":"E","ƒ":"f","Ơ":"O","ơ":"o","Ư":"U","ư":"u","ǈ":"LJ","ǉ":"lj","ǋ":"NJ","ǌ":"nj","Ș":"S","ș":"s","Ț":"T","ț":"t","ə":"e","˚":"o","Ά":"A","Έ":"E","Ή":"H","Ί":"I","Ό":"O","Ύ":"Y","Ώ":"W","ΐ":"i","Α":"A","Β":"B","Γ":"G","Δ":"D","Ε":"E","Ζ":"Z","Η":"H","Θ":"8","Ι":"I","Κ":"K","Λ":"L","Μ":"M","Ν":"N","Ξ":"3","Ο":"O","Π":"P","Ρ":"R","Σ":"S","Τ":"T","Υ":"Y","Φ":"F","Χ":"X","Ψ":"PS","Ω":"W","Ϊ":"I","Ϋ":"Y","ά":"a","έ":"e","ή":"h","ί":"i","ΰ":"y","α":"a","β":"b","γ":"g","δ":"d","ε":"e","ζ":"z","η":"h","θ":"8","ι":"i","κ":"k","λ":"l","μ":"m","ν":"n","ξ":"3","ο":"o","π":"p","ρ":"r","ς":"s","σ":"s","τ":"t","υ":"y","φ":"f","χ":"x","ψ":"ps","ω":"w","ϊ":"i","ϋ":"y","ό":"o","ύ":"y","ώ":"w","Ё":"Yo","Ђ":"DJ","Є":"Ye","І":"I","Ї":"Yi","Ј":"J","Љ":"LJ","Њ":"NJ","Ћ":"C","Џ":"DZ","А":"A","Б":"B","В":"V","Г":"G","Д":"D","Е":"E","Ж":"Zh","З":"Z","И":"I","Й":"J","К":"K","Л":"L","М":"M","Н":"N","О":"O","П":"P","Р":"R","С":"S","Т":"T","У":"U","Ф":"F","Х":"H","Ц":"C","Ч":"Ch","Ш":"Sh","Щ":"Sh","Ъ":"U","Ы":"Y","Ь":"","Э":"E","Ю":"Yu","Я":"Ya","а":"a","б":"b","в":"v","г":"g","д":"d","е":"e","ж":"zh","з":"z","и":"i","й":"j","к":"k","л":"l","м":"m","н":"n","о":"o","п":"p","р":"r","с":"s","т":"t","у":"u","ф":"f","х":"h","ц":"c","ч":"ch","ш":"sh","щ":"sh","ъ":"u","ы":"y","ь":"","э":"e","ю":"yu","я":"ya","ё":"yo","ђ":"dj","є":"ye","і":"i","ї":"yi","ј":"j","љ":"lj","њ":"nj","ћ":"c","ѝ":"u","џ":"dz","Ґ":"G","ґ":"g","Ғ":"GH","ғ":"gh","Қ":"KH","қ":"kh","Ң":"NG","ң":"ng","Ү":"UE","ү":"ue","Ұ":"U","ұ":"u","Һ":"H","һ":"h","Ә":"AE","ә":"ae","Ө":"OE","ө":"oe","Ա":"A","Բ":"B","Գ":"G","Դ":"D","Ե":"E","Զ":"Z","Է":"E\'","Ը":"Y\'","Թ":"T\'","Ժ":"JH","Ի":"I","Լ":"L","Խ":"X","Ծ":"C\'","Կ":"K","Հ":"H","Ձ":"D\'","Ղ":"GH","Ճ":"TW","Մ":"M","Յ":"Y","Ն":"N","Շ":"SH","Չ":"CH","Պ":"P","Ջ":"J","Ռ":"R\'","Ս":"S","Վ":"V","Տ":"T","Ր":"R","Ց":"C","Փ":"P\'","Ք":"Q\'","Օ":"O\'\'","Ֆ":"F","և":"EV","ء":"a","آ":"aa","أ":"a","ؤ":"u","إ":"i","ئ":"e","ا":"a","ب":"b","ة":"h","ت":"t","ث":"th","ج":"j","ح":"h","خ":"kh","د":"d","ذ":"th","ر":"r","ز":"z","س":"s","ش":"sh","ص":"s","ض":"dh","ط":"t","ظ":"z","ع":"a","غ":"gh","ف":"f","ق":"q","ك":"k","ل":"l","م":"m","ن":"n","ه":"h","و":"w","ى":"a","ي":"y","ً":"an","ٌ":"on","ٍ":"en","َ":"a","ُ":"u","ِ":"e","ْ":"","٠":"0","١":"1","٢":"2","٣":"3","٤":"4","٥":"5","٦":"6","٧":"7","٨":"8","٩":"9","پ":"p","چ":"ch","ژ":"zh","ک":"k","گ":"g","ی":"y","۰":"0","۱":"1","۲":"2","۳":"3","۴":"4","۵":"5","۶":"6","۷":"7","۸":"8","۹":"9","฿":"baht","ა":"a","ბ":"b","გ":"g","დ":"d","ე":"e","ვ":"v","ზ":"z","თ":"t","ი":"i","კ":"k","ლ":"l","მ":"m","ნ":"n","ო":"o","პ":"p","ჟ":"zh","რ":"r","ს":"s","ტ":"t","უ":"u","ფ":"f","ქ":"k","ღ":"gh","ყ":"q","შ":"sh","ჩ":"ch","ც":"ts","ძ":"dz","წ":"ts","ჭ":"ch","ხ":"kh","ჯ":"j","ჰ":"h","Ṣ":"S","ṣ":"s","Ẁ":"W","ẁ":"w","Ẃ":"W","ẃ":"w","Ẅ":"W","ẅ":"w","ẞ":"SS","Ạ":"A","ạ":"a","Ả":"A","ả":"a","Ấ":"A","ấ":"a","Ầ":"A","ầ":"a","Ẩ":"A","ẩ":"a","Ẫ":"A","ẫ":"a","Ậ":"A","ậ":"a","Ắ":"A","ắ":"a","Ằ":"A","ằ":"a","Ẳ":"A","ẳ":"a","Ẵ":"A","ẵ":"a","Ặ":"A","ặ":"a","Ẹ":"E","ẹ":"e","Ẻ":"E","ẻ":"e","Ẽ":"E","ẽ":"e","Ế":"E","ế":"e","Ề":"E","ề":"e","Ể":"E","ể":"e","Ễ":"E","ễ":"e","Ệ":"E","ệ":"e","Ỉ":"I","ỉ":"i","Ị":"I","ị":"i","Ọ":"O","ọ":"o","Ỏ":"O","ỏ":"o","Ố":"O","ố":"o","Ồ":"O","ồ":"o","Ổ":"O","ổ":"o","Ỗ":"O","ỗ":"o","Ộ":"O","ộ":"o","Ớ":"O","ớ":"o","Ờ":"O","ờ":"o","Ở":"O","ở":"o","Ỡ":"O","ỡ":"o","Ợ":"O","ợ":"o","Ụ":"U","ụ":"u","Ủ":"U","ủ":"u","Ứ":"U","ứ":"u","Ừ":"U","ừ":"u","Ử":"U","ử":"u","Ữ":"U","ữ":"u","Ự":"U","ự":"u","Ỳ":"Y","ỳ":"y","Ỵ":"Y","ỵ":"y","Ỷ":"Y","ỷ":"y","Ỹ":"Y","ỹ":"y","–":"-","‘":"\'","’":"\'","“":"\\"","”":"\\"","„":"\\"","†":"+","•":"*","…":"...","₠":"ecu","₢":"cruzeiro","₣":"french franc","₤":"lira","₥":"mill","₦":"naira","₧":"peseta","₨":"rupee","₩":"won","₪":"new shequel","₫":"dong","€":"euro","₭":"kip","₮":"tugrik","₯":"drachma","₰":"penny","₱":"peso","₲":"guarani","₳":"austral","₴":"hryvnia","₵":"cedi","₸":"kazakhstani tenge","₹":"indian rupee","₺":"turkish lira","₽":"russian ruble","₿":"bitcoin","℠":"sm","™":"tm","∂":"d","∆":"delta","∑":"sum","∞":"infinity","♥":"love","元":"yuan","円":"yen","﷼":"rial","ﻵ":"laa","ﻷ":"laa","ﻹ":"lai","ﻻ":"la"}'),a=JSON.parse('{"bg":{"Й":"Y","Ц":"Ts","Щ":"Sht","Ъ":"A","Ь":"Y","й":"y","ц":"ts","щ":"sht","ъ":"a","ь":"y"},"de":{"Ä":"AE","ä":"ae","Ö":"OE","ö":"oe","Ü":"UE","ü":"ue","ß":"ss","%":"prozent","&":"und","|":"oder","∑":"summe","∞":"unendlich","♥":"liebe"},"es":{"%":"por ciento","&":"y","<":"menor que",">":"mayor que","|":"o","¢":"centavos","£":"libras","¤":"moneda","₣":"francos","∑":"suma","∞":"infinito","♥":"amor"},"fr":{"%":"pourcent","&":"et","<":"plus petit",">":"plus grand","|":"ou","¢":"centime","£":"livre","¤":"devise","₣":"franc","∑":"somme","∞":"infini","♥":"amour"},"pt":{"%":"porcento","&":"e","<":"menor",">":"maior","|":"ou","¢":"centavo","∑":"soma","£":"libra","∞":"infinito","♥":"amor"},"uk":{"И":"Y","и":"y","Й":"Y","й":"y","Ц":"Ts","ц":"ts","Х":"Kh","х":"kh","Щ":"Shch","щ":"shch","Г":"H","г":"h"},"vi":{"Đ":"D","đ":"d"},"da":{"Ø":"OE","ø":"oe","Å":"AA","å":"aa","%":"procent","&":"og","|":"eller","$":"dollar","<":"mindre end",">":"større end"},"nb":{"&":"og","Å":"AA","Æ":"AE","Ø":"OE","å":"aa","æ":"ae","ø":"oe"},"it":{"&":"e"},"nl":{"&":"en"},"sv":{"&":"och","Å":"AA","Ä":"AE","Ö":"OE","å":"aa","ä":"ae","ö":"oe"}}');function o(o,n){if("string"!=typeof o)throw new Error("slugify: string argument expected");var r=a[(n="string"==typeof n?{replacement:n}:n||{}).locale]||{},i=void 0===n.replacement?"-":n.replacement,t=void 0===n.trim||n.trim,u=o.normalize().split("").reduce((function(a,o){var t=r[o];return void 0===t&&(t=e[o]),void 0===t&&(t=o),t===i&&(t=" "),a+t.replace(n.remove||/[^\w\s$*_+~.()'"!\-:@]+/g,"")}),"");return n.strict&&(u=u.replace(/[^A-Za-z0-9\s]/g,"")),t&&(u=u.trim()),u=u.replace(/\s+/g,i),n.lower&&(u=u.toLowerCase()),u}return o.extend=function(a){Object.assign(e,a)},o}));
+</script>
+
+<style>
+  .content-banner {
+    display: flex;
+    align-items: center;
+    padding: 25px 30px 29px 120px;
+    gap: 20px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="149" height="162" fill="none" viewBox="0 0 149 162"><path stroke="%23997D00" stroke-width="2.799" d="M103.712 197.478s52.843-38.509-53.147-47.372"/><path stroke="%23484C99" stroke-width="2.799" d="M55.914 42.86c-57.712 2.444-108.25 97.476-2.26 106.339M69.258 38.473C99.64 30.633 155 3.5 103.5-4"/><path stroke="%23DDBB1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m73.595 134.165-5.161 28.726a4.864 4.864 0 0 1-5.648 3.928l-28.727-5.162a4.864 4.864 0 0 1-3.928-5.648l5.162-28.727a4.864 4.864 0 0 1 5.648-3.927l28.727 5.161a4.865 4.865 0 0 1 3.927 5.649Z"/><path stroke="%23DDBB1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m34.059 161.657 27.13 4.875-.286 1.596a5.171 5.171 0 0 1-.182.692l-.087.256a3.396 3.396 0 0 1-.19.411l-.017.096-.19.328-.185.247-.09.132-.245.269-.064.079-.189.181-.158.144-.161.119a4.821 4.821 0 0 1-3.89.974l-28.727-5.162a4.878 4.878 0 0 1-3.15-2.041l7.53-5.236a4.856 4.856 0 0 0 3.15 2.04ZM31.042 128.751c.148-.048.298-.087.45-.117l.055.01c.137-.025.265-.052.408-.067.04.004.08.011.12.021.111.021.234-.023.35-.027.076.009.15.023.224.04.088.016.167.03.255.005.163.021.325.05.486.087l1.596.287-4.855 27.019a4.865 4.865 0 0 0 .777 3.608l-7.53 5.236a4.863 4.863 0 0 1-.777-3.607l5.161-28.727a4.866 4.866 0 0 1 2.04-3.151 5.08 5.08 0 0 1 1.237-.601l.003-.016Z"/><path stroke="%23DDBB1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m62.935 133.896-29.525-5.304a4.863 4.863 0 0 0-3.607.777l7.598-5.291a4.87 4.87 0 0 1 3.54-.723l28.727 5.162c3.99.717-.35 6.527-6.733 5.379Z"/><path stroke="%23DDBB1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="M73.595 134.165c-.915 4.777-5.161 28.727-5.161 28.727a4.81 4.81 0 0 1-2.013 3.131l-7.53 5.236a4.806 4.806 0 0 0 2.012-3.131l5.305-29.525c1.147-6.383 8.248-9.226 7.387-4.438Z"/><rect width="38.918" height="38.918" fill="%23FAE166" stroke="%23DDBB1A" stroke-width="2.799" rx="5.599" transform="scale(1 -1) rotate(79.814 133.4 -50.56)"/><rect width="3.073" height="3.012" fill="%23DDBB1A" rx=".7" transform="matrix(-.571 -.821 -.821 .571 67.951 135.654)"/><rect width="1.621" height="3.243" fill="%23DDBB1A" rx=".7" transform="matrix(-.571 -.821 -.821 .571 35.667 127.491)"/><rect width="1.621" height="1.793" fill="%23DDBB1A" rx=".7" transform="matrix(-.571 -.821 -.821 .571 72.876 131.293)"/><path stroke="%236E72E0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m77.366 14.145 8.49 27.925a4.864 4.864 0 0 1-3.238 6.069l-27.925 8.49a4.865 4.865 0 0 1-6.07-3.239l-8.49-27.924a4.864 4.864 0 0 1 3.24-6.07l27.924-8.49a4.865 4.865 0 0 1 6.07 3.24Z"/><path stroke="%236E72E0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m54.693 56.63 26.373-8.02.472 1.552a5.2 5.2 0 0 1 .153.699l.04.268c.015.15.022.3.018.452l.028.093-.02.379-.052.303-.02.159-.096.351-.02.1-.087.246-.074.2-.09.18a4.815 4.815 0 0 1-3.02 2.638l-27.924 8.491a4.865 4.865 0 0 1-3.734-.381l4.319-8.092a4.866 4.866 0 0 0 3.734.381ZM37.018 28.71c.11-.11.225-.213.347-.31l.054-.016c.11-.084.212-.166.333-.245a.673.673 0 0 1 .116-.036c.108-.033.198-.128.3-.184.07-.026.143-.048.217-.066a.53.53 0 0 0 .229-.112 4.94 4.94 0 0 1 .473-.144l1.551-.471 7.986 26.264a4.864 4.864 0 0 0 2.335 2.858l-4.32 8.092a4.864 4.864 0 0 1-2.334-2.858l-8.49-27.924a4.866 4.866 0 0 1 .381-3.735c.224-.402.503-.771.827-1.098l-.005-.016Z"/><path stroke="%236E72E0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="m67.754 18.762-28.7 8.727a4.865 4.865 0 0 0-2.858 2.335l4.354-8.171a4.865 4.865 0 0 1 2.822-2.256l27.925-8.49c3.879-1.18 2.662 5.968-3.543 7.855Z"/><path stroke="%236E72E0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.799" d="M77.366 14.145c1.362 4.67 8.49 27.925 8.49 27.925a4.816 4.816 0 0 1-.364 3.704l-4.32 8.092a4.817 4.817 0 0 0 .366-3.704l-8.726-28.7c-1.887-6.206 3.14-11.97 4.554-7.317Z"/><rect width="38.918" height="38.918" fill="%238287EB" stroke="%236E72E0" stroke-width="2.799" rx="5.599" transform="scale(-1 1) rotate(-73.088 -4.498 83.371)"/><rect width="1.621" height="3.243" fill="%236E72E0" rx=".7" transform="matrix(-.8822 -.4708 -.4708 .8822 84.062 48.371)"/><rect width="3.073" height="3.012" fill="%236E72E0" rx=".7" transform="matrix(-.8822 -.4708 -.4708 .8822 73.02 18.042)"/><rect width="1.621" height="3.243" fill="%236E72E0" rx=".7" transform="matrix(-.8822 -.4708 -.4708 .8822 40.562 25.48)"/><rect width="1.621" height="1.793" fill="%236E72E0" rx=".7" transform="matrix(-.8822 -.4708 -.4708 .8822 75.418 11.917)"/><path stroke="%23484C99" stroke-width=".35" d="M88.94 52.813 75.834 9.709 32.73 22.814l13.106 43.104z"/></svg>')
+      no-repeat 0 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 32px;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .content-banner {
+      flex-direction: column;
+      background: none;
+      padding-left: 30px;
+      text-align: center;
+    }
+
+    .content-banner:before {
+      display: none;
+    }
+  }
+
+  .content-banner:before {
+    content: "";
+    width: 97px;
+    height: 97px;
+    background: #8287eb;
+    filter: blur(66.7196px);
+    position: absolute;
+    top: -41px;
+    left: -70px;
+  }
+  .content-banner div {
+    flex: 1 1 0%;
+  }
+  .content-banner h3 {
+    font-size: 28px;
+    line-height: 36px;
+    margin: 0;
+  }
+  .content-banner a {
+    flex-shrink: 0;
+  }
+  .content-banner p {
+    margin-bottom: 0;
+    line-height: 24px;
+  }
+  .content-banner .global-button {
+    text-decoration: none;
+    padding: 9px 20px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .content-banner--centered {
+    flex-direction: column;
+    background: none;
+    border-radius: 0;
+    padding-left: 30px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+  .content-banner--centered:before {
+    content: "";
+    width: 168px;
+    height: 168px;
+    background: #20b69e;
+    opacity: 0.7;
+    filter: blur(62.4716px);
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .content-banner--centered .global-button {
+    color: #101330 !important;
+    border: 2px solid #20b69e;
+  }
+  .content-banner--centered .global-button:before,
+  .content-banner--centered .global-button:after {
+    background: #fff;
+  }
+  @media screen and (max-width: 1023px) {
+    .content-banner--centered:before {
+      display: block;
+    }
+  }
+  .workflow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  .workflow-content {
+    display: flex;
+    flex: 1 1 0%;
+  }
+  .workflow-nodes {
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .workflow-nodes img {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .workflow-nodes .fa {
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+  .workflow-nodes span {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background: #e4e6ec;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #101330;
+  }
+  .workflow-details {
+    margin-right: 18px;
+  }
+  .workflow-details p {
+    margin: 0;
+  }
+  .workflow .workflow-details-name {
+    color: #101330;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+  }
+  .workflow .workflow-details-name a {
+    text-decoration: none;
+  }
+  .workflow .workflow-details-name a:hover {
+    text-decoration: underline;
+  }
+  .workflow .workflow-details-stats {
+    font-size: 14px;
+    line-height: 18px;
+    color: #707183;
+  }
+  .workflow .global-button {
+    text-decoration: none;
+    padding: 9px 20px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .workflows h3 {
+    margin-bottom: 30px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .workflows .workflow {
+    border-bottom: 1px solid #E0E0EB;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-bottom: 20px;
+  }
+  .workflows .workflow-content {
+    flex-direction: column;
+  }
+  .workflows .workflow-nodes {
+    margin-bottom: 12px;
+  }
+  .workflows .workflow-nodes span,
+  .workflows .workflow-nodes img {
+    width: 32px;
+    height: 32px;
+  }
+  .workflows .workflow-nodes .fa {
+    font-size: 32px;
+  }
+  .workflows .workflow .workflow-details-name {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 5px;
+  }
+  .workflows .workflow-details-stats span {
+    margin: 0 4px;
+    display: inline-block;
+  }
+  .workflows-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .workflows-button .global-button {
+    color: #101330 !important;
+    border: 2px solid #20b69e;
+    text-decoration: none;
+    padding: 9px 20px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .workflows-button .global-button:before,
+  .workflows-button .global-button:after {
+    background: #fff;
+  }
+
+  @media screen and (max-width: 670px) {
+    .workflow-nodes {
+      display: none;
+    }
+    .workflow {
+      flex-direction: column;
+      align-items: start;
+    }
+    .workflow .global-button {
+      margin-top: 10px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .workflow-nodes {
+      flex-wrap: wrap;
+    }
+  }
+</style>
+<style>
+    .grecaptcha-badge { visibility: hidden !important; }
+</style>
+<script>
+const timeSince = (date) => {
+  const seconds = Math.floor((new Date() - new Date(date)) / 1000);
+  let interval = seconds / 31536000;
+  if (interval > 1) {
+    const roundedInterval = Math.floor(interval);
+    return roundedInterval === 1
+      ? roundedInterval + " year"
+      : roundedInterval + " years";
+  }
+  interval = seconds / 2592000;
+  if (interval > 1) {
+    const roundedInterval = Math.floor(interval);
+    return roundedInterval === 1
+      ? roundedInterval + " month"
+      : roundedInterval + " months";
+  }
+
+  interval = seconds / 86400;
+  if (interval > 1) {
+    const roundedInterval = Math.floor(interval);
+    return roundedInterval === 1
+      ? roundedInterval + " day"
+      : roundedInterval + " days";
+  }
+  interval = seconds / 3600;
+  if (interval > 1) {
+    const roundedInterval = Math.floor(interval);
+    return roundedInterval === 1
+      ? roundedInterval + " hour"
+      : roundedInterval + " hours";
+  }
+  interval = seconds / 60;
+  if (interval > 1) {
+    const roundedInterval = Math.floor(interval);
+    return roundedInterval === 1
+      ? roundedInterval + " minute"
+      : roundedInterval + " minutes";
+  }
+
+  const roundedInterval = Math.floor(interval);
+  return roundedInterval === 1
+    ? roundedInterval + " second"
+    : roundedInterval + " seconds";
+};
+const getSingleWorkflowTemplate = (
+  { name, user, nodes, url, views, createdAt },
+  extended = false,
+  texts
+) => {
+  if (name && user) {
+    const IMAGES_PER_PAGE = 5;
+    const workflowDiv = document.createElement("div");
+    const images = [];
+
+    nodes.forEach((node) => {
+      const { icon, name, color } = node;
+
+      if (icon.type === "icon") {
+        const styles = color ? `style="color:${color}"` : "";
+        images.push(`
+          <i class="fa fa-${icon.icon}" aria-hidden="true" ${styles}></i>
+        `);
+      }
+
+      if (icon.type === "file") {
+        images.push(
+          `<img src="https://blog.n8n.io/data-orchestration-tools/${icon.fileBuffer}" alt="${name}" title="${name}" />`
+        );
+      }
+    });
+
+    const description = extended
+      ? `<p class="workflow-details-stats">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" fill="none" viewBox="0 0 12 10"><path fill="#707183" d="M4.94 6.06a1.5 1.5 0 1 1 2.121-2.12 1.5 1.5 0 0 1-2.12 2.12Z"/><path fill="#707183" fill-rule="evenodd" d="M.462 6.143C1.38 7.135 3.294 9.2 6 9.2s4.62-2.065 5.539-3.057a1.703 1.703 0 0 0 0-2.332l-.001-.002C10.703 2.907 8.749.8 6 .8 3.256.8 1.304 2.903.466 3.806l-.004.005a1.703 1.703 0 0 0 0 2.332ZM3.77 3.305c.689-.38 1.447-.62 2.23-.705a5.88 5.88 0 0 1 3.972 2.17.301.301 0 0 1 0 .414A5.88 5.88 0 0 1 6 7.4 6.216 6.216 0 0 1 1.996 5.24a.3.3 0 0 1-.01-.423A5.937 5.937 0 0 1 3.77 3.305Z" clip-rule="evenodd"/></svg>
+          ${
+            views || 0
+          } <span>•</span> <strong>by ${user}</strong> <span>•</span> ${timeSince(
+          createdAt
+        )}
+        </p>`
+      : `<p class="workflow-details-stats">by ${user}</p>`;
+
+    workflowDiv.classList.add("workflow");
+    workflowDiv.innerHTML = `
+      <div class="workflow-content">
+        <div class="workflow-nodes">
+          ${images.slice(0, IMAGES_PER_PAGE).join("")}
+          ${
+            images.length - IMAGES_PER_PAGE > 0
+              ? `<span>+${images.length - IMAGES_PER_PAGE}</span>`
+              : ""
+          }
+        </div>
+        <div class="workflow-details">
+          <p class="workflow-details-name">
+            <a href="https://blog.n8n.io/data-orchestration-tools/${url}" class="blog-banner-workflow">${name}</a>
+          </p>
+          ${description}
+        </div>
+      </div>
+      <a href="https://blog.n8n.io/data-orchestration-tools/${url}" class="global-button blog-banner-workflow">
+        ${texts.workflowButtonLabel}
+      </a>
+    `;
+    return workflowDiv;
+  }
+
+  return null;
+};
+
+const getMultiWorkflowTemplate = (workflows, texts) => {
+  const workflowsDiv = document.createElement("div");
+
+  workflowsDiv.classList.add("workflows");
+  workflowsDiv.innerHTML = `
+    <h3>${texts.workflowsHeader}</h3>
+  `;
+
+  workflows.forEach((workflow) => {
+    const template = getSingleWorkflowTemplate(workflow, true, texts);
+    workflowsDiv.insertAdjacentElement("beforeend", template);
+  });
+
+  workflowsDiv.innerHTML = `
+    ${workflowsDiv.innerHTML}
+    <div class="workflows-button">
+      <a href="https://blog.n8n.io/data-orchestration-tools/${texts.workflowsButtonUrl}" class="global-button blog-banner-signup">
+        ${texts.workflowsButtonLabel}
+      </a>
+    </div>
+  `;
+
+  return workflowsDiv;
+};
+
+const parseWorkflowData = (workflowData) => {
+  const { name, username, nodes, views, createdAt } = workflowData.attributes;
+
+  return {
+    name,
+    views,
+    createdAt,
+    user: username,
+    url: `https://n8n.io/workflows/${workflowData.id}-${slugify(name, {
+      strict: true,
+      lower: true,
+    })}/`,
+    nodes: nodes.data.map((node) => {
+      return {
+        icon: node.attributes.iconData,
+        name: node.attributes.displayName,
+        color: node.attributes.defaults.color,
+      };
+    }),
+  };
+};
+
+const convertIdsToQuery = (workflowIds) => {
+  const ids = Array.isArray(workflowIds) ? workflowIds : [workflowIds];
+  return ids.map((id) => `{ id: { eq: ${id} } }`).join(",");
+};
+const fetchWorkflows = async (workflowId) => {
+  try {
+    const res = await fetch("https://api.n8n.io/graphql", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        query: `query {\n workflows(\n pagination: { start: 0, limit: 32 }\n filters: {\n status: { eq: "published" }\n or: [${convertIdsToQuery(
+          workflowId
+        )}]\n }\n ) {\n data {\n id\n attributes {\n name\n views\n createdAt\n username\n nodes {\n data {\n id\n attributes {\n defaults\n displayName\n name\n iconData\n}\n}\n}\n}\n}\n}\n}\n`,
+      }),
+    });
+    const data = await res.json();
+
+    return data.data.workflows.data.map((workflow) =>
+      parseWorkflowData(workflow)
+    );
+  } catch (e) {}
+};
+
+const workflowBanner = async (workflowContainerId, scriptEl, texts) => {
+  const workflows = await fetchWorkflows(workflowContainerId);
+  const txts = Object.assign(
+    {},
+    {
+      workflowButtonLabel: "Use this workflow",
+      workflowsHeader: "Most popular workflows with these integrations",
+      workflowsButtonLabel: "Get started",
+      workflowsButtonUrl: "https://app.n8n.cloud/register",
+    },
+    texts
+  );
+
+  if (workflows.length === 1) {
+    const template = getSingleWorkflowTemplate(workflows[0], false, txts);
+    scriptEl.insertAdjacentElement("afterend", template);
+  } else if (workflows.length > 1) {
+    const template = getMultiWorkflowTemplate(workflows, txts);
+    scriptEl.insertAdjacentElement("afterend", template);
+  }
+};
+
+var submitSubscription = async function() {
+        const token = await grecaptcha.getResponse()
+
+        if (newSubscriptionData && newSubscriptionData.data) {
+          newSubscriptionData.data.token = token
+          const res = await fetch('https://n8n-website-backend-prod.internal.n8n.io/api/newsletter/subscribe', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newSubscriptionData.data)
+          })
+
+          if (newSubscriptionData.onSuccess && res.ok) {
+            newSubscriptionData.onSuccess()
+          } else if (newSubscriptionData.onError) {
+            newSubscriptionData.onError()
+          }
+
+          window.newSubscriptionData = null
+        }
+      }
+
+const subscribeNewsletter = async (e) => {
+    e.preventDefault();
+
+    const newsletterMailFormat = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+    const ERROR_CLASS = 'error';
+    const SUCCESS_CLASS = 'success';
+    const SHOW_MESSAGE_CLASS = 'show';
+
+    const form = e.target;
+    const emailField = form.querySelector('input[name=email]');
+    const success = form.querySelector('.message--success');
+    const error = form.querySelector('.message--error');
+
+    emailField.setCustomValidity('Please insert a valid email address.');
+    emailField.disabled = true;
+    emailField.classList.remove(ERROR_CLASS);
+
+    success.classList.remove(SHOW_MESSAGE_CLASS);
+    error.classList.remove(SHOW_MESSAGE_CLASS);
+
+    if (!emailField.value.match(newsletterMailFormat)) {
+        emailField.reportValidity();
+        emailField.classList.add(ERROR_CLASS);
+    } else {
+        try {
+            await grecaptcha.execute()
+            const url = new URL(window.location)
+            const urlSource = `${url.origin}${url.pathname}`
+            const utmParams = {
+                utm_source: url.searchParams.get('utm_source') || null,
+                utm_medium: url.searchParams.get('utm_medium') || null,
+                utm_campaign: url.searchParams.get('utm_campaign') || null
+            }
+            const data = {
+                email: emailField.value,
+                created_at: Math.floor(new Date().getTime() / 1000),
+                newsletter_subscriber: true,
+                url_source: urlSource,
+                ...Object.fromEntries(Object.entries(utmParams).filter(([_, v]) => v !== null))
+            }
+
+            window.newSubscriptionData = {
+                data: data,
+                onSuccess: () => {
+                    success.classList.add(SHOW_MESSAGE_CLASS);
+                    emailField.classList.add(SUCCESS_CLASS);
+                    emailField.setCustomValidity('');
+                    emailField.disabled = false;
+                },
+                onError: () => {
+                    error.classList.add(SHOW_MESSAGE_CLASS);
+                    emailField.classList.add(ERROR_CLASS);
+                    emailField.disabled = false;
+                }
+            }
+        } catch (e) {
+            error.classList.add(SHOW_MESSAGE_CLASS);
+            emailField.classList.add(ERROR_CLASS);
+        }
+    }
+
+    emailField.disabled = false;
+}
+</script>
+<script>
+!function(){let e=function(e){let t=document.createElement("a");return t.href=e.url,t.innerText=e.tag,t},t=function(){let t=window.homePageTags||[],n=document.querySelector(".popular-tags");if(n&&t&&t.length){let r=n.querySelector(".popular-tags-listing");t.forEach(t=>{r.appendChild(e(t))}),n.classList.remove("hidden")}};window.addEventListener("DOMContentLoaded",t)}();
+
+/*
+  example:
+  var homePageTags = [
+    { tag: 'AI', url: '/tag/ai/' },
+    { tag: 'Tutorial', url: '/tag/tutorial/' }
+  ]
+*/
+
+var homePageTags = [
+   { tag: 'AI', url: '/tag/ai/' },
+    { tag: 'Database', url: '/tag/database/' },
+    { tag: 'Marketing automation', url: '/tag/marketing-automation/' },
+    { tag: 'Sales', url: '/tag/sales/' },
+    { tag: 'SecOps', url: '/tag/secops/' },
+    { tag: 'ITOps', url: '/tag/itops/' },
+    { tag: 'Tools Alternatives', url: '/tag/tools-alternatives/' },
+    { tag: 'Bot', url: '/tag/bot/' }
+]
+</script>
+    <style> 
+    table thead { background: rgba(33,172,232,.12); } 
+</style>
+	</head>
+	<body class="post-template tag-guide tag-hash-import-2024-10-24-16-31">
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7L9C6X"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		<div class="global-wrap">
+			<div class="global-content">
+				<header class="header-section">
+	<div class="header-wrap">
+		<div class="header-logo is-image">
+			<a href="../index.html" class="is-image"><img src="../content/images/2022/06/n8n-blog.png" alt="n8n Blog"></a>
+		</div>
+		<div class="header-nav">
+			<input id="toggle" class="header-checkbox" type="checkbox">
+			<label class="header-toggle" for="toggle">
+				<span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</span>
+			</label>
+			<nav >
+				<ul>
+<li><a href="https://n8n.io/" >n8n home</a></li>
+<li><a href="../tag/tutorial/index.html" >Tutorials</a></li>
+<li><a href="../tag/guide/index.html" >Guides</a></li>
+<li><a href="../tag/tips/index.html" >Tips</a></li>
+<li><a href="../tag/interview/index.html" >Interviews</a></li>
+<li><a href="../tag/news/index.html" >News</a></li>
+</ul>
+				<ul>
+					<!-- <li class="signin"><a href="https://blog.n8n.io/signin/">Sign in</a></li>
+<li class="signup"><a href="https://blog.n8n.io/signup/" class="global-button">Sign up</a></li>
+ -->
+
+<li class="signin"><a href="https://app.n8n.cloud/">Sign in</a></li>
+<li class="signup"><a href="https://app.n8n.cloud/register" class="global-button">Get started</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>				<main class="global-main">
+					<progress class="post-progress"></progress>
+<article class="post-section">
+	<div class="post-header item is-hero">
+	<div class="item-container">
+		<div class="item-image global-image">
+			<img srcset="../content/images/size/w400/2023/12/data-orchestration-tools5.jpg 400w, 
+			../content/images/size/w800/2023/12/data-orchestration-tools5.jpgg 800w,
+		../content/images/size/w1200/2023/12/data-orchestration-tools5.jpgpg 1200w,
+	../content/images/size/w1600/2023/12/data-orchestration-tools5.jpgjpg 1600w"
+	 sizes="(max-width:480px) 350px, (max-width:1440px) 800px, 1200px"
+	 src="../content/images/size/w1200/2023/12/data-orchestration-tools5.jpg"
+	 loading="lazy"
+	 alt="Top 10 data orchestration tools: a detailed roundup">		</div>
+		<div class="item-content">
+			<div class="item-tags global-tags">
+								<a href="../tag/guide/index.html">Guide</a>
+			</div>
+			<h1 class="item-title">Top 10 data orchestration tools: a detailed roundup</h1>
+			<p class="item-excerpt global-zigzag">
+				<svg role='img' viewBox='0 0 136 24' xmlns='http://www.w3.org/2000/svg'><path d='M1.525 1.525a3.5 3.5 0 014.95 0L20 15.05 33.525 1.525a3.5 3.5 0 014.95 0L52 15.05 65.525 1.525a3.5 3.5 0 014.95 0L84 15.05 97.525 1.525a3.5 3.5 0 014.95 0L116 15.05l13.525-13.525a3.5 3.5 0 014.95 4.95l-16 16a3.5 3.5 0 01-4.95 0L100 8.95 86.475 22.475a3.5 3.5 0 01-4.95 0L68 8.95 54.475 22.475a3.5 3.5 0 01-4.95 0L36 8.95 22.475 22.475a3.5 3.5 0 01-4.95 0l-16-16a3.5 3.5 0 010-4.95z'/></svg>				Looking for data orchestration solutions? Dive into our comprehensive overview of the top 10 tools, including n8n, Prefect, and Azure Data Factory!
+			</p>
+			<div class="item-meta global-meta">
+				<div class="item-profile-image">
+					<a href="../author/yulia/index.html" class="global-image">
+						<img src="../content/images/size/w120/2023/01/profile-pik.jpg" loading="lazy" alt="Yulia Dmitrievna">					</a>
+					<a href="../author/eduard/index.html" class="global-image">
+						<img src="../content/images/size/w120/2022/05/new_pic.png" loading="lazy" alt="Eduard Parsadanyan">					</a>
+				</div>
+				<div class="item-authors">
+					<a href="../author/yulia/index.html">Yulia Dmitrievna</a>, <a href="../author/eduard/index.html">Eduard Parsadanyan</a>
+					<div class="item-time">
+						<time datetime="2023-12-18">December 18, 2023</time> ∙ 13 minutes read
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	<div class="post-content">
+		<p>Imagine a fine orchestra where each instrument is masterfully arranged in a piece to create a rich comprehensive sound.</p><p>The world of data is much like musical interplay – each system, database, and application plays its part in creating a unified data flow. It's through the art of data orchestration that these disparate elements come together to create an accurate view of business operations and end-to-end data-driven systems.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2023/12/Extract--1-.png" class="kg-image" alt="Evolution of data management domains in the enterprise. Adapted from: Managing Data Orchestration and Integration at Scale" loading="lazy" width="1920" height="1080" srcset="../content/images/size/w600/2023/12/Extract--1-.png 600w, ../content/images/size/w1000/2023/12/Extract--1-.png 1000w, ../content/images/size/w1600/2023/12/Extract--1-.png 1600w, ../content/images/2023/12/Extract--1-.png 1920w" sizes="(min-width: 720px) 720px"><figcaption>Evolution of data management domains in the enterprise. Adapted from: <a href="https://www.oreilly.com/library/view/managing-data-orchestration/9781492093862/?ref=blog.n8n.io">Managing Data Orchestration and Integration at Scale</a></figcaption></figure><p>Choosing the right data orchestration tool can be daunting.</p><p>There are so many options out there and the terminology is often not unified, which makes it tricky to decide. Plus, you´d need to think about the learning curves, whether the tool fits the current infrastructure, how much it'll scale, what it's going to cost you in the long run, and so on.</p><p>In this article, we'll explore the world of data orchestration and review the top 10 orchestration platforms with their key features, pros &amp; cons, and pricing offers.</p><p>Here’s the TL;DR:</p><h3 id="list-of-top-10-data-orchestration-tools">List of top 10 data orchestration tools</h3><!--kg-card-begin: markdown--><table>
+<thead>
+<tr>
+<th>Software</th>
+<th>Key Features</th>
+<th>Starting Price</th>
+<th>Free Plan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="index.html#n8n">n8n</a></td>
+<td>Source-available extendable low-code tool.<br />Available in cloud and self-hosted versions.</td>
+<td>Free for Community<br />self-hosted version,<br />From €20/Mo for cloud</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><a href="index.html#prefect">Prefect</a></td>
+<td>An open-source tool that requires knowledge<br />of Python programming. Offers cloud and<br />self-hosted options.</td>
+<td>Free open-source tool</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><a href="index.html#luigi">Luigi</a></td>
+<td>Fully open-source Python module with GUI for<br />easy observation. Lightweight and extendable.</td>
+<td>Free open-source tool</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><a href="index.html#apache-airflow">Apache<br />Airflow</a></td>
+<td>Fully open-source advanced project<br />requiring Python programming skills.</td>
+<td>Free open-source tool</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><a href="index.html#google-cloud-composer">Google<br />Cloud<br />Composer</a></td>
+<td>Google's fully managed Airflow service<br />with even more advanced features and<br />seamless GCP integrations.</td>
+<td>Usage-based pricing</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><a href="index.html#aws-glue">AWS Glue</a></td>
+<td>A fully-managed serverless tool from Amazon, <br /> tightly integrated with the AWS platform.</td>
+<td>Usage-based pricing</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><a href="index.html#azure-data-factory">Azure<br />Data Factory</a></td>
+<td>Microsoft's own cloud tool that integrates<br />seamlessly with the Azure platform.</td>
+<td>Usage-based pricing</td>
+<td>❌, with<br />free trial</td>
+</tr>
+<tr>
+<td><a href="index.html#sap-data-intelligence">SAP Data<br />Intelligence</a></td>
+<td>Arguably the most advanced data orchestration<br />platform. Supports the full data management<br />lifecycle, integrated with ML models for<br />data analysis.</td>
+<td>Custom</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><a href="index.html#databricks-workflow">Databricks<br />Workflow</a></td>
+<td>Another proprietary tool integrated<br />with the Databricks Lakehouse Platform.</td>
+<td>Usage-based pricing</td>
+<td>❌, with<br />free trial</td>
+</tr>
+<tr>
+<td><a href="index.html#fivetran">Fivetran</a></td>
+<td>A more traditional cloud-based data integration<br />tool with limited data orchestration<br /> features. Available in cloud and On-Prem.</td>
+<td>From $500/Mo according<br />to the price calculator</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<!--kg-card-end: markdown--><h2 id="what-is-a-data-orchestration-tool">What is a data orchestration tool?</h2><p>A data orchestration tool is a software solution that helps you automate the way data moves and is processed. It also keeps data tasks in check, making sure everything runs on time across all the different systems and apps that your org's data infrastructure is built on.</p><p>Unlike traditional data integration tools, it should be able to work with data of different types (SQL, streaming IoT data, non-structured documents and images, etc.) and connect to various supporting tools for data pre-processing and analysis.</p><p>A good data orchestrator helps you:</p><!--kg-card-begin: markdown--><ul>
+<li>keep your data in sync,</li>
+<li>automate repetitive tasks and processes,</li>
+<li>ensure high data quality and consistency,</li>
+<li>increase scalability,</li>
+<li>prevent unnecessary data duplication and corruption and fix data inconsistencies</li>
+</ul>
+<!--kg-card-end: markdown--><p>All of these capabilities improve efficiency and decision making, save lots of time and resources, and protect your applications from potential errors and inaccuracies.</p><h2 id="how-do-you-orchestrate-data">How do you orchestrate data?</h2><p>When orchestrating data as an engineer, the approach is hands-on and detail-oriented:</p><!--kg-card-begin: markdown--><ul>
+<li>Identify main data modalities: structured (e.g. SQL databases), semi-structured, streaming data, IoT or unstructured texts, documents and media;</li>
+<li>Identify data sources: cloud-based, on-premises or delivered by third-parties;</li>
+<li>Create separate workflows for data pre-processing or initial analysis of unstructured data;</li>
+<li>Unify data in a warehouse or catalog;</li>
+<li>Create models and dashboards to provide actionable insights into data;</li>
+<li>Continuously oversight, debug and fix workflows and data pipelines.</li>
+</ul>
+<!--kg-card-end: markdown--><h2 id="10-best-data-orchestration-tools">10 best data orchestration tools</h2><h3 id="n8n">n8n</h3><p><strong>Open-source</strong>: ❌, <a href="https://docs.n8n.io/choose-n8n/faircode-license/?ref=blog.n8n.io">source-available</a></p><p><strong>Free Tier</strong>: ✅ (self-hosted community version)</p><figure class="kg-card kg-image-card"><img src="https://lh7-us.googleusercontent.com/XR0ZaHQXo0k2T_lx7D2ZguwPuTO3ZixBRKkBoLnb3svCJcbbJatAIll1CMnr5e2XcSy-YFJIoV98wVT0fs1aawrz-qgc1DWnkOVH-8fQGOtRtCLdqlrr-Qk35DbSNF2lQvIxPsxJreFwBuYv98C4lkE" class="kg-image" alt loading="lazy"></figure><p><a href="https://n8n.io/features/?ref=blog.n8n.io">n8n is a source-available workflow automation platform</a> that utilizes the concept of data orchestration by allowing users to connect different apps and services through a visual workflow editor.</p><p>With n8n's extensibility and openness, users can create new nodes, provide custom code (JS and Python are supported out of the box), <a href="https://n8n.io/integrations/?ref=blog.n8n.io">integrate with other tools</a>, and create complex workflows that can include bulk operations, error handling, and more.</p><p>n8n offers data transformation features to manipulate data within workflows, including:</p><ul><li>conditional logic for dynamic process adjustments</li><li>data mapping to align data with target structures</li><li>transformation functions to modify and meet specific data needs.</li></ul><div class="kg-card kg-callout-card kg-callout-card-green"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text"><strong>n8n Pros</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Many pre-built nodes: connect hundreds of apps and services out of the box</li>
+<li>Drag-and-drop workflows: no coding required for most steps</li>
+<li>Self-hosted: free community version or paid enterprise version for maximum control over your data</li>
+<li>Support for various APIs: REST, GraphQL, MQTT, etc</li>
+<li>Event-driven: workflows start upon certain triggers</li>
+<li>Team-friendly: multi-user collaboration on paid plans</li>
+<li>Clear pricing: fixed cloud or enterprise plans</li>
+</ul>
+<!--kg-card-end: markdown--><div class="kg-card kg-callout-card kg-callout-card-red"><div class="kg-callout-emoji">🛑</div><div class="kg-callout-text"><strong>n8n Cons</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li><a href="https://docs.n8n.io/hosting/?ref=blog.n8n.io">Self-hosting</a> requires tech skills and setup</li>
+<li><a href="https://docs.n8n.io/integrations/builtin/credentials/?ref=blog.n8n.io">Setting up credentials for nodes</a> to establish connections with external services or APIs takes some time</li>
+<li>Complex data tasks require custom work: for example, ML models or advanced data processing must be created separately.</li>
+</ul>
+<!--kg-card-end: markdown--><div class="kg-card kg-callout-card kg-callout-card-yellow"><div class="kg-callout-emoji">💰</div><div class="kg-callout-text"><strong>n8n Pricing</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Self-hosted Community version is free</li>
+<li>Starter single-user cloud plan –  €20/Mo</li>
+<li>Cloud Pro plan for teams – from €50/Mo</li>
+<li>Contact sales for a quote on <a href="https://n8n.io/enterprise/?ref=blog.n8n.io">an enterprise plan</a> (either cloud or self-hosted)</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: html--><script>
+  workflowBanner([1748, 1822, 1964, 1930, 1968], document.currentScript, {
+    workflowsHeader: "Most popular data orchestration workflows"
+})
+</script><!--kg-card-end: html--><h3 id="prefect">Prefect</h3><p><strong>Open-source</strong>: ✅</p><p><strong>Free Tier</strong>: ✅</p><figure class="kg-card kg-image-card"><img src="https://lh7-us.googleusercontent.com/J_AjBxVZN-EeeNmcBL5SzJ4IbAJR_MG_H1BY1diGh_L-CFzGodGNc7MHbqnxyXisX-U685eH6-rQCPiQoX4FKWAD_sEsjrse83GBXjL-lML-okr0yvN7pqtYeWh-ujNTPNblEdEo9ftIVVpcs_M6mpw" class="kg-image" alt loading="lazy"></figure><p><a href="https://www.prefect.io/?ref=blog.n8n.io">Prefect</a> is a modern, open-source workflow management system for data orchestration. The main idea behind Prefect is to allow teams to focus on data and its logic without worrying about the underlying execution environment.</p><p>With Prefect, engineers and data scientists can define workflows as Python code, which provides flexibility and ease of use, making it accessible to professionals accustomed to working in a Python ecosystem. The tool’s UI and dashboard provide a clear and intuitive interface to track workflow runs, status and history, thus providing visibility into the orchestration process.</p><div class="kg-card kg-callout-card kg-callout-card-green"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text"><strong>Prefect Pros</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Hybrid execution: supports cloud and on-prem setups</li>
+<li>Parameterized flows: allows dynamic workflow adjustments</li>
+<li>Easy integration: works with popular tools and cloud services including Kubernetes, AWS, GCP and Azure</li>
+<li>Version control: Improves collaboration by tracking workflows</li>
+</ul>
+<!--kg-card-end: markdown--><div class="kg-card kg-callout-card kg-callout-card-red"><div class="kg-callout-emoji">🛑</div><div class="kg-callout-text"><strong>Prefect Cons</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Programming knowledge: mostly Python-based workflows</li>
+<li>Custom connectors: may need to build connections for niche sources</li>
+<li>Community size: small user base may affect support</li>
+<li>Some of the more advanced features and integrations are only available in the paid cloud version</li>
+</ul>
+<!--kg-card-end: markdown--><div class="kg-card kg-callout-card kg-callout-card-yellow"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text"><strong>Prefect Pricing</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Free tier: basic workflows with limited features</li>
+<li>Pro plan: from $450/month per workflow + $79/month for an additional user</li>
+<li>Enterprise: Contact for a custom quote</li>
+</ul>
+<!--kg-card-end: markdown--><h3 id="luigi">Luigi</h3><p><strong>Open-source</strong>: ✅</p><p><strong>Free Tier</strong>: ✅</p><figure class="kg-card kg-image-card"><img src="https://lh7-us.googleusercontent.com/ww-ONzJ_Q7ZkKzeHxUq_U3gp9uVonstV83uo_tkRuPG88KvO5OnGfUAAlv4xGMc3PBqLlCfCE8EjIzevz57iCZR-VGd95EG4cHiL53V5PYK5vvy23JKAlu0q9LQOwQm_K6_EHonlm3LOoTqR0wfnlK0" class="kg-image" alt loading="lazy"></figure><p><a href="https://github.com/spotify/luigi?ref=blog.n8n.io">Luigi</a> is an open-source Python module that helps to stitch together complex workflows. Developed by Spotify, it is designed to manage interdependent tasks, focusing on the success of the whole rather than individual parts.</p><p>Its Pythonic design makes it flexible and easily adaptable, allowing developers to write their tasks using Python code. Luigi is not just limited to data integration, but can also be used in scenarios where data needs to be processed in different ways and at different stages, facilitating data orchestration</p><div class="kg-card kg-callout-card kg-callout-card-green"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text"><strong>Luigi Pros</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Handles task dependencies automatically</li>
+<li>Provides a web UI for data pipeline visualization</li>
+<li>Easily extensible with Python packages</li>
+<li>Integrates with Hadoop, Spark and AWS</li>
+<li>Supports dynamic tasks creation with parameters</li>
+<li>Tasks are also managed via the command line</li>
+</ul>
+<!--kg-card-end: markdown--><div class="kg-card kg-callout-card kg-callout-card-red"><div class="kg-callout-emoji">🛑</div><div class="kg-callout-text"><strong>Luigi Cons</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Requires a good knowledge of Python</li>
+<li>Not suitable for very large and complex workflows</li>
+<li>Limited number of built-in alerts for task issues</li>
+<li>Infrequent updates compared to competitors</li>
+</ul>
+<!--kg-card-end: markdown--><div class="kg-card kg-callout-card kg-callout-card-yellow"><div class="kg-callout-emoji">💰</div><div class="kg-callout-text"><strong>Luigi Pricing</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Free, as it's an open-source Python module</li>
+</ul>
+<!--kg-card-end: markdown--><h3 id="apache-airflow">Apache Airflow</h3><p><strong>Open-source</strong>: ✅</p><p><strong>Free Tier</strong>: ✅</p><figure class="kg-card kg-image-card"><img src="https://lh7-us.googleusercontent.com/j2of8sTY7xL88dm49T72shpU-n3g-OXUNnqSoMrHVyh_OLMFrDVwBrsWmN1GZyXi3Kr3vSbut6lT-0aJ8_YxdGzSkPW88HMYV9x92LU7qNqiJZXBEOw27pRMXWmpraOyPgPpTk2Nkgq337Ni2bWElPk" class="kg-image" alt loading="lazy"></figure><p><a href="https://airflow.apache.org/?ref=blog.n8n.io">Apache Airflow</a> is an advanced open-source tool designed to programmatically create, schedule and monitor workflows. Airflow enables data engineers and developers to define workflows as Directed Acyclic Graphs (DAGs), with each node of the graph representing a task in a pipeline. This modular approach ensures that dependencies are strictly enforced, facilitating efficient and reliable execution of complex data processing tasks.</p><p>Airflow’s rich user interface makes it easy to visualize pipelines running in production, monitor their progress and troubleshoot issues when they arise. Furthermore, because Airflow supports scripting, it can accommodate complex logic, which is often required when orchestrating data across multiple environments and systems.</p><div class="kg-card kg-callout-card kg-callout-card-green"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text"><strong>Apache Airflow Pros</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Dynamic pipelines: configure with code for flexibility</li>
+<li>Extensibility: add custom operators and plugins</li>
+<li>Rich UI: detailed views of tasks and dependencies</li>
+<li>Community support: strong and active contributors</li>
+<li>Advanced scheduling: cron-like and backfill options</li>
+<li>Role-based access: manage user permissions effectively</li>
+<li>Cloud integration: connect to AWS, GCP, Azure</li>
+</ul>
+<!--kg-card-end: markdown--><div class="kg-card kg-callout-card kg-callout-card-red"><div class="kg-callout-emoji">🛑</div><div class="kg-callout-text"><strong>Apache Airflow Cons</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Steep learning curve: complex setup and concepts</li>
+<li>In addition, Airflow requires Python programming knowledge</li>
+<li>Resource-heavy for big deployments</li>
+<li>Limited data transformation capabilities: relies on external systems for heavy lifting</li>
+</ul>
+<!--kg-card-end: markdown--><div class="kg-card kg-callout-card kg-callout-card-yellow"><div class="kg-callout-emoji">💰</div><div class="kg-callout-text"><strong>Apache Airflow Pricing</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Free: open-source availability</li>
+<li>Managed service costs vary (e.g., Google Cloud Composer)</li>
+</ul>
+<!--kg-card-end: markdown--><h3 id="google-cloud-composer">Google Cloud Composer</h3><p><strong>Open-source</strong>: ❌</p><p><strong>Free Tier</strong>: ❌</p><p><a href="https://cloud.google.com/blog/topics/developers-practitioners/choosing-right-orchestrator-google-cloud?ref=blog.n8n.io">Google Cloud offers several orchestration tools</a> designed for different use cases. One of them is Cloud Composer, a fully managed workflow orchestration service built on Apache Airflow.</p><figure class="kg-card kg-image-card"><img src="https://lh7-us.googleusercontent.com/VtzJMmEdC_GWUoS3h2vSi_bxVC5TrjxrSv5FXqtyaKrw69h684vuBBiLsuoavEBqu_7jtzaLXC8hkckQSAmNtwLwTiTrfxmQizyTa5mQwQSNTkFZtRhIMwgZNf_TN6IEmG-oaq4-54E8CRparlwolm8" class="kg-image" alt loading="lazy"></figure><p><a href="https://cloud.google.com/composer?ref=blog.n8n.io">Cloud Composer</a> integrates seamlessly with other Google Cloud services, providing a centralized way to manage and orchestrate data across multiple environments. Its power lies in its ability to connect and control complex data workflows, ensuring efficient and reliable processing.</p><p>Here are some additional features of Cloud Composer compared to the original Airflow.</p><div class="kg-card kg-callout-card kg-callout-card-green"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text"><strong>Google Cloud Composer Pros</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Fully managed: less infrastructure and operational work</li>
+<li>Built on Apache Airflow: access to a recognized open-source tool</li>
+<li>Scalable: adjusts resources based on workflow needs</li>
+<li>Secure: utilizes Google Cloud security features</li>
+<li>Monitoring: includes advanced monitoring and logging</li>
+</ul>
+<!--kg-card-end: markdown--><div class="kg-card kg-callout-card kg-callout-card-red"><div class="kg-callout-emoji">🛑</div><div class="kg-callout-text"><strong>Google Cloud Composer Cons</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Can be expensive for high-volume or complex workflows</li>
+<li>Less control over the underlying infrastructure due to a fully managed setup</li>
+<li>Setup complexity: requires deep knowledge of Google Cloud and Airflow</li>
+</ul>
+<!--kg-card-end: markdown--><div class="kg-card kg-callout-card kg-callout-card-yellow"><div class="kg-callout-emoji">💰</div><div class="kg-callout-text"><strong>Google Cloud Composer Pricing</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Pay-as-you-go: fees are charged based on compute and storage utilization</li>
+<li>Estimated at $63/month for a small setup</li>
+</ul>
+<!--kg-card-end: markdown--><h3 id="aws-glue">AWS Glue</h3><p><strong>Open-source</strong>: ❌</p><p><strong>Free Tier</strong>: ❌</p><figure class="kg-card kg-image-card"><img src="https://lh7-us.googleusercontent.com/yB2okTweCQMoTYElBp2y28q3oR-y0UFxPWBI_f4KU8nwvQs9rbcUSdm3lhPq8BpmNKXnxokaQOO5oFi2mhCqOstAd6-eqauKjS7fmdg17-JhVKiFea4MbVVtD0lhpTZCkeJx-y7czP5zZ9474iN79cM" class="kg-image" alt loading="lazy"></figure><p><a href="https://aws.amazon.com/glue/?ref=blog.n8n.io">AWS Glue</a> is a fully managed extract, transform, and load (ETL) service. AWS Glue workflows capability handles both batch and streaming data and provides support for a wide range of data orchestration scenarios, from real-time analytics to large-scale data processing jobs.</p><p>Optimized for the cloud, AWS Glue is serverless and eliminates the need to provision or manage servers, reducing time spent on infrastructure tasks. It has a data catalog integrated with Amazon S3, RDS, Redshift and other AWS services, making it a flexible choice for a variety of data integration workflows.</p><div class="kg-card kg-callout-card kg-callout-card-green"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text"><strong>AWS Glue Pros</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Serverless: No server management required</li>
+<li>Data Catalog for automatic schema discovery and management</li>
+<li>Visual ETL editor simplifies job creation without coding expertise</li>
+<li>Scalability: Adjusts resources to match job size</li>
+<li>AWS Integration: Works with many AWS services</li>
+<li>Automatic code generation for data transformation</li>
+<li><strong>Machine Learning integration:</strong> makes it easy to implement ML in apps</li>
+</ul>
+<!--kg-card-end: markdown--><div class="kg-card kg-callout-card kg-callout-card-red"><div class="kg-callout-emoji">🛑</div><div class="kg-callout-text"><strong>AWS Glue Cons</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>A steep learning curve for AWS newbies</li>
+<li>AWS-Only: best suited for AWS users</li>
+<li>Complex pricing: costs may escalate for intensive jobs</li>
+<li>Restrictive: less flexibility compared to custom ETL solutions</li>
+</ul>
+<!--kg-card-end: markdown--><div class="kg-card kg-callout-card kg-callout-card-yellow"><div class="kg-callout-emoji">💰</div><div class="kg-callout-text"><strong>AWS Glue Pricing</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Pay-as-you-go: no upfront costs</li>
+<li>Charges for ETL runtime, Data Catalog storage and DPUs</li>
+<li>Region-specific pricing with possible data transfer fees</li>
+</ul>
+<!--kg-card-end: markdown--><h3 id="azure-data-factory">Azure Data Factory</h3><p><strong>Open-source</strong>: ❌</p><p><strong>Free Tier</strong>: ❌</p><figure class="kg-card kg-image-card"><img src="https://lh7-us.googleusercontent.com/4N8AkgIKsffFVJT_E3o7PrB6pK5ebGYGZ3yfExDTG55uE97MH-tzKalgxWJGbdRuFvyt5F9hkKg-NOVgIsz3A65Ufgn_ftIdGP-_nar9HSevhv4uetb7tGIJSqOyTXjd6hQEg6_7PCLjtKGCdTyiS2s" class="kg-image" alt loading="lazy"></figure><p><a href="https://azure.microsoft.com/en-us/products/data-factory?ref=blog.n8n.io">Azure Data Factory</a> (ADF) is a cloud-based data integration service from Microsoft that allows users to create, schedule and orchestrate data pipelines. It provides a rich graphical interface for designing data-driven workflows and a variety of built-in activities and data transformations.</p><p>As part of Microsoft's Azure cloud platform, ADF integrates seamlessly with other Azure services such as Azure Data Lake Storage, Azure Synapse Analytics and Azure Machine Learning, providing a comprehensive data orchestration solution suitable for advanced analytics and big data projects.</p><div class="kg-card kg-callout-card kg-callout-card-green"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text"><strong>Azure Data Factory Pros</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Intuitive visual interface for creating pipelines</li>
+<li>Integrates with both cloud and on-premise data sources</li>
+<li>Wide variety of connectors for diverse data sources, such as SQL Server, Azure Blob Storage and Salesforce</li>
+<li>Secure authentication with managed Azure identity without storing credentials in ADF.</li>
+<li>Supports existing SQL Server Integration Services (SSIS) packages for easy cloud migration</li>
+<li>Enables custom code with C#, Python or .NET</li>
+<li>Globally available for compliance and low latency</li>
+<li>Automatically scales to meet workload requirements</li>
+</ul>
+<!--kg-card-end: markdown--><div class="kg-card kg-callout-card kg-callout-card-red"><div class="kg-callout-emoji">🛑</div><div class="kg-callout-text"><strong>Azure Data Factory Cons</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Costs can escalate quickly with large data sets</li>
+<li>While ADF offers many transformations, it still requires custom code for complex transformations</li>
+<li><a href="https://the.agilesql.club/2021/03/adf-error-trying-to-debug-pipeline-badrequest/?ref=blog.n8n.io">Some users report</a> that debugging can be difficult in complex pipelines</li>
+</ul>
+<!--kg-card-end: markdown--><div class="kg-card kg-callout-card kg-callout-card-yellow"><div class="kg-callout-emoji">💰</div><div class="kg-callout-text"><strong>Azure Data Factory Pricing</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Initially $200 in Azure credits for 30 days upon registering</li>
+<li>Pay-as-you-go billing based on pipeline activity and data volume. Certain small or infrequent activities may be covered by the service's free tier</li>
+<li>Additional charges may apply for integration with other Azure services</li>
+</ul>
+<!--kg-card-end: markdown--><h3 id="sap-data-intelligence">SAP Data Intelligence</h3><p><strong>Open-source</strong>: ❌</p><p><strong>Free Tier</strong>: ❌</p><figure class="kg-card kg-image-card"><img src="https://lh7-us.googleusercontent.com/5AcmGbHvh2R7QqvHpHDCQD9CkpIuYNEra5v_ZQfJfCvMB2NHAWrqPlXtcwRlo3-gAlCgZjpFPszul2NRew4MtU4VdUQB8A9MOnedYp6bwpb6xhVS0fCNcUfWyZv9zET28FT1nQH8vdODIMkYYfPnzEs" class="kg-image" alt loading="lazy"></figure><p><a href="https://www.sap.com/products/technology-platform/data-intelligence.html?ref=blog.n8n.io">SAP Data Intelligence</a> is a comprehensive data management solution that facilitates the orchestration of data in complex data landscapes. It bridges the gap between data integration and business process innovation, providing a unique platform that combines data-driven insights with action.<br><br>With SAP Data Intelligence, organizations can leverage a wide range of capabilities to manage the entire data lifecycle. From data collection and preparation to data integration and management, the tool ensures that high-quality data is accessible and actionable. SAP Data Intelligence effectively supports the new era of hybrid data processing, in which transactional and analytical domains converge.</p><div class="kg-card kg-callout-card kg-callout-card-green"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text"><strong>SAP Data Intelligence Pros</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Centralized data orchestration for multiple sources and destinations</li>
+<li>Advanced data processing and analysis with Python, R, TensorFlow and Spark</li>
+<li>Integrated machine learning and AI capabilities</li>
+<li>Data catalog for discovery, governance and metadata</li>
+<li>Flexible support for multi-cloud and on-premise environments</li>
+</ul>
+<!--kg-card-end: markdown--><div class="kg-card kg-callout-card kg-callout-card-red"><div class="kg-callout-emoji">🛑</div><div class="kg-callout-text"><strong>SAP Data Intelligence Cons</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Steep learning curve for beginners</li>
+<li>Complex setup and ongoing maintenance</li>
+<li>Potentially high cost for small and midsize businesses</li>
+<li>Requires significant computing resources for advanced features</li>
+<li>Integration with legacy systems can be challenging</li>
+</ul>
+<!--kg-card-end: markdown--><div class="kg-card kg-callout-card kg-callout-card-yellow"><div class="kg-callout-emoji">💰</div><div class="kg-callout-text"><strong>SAP Data Intelligence Pricing</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Cloud version with subscription or pay-as-you-go options</li>
+<li>Prices for the on-premise version are available on request</li>
+</ul>
+<!--kg-card-end: markdown--><h3 id="databricks-workflow">Databricks Workflow</h3><p><strong>Open-source</strong>: ❌</p><p><strong>Free Tier</strong>: ❌</p><figure class="kg-card kg-image-card"><img src="https://lh7-us.googleusercontent.com/LZx9Fk8_f6Ov5enCU7_iMjrfgEhCkfvTTuQSH5Tpm5Zssq8kpJsbvTW7Fhk4i_TsySJfTAPC0ug6904rzRWqBoBHmHogTlk3dgStoxDpNgG-2-W-1cLIvxxkxRd3ZNStbRsMd08_bE_twXyfAgt4bpY" class="kg-image" alt loading="lazy"></figure><p><a href="https://www.databricks.com/product/workflows?ref=blog.n8n.io">Databricks Workflows</a> is an integrated tool within the Databricks Lakehouse Platform designed specifically for data orchestration. It leverages the unified analytics platform for data engineering, collaborative data science, full-lifecycle machine learning and business analytics through a visual interface. An evolution of the previous job scheduler system, Databricks Workflows provides a more powerful and flexible way to build multi-step data pipelines that can handle complex orchestration tasks.</p><div class="kg-card kg-callout-card kg-callout-card-green"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text"><strong>Databricks Workflows Pros</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Unified orchestration in the Databricks Lakehouse</li>
+<li>Supports Python, SQL, Scala and R for building custom pipelines</li>
+<li>Delta Live Tables for simple data pipelines with quality enforcement and automatic error handling</li>
+<li>Various scheduling options (time, API, events)</li>
+<li>Collaboration with shared notebooks and repositories</li>
+<li>Git integration for version control</li>
+</ul>
+<!--kg-card-end: markdown--><div class="kg-card kg-callout-card kg-callout-card-red"><div class="kg-callout-emoji">🛑</div><div class="kg-callout-text"><strong>Databricks Workflows Cons</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Costly for smaller teams/projects</li>
+<li>Complex for basic pipeline requirements</li>
+<li>Potential for vendor lock-in with Databricks</li>
+<li>Tied to the Databricks platform</li>
+</ul>
+<!--kg-card-end: markdown--><div class="kg-card kg-callout-card kg-callout-card-yellow"><div class="kg-callout-emoji">💰</div><div class="kg-callout-text"><strong>Databricks Workflows Pricing</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Based on Databricks Lakehouse Platform usage (data processing units – DBUs), consumed by compute and data storage resources</li>
+<li>Tiers for different team sizes, including a self-service option for smaller teams and a fully-managed service for enterprises</li>
+<li>14-day free trial available</li>
+</ul>
+<!--kg-card-end: markdown--><h3 id="fivetran">Fivetran</h3><p><strong>Open-source</strong>: ❌</p><p><strong>Free Tier</strong>: ✅</p><figure class="kg-card kg-image-card"><img src="https://lh7-us.googleusercontent.com/Xr28Esd505svTQNTKc92J4eKWjVETRTuFVVE3HBShHhCIZQVe72BF0fH0M5u6I09GWEQYTEBtQETHB_PLndMzQArrjxCOl1FCq2qkokz5aEzw6VJe22zhrPFLr_e-mxm-07kwzhzM2FQv_FyD-JTrPI" class="kg-image" alt loading="lazy"></figure><p><a href="https://www.fivetran.com/?ref=blog.n8n.io">Fivetran</a> is a cloud-based data integration service that helps organizations of all sizes automate their ETL processes. With Fivetran, companies can streamline the integration of data from various applications, databases and other data sources with minimal configuration. The platform stands out for its ease of use and ability to quickly connect and centralize data, enabling more efficient data pipeline orchestration.</p><div class="kg-card kg-callout-card kg-callout-card-green"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text"><strong>Fivetran Pros</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>User-friendly UI/UX for easy integration setup</li>
+<li>Automated data sync reduces manual work and errors</li>
+<li>Integrated with dbt for post-load data transformation</li>
+<li>Rollback feature for sync errors and schema drift prevention</li>
+</ul>
+<!--kg-card-end: markdown--><div class="kg-card kg-callout-card kg-callout-card-red"><div class="kg-callout-emoji">🛑</div><div class="kg-callout-text"><strong>Fivetran Cons</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Primarily for ETL to cloud data warehouses, may not suit all data orchestration requirements</li>
+<li>Limited customization options for complex scenarios</li>
+<li>Pricing can be very high for small budgets</li>
+</ul>
+<!--kg-card-end: markdown--><div class="kg-card kg-callout-card kg-callout-card-yellow"><div class="kg-callout-emoji">💰</div><div class="kg-callout-text"><strong>Fivetran Pricing</strong></div></div><!--kg-card-begin: markdown--><ul>
+<li>Free tier for small-scale automation</li>
+<li>Starter, Standard and Enterprise plans with variable pricing. The price calculator and pricing guide show figures ranging from hundreds of USD per month to tens of thousands of USD monthly</li>
+<li>Contact sales for Business Critical and Private Deployment details</li>
+</ul>
+<!--kg-card-end: markdown--><h2 id="faq">FAQ</h2><div class="kg-card kg-toggle-card" data-kg-toggle-state="close"><div class="kg-toggle-heading"><h4 class="kg-toggle-heading-text">What is data orchestration vs ETL?</h4><button class="kg-toggle-card-icon"><svg id="Regular" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path class="cls-1" d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"/></svg></button></div><div class="kg-toggle-content"><p>ETL is a sequential process that focuses on extracting, transforming and loading structured data into a warehouse. Data orchestration encompasses ETL while also managing complex workflows, integrating diverse data types like unstructured and real-time data, to optimize analysis and decision-making.</p></div></div><div class="kg-card kg-toggle-card" data-kg-toggle-state="close"><div class="kg-toggle-heading"><h4 class="kg-toggle-heading-text">What is API orchestration?</h4><button class="kg-toggle-card-icon"><svg id="Regular" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path class="cls-1" d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"/></svg></button></div><div class="kg-toggle-content"><p>API orchestration is the process of integrating multiple API services to work together seamlessly, allowing for more complex operations that a single API alone may not support.</p></div></div><div class="kg-card kg-toggle-card" data-kg-toggle-state="close"><div class="kg-toggle-heading"><h4 class="kg-toggle-heading-text">What is AI orchestration?</h4><button class="kg-toggle-card-icon"><svg id="Regular" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path class="cls-1" d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"/></svg></button></div><div class="kg-toggle-content"><p>AI orchestration involves coordinating various artificial intelligence services and models to improve decision-making processes and optimise tasks across multiple systems or applications.</p></div></div><div class="kg-card kg-toggle-card" data-kg-toggle-state="close"><div class="kg-toggle-heading"><h4 class="kg-toggle-heading-text">What is database orchestration?</h4><button class="kg-toggle-card-icon"><svg id="Regular" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path class="cls-1" d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"/></svg></button></div><div class="kg-toggle-content"><p>Database orchestration refers to the automated arrangement, coordination and management of multiple database systems and services. It involves automating database provisioning, scaling, backups and replication to ensure that databases operate efficiently and reliably in different environments, such as cloud-based platforms or across distributed architectures.</p></div></div><div class="kg-card kg-toggle-card" data-kg-toggle-state="close"><div class="kg-toggle-heading"><h4 class="kg-toggle-heading-text">What is workflow orchestration?</h4><button class="kg-toggle-card-icon"><svg id="Regular" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path class="cls-1" d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"/></svg></button></div><div class="kg-toggle-content"><p>Workflow orchestration is the coordinated execution of a series of automated tasks or workflows, ensuring that they run in the correct order and that dependencies and data sharing between tasks are managed effectively.</p></div></div><div class="kg-card kg-toggle-card" data-kg-toggle-state="close"><div class="kg-toggle-heading"><h4 class="kg-toggle-heading-text">Is orchestration the same as automation?</h4><button class="kg-toggle-card-icon"><svg id="Regular" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path class="cls-1" d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"/></svg></button></div><div class="kg-toggle-content"><p>Orchestration refers to the coordination and management of automated tasks and processes to ensure they work in harmony, while automation is the act of making a single task operate without human intervention. Orchestration can be seen as a higher-level, strategic arrangement of automated tasks.</p></div></div><h2 id="wrap-up">Wrap Up</h2><p>In this article, we reviewed the 10 best data orchestration platforms, detailing their significance in managing complex workflows. Our roundup features top data orchestration tools, including n8n, Apache Airflow, Prefect, and more, ranging from:</p><ul><li>cloud to on-prem solutions</li><li>open-source to proprietary</li><li>coming from independent vendors or large-scale providers</li></ul><p>n8n fits into the data orchestration landscape thanks to its open, extendable architecture and a balance between a low-code approach vs custom coding. While certain data orchestration tasks are performed with dedicated solutions, n8n is capable of handling most of the tasks with ease and at a much more competitive price tag.</p><p>So don't forget to set up your own n8n instance: in the cloud or on-premises. Our <a href="https://n8n.io/pricing/?ref=blog.n8n.io">free and paid plans</a> are aimed at both small and large teams. Also, take a look at our <a href="https://n8n.io/enterprise/?ref=blog.n8n.io">enterprise plans</a>.</p>
+		<div class="newsletter-banner">
+	    <div class="newsletter-banner-content">
+	      <div class="section-header">
+	        <h2>Subscribe to <span>n8n newsletter</span></h2>
+	        <div class="section-subheader--bottom">
+	          Get the best, coolest, and latest in automation and low-code delivered to your inbox each week.
+	        </div>
+	      </div>
+	      <div class="newsletter-banner-form">
+	        <form autocomplete="off" class="contact-form" onsubmit="subscribeNewsletter(event)">
+	        	<div id="recaptcha" class="g-recaptcha"
+              data-sitekey="6LeAQeopAAAAAKlLsRb1weWm6T_vijoQBkGkbHzB"
+              data-callback="submitSubscription"
+              data-size="invisible">
+            </div>
+	          <div class="input-wrapper">
+	            <input placeholder="Email" name="email" type="email" required="required" class="">
+	            <div class="messages">
+	              <div class="message message--error">Something went wrong. Please try again later.</div>
+	              <div class="message message--success">Subscribed!</div>
+	            </div>
+	          </div>
+	          <button type="submit" class="submit-btn">Subscribe</button>
+	        </form>
+	      </div>
+	    </div>
+    </div>
+		<div class="post-share-section">
+	<div class="post-share-wrap">
+		<a href="https://twitter.com/intent/tweet?text=Top%2010%20data%20orchestration%20tools%3A%20a%20detailed%20roundup&amp;url=https://blog.n8n.io/data-orchestration-tools/" target="_blank" rel="noopener" aria-label="Twitter share icon"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg></a>
+		<a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.n8n.io/data-orchestration-tools/" target="_blank" rel="noopener" aria-label="Facebook share icon"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"/></svg></a>
+		<!-- <a href="javascript:" class="post-share-link" id="copy" data-clipboard-target="#copy-link" aria-label="Copy link icon"><svg role="img" viewBox="0 0 33 24" xmlns="http://www.w3.org/2000/svg"><path d="M27.3999996,13.4004128 L21.7999996,13.4004128 L21.7999996,19 L18.9999996,19 L18.9999996,13.4004128 L13.3999996,13.4004128 L13.3999996,10.6006192 L18.9999996,10.6006192 L18.9999996,5 L21.7999996,5 L21.7999996,10.6006192 L27.3999996,10.6006192 L27.3999996,13.4004128 Z M12,20.87 C7.101,20.87 3.13,16.898 3.13,12 C3.13,7.102 7.101,3.13 12,3.13 C12.091,3.13 12.181,3.139 12.272,3.142 C9.866,5.336 8.347,8.487 8.347,12 C8.347,15.512 9.866,18.662 12.271,20.857 C12.18,20.859 12.091,20.87 12,20.87 Z M20.347,0 C18.882,0 17.484,0.276 16.186,0.756 C14.882,0.271 13.473,0 12,0 C5.372,0 0,5.373 0,12 C0,18.628 5.372,24 12,24 C13.471,24 14.878,23.726 16.181,23.242 C17.481,23.724 18.88,24 20.347,24 C26.975,24 32.347,18.628 32.347,12 C32.347,5.373 26.975,0 20.347,0 Z"/></svg></a>
+		<small class="share-link-info">The link has been copied!</small> -->
+	</div>
+	<input type="text" value="https://blog.n8n.io/data-orchestration-tools/" id="copy-link" aria-label="Copy link input">
+</div>
+	</div>
+</article>
+<aside class="nextprev-section">
+	<div class="nextprev-wrap">
+		<section class="nextprev-newer post tag-database tag-tutorial tag-hash-google-sheets tag-hash-import-2024-10-24-16-31">
+			<a href="../google-sheets-as-database/index.html" class="global-link" aria-label="How to use Google Sheets as a database"></a>
+			<a href="../google-sheets-as-database/index.html" class="nextprev-image global-image">
+				<img src="../content/images/size/w400/2023/12/Slide-16_9---83--1-.png" loading="lazy" alt="How to use Google Sheets as a database">			</a>
+			<div>
+				<small>Newer post</small>
+				<h3><a href="../google-sheets-as-database/index.html">How to use Google Sheets as a database</a></h3>
+			</div>
+		</section>
+		<section class="nextprev-older post tag-hash-import-2024-10-24-16-31">
+			<a href="../n8ns-october-highlights-new-features-refined-cloud-plans-and-workflow-editor-improvements/index.html" class="global-link" aria-label="October Highlights: New features, refined Cloud plans, and Workflow Editor improvements"></a>
+			<div>
+				<small>Older post</small>
+				<h3><a href="../n8ns-october-highlights-new-features-refined-cloud-plans-and-workflow-editor-improvements/index.html">October Highlights: New features, refined Cloud plans, and Workflow Editor improvements</a></h3>
+			</div>
+			<a href="../n8ns-october-highlights-new-features-refined-cloud-plans-and-workflow-editor-improvements/index.html" class="nextprev-image global-image">
+				<img src="../content/images/size/w400/2023/11/search-global-vars-sm1920x1080.png" loading="lazy" alt="October Highlights: New features, refined Cloud plans, and Workflow Editor improvements">			</a>
+		</section>
+	</div>
+</aside><div class="comments-section">
+	<div class="comments-wrap">
+			</div>
+</div>
+  <aside class="two-column-posts">
+    <h3>Latest n8n guides</h3>
+    <div class="two-column-posts__inner">
+	      <section class="nextprev-newer post">
+  <a href="../how-to-build-ai-agent/index.html" class="global-link" aria-label="How To Build Your First AI Agent (+Free Workflow Template)"></a>
+    <a href="../how-to-build-ai-agent/index.html" class="nextprev-image global-image">
+      <img src="../content/images/size/w400/2025/04/ai-2--1-.png" loading="lazy" alt="How To Build Your First AI Agent (+Free Workflow Template)">    </a>
+  <div>
+    <h3><a href="../how-to-build-ai-agent/index.html">How To Build Your First AI Agent (+Free Workflow Template)</a></h3>
+  </div>
+</section>
+	      <section class="nextprev-newer post">
+  <a href="../ai-agent-frameworks/index.html" class="global-link" aria-label="9 AI Agent Frameworks Battle: Why Developers Prefer n8n"></a>
+    <a href="../ai-agent-frameworks/index.html" class="nextprev-image global-image">
+      <img src="../content/images/size/w400/2025/04/ai-agent-frameworks5.jpg" loading="lazy" alt="9 AI Agent Frameworks Battle: Why Developers Prefer n8n">    </a>
+  <div>
+    <h3><a href="../ai-agent-frameworks/index.html">9 AI Agent Frameworks Battle: Why Developers Prefer n8n</a></h3>
+  </div>
+</section>
+	      <section class="nextprev-newer post">
+  <a href="../series-b/index.html" class="global-link" aria-label="n8n closes €55M Series B round led by Highland Europe"></a>
+    <a href="../series-b/index.html" class="nextprev-image global-image">
+      <img src="../content/images/size/w400/2025/03/seriesB-blog.jpg" loading="lazy" alt="n8n closes €55M Series B round led by Highland Europe">    </a>
+  <div>
+    <h3><a href="../series-b/index.html">n8n closes €55M Series B round led by Highland Europe</a></h3>
+  </div>
+</section>
+	      <section class="nextprev-newer post">
+  <a href="../ai-agents-examples/index.html" class="global-link" aria-label="15 Practical AI Agent Examples to Scale Your Business in 2025"></a>
+    <a href="../ai-agents-examples/index.html" class="nextprev-image global-image">
+      <img src="../content/images/size/w400/2025/03/Slide-16_9---172--1-.png" loading="lazy" alt="15 Practical AI Agent Examples to Scale Your Business in 2025">    </a>
+  <div>
+    <h3><a href="../ai-agents-examples/index.html">15 Practical AI Agent Examples to Scale Your Business in 2025</a></h3>
+  </div>
+</section>
+    </div>
+  </aside>
+
+					<!-- <div class="subscribe-section">
+	<div class="subscribe-wrap">
+		<h3>Subscribe to new posts</h3>
+		<form data-members-form="subscribe" class="subscribe-form">
+			<input data-members-email type="email" placeholder="Your email address" aria-label="Your email address" required>
+			<button class="global-button" type="submit">Subscribe</button>
+		</form>
+		<div class="subscribe-alert">
+			<small class="alert-loading global-alert">Processing your application</small>
+			<small class="alert-success global-alert">Please check your inbox and click the link to confirm your subscription</small>
+			<small class="alert-error global-alert">There was an error sending the email</small>
+		</div>
+	</div>
+</div>
+ -->
+				</main>
+				<div id="subFooter" class="sub-footer">
+  <div class="sub-footer-container">
+    <div class="footer-columns">
+      <div>
+        <div class="column-name">Popular integrations</div>
+        <ul class="col-links">
+          <li>
+            <a href="https://n8n.io/integrations/google-sheets/" class="footer-link"> Google Sheets </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/telegram/" class="footer-link"> Telegram </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/mysql/" class="footer-link"> MySQL </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/slack/" class="footer-link"> Slack </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/discord/" class="footer-link"> Discord </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/postgres/" class="footer-link"> Postgres </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/notion/" class="footer-link"> Notion </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/gmail/" class="footer-link"> Gmail </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/airtable/" class="footer-link"> Airtable </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/google-drive/" class="footer-link"> Google Drive </a>
+          </li>
+        </ul>
+        <div class="bottom-link hidden-link">
+          <a href="https://n8n.io/integrations/" class="footer-link">
+            Show more integrations
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10" width="7px" height="7px">
+              <g clip-path="url(#a)">
+                <path
+                  fill="#111010"
+                  fill-rule="evenodd"
+                  d="M7.678 1.36H.481V0H10v9.52H8.64v-7.2L.962 10 0 9.038 7.678 1.36Z"
+                  clip-rule="evenodd"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h10v10H0z"></path>
+                </clipPath>
+              </defs></svg
+            ></a>
+        </div>
+        <button
+          type="button"
+          class="footer-link footer-link--more"
+          onclick="document.getElementById('subFooter').classList.toggle('sub-footer--full')"></button>
+      </div>
+      <div>
+        <div class="column-name">Trending combinations</div>
+        <ul class="col-links">
+          <li>
+            <a href="https://n8n.io/integrations/hubspot/and/salesforce/" class="footer-link">
+              HubSpot and Salesforce
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/twilio/and/whatsapp-business-cloud/" class="footer-link">
+              Twilio and WhatsApp
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/github/and/jira-software/" class="footer-link">
+              GitHub and Jira
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/asana/and/slack/" class="footer-link"> Asana and Slack </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/asana/and/salesforce/" class="footer-link">
+              Asana and Salesforce
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/jira-software/and/slack/" class="footer-link">
+              Jira and Slack
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/jira-software/and/salesforce/" class="footer-link">
+              Jira and Salesforce
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/github/and/slack/" class="footer-link"> GitHub and Slack </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/hubspot/and/quickbooks-online/" class="footer-link">
+              HubSpot and QuickBooks
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/hubspot/and/slack/" class="footer-link"> HubSpot and Slack </a>
+          </li>
+        </ul>
+        <div class="bottom-link hidden-link">
+          <a href="https://n8n.io/integrations/" class="footer-link">
+            Show more integrations
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10" width="7px" height="7px">
+              <g clip-path="url(#a)">
+                <path
+                  fill="#111010"
+                  fill-rule="evenodd"
+                  d="M7.678 1.36H.481V0H10v9.52H8.64v-7.2L.962 10 0 9.038 7.678 1.36Z"
+                  clip-rule="evenodd"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h10v10H0z"></path>
+                </clipPath>
+              </defs></svg
+            ></a>
+        </div>
+        <button
+          type="button"
+          class="footer-link footer-link--more"
+          onclick="document.getElementById('subFooter').classList.toggle('sub-footer--full')"></button>
+      </div>
+      <div>
+        <div class="column-name">Top integration categories</div>
+        <ul class="col-links">
+          <li>
+            <a href="https://n8n.io/integrations/categories/development/" class="footer-link"> Development </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/categories/communication/" class="footer-link">
+              Communication
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/categories/langchain/" class="footer-link"> Langchain </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/categories/ai/" class="footer-link"> AI </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/categories/data-and-storage/" class="footer-link">
+              Data &amp; Storage
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/integrations/categories/marketing/" class="footer-link"> Marketing </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/categories/productivity/" class="footer-link">
+              Productivity
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/categories/sales/" class="footer-link"> Sales </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/categories/utility/" class="footer-link"> Utility </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/integrations/categories/miscellaneous/" class="footer-link">
+              Miscellaneous
+            </a>
+          </li>
+        </ul>
+        <div class="bottom-link hidden-link">
+          <a href="https://n8n.io/integrations/" class="footer-link">
+            Explore more categories
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10" width="7px" height="7px">
+              <g clip-path="url(#a)">
+                <path
+                  fill="#111010"
+                  fill-rule="evenodd"
+                  d="M7.678 1.36H.481V0H10v9.52H8.64v-7.2L.962 10 0 9.038 7.678 1.36Z"
+                  clip-rule="evenodd"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h10v10H0z"></path>
+                </clipPath>
+              </defs></svg
+            ></a>
+        </div>
+        <button
+          type="button"
+          class="footer-link footer-link--more"
+          onclick="document.getElementById('subFooter').classList.toggle('sub-footer--full')"></button>
+      </div>
+      <div>
+        <div class="column-name">Trending templates</div>
+        <ul class="col-links">
+          <li>
+            <a href="https://n8n.io/workflows/1750-creating-an-api-endpoint/" class="footer-link">
+              Creating an API endpoint
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/workflows/1954-ai-agent-chat/" class="footer-link">
+              AI agent chat
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/workflows/1951-scrape-and-summarize-webpages-with-ai/" class="footer-link">
+              Scrape and summarize webpages with AI
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/workflows/1700-very-quick-quickstart/" class="footer-link">
+              Very quick quickstart
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/workflows/1748-pulling-data-from-services-that-n8n-doesnt-have-a-pre-built-integration-for/" class="footer-link">
+              Pulling data from services that n8n doesn’t have a pre-built integration for
+            </a>
+          </li>
+          <li>
+            <a href="https://n8n.io/workflows/1747-joining-different-datasets/" class="footer-link">
+              Joining different datasets
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/workflows/1534-back-up-your-n8n-workflows-to-github/" class="footer-link">
+              Back Up Your n8n Workflows To Github
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/workflows/2006-ai-agent-that-can-scrape-webpages/" class="footer-link">
+              AI agent that can scrape webpages
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/workflows/1862-openai-gpt-3-company-enrichment-from-website-content/" class="footer-link">
+              OpenAI GPT-3: Company Enrichment from website content
+            </a>
+          </li>
+          <li class="hidden-link">
+            <a href="https://n8n.io/workflows/1934-telegram-ai-chatbot/" class="footer-link">
+              Telegram AI Chatbot
+            </a>
+          </li>
+        </ul>
+        <div class="bottom-link hidden-link">
+          <a href="https://n8n.io/workflows/" class="footer-link">
+            Explore 800+ workflow templates
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10" width="7px" height="7px">
+              <g clip-path="url(#a)">
+                <path
+                  fill="#111010"
+                  fill-rule="evenodd"
+                  d="M7.678 1.36H.481V0H10v9.52H8.64v-7.2L.962 10 0 9.038 7.678 1.36Z"
+                  clip-rule="evenodd"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h10v10H0z"></path>
+                </clipPath>
+              </defs></svg
+            ></a>
+        </div>
+        <button
+          type="button"
+          class="footer-link footer-link--more"
+          onclick="document.getElementById('subFooter').classList.toggle('sub-footer--full')"></button>
+      </div>
+      <div>
+        <div class="column-name">Top guides</div>
+        <ul class="col-links">
+          <li>
+            <a href="../telegram-bots/index.html" class="footer-link"> Telegram bots </a>
+          </li>
+          <li>
+            <a href="../open-source-chatbot/index.html" class="footer-link"> Open-source chatbot </a>
+          </li>
+          <li>
+            <a href="../open-source-llm/index.html" class="footer-link"> Open-source LLM </a>
+          </li>
+          <li>
+            <a href="../open-source-low-code-platforms.html" class="footer-link"> Open-source low-code platforms </a>
+          </li>
+          <li>
+            <a href="../free-zapier-alternatives/index.html" class="footer-link"> Zapier alternatives </a>
+          </li>
+          <li>
+            <a href="../make-vs-zapier/index.html" class="footer-link"> Make vs Zapier </a>
+          </li>
+          <li class="hidden-link">
+            <a href="../ai-agents/index.html" class="footer-link"> AI agents </a>
+          </li>
+          <li class="hidden-link">
+            <a href="../ai-coding-assistants/index.html" class="footer-link"> AI coding assistants </a>
+          </li>
+          <li class="hidden-link">
+            <a href="../create-chatgpt-discord-bot/index.html" class="footer-link"> ChatGPT Discord bot </a>
+          </li>
+          <li class="hidden-link">
+            <a href="../best-ai-chatbot/index.html" class="footer-link"> Best AI chatbot </a>
+          </li>
+        </ul>
+        <div class="bottom-link hidden-link">
+          <a href="../index.html" class="footer-link">
+            Show guides
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10" width="7px" height="7px">
+              <g clip-path="url(#a)">
+                <path
+                  fill="#111010"
+                  fill-rule="evenodd"
+                  d="M7.678 1.36H.481V0H10v9.52H8.64v-7.2L.962 10 0 9.038 7.678 1.36Z"
+                  clip-rule="evenodd"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h10v10H0z"></path>
+                </clipPath>
+              </defs></svg
+            ></a>
+        </div>
+        <button
+          type="button"
+          class="footer-link footer-link--more"
+          onclick="document.getElementById('subFooter').classList.toggle('sub-footer--full')"></button>
+      </div>
+    </div>
+  </div>
+</div><footer class="footer-section global-footer">
+	<div class="footer-wrap">
+		<div class="footer-data">
+			<div class="footer-logo">
+				<a href="../index.html" class="is-image"><img src="../content/images/2022/06/n8n-blog.png" alt="n8n Blog"></a>
+			</div>
+			<p class="footer-description">Automate without limits</p>
+			<div class="footer-icons">
+				<a href="https://www.facebook.com/n8nio" aria-label="link Facebook"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"/></svg></a>
+				<a href="https://x.com/n8n_io" aria-label="link Twitter"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg></a>
+				<a href="https://github.com/n8n-io/n8n" aria-label="link GitHub"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+				<a href="https://discord.gg/n8n" aria-label="link Discord"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.222 0c1.406 0 2.54 1.137 2.607 2.475V24l-2.677-2.273-1.47-1.338-1.604-1.398.67 2.205H3.71c-1.402 0-2.54-1.065-2.54-2.476V2.48C1.17 1.142 2.31.003 3.715.003h16.5L20.222 0zm-6.118 5.683h-.03l-.202.2c2.073.6 3.076 1.537 3.076 1.537-1.336-.668-2.54-1.002-3.744-1.137-.87-.135-1.74-.064-2.475 0h-.2c-.47 0-1.47.2-2.81.735-.467.203-.735.336-.735.336s1.002-1.002 3.21-1.537l-.135-.135s-1.672-.064-3.477 1.27c0 0-1.805 3.144-1.805 7.02 0 0 1 1.74 3.743 1.806 0 0 .4-.533.805-1.002-1.54-.468-2.14-1.404-2.14-1.404s.134.066.335.2h.06c.03 0 .044.015.06.03v.006c.016.016.03.03.06.03.33.136.66.27.93.4.466.202 1.065.403 1.8.536.93.135 1.996.2 3.21 0 .6-.135 1.2-.267 1.8-.535.39-.2.87-.4 1.397-.737 0 0-.6.936-2.205 1.404.33.466.795 1 .795 1 2.744-.06 3.81-1.8 3.87-1.726 0-3.87-1.815-7.02-1.815-7.02-1.635-1.214-3.165-1.26-3.435-1.26l.056-.02zm.168 4.413c.703 0 1.27.6 1.27 1.335 0 .74-.57 1.34-1.27 1.34-.7 0-1.27-.6-1.27-1.334.002-.74.573-1.338 1.27-1.338zm-4.543 0c.7 0 1.266.6 1.266 1.335 0 .74-.57 1.34-1.27 1.34-.7 0-1.27-.6-1.27-1.334 0-.74.57-1.338 1.27-1.338z"/></svg></a>
+				<a href="https://www.linkedin.com/company/n8n/" aria-label="link LinkedIn"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+				<a href="https://www.youtube.com/c/n8n-io" aria-label="link YouTube"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path class="a" d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+				
+
+			</div>
+		</div>
+		<div class="footer-nav">
+			
+
+
+
+<div class="footer-nav-column">
+	<!-- <small>Column 1</small> -->
+	<ul>
+		<li><a href="https://n8n.io/">n8n home</a></li>
+		<li><a href="https://n8n.io/features/">Features</a></li>
+		<li><a href="https://n8n.io/pricing/">Pricing</a></li>
+		<li><a href="https://docs.n8n.io/">Docs</a></li>
+	</ul>
+</div>
+
+<div class="footer-nav-column">
+	<!-- <small>Column 2</small> -->
+	<ul>
+		<li><a href="https://community.n8n.io">Community</a></li>
+	</ul>
+</div>
+
+
+		</div>
+	</div>
+	<div class="footer-copyright">
+		Made with ❤️ in Berlin. © 2025 n8n | All rights reserved.
+	</div>
+</footer>
+			</div>
+		</div>
+		<div id="notifications" class="global-notification">
+	<div class="subscribe">You’ve successfully subscribed to n8n Blog</div>
+	<div class="signin">Welcome back! You’ve successfully signed in.</div>
+	<div class="signup">Great! You’ve successfully signed up.</div>
+	<div class="expired">Your link has expired</div>
+	<div class="checkout-success">Success! Check your email for magic link to sign-in.</div>
+</div>
+				<script src="../assets/js/global.js%3Fv=4801f6d1f9"></script>
+		<script src="../assets/js/post.js%3Fv=4801f6d1f9"></script>
+		
+		<script>
+!function(){"use strict";const p=new URLSearchParams(window.location.search),isAction=p.has("action"),isStripe=p.has("stripe"),success=p.get("success"),action=p.get("action"),stripe=p.get("stripe"),n=document.getElementById("notifications"),a="is-subscribe",b="is-signin",c="is-signup",d="is-expired",e="is-checkout-success";p&&(isAction&&(action=="subscribe"&&success=="true"&&n.classList.add(a),action=="signin"&&success=="true"&&n.classList.add(b),action=="signup"&&success=="true"&&n.classList.add(c),success=="false"&&n.classList.add(d)),isStripe&&stripe=="success"&&n.classList.add(e),(isAction||isStripe)&&setTimeout(function(){window.history.replaceState(null,null,window.location.pathname),n.classList.remove(a,b,c,d,e)},5000))}();
+</script>
+
+		
+		<script>
+
+// Contain every link in an array.
+var links = document.querySelectorAll('a');
+
+// For every link,
+for (var i = 0; i < links.length; i++) {
+
+  // if the link's hostname is different from this Ghost's hostname,
+  // i.e. if the link is external,
+  if (links[i].hostname != window.location.hostname) {
+
+    // change the target and rel value as the following.
+    links[i].target = '_blank';
+    links[i].rel = 'noopener';
+
+  }
+}
+</script>
+	</body>
+</html>
