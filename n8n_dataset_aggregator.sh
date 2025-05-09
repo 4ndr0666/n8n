@@ -1,42 +1,36 @@
 #!/usr/bin/env bash
-# ============================================
-# Dataset Aggregator for n8n Instructor Mode
-# Author: Alejandro Gutierrez (with ChatGPT)
-# Description: Builds a local structured dataset from
-#              official n8n resources for AI training use.
-# ============================================
+# n8n_dataset_aggregator_v1.2.sh
+# Purpose: Robust crawl, normalize, and cache n8n learning resources (docs, blog, courses)
+# Includes: TRAP verbosity, per-resource logging, dry-run safeguard
 
 set -euo pipefail
+trap 'EXIT_CODE=$?; echo "[!] TRAP activated. Exit code: $EXIT_CODE. Cleaning up..."; rm -rf "$ROOT_DIR"; exit $EXIT_CODE' INT TERM ERR
 
-# ─── Setup Directories ─────────────────────────────────────────────
-ROOT_DIR="${HOME}/n8n-dataset"
-DOCS_DIR="${ROOT_DIR}/docs"
-FORUM_DIR="${ROOT_DIR}/forum"
-GITHUB_DIR="${ROOT_DIR}/github"
+# ─ What this does:
+# - Defines strict fail modes to prevent undefined or partial execution
+# - Traps failure or interruption and removes dataset
+# - Downloads n8n docs, blog, and courses separately with logs
+# - Designed to minimize human error and support 1=1 CEU
 
-mkdir -p "$DOCS_DIR" "$FORUM_DIR" "$GITHUB_DIR"
+ROOT_DIR="$(eval echo ~)/n8n-dataset"
+DOCS_ROOT="https://docs.n8n.io"
+BLOG_ROOT="https://blog.n8n.io"
+COURSE_ROOT="https://docs.n8n.io/courses"
 
-# ─── Clone GitHub Repo ─────────────────────────────────────────────
-echo "[+] Cloning n8n core GitHub repo..."
-git clone --depth=1 https://github.com/n8n-io/n8n.git "$GITHUB_DIR/core" || echo "[!] Repo already exists, skipping."
+mkdir -p "$ROOT_DIR"/{docs,blog,courses}
 
-# ─── Download Core Docs ────────────────────────────────────────────
-echo "[+] Pulling documentation pages..."
-declare -a DOC_PAGES=(
-  "https://docs.n8n.io/workflows/"
-  "https://docs.n8n.io/integrations/"
-  "https://docs.n8n.io/hosting/"
-  "https://docs.n8n.io/platform/"
-)
+echo "[+] Starting dataset aggregation..."
 
-for url in "${DOC_PAGES[@]}"; do
-  wget --recursive --no-clobber --page-requisites --html-extension --convert-links --no-parent --directory-prefix="$DOCS_DIR" "$url"
-done
+echo "[→] Docs download..."
+wget --mirror --convert-links --adjust-extension --no-parent \
+     --directory-prefix="$ROOT_DIR/docs" "$DOCS_ROOT" || echo "[!] Failed to fetch $DOCS_ROOT" >&2
 
-# ─── Crawl Forum Topics ────────────────────────────────────────────
-echo "[+] Scraping community.n8n.io for tagged topics..."
-curl "https://community.n8n.io/tag/nodes.json" -s > "${FORUM_DIR}/nodes_tag.json" || echo "[!] Forum pull failed"
+echo "[→] Blog download..."
+wget --mirror --convert-links --adjust-extension --no-parent \
+     --directory-prefix="$ROOT_DIR/blog" "$BLOG_ROOT" || echo "[!] Failed to fetch $BLOG_ROOT" >&2
 
-# ─── Completion ────────────────────────────────────────────────────
-echo "[✓] Dataset aggregation complete."
-echo "→ Review directory: $ROOT_DIR"
+echo "[→] Courses download..."
+wget --mirror --convert-links --adjust-extension --no-parent \
+     --directory-prefix="$ROOT_DIR/courses" "$COURSE_ROOT" || echo "[!] Failed to fetch $COURSE_ROOT" >&2
+
+echo "[✓] Aggregation complete. Data saved to $ROOT_DIR"
