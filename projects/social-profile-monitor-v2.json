@@ -1,0 +1,46 @@
+{
+  "name": "Social Profile Monitor v2.0",
+  "nodes": [
+    {
+      "parameters": {
+        "functionCode": "return [{ json: {
+  platforms: ['linkedin', 'twitter', 'instagram', 'tiktok', 'facebook', 'mastodon', 'pinterest', 'xenforo'],
+  usernames: ['example_handle_1', 'example_handle_2']
+} }];"
+      },
+      "name": "Set Targets",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [300, 300]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {},
+        "prompt": {
+          "messages": [
+            {
+              "content": "Analyze these social updates and summarize anomalies, trends, or intent:
+{{ JSON.stringify($json.updates) }}"
+            }
+          ]
+        }
+      },
+      "name": "Summarize with GPT",
+      "type": "n8n-nodes-base.openAi",
+      "typeVersion": 1,
+      "position": [600, 300],
+      "credentials": {
+        "openAiApi": {
+          "id": "auto-placeholder",
+          "name": "OpenAI API Key"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Set Targets": {
+      "main": [[{ "node": "Summarize with GPT", "type": "main", "index": 0 }]]
+    }
+  }
+}
